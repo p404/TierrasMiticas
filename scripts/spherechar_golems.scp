@@ -1,0 +1,782 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Jueves, Septiembre 16, 2006
+// Golems NPC y Tinker
+VERSION=2.1
+
+[CHARDEF 0C3]
+DEFNAME=c_iron_golem
+DEFNAME2=c_golem_iron
+NAME=Iron Golem 
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=i_pet_iron_golem
+CAN=MT_WALK|MT_RUN 
+DAM=110,115 
+ARMOR=100
+RESOURCES=1000 i_ingot_iron, i_skeleton_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Iron Golem
+
+ON=@CREATE
+STR={1235 1385}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={85.0 95.0)
+MAGICRESISTANCE={75.0 85.0}
+TACTICS={80.0 100.0}
+WRESTLING={80.0 100.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_iron {3 5}
+SRC.ACT.BOUNCE
+RETURN 1
+
+[CHARDEF 0A0] 
+DEFNAME=c_wood_golem
+DEFNAME2=c_golem_wood
+NAME=Wood Golem
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=30,40
+ARMOR=50 
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Copper Golem
+
+ON=@CREATE
+STR={100 120}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={40.0 60.0)
+MAGICRESISTANCE={40.0 60.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_wood_curls {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF 0B9]
+DEFNAME=c_copper_golem
+DEFNAME2=c_golem_copper
+NAME=Copper Golem 
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=35,45 
+ARMOR=40 
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Copper Golem
+
+ON=@CREATE
+COLOR=1946
+STR={150 180}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={40.0 60.0)
+MAGICRESISTANCE={40.0 60.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_copper {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_bronze_golem] 
+DEFNAME=c_bronze_golem
+DEFNAME2=c_golem_bronze
+NAME=Bronze Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=40,50
+ARMOR=40 
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Bronze Golem
+
+ON=@CREATE
+COLOR=color_o_bronze 
+STR={180 250}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={40.0 60.0)
+MAGICRESISTANCE={40.0 60.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_bronze {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_bloodrock_golem] 
+DEFNAME=c_bloodrock_golem
+DEFNAME2=c_golem_bloodrock
+NAME=Bloodrock Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=45,55 
+ARMOR=40 
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Blood Rock Golem
+
+ON=@CREATE
+COLOR=color_o_bloodrock 
+STR={260 300}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={40.0 60.0)
+MAGICRESISTANCE={40.0 60.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_bloodrock {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_gold_golem]
+DEFNAME=c_gold_golem
+DEFNAME2=c_golem_gold
+NAME=Gold Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=49,59 
+ARMOR=40 
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Gold Golem
+
+ON=@CREATE
+COLOR=2056 
+STR={310 350}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={40.0 60.0)
+MAGICRESISTANCE={40.0 60.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_gold {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_rose_golem] 
+DEFNAME=c_rose_golem
+DEFNAME2=c_golem_rose
+NAME=Rose Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=53,60
+ARMOR=40
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Rose Golem
+
+ON=@CREATE
+COLOR=1945 
+STR={360 410}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={40.0 60.0)
+MAGICRESISTANCE={40.0 60.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_rose {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_agapite_golem]
+DEFNAME=c_agapite_golem
+DEFNAME2=c_golem_agapite
+NAME=Agapite Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=mt_walk|mt_run 
+DAM=62,65 
+ARMOR=41 
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Agapite Golem
+
+ON=@CREATE
+COLOR=1944 
+STR={410 450}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={40.0 60.0)
+MAGICRESISTANCE={40.0 60.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_agapite {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_shadow_golem] 
+DEFNAME=c_shadow_golem
+DEFNAME2=c_golem_shadow
+NAME=Shadow Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=62,65
+ARMOR=41
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Shadow Golem
+
+ON=@CREATE
+COLOR=color_o_shadow 
+STR={410 450}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={40.0 60.0)
+MAGICRESISTANCE={40.0 60.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_shadow {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_verite_golem] 
+DEFNAME=c_verite_golem
+DEFNAME2=c_golem_verite
+NAME=Verite Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=67,73
+ARMOR=41 
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Verite Golem
+
+ON=@CREATE
+COLOR=color_o_Verite 
+STR={460 495}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={40.0 60.0)
+MAGICRESISTANCE={40.0 60.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_verite {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_valorite_golem] 
+DEFNAME=c_valorite_golem
+DEFNAME2=c_golem_valorite
+NAME=Valorite Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=75,78
+ARMOR=41
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Valorite Golem
+
+ON=@CREATE
+STR={500 620}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={40.0 60.0)
+MAGICRESISTANCE={40.0 60.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_valorite {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_silver_golem] 
+DEFNAME=c_silver_golem
+DEFNAME2=c_golem_silver
+NAME=Silver Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=80,83
+ARMOR=41
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Silver Golem
+
+ON=@CREATE
+COLOR=color_o_silver 
+STR={680 725}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={45.0 60.0)
+MAGICRESISTANCE={45.0 60.0}
+TACTICS={75.0 90.0}
+WRESTLING={75.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_silver {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_mytheril_golem] 
+DEFNAME=c_mytheril_golem
+DEFNAME2=c_mytheril_golem
+NAME=Mytheril Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=85,87
+ARMOR=55
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Silver Golem
+
+ON=@CREATE
+COLOR=2053 
+STR={790 825}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={45.0 65.0)
+MAGICRESISTANCE={45.0 65.0}
+TACTICS={75.0 90.0}
+WRESTLING={75.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_mytheril {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_blackrock_golem] 
+DEFNAME=c_blackrock_golem
+DEFNAME2=c_golem_blackrock
+NAME=Blackrock Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=93,96 
+ARMOR=70
+RESOURCES=500 i_ore_blackrock
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Blackrock Golem
+
+ON=@CREATE
+COLOR=color_o_blackrock 
+STR={905 956}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={55.0 70.0)
+MAGICRESISTANCE={50.0 70.0}
+TACTICS={80.0 90.0}
+WRESTLING={80.0 90.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_blackrock {4 5}
+SRC.ACT.BOUNCE
+
+[CHARDEF c_titanium_golem] 
+DEFNAME=c_titanium_golem
+DEFNAME2=c_golem_titanium
+NAME=Titanium Golem 
+ID=0B9
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=8407
+CAN=MT_WALK|MT_RUN 
+DAM=96,100 
+ARMOR=80
+RESOURCES=1000 i_ingot_Titanium
+CATEGORY=Miscellaneous
+SUBSECTION=Golems
+DESCRIPTION=Titanium Golem
+
+ON=@CREATE
+COLOR=color_o_titanium
+STR={1035 1185}
+DEX={200 360} 
+INT={285 360} 
+FAME={1} 
+KARMA=1
+
+PARRYING={65.0 75.0)
+MAGICRESISTANCE={65.0 75.0}
+TACTICS={85.0 95.0}
+WRESTLING={85.0 95.0)
+
+ON=@DEATH
+BODY=c_elem_air
+NEWITEM=i_ore_titanium {4 5}
+SRC.ACT.BOUNCE
+
+////////////////////////////////////////////////////
+///////////////////////Pets/////////////////////////
+////////////////////////////////////////////////////
+
+[ITEMDEF 02610]
+//ID=02610
+DEFNAME=i_pet_iron_golem
+NAME=Iron Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=1000 i_ingot_iron, 1 i_skeleton_golem
+TDATA3=c_iron_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Iron Golem
+ON=@DCLICK
+ON=@CREATE
+MORE=c_iron_golem
+
+[ITEMDEF i_pet_copper]
+ID=8407
+DEFNAME=i_pet_copper
+NAME=Copper Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_copper, 15 i_espiritu_golem
+TDATA3=c_copper_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Copper Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_copper
+MORE=c_copper_golem
+
+[ITEMDEF i_pet_bronze]
+ID=8407
+DEFNAME=i_pet_bronze
+NAME=Bronze Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_bronze, 15 i_espiritu_golem
+TDATA3=c_bronze_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Bronze Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_bronze
+MORE=c_bronze_golem
+
+[ITEMDEF i_pet_bloodrock]
+ID=8407
+DEFNAME=i_pet_bloodrock
+NAME=Blood Rock Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_bloodrock, 15 i_espiritu_golem
+TDATA3=c_bloodrock_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Blood Rock Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_bloodrock
+MORE=c_bloodrock_golem
+
+[ITEMDEF i_pet_gold]
+ID=8407
+DEFNAME=i_pet_gold
+NAME=Gold Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_gold, 15 i_espiritu_golem
+TDATA3=c_gold_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Gold Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_gold
+MORE=c_gold_golem
+
+[ITEMDEF i_pet_rose]
+ID=8407
+DEFNAME=i_pet_rose
+NAME=Rose Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_rose, 15 i_espiritu_golem
+TDATA3=c_Rose_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Rose Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_rose
+MORE=c_rose_golem
+
+[ITEMDEF i_pet_silver]
+ID=8407
+DEFNAME=i_pet_silver
+NAME=Silver Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_silver, 15 i_espiritu_golem
+TDATA3=c_silver_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Silver Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_silver
+MORE=c_silver_golem
+
+[ITEMDEF i_pet_mytheril]
+ID=8407
+DEFNAME=i_pet_mytheril
+NAME=Mytheril Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_mytheril, 15 i_espiritu_golem
+TDATA3=c_mytheril_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Mytheril Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_mytheril
+MORE=c_mytheril_golem
+
+[ITEMDEF i_pet_blackrock]
+ID=8407
+DEFNAME=i_pet_blackrock
+NAME=Blackrock Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_blackrock, 15 i_espiritu_golem
+TDATA3=c_blackrock_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Blackrock Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_blackrock
+MORE=c_blackrock_golem
+
+[ITEMDEF i_pet_agapite]
+ID=8407
+DEFNAME=i_pet_agapite
+NAME=Agapite Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_agapite, 15 i_espiritu_golem
+TDATA3=c_agapite_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Agapite Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_Agapite
+MORE=c_Agapite_golem
+
+[ITEMDEF i_pet_shadow]
+ID=8407
+DEFNAME=i_pet_shadow
+NAME=Shadow Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_shadow, 15 i_espiritu_golem
+TDATA3=c_shadow_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=shadow Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_shadow
+MORE=c_shadow_golem
+
+[ITEMDEF i_pet_verite]
+ID=8407
+DEFNAME=i_pet_verite
+NAME=Verite Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_verite, 15 i_espiritu_golem
+TDATA3=c_verite_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Verite Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_verite
+MORE=c_verite_golem
+
+[ITEMDEF i_pet_valorite]
+ID=8407
+DEFNAME=i_pet_valorite
+NAME=Valorite Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_valorite, 15 i_espiritu_golem
+TDATA3=c_valorite_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Valorite Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_valorite
+MORE=c_valorite_golem
+
+[ITEMDEF i_pet_titanium]
+ID=8407
+DEFNAME=i_pet_titanium
+NAME=Titanium Golem
+TYPE=T_FIGURINE
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+RESOURCES=100 i_ingot_titanium, 15 i_espiritu_golem
+TDATA3=c_titanium_golem
+CATEGORY=Miscellaneous
+SUBSECTION=Character Icons
+DESCRIPTION=Apocalypse Golem
+ON=@DCLICK
+ON=@CREATE
+COLOR=color_o_titanium
+MORE=c_titanium_golem
+
+////////////////////////////////////////////////////
+//////////////////////Partes////////////////////////
+////////////////////////////////////////////////////
+
+[ITEMDEF i_skeleton_golem]
+//Esqueleto de Golem
+ID=02109
+DEFNAME=i_skeleton_golem
+NAME=Esqueleto de Golem
+RESOURCES=6 i_potion_shrink, 1 i_cerebro_goro, 10 i_ingot_iron
+WEIGHT=2
+CATEGORY=Miscellaneous
+SUBSECTION=Items de Golems
+DESCRIPTION=Esqueleto de Golem
+SKILLMAKE=TINKERING 100.0,t_tinker_tools
+
+ON=@DCLICK
+TARGET Donde estan los 1000 Iron ingots?
+RETURN 1
+
+ON=@TARGON_CHAR
+SRC.SYSMESSAGE=That is not an iron ingot.
+RETURN 1
+
+ON=@TARGON_ITEM
+IF !(<SRC.TARG.BASEID>==i_ingot_iron)
+SRC.SYSMESSAGE That is not an iron ingot.
+RETURN 1
+ELSE
+SRC.CONSUME=1 i_skeleton_golem
+SRC.CONSUME=1000 i_ingot_iron
+SRC.NEWITEM=i_pet_iron_golem
+SRC.ACT.BOUNCE 
+RETURN 1
+
+///////////////////////////////
+////////Espiritu de Golem///////
+///////////////////////////////
+
+[ITEMDEF i_Espiritu_Golem] 
+//Espiritu de Golem
+ID=0F23
+NAME=Espiritu de Golem
+Type=t_gem
+CATEGORY=Custom Items
+SUBSECTION=Gemas
+DESCRIPTION=Espiritu de Golem
+dye=1
+value=1500
+
+ON=@CREATE 
+COLOR=2841
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_cerebro_goro]
+DEFNAME=i_cerebro_goro
+ID=7408
+NAME=Cerebro de Goro
+VALUE=70000
+WEIGHT=7
+
+ON=@CREATE
+COLOR=1942

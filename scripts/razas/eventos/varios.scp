@@ -1,0 +1,36 @@
+//*********************
+//Neutral Event
+//*********************
+
+[EVENTS e_Neutral] 
+ON=@Click 
+Message [Neutral]
+
+//*********************
+//Jusgado Event
+//*********************
+
+[EVENTS e_jusgadoVision] 
+ON=@CLICK
+f_jusgadoVision 
+ON=@DCLICK
+f_jusgadoVision 
+ON=@ENVIRONCHANGE 
+f_jusgadoVision 
+
+[FUNCTION f_jusgadoVision] 
+IF <SECTOR.ISDARK> 
+IF (<FLAGS>&statf_nightsight)!=statf_nightsight) 
+SPELLEFFECT=s_night_sight 1000 
+TAG.NIGHTSIGHT_STATUS=1 
+ENDIF 
+ELSE 
+IF <TAG.NIGHTSIGHT_STATUS> 
+FLAGS=<FLAGS>&~statf_nightsight 
+TAG.NIGHTSIGHT_STATUS=0 
+ENDIF
+ENDIF
+
+[EVENTS e_wrong_client]
+
+[EOF]

@@ -1,0 +1,177 @@
+[ITEMDEF i_caja_pandora] 
+NAME=Caja de Pandora
+ID=3650
+DEFNAME=i_chest_pandora
+WEIGHT=15
+FLIP=1
+DUPEITEM=3651
+
+ON=@CREATe
+COLOR=1159
+
+ON=@DCLICK 
+SRC.BODY=c_slime
+SRC.NEWNPC=c_m_energy_vortex
+SRC.ACT.BOUNCE
+RETURN 1
+
+///////////
+[ITEMDEF i_uidchest] 
+NAME=UID Chest [Un-Owned] 
+ID=0e42
+
+ON=@CREATE 
+ATTR=00010 // Static Object / No Highlight 
+COLOR=0 
+
+ON=@DCLICK 
+IF ( (<MORE>=1) && (<MORE2>=<SRC.UID>) ) 
+
+RETURN 0 
+ELSEIF <MORE>!=1 // If MORE isnt 1 then its a deralict chest, and can be used 
+NAME=<SRC.NAME>'s UID Chest // Change the name of chest to owners name for easy 
+
+ID 
+MORE=1 
+MORE2=<SRC.UID> // Encode owners UID to chest as the key 
+SRC.SYSMESSAGE This chest has been linked to you. 
+SRC.SYSMESSAGE No-one but you can open it. 
+SRC.TARG.COLOR=045e // Color: golden brown 
+RETURN 0 
+ELSE 
+IF <SRC.ACCOUNT.PLEVEL> > 6 
+RETURN 0 
+ELSE 
+SRC.TARG.SAY This is not your chest! // Complain  
+RETURN 1 
+ENDIF 
+
+[ITEMDEF i_uidchest_south] 
+NAME=UID Chest [Un-Owned] 
+ID=0e43
+
+ON=@CREATE 
+ATTR=00010 // Static Object / No Highlight 
+COLOR=0 
+
+ON=@DCLICK 
+IF ( (<MORE>=1) && (<MORE2>=<SRC.UID>) ) 
+RETURN 0 
+ELSEIF <MORE>!=1 // If MORE isnt 1 then its a deralict chest, and can be used 
+NAME=<SRC.NAME>'s UID Chest 
+MORE=1 
+MORE2=<SRC.UID> // Encode owners UID to chest as the key 
+SRC.SYSMESSAGE This chest has been linked to you. 
+SRC.SYSMESSAGE No-one but you can open it. 
+SRC.TARG.COLOR= // Color: golden brown 
+RETURN 0 
+ELSE 
+IF <SRC.ACCOUNT.PLEVEL> > 6 
+RETURN 0 
+ELSE 
+SRC.TARG.SAY This is not your chest! // Complain  
+RETURN 1 
+ENDIF 
+
+//////////////////////////////////////////////////////////////////// 
+/// UID Chest (Main Deed) 
+////////////////////////////////////////// 
+
+[ITEMDEF i_uidchest_deed_menu] 
+NAME=Deed To A UID Chest. 
+ID=I_DEED 
+TYPE=t_normal 
+
+ON=@CREATE 
+NAME=Deed To A UID Chest. 
+COLOR=01c 
+
+ON=@DCLICK 
+DIALOG d_uid 
+
+CATEGORY=GM Items 
+SUBSECTION=Stuff 
+DESCRIPTION=UID Chest Deed Gump 
+
+//////////////////////////////////////////////////////////////////// 
+/// UID Chest (Deeds East / South Facing) 
+////////////////////////////////////////// 
+
+[ITEMDEF i_uidchest_deed_east] 
+NAME=Deed To A UID Chest
+ID=I_DEED 
+
+CATEGORY=GM Items 
+SUBSECTION=Stuff 
+DESCRIPTION=UID Chest-East 
+ON=@CREATE 
+NAME=Deed To A UID Chest
+COLOR=0cb 
+MORE=i_uidchest_east 
+
+[ITEMDEF i_uidchest_deed_south] 
+NAME=Deed To A UID Chest
+ID=I_DEED 
+
+CATEGORY=GM Items 
+SUBSECTION=Stuff 
+DESCRIPTION=UID Chest-South 
+
+ON=@CREATE 
+NAME=Deed To A UID Chest
+COLOR=0cb 
+MORE=i_uidchest_south 
+
+//////////////////////////////////////////////////////////////////// 
+/// UID Chest Dialog 
+////////////////////////////////////////// 
+
+[DIALOG d_uid] 
+0,0 
+page 1 
+resizepic 0 0 3600 400 275 
+text 20 15 295 0 
+text 20 45 29 1 
+text 20 65 29 2 
+text 20 85 152 3 
+text 20 100 152 4 
+text 20 115 152 5 
+text 20 142 33 6 
+//text 20 168 152 7 
+//text 20 185 290 8 
+//text 285 185 290 9 
+tilepic 30 207 3708 
+tilepic 312 207 2475 
+button 185 230 1150 1152 1 0 1 
+button 90 215 1153 1155 1 0 2 
+button 278 215 1153 1155 1 0 3 
+
+//text 0 273 33 10 
+
+[DIALOG d_uid TEXT] 
+<SERV.NAME> Secure UID World Containers 
+What is a UID Container? 
+------------------------- 
+This is a container that ONLY you can open. 
+It uses a unique number assigned to your character. 
+This means that it cannot be hacked or lockpicked. 
+Please dont block public areas! or it will be deleted. 
+Please choose the direction of the chest: 
+East Facing 
+South Facing 
+
+
+[DIALOG d_uid BUTTON] 
+ON=1 
+SRC.SYSMESSAGE Menu Closed. 
+RETURN 0 
+
+ON=2 
+SRC.NEWITEM=i_uidchest_deed_east // Create deed for an East Facing Chest 
+SRC.ACT.BOUNCE 
+REMOVE 
+
+ON=3 
+SRC.NEWITEM=i_uidchest_deed_south // Create deed for a South Facing Chest 
+SRC.ACT.BOUNCE 
+REMOVE 

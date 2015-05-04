@@ -1,0 +1,468 @@
+[ITEMDEF i_ice_cape] 
+ID=i_cape
+NAME=Cape of Ice
+REQSTR=20 
+TYPE=10
+WEIGHT=1 
+ARMOR=15 
+RESOURCES=
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=New Cloacks
+DESCRIPTION=Capa del Hielo
+dye=1
+
+ON=@CREATE 
+COLOR=1152
+HITPOINTS=100 
+
+ON=@CLICK
+SAYUA=color_ice 6 1 Cape Cape of Ice
+RETURN 1
+
+ON=@EQUIP
+SRC.MEDITATION=<SRC.MEDITATION> + 5.0
+CONT.SYSMESSAGE Tus habilidades aumentan!
+
+ON=@UNEQUIP 
+SRC.MEDITATION=<SRC.MEDITATION> + (-5.0)
+CONT.SYSMESSAGE Tus habilidades disminuyen...
+
+[ITEMDEF i_fire_cape] 
+ID=i_cape
+NAME=Cape of Fire
+REQSTR=20 
+TYPE=10
+WEIGHT=1 
+ARMOR=15 
+RESOURCES=
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=New Cloacks
+DESCRIPTION=Capa del Fuego
+dye=1
+
+ON=@CLICK
+SAYUA=color_fire 6 1 Cape Cape of Fire
+RETURN 1
+
+ON=@CREATE 
+COLOR=1939
+HITPOINTS=100 
+
+ON=@EQUIP 
+SRC.MAGICRESISTANCE=<SRC.MAGICRESISTANCE> + 5.0
+CONT.SYSMESSAGE Tus habilidades aumentan!
+
+ON=@UNEQUIP 
+SRC.MAGICRESISTANCE=<SRC.MAGICRESISTANCE> + (-5.0)
+CONT.SYSMESSAGE Tus habilidades disminuyen...
+
+[ITEMDEF i_Air_cape] 
+ID=i_cape
+NAME=Cape of Air
+REQSTR=20 
+TYPE=10
+WEIGHT=1 
+ARMOR=15 
+RESOURCES=
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=New Cloacks
+DESCRIPTION=Capa del Aire
+dye=1
+
+ON=@CREATE 
+COLOR=1993
+HITPOINTS=100 
+
+ON=@EQUIP 
+SRC.INSCRIPTION=<SRC.INSCRIPTION> + 5.0
+CONT.SYSMESSAGE Tus habilidades aumentan!
+RETURN 0 
+
+ON=@UNEQUIP 
+SRC.INSCRIPTION=<SRC.INSCRIPTION> + (-5.0)
+CONT.SYSMESSAGE Tus habilidades disminuyen...
+RETURN 0 
+
+ON=@CLICK
+SAYUA=1993 6 1 Cape Cape of Air
+RETURN 1
+
+[ITEMDEF i_Earth_cape] 
+ID=i_cape
+NAME=Cape of Earth
+REQSTR=20 
+TYPE=10
+WEIGHT=1 
+ARMOR=15 
+RESOURCES=
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=New Cloacks
+DESCRIPTION=Capa de la Tierra
+dye=1
+
+ON=@CREATE 
+COLOR=color_earth
+HITPOINTS=100 
+
+ON=@CLICK
+SAYUA=1940 6 1 Cape Cape of Earth
+RETURN 1
+
+ON=@EQUIP 
+SRC.healing=<SRC.Healing> + 5.0
+CONT.SYSMESSAGE Tus habilidades aumentan!
+
+ON=@UNEQUIP 
+SRC.healing=<SRC.healing> + (-5.0)
+CONT.SYSMESSAGE Tus habilidades disminuyen...
+
+[ITEMDEF i_Water_cape] 
+ID=i_cape
+NAME=Cape of Water
+REQSTR=20 
+TYPE=10
+WEIGHT=1 
+ARMOR=15 
+RESOURCES=
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=New Cloacks
+DESCRIPTION=Capa del Agua
+dye=1
+
+ON=@CREATE 
+COLOR=1915
+HITPOINTS=100 
+
+ON=@CLICK
+SAYUA=1915 6 1 Cape Cape of Water
+RETURN 1
+
+ON=@EQUIP 
+SRC.parrying=<SRC.parrying> + 5.0
+CONT.SYSMESSAGE Tus habilidades aumentan!
+
+ON=@UNEQUIP 
+SRC.parrying=<SRC.parrying> + (-5.0)
+CONT.SYSMESSAGE Tus habilidades disminuyen...
+
+[ITEMDEF i_forest_cape] 
+ID=i_cape
+NAME=Cape of Forest
+REQSTR=20 
+TYPE=10
+WEIGHT=1 
+ARMOR=15 
+RESOURCES=
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=New Cloacks
+DESCRIPTION=Capa del Bosque
+dye=1
+
+ON=@CREATE 
+COLOR=color_forest
+HITPOINTS=100 
+
+ON=@CLICK
+SAYUA=color_forest 6 1 Cape Cape of Forest
+RETURN 1
+
+ON=@EQUIP 
+SRC.Magery=<SRC.Magery> + 0.5
+CONT.SYSMESSAGE Tus habilidades aumentan! 
+
+ON=@UNEQUIP 
+SRC.Magery=<SRC.Magery> + (-0.5)
+CONT.SYSMESSAGE Tus habilidades disminuyen...
+
+////////////////////////////
+///////Dragon Mage/////////
+////////////////////////////
+[Itemdef I_Dragon_Mage_Robe] 
+ID=I_Robe
+Name=Robe of Dragon Mage
+ReqStr=20
+//Type=10
+Weight=1 
+Armor=15 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Robe
+dye=1
+
+ON=@Create
+Color=0794
+HITPOINTS={400 400}
+
+ON=@Equip
+Src.MAGERY=<Src.Magery> + (10.0)
+Cont.SysMessage Tus habilidades aumentan!
+Return 0 
+
+ON=@UnEquip 
+Src.Magery=<Src.Magery> + (-10.0)
+Cont.SysMessage Tus habilidades disminuyen
+Return 0 
+
+[Itemdef I_Dragon_Mage_Wizzard] 
+ID=5912
+Name=Wizzard's hat of Dragon Mage
+ReqStr=20
+Type=10
+Weight=1 
+Armor=150
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Wizzard's Hat
+dye=1
+
+ON=@Create
+Color=0794
+HITPOINTS=400
+
+ON=@Equip
+Src.Int=<Src.Int> + 10
+Cont.SysMessage Tus habilidades aumentan!
+Return 0 
+
+ON=@UnEquip 
+Src.Int=<Src.Int> + (-10)
+Cont.SysMessage Tus habilidades disminuyen
+Return 0 
+
+[Itemdef I_Dragon_Mage_Boots] 
+ID=I_Boots_Calf
+Name=Boots of Dragon Mage
+ReqStr=20
+Type=10
+Weight=1 
+Armor=150 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Magic Boots
+dye=1
+
+ON=@Create
+Color=0794
+HITPOINTS=400
+
+ON=@Equip 
+Src.DEX=<Src.DEX> + 10
+Cont.SysMessage Tus habilidades aumentan!
+Return 0 
+
+ON=@UnEquip 
+Src.DEX=<Src.DEX> + (-10)
+Cont.SysMessage Tus habilidades disminuyen...
+Return 0 
+
+[Itemdef I_Dragon_Mage_Cape] 
+ID=I_Cape
+Name=Cape of Dragon Mage
+ReqStr=20
+Type=10
+Weight=1 
+Armor=15 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Cape
+dye=1
+
+ON=@Create
+Color=0794
+HITPOINTS=400 
+
+ON=@Equip 
+Src.Inscription=<Src.Inscription> + 10
+Cont.SysMessage Tus habilidades aumentan!
+Return 0 
+
+ON=@UnEquip 
+Src.Inscription=<Src.Inscription> + (-10)
+Cont.SysMessage Tus habilidades disminuyen...
+RETURN 0 
+
+[Itemdef I_Dragon_Mage_Magic_Gloves] 
+ID=I_Leather_Gloves
+Name=Gloves of Dragon Mage
+ReqStr=20
+Type=10
+Weight=1 
+Armor=150 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Magic Gloves
+dye=1
+
+ON=@Create 
+Color=0794
+HITPOINTS=400 
+
+ON=@Equip 
+Src.Alchemy=<Src.Alchemy> + 10
+Src.Tailoring=<Src.Tailoring> + 10
+Cont.SysMessage Tus habilidades aumentan!
+Return 0 
+
+ON=@UnEquip 
+Src.Alchmy=<Src.Alchemy> + (-10)
+Src.Tailoring=<Src.Tailoring> + (-10)
+Cont.SysMessage Tus habilidades disminuyen...
+Return 0 
+
+[Itemdef I_Dragon_Mage_Sleeves]
+DefName=I_Dragon_Mage_Sleeves
+Name=Magic armor of Dragon Mage
+ID=I_Leather_Sleeves
+Type=T_Armor
+Weight=1
+Armor=150
+ReqStr=45
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Sleeves
+
+ON=@Create
+Color=0794
+HITPOINTS=400 
+
+ON=@EQUIP
+IF <SRC.Magery><100.0
+DROP
+EMOTE=no have sufficient Magery for this item!
+RETURN 1
+
+[Itemdef I_Dragon_Mage_Leggings]
+DefName=I_Dragon_Mage_Leggings
+Name=Magic Armor of Dragon Mage
+ID=I_Studded_Leggings
+Type=T_Armor
+Weight=1
+Armor=150
+ReqStr=45
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Leggigns
+
+ON=@Create
+ColoR=0794
+HITPOINTS=400 
+
+ON=@EQUIP
+IF <SRC.Magery><100.0
+DROP
+EMOTE=no have sufficient Magery for this item!
+RETURN 1
+
+[Itemdef I_Dragon_Mage_bone]
+DefName=I_Dragon_Mage_bone
+Name=Magic Armor of Dragon Mage
+ID=5206
+Type=T_Armor
+Weight=1
+Armor=150
+ReqStr=45
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Helment
+
+ON=@Create
+Color=0794
+HITPOINTS=400 
+
+ON=@EQUIP
+IF <SRC.Magery><100.0
+DROP
+EMOTE=no have sufficient Magery for this item!
+RETURN 1
+
+[Itemdef I_Dragon_Mage_Gorget]
+DefName=I_Dragon_Mage_Gorget
+Name=Magic Armor of Dragon Mage
+ID=I_Leather_Gorget
+Type=T_Armor
+Weight=1
+Armor=150
+ReqStr=45
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Gorget
+
+ON=@Create
+Color=0794
+HITPOINTS=400 
+
+ON=@EQUIP
+IF <SRC.Magery><100.0
+DROP
+EMOTE=no have sufficient Magery for this item!
+RETURN 1
+
+[Itemdef I_Dragon_Mage_Boots]
+DefName=I_Dragon_Mage_Boots
+Name=Magic Armor of Dragon Mage
+ID=I_Boots_Calf
+Type=T_Armor
+Weight=1
+Armor=150
+ReqStr=45
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Boots
+
+ON=@Create
+Color=0794
+HITPOINTS=400 
+
+[Itemdef I_Dragon_Mage_tunic]
+DefName=I_Dragon_Mage_tunic
+Name=Magic Armor of Dragon Mage
+ID=5204
+Type=T_armor
+Weight=1
+Armor=150
+ReqStr=45
+
+CATEGORY=Custom Items
+SUBSECTION=Items [DM]
+DESCRIPTION=Dragon Mage Tunic
+
+ON=@Create
+Color=0794
+HITPOINTS=400 
+
+ON=@EQUIP
+IF <SRC.Magery><100.0
+DROP
+EMOTE=no have sufficient Magery for this item!
+RETURN 1
+
+[Itemdef I_Dragon_Mage_Gloves]
+DefName=I_Dragon_Mage_Gloves
+Name=Magic Armor of Dragon Mage
+ID=I_Leather_Gloves
+Type=T_Armor
+Weight=1
+Armor=150
+ReqStr=45
+
+ON=@Create
+Color=0794
+HITPOINTS=400 
+
+ON=@EQUIP
+IF <SRC.Magery><100.0
+DROP
+EMOTE=no have sufficient Magery for this item!
+RETURN 1
+
+[eof]

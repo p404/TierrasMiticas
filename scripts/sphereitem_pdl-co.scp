@@ -1,0 +1,820 @@
+[itemdef 06f7]
+defname=i_lightning_platemail
+NAME=Platemail de la Luz
+CAN=MT_EQUIP
+REQSTR=120
+WEIGHT=5 
+TYPE=T_ARMOR
+ARMOR=200
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Pdl]
+DESCRIPTION=Lightning Platemail
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=1952
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_order>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a Order!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+RETURN 0 
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef 03E4]
+defname=i_lightning_platemail_leggings
+NAME=Leggings de la Luz
+CAN=MT_EQUIP
+REQSTR=120
+TYPE=T_ARMOR
+ARMOR=200
+WEIGHT=5 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Pdl]
+DESCRIPTION=Lightning Platemail Legs
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=1952
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_order>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a Order!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef i_lightning_platemail_gauntlets]
+id=i_platemail_gloves
+defname=i_lightning_platemail_gauntlets
+NAME=Gauntlets de la Luz
+CAN=MT_EQUIP
+armor=200
+REQSTR=120
+TYPE=T_ARMOR
+WEIGHT=5 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Pdl]
+DESCRIPTION=Lightning Platemail Gauntlets
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=1952
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_order>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a Order!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef i_lightning_platemail_gorget]
+id=i_platemail_gorget
+defname=i_lightning_platemail_gorget
+NAME=Platemail de la Luz
+CAN=MT_EQUIP
+TYPE=T_ARMOR
+REQSTR=120
+WEIGHT=5 
+ARMOR=200
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Pdl]
+DESCRIPTION=Lightning Gorget
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=1952
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_order>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a Order!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef 03a1]
+defname=i_lightning_platemail_arms
+NAME=Arms de la Luz
+TYPE=T_ARMOR
+CAN=MT_EQUIP
+ARMOR=200
+REQSTR=120
+WEIGHT=5 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Pdl]
+DESCRIPTION=Lightning Platemail
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=1952
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_order>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a Order!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef i_lightning_plate_helm]
+id=i_platemail_helm
+defname=i_lightning_plate_helm
+NAME=Helm de la Luz
+CAN=MT_EQUIP
+armor=200
+REQSTR=120
+WEIGHT=5 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Pdl]
+DESCRIPTION=Lightning Plate Helm
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=1952
+ATTR=00024
+MOREY=241.6
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_order>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a Order!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef 0643]
+defname=i_sword_lightning
+CAN=MT_EQUIP
+REQSTR=120
+TYPE=T_WEAPON_SWORD
+DAM=4,32
+WEIGHT=5 
+
+[itemdef i_lightning_sword]
+defname=i_lightning_sword
+ID=0643
+NAME=Espada de la Luz
+CAN=MT_EQUIP
+REQSTR=120
+TYPE=T_WEAPON_SWORD
+DAM=4,32
+WEIGHT=5 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Pdl]
+DESCRIPTION=Lightning Sword
+
+ON=@Create 
+HITPOINTS={350 350} 
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_order>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a Order!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef 0820]
+defname=i_lightning_shield
+NAME=Escudo de la Luz
+CAN=MT_EQUIP
+REQSTR=120
+armor=54
+WEIGHT=5 
+TYPE=T_SHIELD
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Pdl]
+DESCRIPTION=Lightning Shield
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=1952
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_order>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a Order!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef 06FB]
+defname=i_lightning_staff
+NAME=Baston de la Luz
+CAN=MT_EQUIP
+REQSTR=90
+WEIGHT=5
+TWOHANDS=Y
+TYPE=t_weapon_mace_staff 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Pdl]
+DESCRIPTION=Lightning Staff
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=1953
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_order>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a Order!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@TIMER 
+IF (<LINK.MANA><<LINK.INT>) 
+LINK.MANA=<LINK.MANA>+3
+CONT.EFFECT=3,i_fx_sparkle_2,10,20,10 
+TIMER=2
+else 
+TIMER=0 
+ENDIF
+RETURN 1 
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+/////////////////////////
+///////////CO///////////
+/////////////////////////
+
+[itemdef i_Dark_platemail]
+id=06f7
+defname=i_Dark_platemail
+NAME=Platemail de la Obscuridad
+CAN=MT_EQUIP
+REQSTR=120
+WEIGHT=5 
+TYPE=T_ARMOR
+ARMOR=200
+
+CATEGORY=Custom Items
+SUBSECTION=Items [CO]
+DESCRIPTION=Dark Platemail
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=color_o_blackrock
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_pk>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a PK!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef i_dark_platemail_leggings]
+id=03E4
+defname=i_dark_platemail_leggings
+NAME=Leggings de la Obscuridad
+CAN=MT_EQUIP
+REQSTR=120
+TYPE=T_ARMOR
+ARMOR=200
+WEIGHT=5 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [CO]
+DESCRIPTION=Dark Platemail Legs
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=color_o_blackrock
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_pk>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a PK!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef i_dark_platemail_gauntlets]
+id=i_platemail_gloves
+defname=i_dark_platemail_gauntlets
+NAME=Gauntlets de la Obscuridad
+CAN=MT_EQUIP
+armor=200
+REQSTR=120
+TYPE=T_ARMOR
+WEIGHT=5 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [CO]
+DESCRIPTION=Dark Platemail Gountlets
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=color_o_blackrock
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_pk>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a PK!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef i_dark_platemail_gorget]
+id=i_platemail_gorget
+defname=i_dark_platemail_gorget
+NAME=Platemail de la Obscuridad
+CAN=MT_EQUIP
+TYPE=T_ARMOR
+REQSTR=120
+WEIGHT=5 
+ARMOR=200
+
+CATEGORY=Custom Items
+SUBSECTION=Items [CO]
+DESCRIPTION=Dark Platemail Gorget
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=color_o_blackrock
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_pk>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a PK!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef i_dark_platemail_Arms]
+id=03a1
+defname=i_dark_platemail_arms
+NAME=Arms de la Obscuridad
+TYPE=T_ARMOR
+CAN=MT_EQUIP
+ARMOR=200
+REQSTR=120
+WEIGHT=5 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [CO]
+DESCRIPTION=Dark Platemail Arms
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=color_o_blackrock
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_pk>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a PK!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef i_dark_plate_helm]
+id=i_platemail_helm
+defname=i_dark_plate_helm
+NAME=Helm de la Obscuridad
+CAN=MT_EQUIP
+armor=200
+REQSTR=120
+WEIGHT=5 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [CO]
+DESCRIPTION=Dark Plate Helm
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=color_o_blackrock
+ATTR=00024
+MOREY=241.6
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_pk>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a PK!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef 2197]
+defname=i_dark_sword
+NAME=Espada de la Obscuridad
+CAN=MT_EQUIP
+REQSTR=120
+TYPE=T_WEAPON_SWORD
+DAM=4,32
+WEIGHT=5 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [CO]
+DESCRIPTION=Dark Sword
+
+ON=@Create 
+HITPOINTS={350 350} 
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_pk>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a PK!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[itemdef 1602]
+defname=i_dark_shield
+NAME=Escudo de la Obscuridad
+CAN=MT_EQUIP
+REQSTR=120
+armor=54
+WEIGHT=5 
+TYPE=T_SHIELD
+
+CATEGORY=Custom Items
+SUBSECTION=Items [CO]
+DESCRIPTION=Dark Shield
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=color_o_blackrock
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_pk>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a PK!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0
+
+[itemdef i_dark_staff]
+id=i_staff_black
+defname=i_dark_staff
+NAME=Baston de la Obscuridad
+CAN=MT_EQUIP
+REQSTR=90
+WEIGHT=5
+TWOHANDS=Y
+TYPE=t_weapon_mace_staff 
+VALUE=
+RESOURCES=
+SKILLMAKE=
+
+CATEGORY=Custom Items
+SUBSECTION=Items [CO]
+DESCRIPTION=Dark Staff
+
+ON=@Create 
+HITPOINTS={350 350} 
+COLOR=2772
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+              IF (!<SRC.RESTEST 1 i_mem_pk>)
+              drop
+              effect=3,i_fx_curse,6,15,1
+              Message=<src.name> you are not a PK!
+              sfx snd_SPELL_CURSE
+	   Timer=1
+              endif           
+RETURN 0 
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@TIMER 
+IF (<LINK.MANA><<LINK.INT>) 
+LINK.MANA=<LINK.MANA>+6
+CONT.EFFECT=3,i_fx_sparkle_2,10,20,10 
+TIMER=5
+else 
+TIMER=0 
+ENDIF
+RETURN 1 
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+ENDIF

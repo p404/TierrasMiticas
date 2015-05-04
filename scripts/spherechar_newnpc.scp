@@ -1,0 +1,2133 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Jueves, Septiembre 14, 2006
+// NPCs Nuevos
+VERSION=1.6
+
+[CHARDEF 0C0]
+DEFNAME=c_troll_w_bosque
+NAME=Troll del Bosque
+SOUND=snd_MONSTER_GARGYL1
+ICON=
+ANIM=078c7f
+CAN=MT_WALK|MT_USEHANDS|MT_RUN
+DAM=5,15
+ARMOR=16
+RESOURCES=6 i_ribs_raw, 1 i_troll_hide
+FOODTYPE=15 t_meat_raw
+
+//ALIGNMENT=EVIL
+SHELTER=r_forests,r_mountains
+AVERSIONS=t_TRAP,r_civilization
+
+CATEGORY=Monsters
+SUBSECTION=Ettins, Ogres, Trolls, Cyclops, and Titans
+DESCRIPTION=Troll (Bosque)
+
+ON=@Create	// stuff that happens to the created instance of a char.
+NPC=brain_monster
+STR={125 160}
+DEX={91 115}
+INT={160 185}
+
+PARRYING={45.0 55.0}
+MAGICRESISTANCE={45.0 60.0}
+TACTICS={60.0 70.0}
+WRESTLING={70.0 80.0}
+
+FAME=450
+KARMA={-100 -199}
+
+ON=@NPCRestock
+ITEM=random_potion
+ITEM=random_potion
+ITEM=random_jewel
+ITEM=tm_rocks,R2
+ITEM=i_gold,{50 150}
+
+[CHARDEF 0BA]
+DEFNAME=c_vampire
+NAME=Vampire
+//TITLE=the Vampire
+SOUND=634
+ICON=
+ANIM=03fbc7f
+CAN=MT_WALK|MT_FLY|MT_USEHANDS
+DAM=150,170
+ARMOR=150
+RESOURCES=9 i_ribs_raw, 8 i_reag_daemon_bone, 4 i_vampire_hide
+FOODTYPE=
+DESIRES=i_gold
+SHELTER=r_dungeon,r_caves
+AVERSIONS=r_civilization
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Vampire
+
+ON=@Create
+NPC=brain_monster
+FAME={1400}
+KARMA={-5000 -5999}
+STR={2800 3050}
+DEX={650 725}
+INT={300 325}
+
+PARRYING={100.0 100.0}
+MAGERY={100.0 100.0}
+MAGICRESISTANCE={100.0 100.0}
+TACTICS={100.0 100.0}
+WRESTLING={100.0 100.0}
+
+//ALIGNMENT=EVIL
+
+ON=@NPCRestock
+ITEM=random_potion,{ 2 3 }
+ITEM=random_potion,{ 2 3 }
+ITEM=ttm_lvl4,R99
+ITEM=random_scroll,{ 2 3 }
+ITEM=random_reagent,{ 4 6 }
+ITEM=random_reagent,{ 4 6 }
+ITEM=random_jewel
+ITEM=random_jewel
+ITEM=random_magic_wands
+ITEM=random_magic_wands
+ITEM=i_scroll_blank,{ 1 2 }
+ITEM=i_gold,{150 600}
+
+[CHARDEF 0BB]
+DEFNAME=c_titan2
+NAME=Titan
+SOUND=snd_MONSTER_TITAN1
+ICON=
+ANIM=078c7f
+DAM=50,60
+ARMOR=20
+RESOURCES=10 i_ribs_raw, 2 i_titan_hide
+CAN=MT_WALK|MT_USEHANDS
+FOODTYPE=15 t_meat_raw
+SHELTER=r_forests,r_mountains
+DESIRES=c_titan
+AVERSIONS=r_civilization
+CATEGORY=Monsters
+SUBSECTION=Ettins, Ogres, Trolls, Cyclops, and Titans
+DESCRIPTION=Titan
+
+ON=@Create
+NPC=brain_monster
+
+STR={1385 1405}
+DEX={125 145}
+INT={280 305}
+
+PARRYING={60.0 80.0}
+MAGERY={85.0 100.0}
+MAGICRESISTANCE={80.0 95.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0}
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+//ALIGNMENT=EVIL
+
+ON=@NPCRestock
+ITEM=Random_Potion
+ITEM=Random_Potion
+ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 3
+ITEM=i_gold,{300 600}
+
+[CHARDEF 018F]
+DEFNAME=c_rhino
+NAME=Rhino
+SOUND=79
+ICON=
+
+DAM=5,19
+ARMOR=16
+RESOURCES=8 i_ore_copper
+
+//ALIGNMENT=EVIL
+CAN=MT_WALK|MT_USEHANDS|MT_RUN
+FOODTYPE=i_ore_copper
+SHELTER=r_dungeon
+AVERSIONS=r_civilization
+
+ON=@Create
+COLOR=0815
+STR={215 295}
+DEX={56 80}
+INT={66 85}
+
+PARRYING={45.0 60.0}
+MAGICRESISTANCE={25.0 40.0}
+TACTICS={75.0 80.0}
+WRESTLING={60.0 80.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-1400 -1499}
+
+ON=@NPCRestock
+ITEM=i_ore_copper,{3 8}
+
+CATEGORY=Monsters
+SUBSECTION=Giant Insects and Reptiles
+DESCRIPTION=Rhino
+
+[CHARDEF 0B6]
+DEFNAME=c_scarabman
+NAME=Scarabman
+SOUND=79
+ICON=
+
+DAM=5,19
+ARMOR=16
+RESOURCES=8 i_ore_copper
+
+//ALIGNMENT=EVIL
+CAN=MT_WALK|MT_USEHANDS|MT_RUN
+FOODTYPE=i_ore_copper
+SHELTER=r_dungeon
+AVERSIONS=r_civilization
+
+ON=@Create
+COLOR=
+STR={245 295}
+DEX={56 80}
+INT={66 85}
+
+PARRYING={45.0 60.0}
+MAGICRESISTANCE={25.0 40.0}
+TACTICS={75.0 80.0}
+WRESTLING={60.0 80.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-4000 -4999}
+
+ON=@NPCRestock
+ITEM=i_ore_bronze,{2 7}
+
+CATEGORY=Monsters
+SUBSECTION=Giant Insects and Reptiles
+DESCRIPTION=Scarabman
+
+[CHARDEF 0C5]
+DEFNAME=c_undead_dragon
+NAME=Undead Dragon
+SOUND=snd_MONSTER_DRAGON1
+ICON=
+ANIM=03f9c7f
+CAN=MT_WALK|MT_FLY|MT_FIRE_IMMUNE
+DAM=100,119
+ARMOR=220
+RESOURCES=50 i_ribs_raw,8 i_reag_dragon_blood, {76 84} i_bone
+FOODTYPE=80 t_meat_raw,t_gem
+DESIRES=i_gold
+SHELTER=r_caves,r_dungeon
+AVERSIONS=r_water,r_civilization
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Dragons and Drakes
+DESCRIPTION=Dragon (Undead)
+
+ON=@Create
+NPC=brain_dragon
+FAME={3000 9000}
+KARMA={-5000 -5999}
+
+STR={7500 8500}
+DEX={7500 8500}
+INT={7500 8500}
+
+PARRYING={55.0 95.0}
+MAGICRESISTANCE={99.0 100.0}
+TACTICS={98.0 100.0}
+WRESTLING={90.0 93.0}
+TAMING=
+
+//ALIGNMENT=CHAOTIC
+
+ON=@NPCRestock
+ITEM=i_blessed_metal
+ITEM=random_potion,{ 2 3 }
+ITEM=random_scroll,{2 3}
+ITEM=random_scroll,{2 3}
+ITEM=random_jewel
+ITEM=random_jewel
+ITEM=i_scroll_blank,{ 1 2 }
+ITEM=i_gold,{1200 1400}
+
+[CHARDEF 0BD]
+DEFNAME=c_Mandragora
+NAME=Mandragora
+SOUND=snd_MONSTER_Reaper1
+ICON=i_pet_mandragora
+ANIM=06147f
+CAN=MT_Walk|MT_RUN|MT_USEHANDS
+DAM=3,30
+ARMOR=9
+//RESOURCES=10 t_eerie_stuff
+FOODTYPE=24 t_meat_raw
+SHELTER=r_jungle,r_swamp,r_forests
+AVERSIONS=r_civilization
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Mandragora
+
+ON=@CREATE
+NPC=brain_monster
+FAME={200 1000}
+KARMA={-999 -2000}
+//ALIGNMENT=CHAOTIC
+
+STR={315 345}
+DEX={26 45}
+INT={26 40}
+
+PARRYING={15.0 25.0}
+MAGICRESISTANCE={15.0 20.0}
+TACTICS={45.0 60.0}
+WRESTLING={45.0 60.0}
+HIDING={75.0 80.0}
+
+ON=@NPCRestock
+ITEM={ i_log 1 i_board 1 },{ 5 10 }
+ITEM=i_reag_executioners_cap,{ 2 5 }
+ITEM=i_gold,{ 0 50 }
+
+[CHARDEF 0C4]
+DEFNAME=c_minotauro
+DEFNAME2=c_minotaur
+NAME=Minotauro
+SOUND=snd_animals_bull1
+ICON=i_pet_minotauro
+ANIM=078c7f
+DAM=5,17
+ARMOR=68
+RESOURCES=10 i_ribs_raw, {1 2} i_minotaur_hide
+CAN=MT_WALK|MT_USEHANDS
+FOODTYPE=15 t_meat_raw
+SHELTER=r_forests,r_mountains
+DESIRES=i_gold
+AVERSIONS=r_civilization
+CATEGORY=Monsters
+SUBSECTION=Ettins, Ogres, Trolls, Cyclops, and Titans
+DESCRIPTION=Minotauro
+
+ON=@CREATE
+NPC=brain_monster
+STR={5750 6050}
+DEX={1000 1150}
+INT={1000 1150}
+
+PARRYING={80.0 100.0}
+MAGICRESISTANCE={80.0 100.0}
+TACTICS={80.0 100.0}
+WRESTLING={80.0 100.0}
+
+FAME={300 8000}
+KARMA={-3000 -3999}
+
+//ALIGNMENT=EVIL
+
+ON=@NPCRestock
+ITEM={ rich_monster_backpack 1 filthy_rich_monster_backpack 3 }
+ITEM={ rich_monster_backpack 1 filthy_rich_monster_backpack 3 }
+ITEM={ rich_monster_backpack 1 filthy_rich_monster_backpack 3 }
+ITEM={ rich_gold_pile 1 filthy_rich_gold_pile 3 }
+ITEM={ rich_gold_pile 1 filthy_rich_gold_pile 3 }
+ITEM={ rich_gold_pile 1 }
+ITEM=random_jewel, {1 4}, R2
+ITEM=random_jewel, {1 4}, R2
+ITEM=random_jewel, {1 4}, R2
+ITEM=random_jewel, {1 4}, R2
+ITEM=i_gold,{4200 5900}
+ITEM=TTM_LVL5,R99
+
+[CHARDEF 0C2]
+DEFNAME=c_critter
+NAME=Critter
+SOUND=540
+ICON=i_pet_critter
+ANIM=07bc7f
+DAM=15,25
+ARMOR=20
+//RESOURCES=10 t_eerie_stuff
+CAN=MT_WALK|MT_USEHANDS
+FOODTYPE=
+SHELTER=r_dungeon,r_caves,r_spooky
+DESIRES=t_bone,i_gold,t_wand,t_reagent
+BLOODCOLOR=colors_green
+
+CATEGORY=Monsters
+SUBSECTION=Misscellaneous
+DESCRIPTION=Critter
+
+ON=@CREATE
+NPC=brain_monster
+FAME={600 500}
+KARMA={-4000 -499}
+//ALIGNMENT=EVIL
+STR={435 545}
+DEX={66 85}
+INT={175 205}
+
+PARRYING={55.0 65.0}
+MAGERY={70.0 80.0}
+MAGICRESISTANCE={70.0 90.0}
+TACTICS={70.0 90.0}
+//SPELLCIRCLES=2-8
+
+// knows undead type spells.
+ITEMNEWBIE=i_spellbook
+ADDSPELL=s_Clumsy
+ADDSPELL=s_Weaken
+ADDSPELL=s_feeblemind
+ADDSPELL=s_Harm
+ADDSPELL=s_magic_arrow
+ADDSPELL=s_fireball
+ADDSPELL=s_poison
+ADDSPELL=s_curse
+ADDSPELL=s_paralyze
+ADDSPELL=s_dispel
+ADDSPELL=s_summon_undead
+ADDSPELL=s_animate_dead
+ADDSPELL=s_fire_bolt
+ADDSPELL=s_Hallucination
+
+ON=@GETHIT
+SAY=Pudrete en el infierno <src.name>!
+
+ON=@DEATH
+SAY=Nunca descansaras <src.name>!
+
+ON=@NPCRestock
+ITEM=RANDOM_REAGENT,{ 4 6 }
+ITEM=RANDOM_REAGENT,{ 4 6 }
+ITEM=RANDOM_JEWEL
+ITEM=RANDOM_MAGIC_WANDS
+ITEM=i_gold,{700 800}
+
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Critter
+
+[CHARDEF 0B8]
+DEFNAME=c_azote_archer
+NAME=Azote del Infierno
+SOUND=snd_animals_sheep1
+ICON=
+ANIM=078c7f
+DAM=4,18
+ARMOR=20
+RESOURCES=10 i_ribs_raw
+CAN=MT_WALK|MT_USEHANDS
+FOODTYPE=15 t_meat_raw
+SHELTER=r_forests,r_mountains
+DESIRES=
+AVERSIONS=r_civilization
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Azote (Archer)
+
+ON=@CREATE
+COLOR=1979
+NPC=brain_monster
+
+STR={200}
+DEX={120}
+INT={280 305}
+
+PARRYING={40.0 50.0}
+archery={100.0 100.0}
+MAGICRESISTANCE={80.0 95.0}
+TACTICS={60.0 80.0}
+WRESTLING={40.0 50.0}
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+//ALIGNMENT=EVIL
+
+ON=@NPCRestock
+ITEM=i_GOLD,{80 100}
+ITEM=i_bow_del_infierno
+
+[CHARDEF 0B7]
+DEFNAME=c_azote
+NAME=Azote del Infierno
+SOUND=snd_animals_sheep1
+ICON=
+ANIM=078c7f
+DAM=4,18
+ARMOR=20
+RESOURCES=10 i_ribs_raw
+CAN=MT_WALK|MT_USEHANDS
+FOODTYPE=15 t_meat_raw
+SHELTER=r_forests,r_mountains
+DESIRES=
+AVERSIONS=r_civilization
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Azote (mace)
+
+ON=@CREATE
+cOLOR=1979
+NPC=brain_monster
+
+STR={200}
+DEX={200}
+INT={280 305}
+
+PARRYING={40.0 50.0}
+MAGICRESISTANCE={80.0 95.0}
+TACTICS={60.0 80.0}
+WRESTLING={40.0 50.0}
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+//ALIGNMENT=EVIL
+
+ON=@DAMAGE
+SOUND=snd_spell_explosion
+SRC.NEWITEM=i_fx_explode 
+SRC.ACT.ATTR=attr_static|attr_decay 
+SRC.ACT.TIMER=2 
+SRC.ACT.P=<SRC.P> 
+SRC.ACT.MOVE s 
+SRC.ACT.MOVE e 
+VAR.X=RAND(14) 
+IF X==0 
+SRC.HITS=<SRC.HITS>0 
+ENDIF 
+RETURN 0
+
+ON=@NPCRestock
+ITEM=i_GOLD,{80 100}
+ITEM=i_pantalones_de_azote
+
+[CHARDEF 0A3]
+DEFNAME=c_dragon_forest
+NAME=Dragon Forest
+SOUND=snd_MONSTER_DRAGON1
+ICON=
+ANIM=03f9c7f
+CAN=MT_WALK|MT_FLY|MT_FIRE_IMMUNE
+DAM=9,29
+ARMOR=220
+RESOURCES=50 i_ribs_raw,8 i_reag_dragon_blood, 4 i_dragon_hide
+FOODTYPE=80 t_meat_raw,t_gem
+DESIRES=i_gold
+SHELTER=r_caves,r_dungeon
+AVERSIONS=r_water,r_civilization
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Dragons and Drakes
+DESCRIPTION=Dragon (Forest)
+
+ON=@Create
+NPC=brain_dragon
+FAME={3000 9000}
+KARMA={-5000 -5999}
+
+COLOR=1947
+STR={8700 9000}
+DEX={7500 8500}
+INT={7500 8500}
+
+PARRYING={55.0 95.0}
+MAGICRESISTANCE={99.0 100.0}
+TACTICS={98.0 100.0}
+WRESTLING={90.0 93.0}
+TAMING=
+
+//ALIGNMENT=CHAOTIC
+//SPELLCIRCLES=6
+
+ON=@NPCRestock
+ITEM=i_blessed_metal
+ITEM=random_potion,{ 2 3 }
+ITEM=random_scroll,{2 3}
+ITEM=random_scroll,{2 3}
+ITEM=random_jewel
+ITEM=random_jewel
+ITEM=i_scroll_blank,{ 1 2 }
+ITEM=i_gold,{1200 1400}
+
+[CHARDEF 0BF]
+DEFNAME=c_dragon_sun
+NAME=Dragon Sun
+SOUND=snd_MONSTER_DRAGON1
+ANIM=03f9c7f
+CAN=MT_WALK|MT_FLY|MT_FIRE_IMMUNE
+DAM=9,29
+ARMOR=220
+RESOURCES=50 i_ribs_raw,8 i_reag_dragon_blood, 4 i_dragon_hide
+FOODTYPE=80 t_meat_raw,t_gem
+DESIRES=i_gold
+SHELTER=r_caves,r_dungeon
+AVERSIONS=r_water,r_civilization
+TEVENTS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Dragons and Drakes
+DESCRIPTION=Dragon (Sun)
+
+ON=@Create
+NPC=brain_dragon
+FAME={3000 9000}
+KARMA={-5000 -5999}
+
+COLOR=
+STR={8700 9000}
+DEX={7500 8500}
+INT={7500 8500}
+
+PARRYING={55.0 95.0}
+MAGICRESISTANCE={99.0 100.0}
+TACTICS={98.0 100.0}
+WRESTLING={90.0 93.0}
+TAMING=150.0
+
+//ALIGNMENT=CHAOTIC
+//SPELLCIRCLES=6
+
+ON=@NPCRestock
+ITEM=i_blessed_metal
+ITEM=random_potion,{ 2 3 }
+ITEM=random_scroll,{2 3}
+ITEM=random_scroll,{2 3}
+ITEM=random_jewel
+ITEM=random_jewel
+ITEM=i_scroll_blank,{ 1 2 }
+ITEM=i_gold,{1200 1400}
+
+[CHARDEF 0C7]
+DEFNAME=c_goro
+NAME=Deamon Goro
+SOUND=snd_Monster_gargyl1
+ICON=i_pet_goro
+ANIM=079c7f
+DAM=80,95
+ARMOR=100
+RESOURCES=1 i_cerebro_goro
+CAN=MT_WALK|MT_Usehands|MT_RUN
+FOODTYPE=15 t_arock,t_coin,t_ore,t_ingot
+SHELTER=r_mountains,r_caves,r_dungeon
+DESIRES=r_caves
+//SPELLCIRCLES=3-8
+
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Goro
+
+ON=@Create
+NPC=brain_monster
+FAME={1000 6000}
+KARMA={-3000 -3999}
+
+//ALIGNMENT=EVIL
+STR={4000 4550}
+DEX={5800 5000}
+INT={4700 5050}
+
+PARRYING={80.0 100.0}
+MAGICRESISTANCE={50.0 65.0}
+TACTICS={100.0 100.0}
+WRESTLING={100.0 100.0}
+MAGERY={100.0 100.0}
+
+ON=@NPCRestock
+ITEM=random_potion
+ITEM=random_potion
+ITEM=random_jewel
+ITEM=tm_boulders,R8
+ITEM=tm_rocks,R2
+ITEM=tm_rocks,R2
+ITEM=tm_rocks,R2
+ITEM=i_gold,{1050 1550}
+
+[CHARDEF c_m_icefiend]
+DEFNAME=c_m_icefiend
+NAME=Ice Fiend
+ID=c_DAEMON
+SOUND=snd_MONSTER_DAEMON1
+ICON=i_pet_DAEMON
+DAM=100,105
+ARMOR=110
+RESOURCES=9 i_ribs_raw, 8 i_reag_daemon_bone, 4 i_ice_fiend_hide
+CAN=MT_FLY|MT_WALK
+SHELTER=r_caves,r_dungeon
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Ice Fiend
+
+ON=@Create
+COLOR=color_ice
+STR={7000 7250}
+DEX={175 195}
+INT={200 225}
+//ALIGNMENT=EVIL
+//SPELLCIRCLES=5,7
+
+PARRYING={75.0 85.0}
+MAGERY={80.0 90.0}
+MAGICRESISTANCE={80.0 90.0}
+TACTICS={80.0 90.0}
+WRESTLING={80.0 100.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+
+ON=@NPCRestock
+ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 4
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=i_gold,{3500 4000}
+
+[CHARDEF c_m_firefiend]
+DEFNAME=c_m_firefiend
+NAME=Fire Fiend
+ID=c_DAEMON
+SOUND=snd_MONSTER_DAEMON1
+ICON=i_pet_DAEMON
+DAM=3,24
+ARMOR=110
+RESOURCES=9 i_ribs_raw, 8 i_reag_daemon_bone, 4 i_Fire_fiend_hide
+CAN=MT_FLY|MT_WALK
+SHELTER=r_caves,r_dungeon
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Fire Fiend
+
+ON=@Create
+COLOR=1925
+STR={7000 7250}
+DEX={175 195}
+INT={200 225}
+//ALIGNMENT=EVIL
+//SPELLCIRCLES=5,7
+
+PARRYING={75.0 85.0}
+MAGERY={80.0 90.0}
+MAGICRESISTANCE={80.0 90.0}
+TACTICS={80.0 90.0}
+WRESTLING={80.0 100.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+
+ON=@NPCRestock
+ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 4
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=i_gold,{3500 4000}
+
+[CHARDEF c_m_airfiend]
+DEFNAME=c_m_airfiend
+NAME=Air Fiend
+ID=c_DAEMON
+SOUND=snd_MONSTER_DAEMON1
+ICON=i_pet_DAEMON
+DAM=3,24
+ARMOR=110
+RESOURCES=9 i_ribs_raw, 8 i_reag_daemon_bone, 4 i_Air_fiend_hide
+CAN=MT_FLY|MT_WALK
+SHELTER=r_caves,r_dungeon
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Air Fiend
+
+ON=@Create
+COLOR=012345678
+STR={7000 7250}
+DEX={175 195}
+INT={200 225}
+//ALIGNMENT=EVIL
+//SPELLCIRCLES=5,7
+
+PARRYING={75.0 85.0}
+MAGERY={80.0 90.0}
+MAGICRESISTANCE={80.0 90.0}
+TACTICS={80.0 90.0}
+WRESTLING={80.0 100.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+
+ON=@NPCRestock
+ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 4
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=i_gold,{3500 4000}
+
+[CHARDEF c_m_earthfiend]
+DEFNAME=c_m_earthfiend
+NAME=Earth Fiend
+ID=c_DAEMON
+SOUND=snd_MONSTER_DAEMON1
+ICON=i_pet_DAEMON
+DAM=3,24
+ARMOR=110
+RESOURCES=9 i_ribs_raw, 8 i_reag_daemon_bone, 4 i_earth_fiend_hide
+CAN=MT_FLY|MT_WALK
+SHELTER=r_caves,r_dungeon
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Earth Fiend
+
+ON=@Create
+COLOR=color_earth
+STR={7000 7250}
+DEX={175 195}
+INT={200 225}
+//ALIGNMENT=EVIL
+//SPELLCIRCLES=5,7
+
+PARRYING={75.0 85.0}
+MAGERY={80.0 90.0}
+MAGICRESISTANCE={80.0 90.0}
+TACTICS={80.0 90.0}
+WRESTLING={80.0 100.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+
+ON=@NPCRestock
+ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 4
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=i_gold,{3500 4000}
+
+[CHARDEF c_m_forestfiend]
+DEFNAME=c_m_forestfiend
+NAME=Forest Fiend
+ID=c_DAEMON
+SOUND=snd_MONSTER_DAEMON1
+ICON=i_pet_DAEMON
+DAM=3,24
+ARMOR=110
+RESOURCES=9 i_ribs_raw, 8 i_reag_daemon_bone, 4 i_Forest_fiend_hide
+CAN=MT_FLY|MT_WALK
+SHELTER=r_caves,r_dungeon
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Forest Fiend
+
+ON=@Create
+COLOR=1947
+STR={7000 7250}
+DEX={175 195}
+INT={200 225}
+//ALIGNMENT=EVIL
+//SPELLCIRCLES=5,7
+
+PARRYING={75.0 85.0}
+MAGERY={80.0 90.0}
+MAGICRESISTANCE={80.0 90.0}
+TACTICS={80.0 90.0}
+WRESTLING={80.0 100.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+
+ON=@NPCRestock
+ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 4
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=i_gold,{3500 4000}
+
+[CHARDEF c_m_waterfiend]
+DEFNAME=c_m_waterfiend
+NAME=Water Fiend
+ID=c_DAEMON
+SOUND=snd_MONSTER_DAEMON1
+ICON=i_pet_DAEMON
+DAM=3,24
+ARMOR=100
+RESOURCES=9 i_ribs_raw, 8 i_reag_daemon_bone, 4 i_water_fiend_hide
+CAN=MT_FLY|MT_WALK
+SHELTER=r_caves,r_dungeon
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+
+CATEGORY=Monsters
+SUBSECTION=Daemons & Gargoyles
+DESCRIPTION=Water Fiend
+
+ON=@Create
+COLOR=2869
+STR={7000 7250}
+DEX={175 195}
+INT={200 225}
+//ALIGNMENT=EVIL
+//SPELLCIRCLES=5,7
+
+PARRYING={75.0 85.0}
+MAGERY={80.0 90.0}
+MAGICRESISTANCE={80.0 90.0}
+TACTICS={80.0 90.0}
+WRESTLING={80.0 100.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+
+ON=@NPCRestock
+ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 4
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=RANDOM_SCROLL
+ITEM=i_gold,{3500 4000}
+
+[CHARDEF C_BULL_OF_LIDIA]
+ID=00e8
+NAME=Bull of Lidia
+SOUND=snd_ANIMALS_BULL1
+ICON=i_pet_BULL
+ANIM=017ff
+DAM=4,9
+ARMOR=14
+RESOURCES=50 i_ribs_raw,15 i_hide
+CAN=MT_WALK|MT_RUN
+FOODTYPE=25 t_grain, 25 I_HAY, 64 t_grass
+SHELTER=r_plains,r_stables
+DESIRES=c_cow_bw,c_cow_brown,c_bull_brown_lt,c_bull_brown_dk
+AVERSIONS=e_carnivores3
+DESCRIPTION=Bull (Lidia)
+SUBSECTION=Land (Domestic)
+CATEGORY=Animals
+
+ON=@Create
+NPC=brain_Monster
+FAME=10
+KARMA=-1000
+//ALIGNMENT=NEUTRAL
+COLOR=1
+
+STR={225 270}
+DEX={185 200}
+INT={47 75}
+PARRYING={43.0 55.0}
+MAGICRESISTANCE={18.0 25.0}
+TACTICS={68.0 85.0}
+WRESTLING={40.0 57.0}
+
+[CHARDEF C_ICE_GOLEM]
+ID=C_copper_golem
+NAME=Ice Golem
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=
+ANIM=079dff
+DAM=150,165 
+ARMOR=50
+can=mt_walk|mt_run 
+SHELTER=r_mountains
+DESIRES=r_mountains
+BLOODCOLOR=colors_white
+
+CATEGORY=Monsters
+SUBSECTION=Elementals
+DESCRIPTION=Ice Golem
+
+ON=@Create
+Color=color_ice
+NPC=brain_monster
+FAME={1000 6000}
+KARMA={-4000 -4999}
+PARRYING={100.0 100.0)
+MAGICRESISTANCE={100.0 100.0}
+TACTICS={100.0 100.0}
+WRESTLING={100.0 100.0)
+
+//ALIGNMENT=EVIL
+STR={370 450}
+DEX={200 360} 
+INT={285 360} 
+
+PARRYING={65.0 75.0}
+MAGERY={60.0 75.0}
+MAGICRESISTANCE={60.0 75.0}
+TACTICS={60.0 80.0}
+WRESTLING={60.0 80.0}
+//SPELLCIRCLES=3 7
+
+ON=@NPCRestock
+ITEM=random_potion
+ITEM=random_potion
+ITEM=random_scroll,{1 3}
+ITEM=random_scroll,{1 3}
+ITEM=i_scroll_blank, { 1 2 }
+ITEM=i_gold, {400 500}
+ITEM=ttm_lvl2,R99 //Tattered Treasure Map Level 2
+
+ON=@DEATH
+BODY=c_elem_air
+
+[CHARDEF C_FIRE_GOLEM]
+ID=c_copper_golem
+NAME=Fire Golem
+SOUND=snd_ELEMENTL_ERTHEL1
+ICON=
+ANIM=079dff
+DAM=150,165 
+ARMOR=50
+can=mt_walk|mt_run 
+SHELTER=r_mountains
+DESIRES=r_mountains
+BLOODCOLOR=1981
+
+CATEGORY=Monsters
+SUBSECTION=Elementals
+DESCRIPTION=Fire Golem
+
+ON=@Create
+Color=1925
+NPC=brain_monster
+FAME={1000 6000}
+KARMA={-4000 -4999}
+PARRYING={100.0 100.0)
+MAGICRESISTANCE={100.0 100.0}
+TACTICS={100.0 100.0}
+WRESTLING={100.0 100.0)
+
+//ALIGNMENT=EVIL
+STR={370 450}
+DEX={200 360} 
+INT={285 360} 
+
+PARRYING={65.0 75.0}
+MAGERY={60.0 75.0}
+MAGICRESISTANCE={60.0 75.0}
+TACTICS={60.0 80.0}
+WRESTLING={60.0 80.0}
+//SPELLCIRCLES=3 7
+
+ON=@NPCRestock
+ITEM=random_potion
+ITEM=random_potion
+ITEM=random_scroll,{1 3}
+ITEM=random_scroll,{1 3}
+ITEM=i_scroll_blank, { 1 2 }
+ITEM=i_gold, {400 500}
+ITEM=ttm_lvl2,R99 //Tattered Treasure Map Level 2
+
+ON=@DEATH
+body=c_elem_air
+
+[CHARDEF C_EARTH_SEA]
+ID=005f
+NAME=Earth Sea
+SOUND=snd_MONSTER_SEASERP1
+ICON=
+CAN=MT_SWIm|MT_RUN|MT_WALK|mt_usehans
+ANIM=078c7f
+DAM=5,15
+ARMOR=15
+RESOURCES=50 i_ribs_raw,8 i_reag_serpent_scale
+FOODTYPE=25 t_meat_raw,t_fish
+DESIRES=t_ship
+SHELTER=r_water
+AVERSIONS=r_civilization
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Earth Sea
+
+ON=@Create
+NPC=brain_monster
+Color=1940
+FAME={2000 6000}
+KARMA={-3000 -3999}
+//ALIGNMENT=NEUTRAL
+
+STR={300 500}
+DEX={100}
+INT={1000}
+
+PARRYING={65.0 75.0}
+MAGICRESISTANCE={60.0 75.0}
+TACTICS={60.0 70.0}
+WRESTLING={60.0 75.0}
+FISHING=80.0
+
+ON=@NPCRestock
+
+[CHARDEF c_h_firce_m]
+DEFNAME=c_h_Firce_m
+NAME=Firce
+armor=90
+ID=C_MAN
+
+CAN=MT_EQUIP|MT_USEHANDS|MT_WALK
+//ALIGNMENT=EVIL
+DESIRES=i_gold,e_notoriety
+AVERSIONS=t_TRAP,t_eerie_stuff
+
+
+TSPEECH=jobFirce
+TSPEECH=spk_Firce
+
+TEVENTS=e_Human_HearUnk
+TEVENTS=e_Human_Needs
+TEVENTS=e_Human_ConvInit
+TEVENTS=e_Human_Greet
+TEVENTS=e_Human_Space
+TEVENTS=e_Human_Refuse
+TEVENTS=e_Human_Environ
+
+ON=@Create
+COLOR=colors_skin
+STR={500 570}
+DEX={487 557}
+INT={487 557}
+
+PARRYING={80.0 100.0}
+SWORDSMANSHIP={80.0 100.0}
+WRESTLING={80.0 100.0}
+MAGICRESISTANCE={80.0 100.0}
+TACTICS={80.0 100.0}
+
+NPC=BRAIN_MONSTER
+
+KARMA={-3000 -4000}
+FAME={2500 4000}
+
+ITEMNEWBIE=random_male_hair
+COLOR=color_ice
+ITEMNEWBIE=random_facial_hair
+COLOR=color_fire
+
+ON=@NPCRestock
+ITEM=i_platemail_gloves
+COLOR=color_ice
+ITEM=i_platemail_gorget
+COLOR=color_fire
+ITEM=i_shield_heater
+COLOR=color_ice
+ITEM=i_platemail_chest
+COLOR=color_ice
+ITEM=i_platemail_arms
+COLOR=color_fire
+ITEM=i_platemail_leggings
+COLOR=color_fire
+ITEM=i_gold {578 956}
+ITEM=i_sword_viking_might
+
+ON=@DAMAGE
+src.spelleffect=s_poison 15
+
+CATEGORY=Civilized
+SUBSECTION=Miscellaneous (Evil)
+DESCRIPTION=Firce (male)
+
+[CHARDEF c_h_firce_f]
+DEFNAME=c_h_Firce_f
+NAME=Firce
+armor=90
+ID=C_WOMAN
+
+CAN=MT_EQUIP|MT_USEHANDS|MT_WALK
+//ALIGNMENT=EVIL
+DESIRES=i_gold,e_notoriety
+AVERSIONS=t_TRAP,t_eerie_stuff
+
+
+TSPEECH=jobFirce
+TSPEECH=spk_Firce_f
+
+TEVENTS=e_Human_HearUnk
+TEVENTS=e_Human_Needs
+TEVENTS=e_Human_ConvInit
+TEVENTS=e_Human_Greet
+TEVENTS=e_Human_Space
+TEVENTS=e_Human_Refuse
+TEVENTS=e_Human_Environ
+
+ON=@Create
+COLOR=colors_skin
+STR={500 570}
+DEX={487 557}
+INT={487 557}
+
+PARRYING={80.0 100.0}
+SWORDSMANSHIP={80.0 100.0}
+WRESTLING={80.0 100.0}
+MAGICRESISTANCE={80.0 100.0}
+TACTICS={80.0 100.0}
+
+NPC=BRAIN_MONSTER
+
+KARMA={-3000 -4000}
+FAME={2500 4000}
+
+ITEMNEWBIE=random_male_hair
+COLOR=color_ice
+
+ON=@NPCRestock
+ITEM=i_platemail_gloves
+COLOR=color_ice
+ITEM=i_platemail_gorget
+COLOR=color_fire
+ITEM=i_shield_heater
+COLOR=color_ice
+ITEM=i_platemail_chest
+COLOR=color_ice
+ITEM=i_platemail_arms
+COLOR=color_fire
+ITEM=i_platemail_leggings
+COLOR=color_fire
+ITEM=i_gold {578 956}
+ITEM=i_sword_viking_might
+
+ON=@DAMAGE
+src.spelleffect=s_poison 15
+
+CATEGORY=Civilized
+SUBSECTION=Miscellaneous (Evil)
+DESCRIPTION=Firce (Female)
+
+[SPEECH spk_Firce]
+ON=Hi
+ON=Greet
+ON=Hello
+ON=Hail
+ON=Hola
+ON=Oa
+	SAY=Hola, como estas?
+
+ON=Bn
+ON=Bien
+ON=Good
+         SAY=Que bien...
+
+ON=Y tu?
+ON=Y Ud?
+        SAY=Bien tambien...
+
+ON=Bye
+ON=Chao
+ON=Adios
+ON=byebye
+ON=bye bye
+ON=Goodbye
+ON=Farewell
+	SAY=Adios.
+	Adios
+	return 1
+
+ON=Pelea
+ON=Attack
+ON=Ataca
+ON=Atacame
+          SAY=Te arrepentiras!
+          src.attack
+ON=Corran!
+ON=Escapen!
+	SAY=Escapan de mi? Corran imbeciles!
+           src.attack
+ON=Firce
+	SAY=Me llamabas <src.name>?  Aqui estoy!
+
+ON=Gay
+          SAY=Y vo?
+          src.attack
+
+[SPEECH spk_Firce_f]
+ON=Hi
+ON=Greet
+ON=Hello
+ON=Hail
+ON=Hola
+ON=Oa
+	SAY=Hola, como estas?
+
+ON=Bn
+ON=Bien
+ON=Good
+         SAY=Que bien...
+
+ON=Y tu?
+ON=Y Ud?
+        SAY=Bien tambien...
+
+ON=Bye
+ON=Chao
+ON=Adios
+ON=byebye
+ON=bye bye
+ON=Goodbye
+ON=Farewell
+	SAY=Adios.
+	Adios
+	return 1
+
+ON=Pelea
+ON=Attack
+ON=Ataca
+ON=Atacame
+          SAY=Te arrepentiras!
+          src.attack
+
+ON=Corran!
+ON=Escapen!
+	SAY=Escapan de mi? Corran imbeciles!
+           src.attack
+ON=Firce
+	SAY=Me llamabas <src.name>?  Aqui estoy!
+
+ON=Gaysha
+          SAY=Y vo? 
+          src.attack
+[CHARDEF c_h_garab_m]
+DEFNAME=c_h_garab_m
+NAME=#NAMES_Pers 
+armor=120
+ID=C_MAN
+
+CAN=MT_EQUIP|MT_USEHANDS|MT_WALK
+//ALIGNMENT=EVIL
+DESIRES=i_gold,e_notoriety
+AVERSIONS=t_TRAP,t_eerie_stuff
+
+
+TSPEECH=spk_Garab
+
+TEVENTS=e_Human_HearUnk
+TEVENTS=e_Human_Needs
+TEVENTS=e_Human_ConvInit
+TEVENTS=e_Human_Greet
+TEVENTS=e_Human_Space
+TEVENTS=e_Human_Refuse
+TEVENTS=e_Human_Environ
+
+ON=@Create
+COLOR=colors_skin
+STR={500 570}
+DEX={487 557}
+INT={487 557}
+
+PARRYING={80.0 100.0}
+SWORDSMANSHIP={80.0 100.0}
+WRESTLING={80.0 100.0}
+MAGICRESISTANCE={80.0 100.0}
+TACTICS={80.0 100.0}
+
+NPC=BRAIN_MONSTER
+
+KARMA={-3000 -4000}
+FAME={2500 4000}
+
+ITEMNEWBIE=random_male_hair
+
+ON=@DEATH
+SAY=Conchatumadre!
+
+ON=@NPCRestock
+ITEM=random_pants
+COLOR=colors_all
+ITEM=random_hats
+COLOR=colors_all
+ITEM=random_shoes
+COLOR=colors_all
+ITEM={i_shirt_plain i_doublet i_shirt_fancy}
+COLOR=colors_all
+ITEM=i_dagger
+ITEM=i_gold {578 956}
+
+CATEGORY=Civilized
+SUBSECTION=Miscellaneous (Evil)
+DESCRIPTION=Loco (male)
+
+[SPEECH spk_Garab]
+ON=Hi
+ON=Greet
+ON=Hello
+ON=Hail
+ON=Hola
+ON=Oa
+	SAY=Hola, loco... queri morir?
+           src.attack
+
+ON=Estabn
+ON=Estabien
+ON=Good
+         SAY=Cagaste conchatumare
+         src.attack
+
+ON=imbecil
+ON=aweonao
+ON=conchatumare
+ON=conchatumadre
+ON=rq
+ON=ql
+        SAY=Te vay pal cielo no ma!
+        src.attack
+ON=Bye
+ON=Chao
+ON=Adios
+ON=byebye
+ON=bye bye
+ON=Goodbye
+ON=Farewell
+	SAY=Te vay pero sin las astillas!
+          src.attack
+	Te vay pero sin las astillas!
+	return 1
+
+ON=Pelea
+ON=Attack
+ON=Ataca
+ON=Atacame
+          SAY=Shaa loco quiere quedar leyenda?
+          src.attack
+ON=Adios
+	SAY=Te voy a sacar la shusha!
+          src.attack
+ON=<src.name>
+	SAY=Que te pasa?
+           src.attack
+ON=Gay
+          SAY=Y vo conchatumare?
+          src.attack
+
+[NAMES NAMES_pers]
+13
+Nicolas
+Ignacio
+Jonatan
+Hernan
+Matias
+Lucho
+Rucio
+Brayan
+Palta
+Franco
+Francisco
+Ruben
+Slyker
+
+[Chardef 0BE] 
+DEFNAME=C_guardian
+SOUND=snd_ANIMALS_LION1
+Name=Guardian
+can=mt_walk|mt_run|MT_USEHANDS
+DAM=20,21 
+ARMOR=50 
+
+ON=@Create 
+STR={600 750} 
+DEX={200 360} 
+INT={285 360} 
+FAME={8000 9000} 
+KARMA=-9000 
+
+PARRYING={50.0 70.0)
+MAGICRESISTANCE={50.0 70.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@NPCRESTOCK
+ITEM=i_gold,523
+
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Guardian(Purp)
+
+[CHARDEF C_FIRE_DRAGON]
+NAME=Fire Dragon
+ID=003b
+SOUND=snd_MONSTER_DRAGON1
+ICON=i_pet_dragon
+CAN=MT_WALK|MT_FLY|MT_RUN
+DAM=9,33
+ARMOR=120
+FOODTYPE=80 t_meat_raw
+DESIRES=i_gold
+RESOURCES=99 i_ribs_raw,8 i_reag_dragon_blood,4 i_dragon_hide
+SHELTER=r_caves,r_dungeon
+AVERSIONS=r_civilization,r_water
+
+CATEGORY=Monsters
+SUBSECTION=Dragons and Drakes
+DESCRIPTION=Fire Dragon
+
+ON=@Create
+NPC=brain_dragon
+COLOR=1925
+STR={8500 9000}
+DEX={7500 8500}
+INT={7500 8500}
+//ALIGNMENT=EVIL
+//SPELL_CIRCLE=7,8
+
+PARRYING={55.0 95.0}
+MAGERY={99.0 100.0}
+MAGICRESISTANCE={99.0 100.0}
+TACTICS={99.0 100.0}
+WRESTLING={90.0 93.0}
+TAMING=100.0
+
+FAME={3000 9000}
+KARMA={-4999 -5999}
+
+ON=@NPCRestock
+ITEM={i_blessed_metal 1 random_fireberg 1 }
+ITEM=Random_Potion
+ITEM=Random_Potion
+ITEM=TTM_LVL4,R99 //Tattered Treasure Map Level 3
+ITEM=i_gold,{600 1400}
+
+[CHARDEF c_eagle_ice]
+NAME=Ice Eagle
+ID=c_eagle
+SOUND=snd_ANIMALS_EAGLE1
+ICON=i_pet_EAGLE
+CAN=MT_FLY|MT_WALK|MT_FIRE_IMMUNE|MT_USEHANDS
+DAM=20,25
+ARMOR=25
+RESOURCES=2 i_ribs_raw, 36 i_feather
+FOODTYPE=5 t_meat_raw
+SHELTER=r_mountains
+
+ON=@Create
+COLOR=color_ice
+STR={1300}
+DEX={700}
+INT={200}
+//ALIGNMENT=NEUTRAL
+//SPELLCIRCLES=4,7
+
+MAGERY={100.0}
+MAGICRESISTANCE={0}
+TACTICS={90.0}
+WRESTLING={100.0}
+
+NPC=brain_monster
+
+FAME={1000 9000}
+KARMA={-5000 -9000}
+
+ON=@NPCRestock
+
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Ice Phoenix
+
+[CHARDEF C_MARANELLO]
+NAME=Maranello
+ID=00cc
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+
+DAM=9,29
+ARMOR=50
+RESOURCES=25 i_ribs_raw,10 i_hide
+
+//ALIGNMENT=EVIL
+CAN=MT_WALK
+FOODTYPE=5 t_meat_raw
+SHELTER=r_caves,r_dungeon
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+
+ON=@Create
+COLOR=1953
+STR={2175 2400}
+DEX={86 105}
+INT={385 425}
+
+PARRYING={55.0 95.0}
+MAGICRESISTANCE={99.0 100.0}
+TACTICS={98.0 100.0}
+WRESTLING={90.0 93.0}
+TAMING=100.0
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+
+ON=@NPCRestock
+
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Maranello
+
+[Chardef 0C6] 
+DEFNAME=C_guardian_forest
+ICON=i_pet_guardian_forest
+SOUND=snd_ANIMALS_LION1
+Name=Guardian
+can=mt_walk|mt_run|MT_USEHANDS
+DAM=20,21 
+ARMOR=50 
+
+ON=@Create
+color=color_forest 
+STR={600 750} 
+DEX={200 360} 
+INT={285 360} 
+FAME={8000 9000} 
+KARMA=-9000 
+
+PARRYING={50.0 70.0)
+MAGICRESISTANCE={50.0 70.0}
+TACTICS={70.0 90.0}
+WRESTLING={70.0 90.0)
+
+ON=@NPCRestock
+ITEM=i_gold,482
+
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Guardian(Forest)
+
+////////////////////////////////
+///////////Air//////////////////
+///////////////////////////////
+
+[CHARDEF 03AE]
+DEFNAME=c_air_bow
+NAME=Air Bow
+DAM=4,18
+ARMOR=20
+CAN=MT_WALK|MT_USEHANDS
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Air Bow
+SOUND=snd_WEAPONS_CROSSBOW
+
+ON=@Create
+COLOR=20230
+NPC=brain_monster
+
+STR={200}
+DEX={120}
+INT={280 305}
+
+PARRYING={40.0 50.0}
+archery={100.0 100.0}
+MAGICRESISTANCE={80.0 95.0}
+TACTICS={60.0 80.0}
+WRESTLING={40.0 50.0}
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+//ALIGNMENT=EVIL
+
+ON=@NPCRestock
+ITEM=i_GOLD,{80 100}
+ITEM=i_bow
+
+ON=@DEATH
+BODY=c_elem_air
+
+[CHARDEF 03E0]
+DEFNAME=c_air_shield
+NAME=Air Shield
+DAM=4,18
+ARMOR=20
+CAN=MT_WALK|MT_USEHANDS
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Air Shield
+SOUND=snd_HITS_HIT01
+
+ON=@Create
+COLOR=20230
+NPC=brain_monster
+STR={200}
+DEX={120}
+INT={280 305}
+
+PARRYING=100.0
+MAGICRESISTANCE={80.0 95.0}
+TACTICS={60.0 80.0}
+WRESTLING={80.0 90.0}
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+//ALIGNMENT=EVIL
+
+ON=@NPCRestock
+ITEM=i_GOLD,{80 100}
+ITEM=i_shield_kite_metal
+
+ON=@DEATH
+BODY=c_elem_air
+
+[CHARDEF 024C]
+DEFNAME=c_air_axe
+NAME=Air Axe
+DAM=15,20
+ARMOR=20
+CAN=MT_WALK|MT_USEHANDS
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Air Axe
+SOUND=snd_WEAPONS_AXE01
+
+ON=@Create
+COLOR=20230
+NPC=brain_monster
+
+STR={270}
+DEX={120}
+INT={280 305}
+
+PARRYING={40.0 50.0}
+Swordsmanship={100.0 100.0}
+MAGICRESISTANCE={80.0 95.0}
+TACTICS={80.0 90.0}
+WRESTLING={40.0 50.0}
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+//ALIGNMENT=EVIL
+
+ON=@NPCRestock
+ITEM=i_GOLD,{80 100}
+ITEM=i_axe
+
+ON=@DEATH
+BODY=c_elem_air
+
+[CHARDEF 02B6]
+DEFNAME=c_air_exec_axe
+NAME=Air Executioner Axe
+DAM=15,20
+ARMOR=20
+CAN=MT_WALK|MT_USEHANDS
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Air Executioner Axe
+SOUND=snd_WEAPONS_AXE01
+
+ON=@Create
+COLOR=20230
+NPC=brain_monster
+
+STR={270}
+DEX={120}
+INT={280 305}
+
+PARRYING={40.0 50.0}
+Swordsmanship={100.0 100.0}
+MAGICRESISTANCE={80.0 95.0}
+TACTICS={80.0 90.0}
+WRESTLING={40.0 50.0}
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+//ALIGNMENT=EVIL
+
+ON=@NPCRestock
+ITEM=i_GOLD,{80 100}
+ITEM=i_Axe_exec
+
+ON=@DEATH
+BODY=c_elem_air
+
+[CHARDEF 0270]
+DEFNAME=c_air_halberd
+NAME=Air Halberd
+DAM=20,27
+ARMOR=20
+CAN=MT_WALK|MT_USEHANDS
+CATEGORY=Monsters
+SUBSECTION=Miscellaneous
+DESCRIPTION=Air Halberd
+sound=snd_WEAPONS_AXE01
+
+ON=@Create
+COLOR=20230
+NPC=brain_monster
+
+STR={300}
+DEX={120}
+INT={280 305}
+
+PARRYING={40.0 50.0}
+Swordsmanship={100.0 100.0}
+MAGICRESISTANCE={80.0 95.0}
+TACTICS={80.0 90.0}
+WRESTLING={40.0 50.0}
+
+FAME={100 2000}
+KARMA={-5000 -5999}
+//ALIGNMENT=EVIL
+
+ON=@NPCRestock
+ITEM=i_GOLD,{80 100}
+ITEM=i_halberd
+
+ON=@DEATH
+BODY=c_elem_air
+
+[CHARDEF C_silver_mustang]
+NAME=Silver Mustang
+ID=00cc
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+
+DAM=9,29
+ARMOR=30
+RESOURCES=25 i_ribs_raw,10 i_hide
+
+//ALIGNMENT=EVIL
+CAN=MT_WALK
+FOODTYPE=5 t_meat_raw
+SHELTER=r_caves,r_dungeon
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+
+ON=@Create
+COLOR=color_o_silver
+STR={2175 2400}
+DEX={86 105}
+INT={385 425}
+
+PARRYING={55.0 95.0}
+MAGICRESISTANCE={99.0 100.0}
+TACTICS={98.0 100.0}
+WRESTLING={90.0 93.0}
+TAMING=100.0
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={5000 5999}
+
+CATEGORY=Animals
+SUBSECTION=Miscellaneous
+DESCRIPTION=Mustang (Silver)
+
+[CHARDEF C_mytheril_mustang]
+NAME=Mytheril Mustang
+ID=00cc
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+
+DAM=9,29
+ARMOR=30
+RESOURCES=25 i_ribs_raw,10 i_hide
+
+//ALIGNMENT=EVIL
+CAN=MT_WALK
+FOODTYPE=5 t_meat_raw
+SHELTER=r_caves,r_dungeon
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+
+ON=@Create
+COLOR=color_o_mytheril
+STR={2175 2400}
+DEX={86 105}
+INT={385 425}
+
+PARRYING={55.0 95.0}
+MAGICRESISTANCE={99.0 100.0}
+TACTICS={98.0 100.0}
+WRESTLING={90.0 93.0}
+TAMING=100.0
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={5000 5999}
+
+CATEGORY=Animals
+SUBSECTION=Miscellaneous
+DESCRIPTION=Mustang (Mytheril)
+
+[CHARDEF C_blackrock_mustang]
+NAME=Blackrock Mustang
+ID=00cc
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+
+DAM=9,29
+ARMOR=30
+RESOURCES=25 i_ribs_raw,10 i_hide
+
+//ALIGNMENT=EVIL
+CAN=MT_WALK
+FOODTYPE=5 t_meat_raw
+SHELTER=r_caves,r_dungeon
+DESIRES=i_gold
+AVERSIONS=r_civilization,r_water
+
+ON=@Create
+COLOR=color_o_blackrock
+STR={2175 2400}
+DEX={86 105}
+INT={385 425}
+
+PARRYING={55.0 95.0}
+MAGICRESISTANCE={99.0 100.0}
+TACTICS={98.0 100.0}
+WRESTLING={90.0 93.0}
+TAMING=100.0
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={5000 5999}
+
+CATEGORY=Animals
+SUBSECTION=Miscellaneous
+DESCRIPTION=Mustang (Blackrock)
+
+////////////////////////////////////////////////////////////
+///////////// NPCS Capas de elementos//////////////////////
+///////////////////////////////////////////////////////////
+
+[CHARDEF c_h_lordice_m]
+DEFNAME=c_h_lordice_m
+NAME=Ice
+ARMOR=100
+ID=C_MAN
+
+CAN=MT_EQUIP|MT_USEHANDS|MT_WALK
+//ALIGNMENT=EVIL
+DESIRES=i_gold,e_notoriety
+AVERSIONS=t_TRAP,t_eerie_stuff
+
+ON=@Create
+COLOR=color_ice
+STR={2000 2570}
+DEX={2000 2570}
+INT={2000 2570}
+
+MAGERY={100.0 100.0}
+WRESTLING={100.0 100.0}
+MAGICRESISTANCE={80.0 100.0}
+TACTICS={100.0 100.0}
+
+NPC=BRAIN_MONSTER
+
+KARMA={-10000 -10000}
+FAME={10000 10000}
+
+ITEMNEWBIE=random_male_hair
+ITEMNEWBIE=random_facial_hair
+ITEMNEWBIE=I_Dragon_Mage_Robe
+ITEMNEWBIE=I_Dragon_Mage_boots
+ITEMNEWBIE=I_Dragon_Mage_wizzard
+ITEMNEWBIE=I_Dragon_Mage_gloves
+ITEMNEWBIE=I_Dragon_Mage_gorget
+
+//SPELLCIRCLES=5,8
+
+ON=@NPCRestock
+ITEM=i_ice_cape
+ITEM=i_GOLD,{880 1000}
+ITEM=random_jewel
+ITEM=random_scroll
+ITEM=random_scroll
+CONTAINER=i_bag
+ITEM=i_reag_black_pearl,15
+ITEM=i_reag_blood_moss,15
+ITEM=i_reag_garlic,50
+ITEM=i_reag_ginseng,15
+ITEM=i_reag_mandrake_root,15
+ITEM=i_reag_nightshade,15
+ITEM=i_reag_sulfur_ash,15
+ITEM=i_reag_spider_silk,15
+
+CATEGORY=Civilized
+SUBSECTION=Miscellaneous (Evil)
+DESCRIPTION=Lord Ice
+
+[CHARDEF c_h_lordfire_m]
+DEFNAME=c_h_lordfire_m
+NAME=Fire
+ARMOR=100
+ID=C_MAN
+
+CAN=MT_EQUIP|MT_USEHANDS|MT_WALK
+//ALIGNMENT=EVIL
+DESIRES=i_gold,e_notoriety
+AVERSIONS=t_TRAP,t_eerie_stuff
+
+ON=@Create
+COLOR=color_fire
+STR={2000 2570}
+DEX={2000 2570}
+INT={2000 2570}
+
+MAGERY={100.0 100.0}
+WRESTLING={100.0 100.0}
+MAGICRESISTANCE={80.0 100.0}
+TACTICS={100.0 100.0}
+
+NPC=BRAIN_MONSTER
+
+KARMA={-10000 -10000}
+FAME={10000 10000}
+
+ITEMNEWBIE=random_male_hair
+ITEMNEWBIE=random_facial_hair
+ITEMNEWBIE=I_Dragon_Mage_Robe
+ITEMNEWBIE=I_Dragon_Mage_boots
+ITEMNEWBIE=I_Dragon_Mage_wizzard
+ITEMNEWBIE=I_Dragon_Mage_gloves
+ITEMNEWBIE=I_Dragon_Mage_gorget
+
+//SPELLCIRCLES=5,8
+
+ON=@NPCRestock
+ITEM=i_fire_cape
+ITEM=i_GOLD,{880 1000}
+ITEM=random_jewel
+ITEM=random_scroll
+ITEM=random_scroll
+CONTAINER=i_bag
+ITEM=i_reag_black_pearl,15
+ITEM=i_reag_blood_moss,15
+ITEM=i_reag_garlic,50
+ITEM=i_reag_ginseng,15
+ITEM=i_reag_mandrake_root,15
+ITEM=i_reag_nightshade,15
+ITEM=i_reag_sulfur_ash,15
+ITEM=i_reag_spider_silk,15
+
+CATEGORY=Civilized
+SUBSECTION=Miscellaneous (Evil)
+DESCRIPTION=Lord Fire
+
+////////////////////////
+adsadsdsa
+
+[CHARDEF c_lizardman_mage]
+DEFNAME=c_lizardman_mage
+ID=c_lizardman
+NAME=#NAMES_LIZARDMAN the Lizard Man Mage
+SOUND=snd_MONSTER_LZRDMN1
+ICON=i_pet_LIZMAN
+ANIM=078c7f
+DAM=3,9
+ARMOR=14
+RESOURCES=6 i_ribs_raw,12 i_hide
+CAN=MT_WALK|MT_RUN|MT_USEHANDS
+FOODTYPE=15 t_meat_raw
+SHELTER=r_dungeon,r_swamp
+DESIRES=i_gold,c_LIZARDMAN
+AVERSIONS=e_carnivores3
+CATEGORY=Monsters
+SUBSECTION=Lizardmen
+DESCRIPTION=Lizardman Mage
+
+ON=@Create
+NPC=brain_monster
+
+//ALIGNMENT=EVIL
+//SPELLCIRCLES=5,8
+
+FAME={100 1500}
+KARMA={-4000 -4999}
+
+STR={396 420}
+DEX={386 415}
+INT={336 460}
+
+PARRYING={60.0 80.0}
+MagicResistance={60.0 80.0}
+TACTICS={60.0 80.0}
+WRESTLING={60.0 80.0}
+MAGERY={80.0 100.0}
+
+ON=@NPCRestock
+ITEM=i_gold,{250 450}
+ITEM=RANDOM_SCROLL,{ 2 3 }
+ITEM=RANDOM_REAGENT,{ 4 6 }
+ITEM=RANDOM_REAGENT,{ 4 6 }
+ITEM=RANDOM_MAGIC_WANDS,R99
+
+[CHARDEF c_ratman_mage]
+DEFNAME=c_ratman_mage
+NAME=#NAMES_RATMAN the Rat Man Mage
+ID=c_ratman
+SOUND=snd_MONSTER_RATMAN1
+ICON=i_pet_RATMAN
+ANIM=078c7f
+DAM=3,6
+ARMOR=14
+CAN=MT_WALK|MT_RUN|MT_USEHANDS
+RESOURCES=6 i_ribs_raw, 3 i_rat_hide
+FOODTYPE=15 t_meat_raw,i_cheese_wheel
+SHELTER=r_caves,r_dungeon,r_swamp,r_desert
+DESIRES=c_ratman,c_ratman_w_sword,c_ratman_w_mace
+CATEGORY=Monsters
+SUBSECTION=Ratmen
+DESCRIPTION=Rat Man (Mage)
+
+ON=@Create
+NPC=brain_monster
+COLOR=08000|RAND(COLOR_DYE_HIGH) // shirt color
+
+STR={396 420}
+DEX={386 415}
+INT={336 460}
+
+PARRYING={60.0 80.0}
+MagicResistance={60.0 80.0}
+TACTICS={60.0 80.0}
+WRESTLING={60.0 80.0}
+MAGERY={80.0 100.0}
+
+FAME={100 1500}
+KARMA={-4000 -4999}
+//ALIGNMENT=EVIL
+//SPELLCIRCLES=5,8
+
+ON=@NPCRestock
+ITEM=i_gold,{250 450}
+ITEM=RANDOM_SCROLL,{ 2 3 }
+ITEM=RANDOM_REAGENT,{ 4 6 }
+ITEM=RANDOM_REAGENT,{ 4 6 }
+ITEM=RANDOM_MAGIC_WANDS,R99

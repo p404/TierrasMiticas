@@ -1,0 +1,3326 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2005
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualisación: Sabado, Julio 30, 2005
+// Armaduras de Mago
+VERSION=1.03
+// Orden
+// Rat
+// Terathan
+// Troll
+// Gargoyle
+// Cyclops
+// Titan
+// Demon
+// Dragon
+// Fiends
+// Minotaur
+
+/////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////Rat Armor//////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_rat_armor_sleeves]
+DEFNAME=i_rat_armor_sleeves
+NAME=leather sleeves
+ID=i_leather_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=35
+REQSTR=30
+SKILLMAKE=TAILORING 55.0
+RESOURCES=4 i_rat_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Rat
+DESCRIPTION=Rat Leather Sleeves
+
+ON=@Create
+	COLOR=543
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.MAGERY><30.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+
+[ITEMDEF i_rat_amor_gorget]
+DEFNAME=i_rat_armor_gorget
+NAME=leather gorget
+ID=i_leather_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=35
+REQSTR=30
+SKILLMAKE=TAILORING 52.0
+RESOURCES=4 i_rat_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Rat
+DESCRIPTION=Rat Leather Gorget
+
+ON=@Create
+	COLOR=543
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><30.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_rat_armor_Leggings]
+DEFNAME=i_rat_armor_Leggings
+NAME=leather leggings
+ID=i_leather_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=35
+REQSTR=30
+SKILLMAKE=TAILORING 57.3
+RESOURCES=10 i_rat_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Rat
+DESCRIPTION=Rat Leather Leggings
+
+ON=@Create
+	COLOR=543
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><30.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_rat_armor_Tunic]
+DEFNAME=i_rat_armor_Tunic
+NAME=leather tunic
+ID=i_leather_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=35
+REQSTR=30
+SKILLMAKE=TAILORING 58.0
+RESOURCES=12 i_rat_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Rat
+DESCRIPTION=Rat Leather Tunic
+
+ON=@Create
+	COLOR=543
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><30.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_rat_armor_Gloves]
+DEFNAME=i_rat_armor_Gloves
+NAME=leather gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=35
+REQSTR=30
+SKILLMAKE=TAILORING 53.5
+RESOURCES=3 i_rat_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Rat
+DESCRIPTION=Rat Leather Gloves
+
+ON=@Create
+	COLOR=543
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><30.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Rat_armor_Cap]
+DEFNAME=i_rat_armor_Cap
+NAME=leather cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=32
+REQSTR=30
+SKILLMAKE=TAILORING 54.0
+RESOURCES=2 i_rat_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Rat
+DESCRIPTION=Rat Leather Cap
+
+ON=@Create
+	COLOR=543
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><30.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_rat_armor_wizzard]
+DEFNAME=i_rat_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=35
+REQSTR=30
+SKILLMAKE=TAILORING 63.2
+RESOURCES=12 i_rat_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Rat
+DESCRIPTION=Rat Wizzard's hat
+
+ON=@Create
+	COLOR=543
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><30.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF I_rat_armor_boots]
+DEFNAME=i_rat_armor_boots 
+ID=i_Boots_calf
+NAME=boots
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=35
+REQSTR=30
+SKILLMAKE=TAILORING 50.1
+RESOURCES=4 i_rat_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Rat
+DESCRIPTION=Rat Boots
+
+ON=@Create
+	COLOR=543
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><30.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////Terathan armor///////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_Terathan_armor_sleeves]
+DEFNAME=i_Terathan_armor_sleeves
+NAME=leather sleeves
+ID=i_leather_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=40
+REQSTR=30
+SKILLMAKE=TAILORING 65.0, t_sewing_kit
+RESOURCES=4 i_Terathan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Terathan
+DESCRIPTION=Terathan Leather Sleeves
+
+ON=@Create
+	COLOR=62
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><50.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Terathan_armor_gorget]
+DEFNAME=i_Terathan_armor_gorget
+NAME=leather gorget
+ID=i_leather_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=40
+REQSTR=30
+SKILLMAKE=TAILORING 62.0, t_sewing_kit
+RESOURCES=4 i_Terathan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Terathan
+DESCRIPTION=Terathan Leather Gorget
+
+ON=@Create
+	COLOR=62
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><50.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Terathan_armor_Leggings]
+DEFNAME=i_Terathan_armor_Leggings
+NAME=leather leggings
+ID=i_leather_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=40
+REQSTR=30
+SKILLMAKE=TAILORING 67.3, t_sewing_kit
+RESOURCES=10 i_Terathan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Terathan
+DESCRIPTION=Terathan Leather Leggings
+
+ON=@Create
+	COLOR=62
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><50.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Terathan_armor_Tunic]
+DEFNAME=i_Terathan_armor_Tunic
+NAME=leather tunic
+ID=i_leather_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=40
+REQSTR=30
+SKILLMAKE=TAILORING 68.0, t_sewing_kit
+RESOURCES=12 I_Terathan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Terathan
+DESCRIPTION=Terathan Leather Tunic
+
+ON=@Create
+	COLOR=62
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><50.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Terathan_armor_Gloves]
+DEFNAME=i_Terathan_armor_Gloves
+NAME=leather gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=40
+REQSTR=30
+SKILLMAKE=TAILORING 63.5, t_sewing_kit
+RESOURCES=3 i_Terathan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Terathan
+DESCRIPTION=Terathan Leather Gloves
+
+ON=@Create
+	COLOR=62
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><50.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Terathan_armor_Cap]
+DEFNAME=i_Terathan_armor_Cap
+NAME=leather cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=39
+REQSTR=30
+SKILLMAKE=TAILORING 64.0, t_sewing_kit
+RESOURCES=2 i_Terathan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Terathan
+DESCRIPTION=Terathan Leather Cap
+
+ON=@Create
+	COLOR=62
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><50.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_terathan_armor_wizzard]
+DEFNAME=i_Terathan_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=40
+REQSTR=45
+SKILLMAKE=TAILORING 73.2, t_sewing_kit
+RESOURCES=12 i_terathan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Terathan
+DESCRIPTION=Terathan Wizzard's hat
+
+ON=@Create
+	COLOR=62
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><50.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_terathan_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=40
+REQSTR=45
+SKILLMAKE=TAILORING 60.0, t_sewing_kit
+RESOURCES=4 i_Terathan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Terathan
+DESCRIPTION=Terathan Boots
+
+ON=@Create
+	COLOR=62
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><50.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////Troll armor/////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_troll_armor_sleeves]
+DEFNAME=i_troll_armor_sleeves
+NAME=leather sleeves
+ID=i_leather_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=43
+REQSTR=45
+SKILLMAKE=TAILORING 67.0, t_sewing_kit
+RESOURCES=4 i_troll_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Troll
+DESCRIPTION=Troll Leather Sleeves
+
+ON=@Create
+	COLOR=1953
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_troll_armor_Leggings]
+DEFNAME=i_troll_armor_Leggings
+NAME=leather leggings
+ID=i_leather_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=43
+REQSTR=45
+SKILLMAKE=TAILORING 69.5, t_sewing_kit
+RESOURCES=10 i_troll_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Troll
+DESCRIPTION=Troll Leather Leggings
+
+ON=@Create
+	COLOR=1953
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_troll_armor_Tunic]
+DEFNAME=i_troll_armor_Tunic
+NAME=leather tunic
+ID=i_leather_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=43
+REQSTR=45
+SKILLMAKE=TAILORING 70.0, t_sewing_kit
+RESOURCES=12 i_troll_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Troll
+DESCRIPTION=Troll Leather Tunic
+
+ON=@Create
+	COLOR=1953
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_troll_armor_Gloves]
+DEFNAME=i_troll_armor_Gloves
+NAME=leather gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=43
+REQSTR=45
+SKILLMAKE=TAILORING 65.7, t_sewing_kit
+RESOURCES=3 i_troll_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Troll
+DESCRIPTION=Troll Leather Gloves
+
+ON=@Create
+	COLOR=1953
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_troll_armor_wizzard]
+DEFNAME=i_troll_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=43
+REQSTR=45
+SKILLMAKE=TAILORING 75.4, t_sewing_kit
+RESOURCES=12 i_troll_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Troll
+DESCRIPTION=Troll Wizard's hat
+
+ON=@Create
+	COLOR=1953
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_troll_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=43
+REQSTR=45
+SKILLMAKE=TAILORING 62.0, t_sewing_kit
+RESOURCES=4 i_troll_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Troll
+DESCRIPTION=Troll Boots
+
+ON=@Create
+	COLOR=1953
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_troll_armor_gorget]
+DEFNAME=i_troll_armor_gorget
+NAME=leather gorget
+ID=i_leather_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=43
+REQSTR=30
+SKILLMAKE=TAILORING 64.0, t_sewing_kit
+RESOURCES=4 i_troll_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Troll
+DESCRIPTION=Troll Leather Gorget
+
+ON=@Create
+	COLOR=1953
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Troll_armor_cap]
+DEFNAME=i_Troll_armor_cap
+NAME=leather cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=43
+REQSTR=45
+SKILLMAKE=TAILORING 66.0, t_sewing_kit
+RESOURCES=2 i_troll_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Troll
+DESCRIPTION=Troll Leather Cap
+
+ON=@Create
+	COLOR=1953
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////Gargoyle armor/////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_Gargoyle_armor_sleeves]
+DEFNAME=i_Gargoyle_armor_sleeves
+NAME=leather sleeves
+ID=i_studded_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=46
+REQSTR=45
+SKILLMAKE=TAILORING 69.0, t_sewing_kit
+RESOURCES=4 i_Gargoyle_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Gargoyle
+DESCRIPTION=Gargoyle Leather Sleeves
+
+ON=@Create
+	COLOR=146
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Gargoyle_armor_Leggings]
+DEFNAME=i_Gargoyle_armor_Leggings
+NAME=leather leggings
+ID=i_studded_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=46
+REQSTR=45
+SKILLMAKE=TAILORING 71.5, t_sewing_kit
+RESOURCES=10 i_Gargoyle_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Gargoyle
+DESCRIPTION=Gargoyle Leather Leggings
+
+ON=@Create
+	COLOR=146
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Gargoyle_armor_Tunic]
+DEFNAME=i_Gargoyle_armor_Tunic
+NAME=leather tunic
+ID=i_studded_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=46
+REQSTR=45
+SKILLMAKE=TAILORING 72.0, t_sewing_kit
+RESOURCES=12 i_Gargoyle_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Gargoyle
+DESCRIPTION=Gargoyle Leather Tunic
+
+ON=@Create
+	COLOR=146
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Gargoyle_armor_Gloves]
+DEFNAME=i_Gargoyle_armor_Gloves
+NAME=leather gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=46
+REQSTR=45
+SKILLMAKE=TAILORING 67.7, t_sewing_kit
+RESOURCES=3 i_Gargoyle_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Gargoyle
+DESCRIPTION=Gargoyle Leather Gloves
+
+ON=@Create
+	COLOR=146
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Gargoyle_armor_wizzard]
+DEFNAME=i_Gargoyle_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=46
+REQSTR=45
+SKILLMAKE=TAILORING 77.4, t_sewing_kit
+RESOURCES=12 i_Gargoyle_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Gargoyle
+DESCRIPTION=Gargoyle Wizzard's hat
+
+ON=@Create
+	COLOR=146
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Gargoyle_armor_cap]
+DEFNAME=i_Gargoyle_armor_cap
+NAME=leather cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=59
+REQSTR=45
+SKILLMAKE=TAILORING 68.0, t_sewing_kit
+RESOURCES=2 i_Gargoyle_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Gargoyle
+DESCRIPTION=Gargoyle Leather Cap
+
+ON=@Create
+	COLOR=146
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Gargoyle_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+TYPE=T_ARMOR
+WEIGHT=13
+ARMOR=46
+REQSTR=45
+SKILLMAKE=TAILORING 64.0, t_sewing_kit
+RESOURCES=4 i_Gargoyle_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Gargoyle
+DESCRIPTION=Gargoyle Boots
+
+ON=@Create
+	COLOR=146
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Gargoyle_armor_gorget]
+DEFNAME=i_Gargoyle_armor_gorget
+NAME=leather gorget
+ID=i_leather_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=46
+REQSTR=30
+SKILLMAKE=TAILORING 66.0, t_sewing_kit
+RESOURCES=4 i_Gargoyle_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Gargoyle
+DESCRIPTION=Gargoyle Leather Gorget
+
+ON=@Create
+	COLOR=146
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><60.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////Cyclops armor/////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_Cyclops_armor_sleeves]
+DEFNAME=i_Cyclops_armor_sleeves
+NAME=leather sleeves
+ID=i_LEATHER_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=49
+REQSTR=30
+SKILLMAKE=TAILORING 71.0, t_sewing_kit
+RESOURCES=4 i_Cyclops_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Cyclops
+DESCRIPTION=Cyclops Leather Sleeves
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Cyclops_armor_gorget]
+DEFNAME=i_Cyclops_armor_gorget
+NAME=leather gorget
+ID=i_leather_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=49
+REQSTR=30
+SKILLMAKE=TAILORING 67.0, t_sewing_kit
+RESOURCES=4 i_Cyclops_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Cyclops
+DESCRIPTION=Cyclops Leather Gorget
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Cyclops_armor_Leggings]
+DEFNAME=i_Cyclops_armor_Leggings
+NAME=leather leggings
+ID=i_leather_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=49
+REQSTR=30
+SKILLMAKE=TAILORING 72.5, t_sewing_kit
+RESOURCES=10 i_Cyclops_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Cyclops
+DESCRIPTION=Cyclops Leather Leggings
+
+ON=@CREATE
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Cyclops_armor_Tunic]
+DEFNAME=i_Cyclops_armor_Tunic
+NAME=leather tunic
+ID=i_leather_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=49
+REQSTR=30
+SKILLMAKE=TAILORING 73.0, t_sewing_kit
+RESOURCES=12 i_Cyclops_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Cyclops
+DESCRIPTION=Cyclops Leather Tunic
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Cyclops_armor_Gloves]
+DEFNAME=i_Cyclops_armor_Gloves
+NAME=leather gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=49
+REQSTR=30
+SKILLMAKE=TAILORING 68.7, t_sewing_kit
+RESOURCES=3 i_Cyclops_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Cyclops
+DESCRIPTION=Cyclops Leather Gloves
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Cyclops_armor_wizzard]
+DEFNAME=i_Cyclops_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=49
+REQSTR=30
+SKILLMAKE=TAILORING 78.4, t_sewing_kit
+RESOURCES=12 i_Cyclops_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Cyclops
+DESCRIPTION=Cyclops Wizzard's hat
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_cyclops_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=49
+REQSTR=45
+SKILLMAKE=TAILORING 65.0, t_sewing_kit
+RESOURCES=4 i_cyclops_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Cyclops
+DESCRIPTION=Cyclops Boots
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Cyclops_armor_cap]
+DEFNAME=i_Cyclops_armor_cap
+NAME=leather cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=49
+REQSTR=45
+SKILLMAKE=TAILORING 69.0, t_sewing_kit
+RESOURCES=10 i_Cyclops_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Cyclops
+DESCRIPTION=Cyclops Leather Cap
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////Titan///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_titan_armor_sleeves]
+DEFNAME=i_titan_armor_sleeves
+NAME=studded sleeves
+ID=i_studded_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=52
+REQSTR=45
+SKILLMAKE=TAILORING 77.1, t_sewing_kit
+RESOURCES=4 i_titan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Titan
+DESCRIPTION=Titan Studded Sleeves
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_titan_armor_Leggings]
+DEFNAME=i_titan_armor_Leggings
+NAME=studded leggings
+ID=i_studded_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=52
+REQSTR=45
+SKILLMAKE=TAILORING 78.1, t_sewing_kit
+RESOURCES=10 i_titan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Titan
+DESCRIPTION=Titan Studded Leggings
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_titan_armor_Tunic]
+DEFNAME=i_titan_armor_Tunic
+NAME=studded tunic
+ID=i_studded_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=52
+REQSTR=45
+SKILLMAKE=TAILORING 79.0, t_sewing_kit
+RESOURCES=12 i_titan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Titan
+DESCRIPTION=Titan Studded Tunic
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_titan_armor_Gloves]
+DEFNAME=i_titan_armor_Gloves
+NAME=studded gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=52
+REQSTR=45
+SKILLMAKE=TAILORING 75.1, t_sewing_kit
+RESOURCES=3 i_titan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Titan
+DESCRIPTION=Titan Studded Gloves
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_titan_armor_wizzard]
+DEFNAME=i_titan_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=52
+REQSTR=45
+SKILLMAKE=TAILORING 82.4, t_sewing_kit
+RESOURCES=12 i_titan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Titan
+DESCRIPTION=Titan Wizzard's hat
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_titan_armor_cap]
+DEFNAME=i_titan_armor_cap
+NAME=studded cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=79
+REQSTR=45
+SKILLMAKE=TAILORING 74.0, t_sewing_kit
+RESOURCES=2 i_titan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Titan
+DESCRIPTION=Titan Studded Cap
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_titan_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=52
+REQSTR=45
+SKILLMAKE=TAILORING 71.0, t_sewing_kit
+RESOURCES=4 i_titan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Titan
+DESCRIPTION=Titan Boots
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_titan_armor_gorget]
+DEFNAME=i_titan_armor_gorget
+NAME=studded gorget
+ID=i_studded_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=52
+REQSTR=30
+SKILLMAKE=TAILORING 72.1, t_sewing_kit
+RESOURCES=4 i_titan_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Titan
+DESCRIPTION=Titan Studded Gorget
+
+ON=@Create
+	COLOR=2026
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><70.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////Demon////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_Demon_armor_sleeves]
+DEFNAME=i_Demon_armor_sleeves
+NAME=leather sleeves
+ID=i_leather_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=55
+REQSTR=45
+SKILLMAKE=TAILORING 75.1, t_sewing_kit
+RESOURCES=4 i_Demon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Demon
+DESCRIPTION=Demon Leather Sleeves
+
+ON=@Create
+	COLOR=1945
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Demon_armor_gorget]
+DEFNAME=i_Demon_armor_gorget
+NAME=leather gorget
+ID=i_leather_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=55
+REQSTR=45
+SKILLMAKE=TAILORING 71.1, t_sewing_kit
+RESOURCES=4 i_demon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Demon
+DESCRIPTION=Demon Leather Gorget
+
+ON=@Create
+	COLOR=1945
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Demon_armor_Leggings]
+DEFNAME=i_Demon_armor_Leggings
+NAME=leather leggings
+ID=i_leather_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=55
+REQSTR=45
+SKILLMAKE=TAILORING 76.1, t_sewing_kit
+RESOURCES=10 i_demon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Demon
+DESCRIPTION=Demon Leather Leggings
+
+ON=@Create
+	COLOR=1945
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Demon_armor_Tunic]
+DEFNAME=i_Demon_studded_Tunic
+NAME=leather tunic
+ID=i_leather_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=55
+REQSTR=45
+SKILLMAKE=TAILORING 77.0, t_sewing_kit
+RESOURCES=12 i_demon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Demon
+DESCRIPTION=Demon Leather Tunic
+
+ON=@Create
+	COLOR=1945
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Demon_armor_Gloves]
+DEFNAME=i_Demon_armor_Gloves
+NAME=leather gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=55
+REQSTR=45
+SKILLMAKE=TAILORING 72.9, t_sewing_kit
+RESOURCES=3 i_demon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Demon
+DESCRIPTION=Demon Leather Gloves
+
+ON=@Create
+	COLOR=1945
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Demon_armor_cap]
+DEFNAME=i_Demon_armor_Cap
+NAME=leather cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=74
+REQSTR=45
+SKILLMAKE=TAILORING 72.0, t_sewing_kit
+RESOURCES=2 i_demon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Demon
+DESCRIPTION=Demon Leather Cap
+
+ON=@Create
+	COLOR=1945
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Demon_armor_wizzard]
+DEFNAME=i_Demon_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=55
+REQSTR=45
+SKILLMAKE=TAILORING 82.4, t_sewing_kit
+RESOURCES=12 i_demon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Demon
+DESCRIPTION=Demon Wizzard's hat
+
+ON=@Create
+	COLOR=1945
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_demon_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=55
+SKILLMAKE=TAILORING 69.0, t_sewing_kit
+RESOURCES=4 i_demon_Hide
+dye=1
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Demon
+DESCRIPTION=Demon Boots
+
+ON=@Create
+	COLOR=1945
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////Dragon////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+[ITEMDEF i_dragon_armor_cap]
+DEFNAME=i_dragon_armor_cap
+NAME=studded cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=58
+REQSTR=45
+SKILLMAKE=TAILORING 65.0, t_sewing_kit
+RESOURCES=2 i_dragon_Hide
+
+ON=@CREATE
+COLOR=1908
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Dragons
+DESCRIPTION=Dragon Studded Cap
+
+[ITEMDEF i_dragon_armor_sleeves]
+DEFNAME=dragon_studded_sleeves
+NAME=studded sleeves
+ID=i_studded_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=58
+REQSTR=45
+SKILLMAKE=TAILORING 85.0, t_sewing_kit
+RESOURCES=4 i_dragon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Dragons
+DESCRIPTION=Dragon Studded Sleeves
+
+ON=@Create
+	COLOR=1908
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_dragon_armor_Leggings]
+DEFNAME=i_dragon_armor_Leggings
+NAME=studded leggings
+ID=i_studded_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=58
+REQSTR=45
+SKILLMAKE=TAILORING 85.0, t_sewing_kit
+RESOURCES=10 i_dragon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Dragons
+DESCRIPTION=Dragon Studded Leggings
+
+ON=@Create
+	COLOR=1908
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_dragon_armor_Tunic]
+DEFNAME=i_dragon_armor_Tunic
+NAME=studded tunic
+ID=i_studded_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=58
+REQSTR=45
+SKILLMAKE=TAILORING 85.0, t_sewing_kit
+RESOURCES=12 i_dragon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Dragons
+DESCRIPTION=Dragon Studded Tunic
+
+ON=@Create
+	COLOR=1908
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_dragon_armor_Gloves]
+DEFNAME=i_dragon_armor_Gloves
+NAME=studded gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=58
+REQSTR=45
+SKILLMAKE=TAILORING 85.0, t_sewing_kit
+RESOURCES=3 i_dragon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Dragons
+DESCRIPTION=Dragon Studded Gloves
+
+ON=@Create
+	COLOR=1908
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_dragon_armor_wizzard]
+DEFNAME=i_dragon_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=58
+REQSTR=45
+SKILLMAKE=TAILORING 85.0, t_sewing_kit
+RESOURCES=12 i_dragon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Dragons
+DESCRIPTION=Dragon Wizzard's hat
+
+ON=@Create
+	COLOR=1908
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_dragon_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=58
+REQSTR=45
+SKILLMAKE=TAILORING 85.0, t_sewing_kit
+RESOURCES=4 i_dragon_Hide
+dye=1
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Dragons
+DESCRIPTION=Dragon Boots
+
+ON=@Create
+	COLOR=1908
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_dragon_armor_gorget]
+DEFNAME=i_dragon_armor_gorget
+NAME=studded gorget
+ID=i_studded_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=58
+REQSTR=45
+SKILLMAKE=TAILORING 85.0
+RESOURCES=4 i_dragon_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Dragons
+DESCRIPTION=Dragon Studded Gorget
+
+ON=@Create
+	COLOR=1908
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><80.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////Fire Fiend////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[ITEMDEF i_ff_armor_cap]
+DEFNAME=i_fF_armor_cap
+NAME=studded cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 65.0, t_sewing_kit
+RESOURCES=2 i_fire_fiend_Hide
+
+ON=@CREATE
+COLOR=1965
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Fire Fiend Studded Cap
+
+[ITEMDEF i_ff_armor_sleeves]
+DEFNAME=i_ff_armor_sleeves
+NAME=studded sleeves
+ID=i_studded_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=4 i_fire_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Fire Fiend Studded Sleeves
+
+ON=@Create
+	COLOR=1965
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ff_armor_Leggings]
+DEFNAME=i_ff_armor_Leggings
+NAME=studded leggings
+ID=i_studded_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=10 i_fire_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Fire Fiend Studded Leggings
+
+ON=@Create
+	COLOR=1965
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ff_armor_Tunic]
+DEFNAME=i_ff_armor_Tunic
+NAME=studded tunic
+ID=i_studded_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=12 i_fire_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Fire Fiend Studded Tunic
+
+ON=@Create
+	COLOR=1965
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ff_armor_Gloves]
+DEFNAME=i_ff_armor_Gloves
+NAME=studded gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=3 i_fire_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Fire Fiend Studded Gloves
+
+ON=@Create
+	COLOR=1965
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ff_armor_wizzard]
+DEFNAME=i_ff_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=12 i_Fire_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Fire Fiend Wizzard's hat
+
+ON=@Create
+	COLOR=1965
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ff_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 75.0, t_sewing_kit
+RESOURCES=4 i_fire_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Fire Fiend Boots
+
+ON=@Create
+	COLOR=1965
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF I_ff_armor_gorget]
+DEFNAME=i_ff_armor_gorget
+NAME=studded gorget
+ID=i_studded_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=30
+SKILLMAKE=TAILORING 85.0, t_sewing_kit
+RESOURCES=4 i_fire_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Fire Fiend Studded Gorget
+
+ON=@Create
+	COLOR=1965
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////Ice Fiend////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_if_armor_sleeves]
+DEFNAME=i_if_armor_sleeves
+NAME=studded sleeves
+ID=i_studded_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=4 i_ice_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Ice Fiend Studded Sleeves
+
+ON=@Create
+	COLOR=2028
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_if_armor_Leggings]
+DEFNAME=i_if_armor_Leggings
+NAME=studded Leggings
+ID=i_studded_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=10 i_ice_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Ice Fiend Studded Leggings
+
+ON=@Create
+	COLOR=2028
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_If_armor_cap]
+DEFNAME=i_IF_armor_cap
+NAME=studded cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 65.0, t_sewing_kit
+RESOURCES=2 i_ice_fiend_Hide
+
+ON=@CREATE
+COLOR=2028
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Ice Fiend Studded Cap
+
+[ITEMDEF i_if_armor_Tunic]
+DEFNAME=i_if_armor_Tunic
+NAME=studded tunic
+ID=i_studded_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=12 i_ice_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Ice Fiend Studded Tunic
+
+ON=@Create
+	COLOR=2028
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_if_armor_Gloves]
+DEFNAME=i_if_armor_Gloves
+NAME=studded gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=3 i_ice_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Ice Fiend Studded Gloves
+
+ON=@Create
+	COLOR=2028
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_if_armor_wizzard]
+DEFNAME=i_if_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=12 i_ice_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Ice Fiend Wizzard's hat
+
+ON=@Create
+	COLOR=2028
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_if_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 75.0, t_sewing_kit
+RESOURCES=4 i_ice_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Ice Fiend Boots
+
+ON=@Create
+	COLOR=2028
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_if_armor_gorget]
+DEFNAME=I_if_armor_gorget
+NAME=studded gorget
+ID=i_studded_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=30
+SKILLMAKE=TAILORING 85.0, t_sewing_kit
+RESOURCES=4 i_ice_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Ice Fiend Studded Gorget
+
+ON=@Create
+	COLOR=2028
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////Air Fiend////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_af_armor_sleeves]
+DEFNAME=i_af_armor_sleeves
+NAME=studded sleeves
+ID=i_studded_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=4 i_Air_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Air Fiend Studded Sleeves
+
+ON=@Create
+	COLOR=1993
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Af_armor_cap]
+DEFNAME=i_AF_armor_cap
+NAME=studded cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 65.0, t_sewing_kit
+RESOURCES=2 i_air_fiend_Hide
+
+ON=@CREATE
+COLOR=1993
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Air Fiend Studded Cap
+
+
+[ITEMDEF i_af_armor_Leggings]
+DEFNAME=i_af_armor_Leggings
+NAME=studded leggings
+ID=i_studded_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=10 i_air_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Air Fiend Studded Leggings
+
+ON=@Create
+	COLOR=1993
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_af_armor_Tunic]
+DEFNAME=i_af_armor_Tunic
+NAME=studded tunic
+ID=i_studded_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=12 i_Air_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Air Fiend Studded Tunic
+
+ON=@Create
+	COLOR=1993
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_Af_armor_Gloves]
+DEFNAME=i_Af_armor_Gloves
+NAME=studded gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=3 i_Air_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Air Fiend Studded Gloves
+
+ON=@Create
+	COLOR=1993
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_af_armor_wizzard]
+DEFNAME=i_af_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0 
+RESOURCES=12 i_air_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Air Fiend Wizzard's hat
+
+ON=@Create
+	COLOR=1993
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_af_armor_gorget]
+DEFNAME=i_af_armor_gorget
+NAME=studded gorget
+ID=i_studded_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=30
+SKILLMAKE=TAILORING 85.0
+RESOURCES=4 i_air_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Air Fiend Studded Gorget
+
+ON=@Create
+	COLOR=1993
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_af_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=61
+SKILLMAKE=TAILORING 75.0
+RESOURCES=4 i_air_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Air Fiend Boots
+
+ON=@Create
+	COLOR=1993
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////Earth Fiend////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_ef_armor_Leggings]
+DEFNAME=i_ef_armor_Leggings
+NAME=studded leggings
+ID=i_studded_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=10 i_earth_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Earth Fiend Studded Leggings
+
+ON=@Create
+	COLOR=color_earth
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ef_armor_sleeves]
+DEFNAME=i_ef_armor_sleeves
+NAME=studded sleeves
+ID=i_studded_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=4 i_earth_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Earth Fiend Studded Sleeves
+
+ON=@Create
+	COLOR=color_earth
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ef_armor_Tunic]
+DEFNAME=i_ef_armor_Tunic
+NAME=studded tunic
+ID=i_studded_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=12 i_earth_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Earth Fiend Studded Tunic
+
+ON=@Create
+	COLOR=color_earth
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ef_armor_Gloves]
+DEFNAME=i_ef_armor_Gloves
+NAME=studded gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=3 i_earth_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Earth Fiend Studded Gloves
+
+ON=@Create
+	COLOR=color_earth
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ef_armor_wizzard]
+DEFNAME=i_ef_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0 
+RESOURCES=12 i_earth_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Earth Fiend Wizzard's hat
+
+ON=@Create
+	COLOR=color_earth
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ef_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 75.0
+RESOURCES=4 i_earth_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Earth Fiend Studded Boots
+
+ON=@Create
+	COLOR=color_earth
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ef_armor_gorget]
+DEFNAME=i_ef_armor_gorget
+NAME=studded gorget
+ID=i_studded_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=50
+SKILLMAKE=TAILORING 85.0
+RESOURCES=4 i_earth_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Earth Fiend Studded Gorget
+
+ON=@Create
+	COLOR=color_earth
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_ef_armor_cap]
+DEFNAME=i_eF_armor_cap
+NAME=studded cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 65.0, t_sewing_kit
+RESOURCES=2 i_earth_fiend_Hide
+
+ON=@CREATE
+COLOR=color_earth
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Earth Fiend Studded Cap
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////Forest Fiend////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_fof_armor_Leggings]
+DEFNAME=i_fof_armor_Leggings
+NAME=studded leggings
+ID=i_studded_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=10 i_Forest_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Forest Fiend Studded Leggings
+
+ON=@Create
+	COLOR=color_Forest
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_fof_armor_sleeves]
+DEFNAME=i_fof_armor_sleeves
+NAME=studded sleeves
+ID=i_studded_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=4 i_Forest_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Forest Fiend Studded Sleeves
+
+ON=@Create
+	COLOR=color_Forest
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_fof_armor_Tunic]
+DEFNAME=i_fof_armor_Tunic
+NAME=studded tunic
+ID=i_studded_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=12 i_Forest_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Forest Fiend Studded Tunic
+
+ON=@Create
+	COLOR=color_Forest
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_fof_armor_Gloves]
+DEFNAME=i_fof_armor_Gloves
+NAME=studded gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=3 i_Forest_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Forest Fiend Studded Gloves
+
+ON=@Create
+	COLOR=color_Forest
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_fof_armor_wizzard]
+DEFNAME=i_fof_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0 
+RESOURCES=12 i_Forest_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Forest Fiend Wizzard's hat
+
+ON=@Create
+	COLOR=color_Forest
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_fof_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 75.0
+RESOURCES=4 i_Forest_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Forest Fiend Studded Boots
+
+ON=@Create
+	COLOR=color_Forest
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_fof_armor_gorget]
+DEFNAME=i_fof_armor_gorget
+NAME=studded gorget
+ID=i_studded_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=50
+SKILLMAKE=TAILORING 85.0
+RESOURCES=4 i_Forest_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Forest Fiend Studded Gorget
+
+ON=@Create
+	COLOR=color_Forest
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_fof_armor_cap]
+DEFNAME=i_foF_armor_cap
+NAME=studded cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 65.0, t_sewing_kit
+RESOURCES=2 i_Forest_fiend_Hide
+
+ON=@CREATE
+COLOR=color_Forest
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Forest Fiend Studded Cap
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////Water Fiend////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_wf_armor_Leggings]
+DEFNAME=i_wf_armor_Leggings
+NAME=studded leggings
+ID=i_studded_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=10 i_Water_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Water Fiend Studded Leggings
+
+ON=@Create
+	COLOR=color_Water
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_wf_armor_sleeves]
+DEFNAME=i_wf_armor_sleeves
+NAME=studded sleeves
+ID=i_studded_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=4 i_Water_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Water Fiend Studded Sleeves
+
+ON=@Create
+	COLOR=color_Water
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_wf_armor_Tunic]
+DEFNAME=i_wf_armor_Tunic
+NAME=studded tunic
+ID=i_studded_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=12 i_Water_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Water Fiend Studded Tunic
+
+ON=@Create
+	COLOR=color_Water
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_wf_armor_Gloves]
+DEFNAME=i_wf_armor_Gloves
+NAME=studded gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0, t_sewing_kit
+RESOURCES=3 i_Water_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Water Fiend Studded Gloves
+
+ON=@Create
+	COLOR=color_Water
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_wf_armor_wizzard]
+DEFNAME=i_wf_armor_wizzard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 95.0 
+RESOURCES=12 i_Water_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Water Fiend Wizzard's hat
+
+ON=@Create
+	COLOR=color_Water
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_wf_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 75.0
+RESOURCES=4 i_Water_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Water Fiend Studded Boots
+
+ON=@Create
+	COLOR=color_Water
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_wf_armor_gorget]
+DEFNAME=i_wf_armor_gorget
+NAME=studded gorget
+ID=i_studded_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=61
+REQSTR=50
+SKILLMAKE=TAILORING 85.0
+RESOURCES=4 i_Water_fiend_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Water Fiend Studded Gorget
+
+ON=@Create
+	COLOR=color_Water
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_wf_armor_cap]
+DEFNAME=i_wf_armor_cap
+NAME=studded cap
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=61
+REQSTR=45
+SKILLMAKE=TAILORING 65.0, t_sewing_kit
+RESOURCES=2 i_Water_fiend_Hide
+
+ON=@CREATE
+COLOR=color_Water
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Fiends
+DESCRIPTION=Water Fiend Studded Cap
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////Minotaur Armor////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_minotaur_armor_sleeves]
+DEFNAME=i_minotauro_armor_sleeves
+NAME=leather sleeves
+ID=i_leather_sleeves
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=64
+REQSTR=45
+SKILLMAKE=TAILORING 73.0, t_sewing_kit
+RESOURCES=4 i_minotaur_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Minotaur
+DESCRIPTION=Minotaur Leather Sleeves
+
+ON=@Create
+	COLOR=967
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_minotaur_armor_Leggings]
+DEFNAME=i_minotauro_armor_Leggings
+NAME=leather leggings
+ID=i_leather_leggings
+TYPE=T_ARMOR
+WEIGHT=6
+ARMOR=64
+REQSTR=45
+SKILLMAKE=TAILORING 74.5, t_sewing_kit
+RESOURCES=10 i_minotaur_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Minotaur
+DESCRIPTION=Minotaur Leather Leggings
+
+ON=@Create
+	COLOR=967
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_minotaur_armor_Tunic]
+DEFNAME=i_minotaur_armor_Tunic
+NAME=leather tunic
+ID=i_Leather_tunic
+TYPE=T_ARMOR
+WEIGHT=7
+ARMOR=64
+REQSTR=45
+SKILLMAKE=TAILORING 75.0, t_sewing_kit
+RESOURCES=12 i_minotaur_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Minotaur
+DESCRIPTION=Minotaur Leather Tunic
+
+ON=@Create
+	COLOR=967
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_minotaur_armor_Gloves]
+DEFNAME=i_minotaur_armor_Gloves
+NAME=leather gloves
+ID=i_leather_gloves
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=64
+REQSTR=45
+SKILLMAKE=TAILORING 70.7, t_sewing_kit
+RESOURCES=3 i_minotaur_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Minotaur
+DESCRIPTION=Minotaur Leather Gloves
+
+ON=@Create
+	COLOR=967
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_minotaur_armor_wizzard]
+DEFNAME=I_minotaur_armor_wizard
+NAME=wizzard's hat
+ID=5912
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=64
+REQSTR=45
+SKILLMAKE=TAILORING 80.4, t_sewing_kit
+RESOURCES=12 i_minotaur_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Minotaur
+DESCRIPTION=Minotaur Wizzard's hat
+
+ON=@Create
+	COLOR=967
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_minotaur_armor_boots] 
+ID=i_Boots_calf
+NAME=boots
+REQSTR=45
+TYPE=T_ARMOR
+WEIGHT=3
+ARMOR=64
+REQSTR=45
+SKILLMAKE=TAILORING 67.0, t_sewing_kit
+RESOURCES=4 i_minotaur_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Minotaur
+DESCRIPTION=Minotaur Boots
+
+ON=@Create
+	COLOR=967
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_minotaur_armor_gorget]
+DEFNAME=i_minotaur_armor_gorget
+NAME=leather gorget
+ID=i_leather_gorget
+TYPE=T_ARMOR
+WEIGHT=2
+ARMOR=64
+REQSTR=30
+SKILLMAKE=TAILORING 69.0, t_sewing_kit
+RESOURCES=4 i_minotaur_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Minotaur
+DESCRIPTION=Minotaur Leather Gorget
+
+ON=@Create
+	COLOR=967
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[ITEMDEF i_minotaur_armor_cap]
+DEFNAME=i_minotaur_armor_cap
+NAME=leather cap 
+ID=i_leather_cap
+TYPE=T_ARMOR
+WEIGHT=1
+ARMOR=64
+REQSTR=30
+SKILLMAKE=TAILORING 71.0, t_sewing_kit
+RESOURCES=2 i_minotaur_Hide
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Minotaur
+DESCRIPTION=Minotaur leather Cap
+
+ON=@Create
+	COLOR=967
+	HITPOINTS={350 350}
+
+ON=@EQUIP
+IF <SRC.Magery><90.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              Sfx snd_SPELL_CURSE
+SRC.EMOTE=no have sufficient Magery for this item!
+endif
+
+[EOF]

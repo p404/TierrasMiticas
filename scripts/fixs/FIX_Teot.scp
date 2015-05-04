@@ -1,0 +1,184 @@
+[EVENTS e_Stat_Limit] 
+ON=@Login 
+IF !<SRC.FINDID.i_Stats> //If they dont have a limiter, make one. 
+SRC.NEWITEM i_Stats 
+SRC.ACT.EQUIP 
+SRC.ACT.LINK=<SRC.UID> 
+ENDIF 
+
+[ITEMDEF i_Stats] 
+ID=i_memory 
+NAME=Stats Memory 
+LAYER=layer_special 
+TYPE=t_eq_script 
+WEIGHT=0 
+
+ON=@Create 
+ATTR=attr_decay|attr_newbie 
+
+ON=@Equip 
+LINK=<SRC.UID> 
+TIMER=1
+RETURN 0
+
+ON=@UNEQUIP 
+LINK=04FFFFFFF 
+RETURN 0
+
+ON=@Timer 
+TIMER 10
+IF ! (<CONT.FINDLAYER(32)>) && ! (<CONT.FINDLAYER(40)>) && ! (<CONT.FINDLAYER(47)>) && ! (<CONT.FINDLAYER(49)>)
+IF (<CONT.TAG.STRI>==0938) //If STR is red (Blocked) 
+CONT.STR=<EVAL <CONT.TAG.STR>> 
+ENDIF
+IF (<CONT.TAG.INTI>==0938) //If INT is red (Blocked) 
+CONT.INT=<EVAL <CONT.TAG.INT>> 
+ENDIF
+IF (<CONT.TAG.DEXI>==0938) //If DEX is red (Blocked) 
+CONT.DEX=<EVAL <CONT.TAG.DEX>> 
+ENDIF 
+ENDIF 
+RETURN 1 
+
+
+[Plevel 1] 
+Candado
+
+[FUNCTION Candado] 
+IF <SRC.FINDLAYER(32)> || <SRC.FINDLAYER(40)> || <SRC.FINDLAYER(47)> || <SRC.FINDLAYER(49)> || <SRC.findid.i_rune_CLUMSY> || <SRC.findid.i_rune_FEEBLEMIND> || <SRC.findid.i_rune_WEAKEN> || <SRC.findid.i_rune_AGILITY> || <SRC.findid.i_rune_CUNNING> || <SRC.findid.i_rune_STRENGTH> || <SRC.findid.i_rune_BLESS> || <SRC.findid.i_rune_CURSE> || <SRC.findid.i_rune_MASS_CURSE> || <SRC.findid.i_rune_POLYMORPH> || <link.findid.i_rune_ALCHEM_3>
+SRC.SYSMESSAGE When cursed you cannot access the stat block menu. 
+RETURN 1 
+ENDIF
+IF (<SRC.STR>==126) || (<SRC.STR>==127) || (<SRC.STR>==128) || (<SRC.STR>==129) || (<SRC.STR>==130) || (<SRC.STR>==131) || (<SRC.STR>==132) || (<SRC.STR>==133) || (<SRC.STR>==134) || (<SRC.STR>==135)
+SRC.STR=125
+ENDIF
+IF (<SRC.DEX>==126) || (<SRC.DEX>==127) || (<SRC.DEX>==128) || (<SRC.DEX>==129) || (<SRC.DEX>==130) || (<SRC.DEX>==131) || (<SRC.DEX>==132) || (<SRC.DEX>==133) || (<SRC.DEX>==134) || (<SRC.DEX>==135)
+SRC.DEX=125
+ENDIF
+IF (<SRC.INT>==126) || (<SRC.INT>==127) || (<SRC.INT>==128) || (<SRC.INT>==129) || (<SRC.INT>==130) || (<SRC.INT>==131) || (<SRC.INT>==132) || (<SRC.INT>==133) || (<SRC.INT>==134) || (<SRC.INT>==135)
+SRC.INT=125
+ENDIF
+
+IF (<SRC.TAG.STRI>==0) 
+SRC.TAG.STRI=0939 //Green 
+SRC.TAG.STRD=0940 //Red 
+ENDIF 
+IF (<SRC.TAG.INTI>==0) 
+SRC.TAG.INTI=0939 //Green 
+SRC.TAG.INTD = 0940 //Red 
+ENDIF 
+IF (<SRC.TAG.DEXI>==0) 
+SRC.TAG.DEXI = 0939 //Green 
+SRC.TAG.DEXD = 0940 //Red 
+ENDIF 
+dialog d_Candado 
+EVENTS e_Stat_Limit
+
+[DIALOG d_Candado] 
+0,0 
+nomove 
+noclose 
+gumppic 100 100 2500 //Bottom 
+text 150 130 1152 0 //Strength 
+button 260 134 <EVAL <SRC.TAG.STRI>> <EVAL <SRC.TAG.STRD>> 1 0 1 //Button for STR 
+text 150 150 1152 1 //Intelligece 
+button 260 154 <EVAL <SRC.TAG.INTI>> <EVAL <SRC.TAG.INTD>> 1 0 2 //Button for INT 
+text 150 170 1152 2 //Dexterity 
+button 260 174 <EVAL <SRC.TAG.DEXI>> <EVAL <SRC.TAG.DEXD>> 1 0 3 //Button for DEX 
+button 180 210 247 248 1 0 4 //Button to close 
+
+[DIALOG d_Candado BUTTON] 
+ONBUTTON=1 //block/unblock STR 
+IF (<SRC.TAG.STRI>==0939) //If STR is green then block 
+SRC.TAG.STRI=0938 //Interchange the colors for the gumppic 
+SRC.TAG.STRD=0939 
+SRC.TAG.STR=<SRC.STR> 
+ELSE //If STR is red then unblock 
+SRC.TAG.STRI=0939 
+SRC.TAG.STRD=0938 
+SRC.TAG.STR=
+ENDIF 
+SRC.Candado 
+
+ONBUTTON=2 //block/unblock INT 
+IF (<SRC.TAG.INTI>==0939) //If INT is green then block 
+SRC.TAG.INTI=0938 //Interchange the colors for the gumppic 
+SRC.TAG.INTD=0939 
+SRC.TAG.INT=<SRC.INT> 
+ELSE //If INT is red then unblock 
+SRC.TAG.INTI=0939 
+SRC.TAG.INTD=0938 
+SRC.TAG.INT=
+ENDIF 
+SRC.Candado 
+
+ONBUTTON=3 //block/unblock DEX 
+IF (<SRC.TAG.DEXI>==0939) //If DEX is green then block 
+SRC.TAG.DEXI=0938 //Interchange the colors for the gumppic 
+SRC.TAG.DEXD=0939 
+SRC.TAG.DEX=<SRC.DEX> //The variable with DEX is actually blocked 
+ELSE //If DEX is red then unblock 
+SRC.TAG.DEXI=0939 
+SRC.TAG.DEXD=0938 
+SRC.TAG.DEX=//Remove the variable 
+ENDIF 
+SRC.Candado 
+
+ONBUTTON=4 
+SRC.SYSMESSAGE Guardando Stats... 
+
+[DIALOG d_Candado TEXT] 
+STR: <SRC.STR> 
+INT: <SRC.INT> 
+DEX: <SRC.DEX>
+
+[FUNCTION jail1]
+SRC.NEWITEM=i_mem_jail1
+SRC.ACT.EQUIP
+
+[ITEMDEf i_mem_jail1] 
+defname=i_mem_jail1
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=asd
+
+ON=@EQUIP
+TARGET
+RETURN 1
+
+ON=@TARGON_CHAR
+SRC.ACT.MOREP=<SRC.P>
+SRC.TAG.WEND = <MOREP>
+SRC.TARG.GO=CELL 1
+SRC.TARG.EVENTS=+e_jailed
+SRC.TARG.SYSMESSAGE=You feel the world is punishing you.
+SRC.TARG.SYSMESSAGE=You have been Jailed.
+CONT.CONSUME=i_mem_jail1
+RETURN 1
+
+[FUNCTION unjail]
+SRC.NEWITEM=i_mem_unjail1
+SRC.ACT.EQUIP
+
+[ITEMDEf i_mem_unjail1] 
+DEFNAME=i_mem_unjail1
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Librar
+
+ON=@EQUIP
+TARGET
+RETURN 1
+
+ON=@TARGON_CHAR
+SRC.TARG.GO=<SRC.TAG.WEND>
+SRC.TARG.EVENTS=-e_jailed
+SRC.TARG.SYSMESSAGE=You have been forgiven.
+CONT.CONSUME=i_mem_unjail1
+RETURN 1
+
+[EVENTS e_jailed]
+ON=@CLICK
+SRC.MESSAGE=[Jailed]
+
+[EOF]

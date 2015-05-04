@@ -1,0 +1,135 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©1997-2000
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// FILE LAST UPDATED: Friday, April 28, 2000
+// SKILL COOKING
+VERSION=Ultra Version
+
+////////////////
+/////ITEMS/////
+////////////////
+
+[ITEMDEF 0103f]
+DEFNAME=i_cookie_mix
+TYPE=T_FOOD_RAW
+TDATA1=i_pan_cookies
+RESOURCES=1 i_bowl_dough, 1 i_POT
+WEIGHT=1
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Cookie Mix
+
+[ITEMDEF 01040]
+DEFNAME=i_pizza
+RESOURCES=3 i_FLOUR_SACK
+WEIGHT=1
+TYPE=T_FOOD
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Pizza
+SKILLMAKE=COOKING 20.0
+RESOURCES2=1 i_pizza_uncooked,1 i_POT
+
+[ITEMDEF 01041]
+DEFNAME=i_pie_baked
+RESOURCES=3 i_FLOUR_SACK
+WEIGHT=1
+TYPE=T_FOOD
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Baked Pie
+SKILLMAKE=COOKING 20.0
+RESOURCES2=1 i_pie_unbaked
+
+[ITEMDEF 01042]
+DEFNAME=i_pie_unbaked
+TYPE=T_FOOD_RAW
+TDATA1=i_pie_baked
+RESOURCES=1 i_bowl_dough, 1 T_FRUIT, 1 i_POT, i_lard
+WEIGHT=1
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Unbaked Pie
+
+[ITEMDEF 09e9]
+DEFNAME=i_cake
+TYPE=T_FOOD
+VALUE={8 12}
+WEIGHT=1
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Cake
+
+SKILLMAKE=COOKING 30.0
+RESOURCES=3 i_FLOUR_SACK
+
+[ITEMDEF 09ea]
+DEFNAME=i_muffin
+RESOURCES=1 i_bowl_dough, 1 I_TRAY
+TYPE=T_FOOD
+VALUE={2 4}
+WEIGHT=0.1
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Muffin
+
+[ITEMDEF 09eb]
+DEFNAME=i_muffins
+WEIGHT=0.5
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=Muffins
+
+SKILLMAKE=COOKING 10.0
+RESOURCES=1 i_FLOUR_SACK
+RESOURCES2=1 i_bowl_dough,1 i_TRAY
+
+[ITEMDEF 098c]
+DEFNAME=i_bread_french
+TYPE=T_FOOD
+VALUE={4 8}
+WEIGHT=0.5
+CATEGORY=Items by Professions
+SUBSECTION=Baker
+DESCRIPTION=French Bread
+
+SKILLMAKE=COOKING 15.0
+RESOURCES=1 i_FLOUR_SACK, 1 i_water, 2 I_EGG,1 i_POT
+
+////////////////
+/////Skill///////
+////////////////
+
+[SKILLMENU sm_cook]
+ON=i_bread_loaf Baked Goods
+SKILLMENU=sm_cook_1
+
+[SKILLMENU sm_cook_1]
+Baked Goods
+
+ON=i_bread_loaf <name> (<resmake>)
+MAKEITEM=i_bread_loaf
+
+ON=i_muffins <name> (<resmake>)
+MAKEITEM=i_muffins
+
+ON=i_bread_french <name> (<resmake>)
+MAKEITEM=i_bread_french
+
+ON=i_pan_cookies <name> (<resmake>)
+MAKEITEM=i_pan_cookies
+
+ON=i_pie_baked <name> (<resmake>)
+MAKEITEM=i_pie_baked
+
+ON=i_pizza <name> (<resmake>)
+MAKEITEM=i_pizza
+
+ON=i_cake <name> (<resmake>)
+MAKEITEM=i_cake

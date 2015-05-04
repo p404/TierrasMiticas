@@ -1,0 +1,2520 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Sabado, Septiembre 16, 2006
+// Armas +21
+VERSION=2.8
+
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////Iceberg/////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_double_bladed_staff_iceberg] 
+defname=i_double_bladed_staff_iceberg
+NAME=double staff of Iceberg
+ID=i_double_bladed_staff
+TWOHANDS=Y
+DAM=12,13
+SPEED=50
+SKILL=FENCING
+REQSTR=50
+WEIGHT=2
+TYPE=T_WEAPON_FENCE
+FLIP=1
+SKILL=Fencing
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Double Staff of Iceberg
+
+ON=@Create 
+HITPOINTS={56 60}
+COLOR=1928
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_blade_crescent_iceberg]
+DEFNAME=i_blade_crescent_iceberg
+NAME=crescent blade of Iceberg
+ID=i_blade_crescent
+TYPE=T_WEAPON_SWORD
+FLIP=1
+DAM=11,14
+SPEED=47
+SKILL=Swordsmanship
+REQSTR=55
+TWOHANDS=Y
+WEIGHT=1
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Crescent Blade of Iceberg
+
+ON=@Create
+Color=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={82 87}
+MOREY=145.0
+
+[ITEMDEF i_axe_iceberg]
+DEFNAME=i_axe_iceberg
+ID=i_axe
+TYPE=T_WEAPON_SWORD
+Name=axe of Iceberg
+FLIP=0
+//ATT=30
+DAM=6,33
+SPEED=37
+SKILL=Swordsmanship
+REQSTR=35
+TWOHANDS=Y
+WEIGHT=15
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Axe of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={85 110}
+MOREY=145.0
+
+[ITEMDEF i_axe_battle_iceberg]
+DEFNAME=i_axe_battle_iceberg
+TYPE=T_WEAPON_SWORD
+name=battle axe of Iceberg
+ID=i_axe_battle
+FLIP=0
+DAM=6,38
+SPEED=20
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=Y
+WEIGHT=28
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Battle Axe of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={80 105}
+MOREY=145.0
+
+[ITEMDEF i_axe_double_iceberg]
+DEFNAME=i_axe_double_iceberg
+TYPE=T_WEAPON_SWORD
+name=double axe of Iceberg
+ID=i_axe_double
+FLIP=0
+DAM=5,35
+//ATT=25
+SPEED=37
+SKILL=Swordsmanship
+REQSTR=45
+TWOHANDS=Y
+WEIGHT=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Double Axe of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={70 110}
+MOREY=145.0
+
+[ITEMDEF i_axe_exec_iceberg]
+DEFNAME=i_axe_exec_iceberg
+TYPE=T_WEAPON_SWORD
+name=executioner's axe of Iceberg
+ID=i_axe_exec
+FLIP=0
+DAM=6,33
+//ATT=30
+SPEED=50
+SKILL=Swordsmanship
+REQSTR=35
+TWOHANDS=Y
+WEIGHT=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Executioner's Axe of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={90 105}
+MOREY=145.0
+
+[ITEMDEF i_hatchet_iceberg]
+DEFNAME=i_hatchet_iceberg
+TYPE=T_WEAPON_SWORD
+name=hatchet of Iceberg
+ID=i_hatchet
+FLIP=0
+DAM=2,17
+SPEED=55
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=Y
+WEIGHT=28
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Hatchet of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={95 110}
+MOREY=145.0
+
+[ITEMDEF i_axe_battle_large_iceberg]
+DEFNAME=i_axe_battle_large_iceberg
+WEIGHT=12
+TYPE=T_WEAPON_AXE
+name=large battle axe of Iceberg
+ID=i_axe_battle_large
+Dam=4,34
+FLIP=0
+SPEED=20
+SKILL=Swordsmanship
+REQSTR=45
+TWOHANDS=Y
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Large Battle Axe of Iceberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+COLOR=1928
+HITPOINTS={80 110}
+MOREY=145.0
+
+[ITEMDEF i_axe_two_hand_iceberg]
+DEFNAME=i_axe_two_hand_iceberg
+WEIGHT=8
+name=two handed axe of Iceberg
+Dam=4,32
+ID=i_axe_two_hand
+TYPE=T_WEAPON_AXE
+FLIP=0
+SPEED=30
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=Y
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Two Handed Axe of Iceberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+COLOR=1928
+HITPOINTS={60 98}
+MOREY=145.0
+
+[ITEMDEF i_axe_war_iceberg]
+DEFNAME=i_axe_war_iceberg
+WEIGHT=8
+TYPE=T_WEAPON_MACE_SHARP
+name=war axe of Iceberg
+Dam=8,33
+ID=i_axe_war
+FLIP=0
+SPEED=35
+SKILL=Mace Fighting
+REQSTR=35
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=War Axe of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={80 110}
+MOREY=145.0
+
+On=@Equip
+SRC.Swordsmanship=<SRC.Swordsmanship> +(-25.0)
+
+On=@Unequip
+SRC.Swordsmanship=<SRC.Swordsmanship> +25.0
+
+[ITEMDEF i_bow_iceberg]
+//arrow
+//Using bow type below
+DEFNAME=i_bow_iceberg
+name=bow of Iceberg
+ID=i_bow
+Dam=9,21
+TYPE=T_WEAPON_BOW
+FLIP=0
+WEIGHT=5
+SPEED=20
+SKILL=Archery
+REQSTR=20
+TWOHANDS=Y
+TDATA3=i_arrow
+TDATA4=6255
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Bow of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={54 75}
+MOREY=145.0
+
+[ITEMDEF i_crossbow_iceberg]
+//Crossbow
+//Using bow type below
+DEFNAME=i_crossbow_iceberg
+NAME=crossbow of Iceberg
+ID=i_crossbow
+Dam=8,43
+TYPE=T_WEAPON_XBOW
+FLIP=0
+//SPEED=18
+SKILL=Archery
+REQSTR=30
+TWOHANDS=Y
+WEIGHT=15
+TDATA3=i_xbolt
+TDATA4=656
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Crossbow of Iceberg
+
+ON=@Create
+color=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 80}
+MOREY=1450
+
+[ITEMDEF i_crossbow_heavy_iceberg]
+DEFNAME=i_crossbow_heavy_iceberg
+NAME=heavy crossbow of Iceberg
+ID=i_crossbow_heavy
+TYPE=T_WEAPON_XBOW
+FLIP=0
+WEIGHT=8
+DAM=18,48
+//SPEED=10
+SKILL=archery
+REQSTR=40
+TWOHANDS=Y
+TDATA3=i_xbolt
+TDATA4=	8902
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Heavy Crossbow of Iceberg
+
+ON=@Create
+color=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 100}
+MOREY=145.0
+
+ON=@Damage   
+SRC.NEWITEM=i_fx_smoke 
+SRC.ACT.ATTR=attr_static|attr_decay 
+SRC.ACT.TIMER=2 
+SRC.ACT.P=<SRC.P> 
+SRC.ACT.MOVE s 
+SRC.ACT.MOVE e 
+VAR.X=RAND(14) 
+IF X==0 
+SRC.HITS=<SRC.HITS>+(-<EVAL {70}> 
+SRC.ACT.SAYU Es demasiado para el! 
+ENDIF 
+RETURN 0
+
+
+[ITEMDEF i_kryss_iceberg]
+DEFNAME=i_kryss_iceberg
+NAME=kryss of Iceberg
+ID=i_kryss
+WEIGHT=8
+TYPE=T_WEAPON_FENCE
+FLIP=0
+DAM=6,18
+//SPEED=50
+SKILL=Fencing
+REQSTR=10
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Kryss of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 90}
+MOREY=145.0
+
+[ITEMDEF i_club_iceberg]
+DEFNAME=i_club_iceberg
+NAME=club of Iceberg
+ID=i_club
+WEIGHT=8
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=3,12
+//SPEED=60
+SKILL=Mace Fighting
+REQSTR=10
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Club of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={31 40}
+MOREY=145.0
+
+[ITEMDEF i_hammer_pick_iceberg]
+DEFNAME=i_hammer_pick_iceberg
+NAME=hammer pick of Iceberg
+ID=i_hammer_pick
+WEIGHT=7
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=9,33
+//SPEED=30
+SKILL=Mace Fighting
+REQSTR=35
+TWOHANDS=Y
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Hammer Pick of Iceberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+COLOR=1928
+HITPOINTS={31 70}
+MOREY=145.0
+
+[ITEMDEF i_mace_iceberg]
+DEFNAME=i_mace_iceberg
+NAME=mace of Iceberg
+ID=i_mace
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=8,32
+//SPEED=55
+SKILL=MaceFighting
+REQSTR=20
+TWOHANDS=N
+//MATERIAL=20
+WEIGHT=14
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Mace of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={31 70}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_maul_iceberg]
+DEFNAME=i_maul_iceberg
+NAME=maul of Iceberg
+ID=I_MAUL
+WEIGHT=9
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=9,21
+//SPEED=40
+SKILL=Mace Fighting
+REQSTR=20
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Maul of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 70}
+MOREY=145.0
+
+[ITEMDEF i_scepter_iceberg]
+DEFNAME=i_scepter_iceberg
+NAME=scepter of Iceberg
+ID=i_scepter
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=1
+DAM=14,17
+SPEED=30
+SKILL=Macefighting
+REQSTR=40
+TWOHANDS=N
+WEIGHT=8
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Scepter of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={79 92}
+MOREY=145.0
+
+[ITEMDEF i_hammer_war_iceberg]
+DEFNAME=i_hammer_war_iceberg
+NAME=war hammer of Iceberg
+ID=i_hammer_war
+WEIGHT=7
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=4,36
+//SPEED=20
+SKILL=Mace Fighting
+REQSTR=40
+TWOHANDS=Y
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=War Hammer of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 110}
+MOREY=145.0
+
+[ITEMDEF i_mace_war_iceberg]
+DEFNAME=i_mace_war_iceberg
+NAME=war mace of Iceberg
+ID=i_mace_war
+WEIGHT=8
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=6,34
+//SPEED=30
+SKILL=Mace Fighting
+REQSTR=30
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=War Mace of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={31 110}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_bardiche_iceberg]
+DEFNAME=i_bardiche_iceberg
+NAME=bardiche of Iceberg
+ID=i_bardiche
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=5,43
+//SPEED=30
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=Y
+WEIGHT=7
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Bardiche of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 100}
+MOREY=145.0
+
+[ITEMDEF i_halberd_iceberg]
+DEFNAME=i_halberd_iceberg
+Name=haldberd of Iceberg
+ID=i_halberd
+WEIGHT=10
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=4,48
+//SPEED=20
+SKILL=Swordsmanship
+REQSTR=45
+TWOHANDS=Y
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Halberd of Iceberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+CoLOR=1928
+HITPOINTS={31 80}
+MOREY=145.0
+
+[ITEMDEF i_pitchfork_iceberg]
+DEFNAME=i_pitchfork_iceberg
+ID=i_pitchfork
+NAME=pitchfork of Iceberg
+TYPE=T_WEAPON_FENCE
+FLIP=0
+DAM=4,16
+//SPEED=50
+SKILL=Fencing
+REQSTR=15
+TWOHANDS=Y
+WEIGHT=10
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Pitchfork of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={31 60}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_spear_iceberg]
+DEFNAME=i_spear_iceberg
+ID=i_spear
+NAME=spear of Iceberg
+TYPE=T_WEAPON_FENCE
+FLIP=0
+DAM=5,33
+//SPEED=30
+SKILL=Fencing
+REQSTR=30
+TWOHANDS=N
+WEIGHT=7
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Spear of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 80}
+MOREY=145.0
+
+[ITEMDEF i_scythe_iceberg]
+DEFNAME=i_scythe_iceberg
+ID=i_scythe
+NAME=scythe of Iceberg
+TYPE=t_weapon_mace_staff
+DAM=15,18
+SPEED=32
+SKILL=macefighting
+REQSTR=45
+TWOHANDS=Y
+WEIGHT=5
+FLIP=1
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Scythe of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={46 88}
+MOREY=145.0
+
+[ITEMDEF i_war_fork_iceberg]
+DEFNAME=i_war_fork_iceberg
+ID=i_war_fork
+NAME=war fork of Iceberg
+WEIGHT=8
+TYPE=T_WEAPON_FENCE
+FLIP=0
+DAM=4,28
+//SPEED=35
+SKILL=Fencing
+REQSTR=35
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=War Fork of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={31 110}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_spear_short_iceberg]
+DEFNAME=i_spear_short_iceberg
+ID=i_spear_short
+NAME=short spear of Iceberg
+WEIGHT=7
+TYPE=T_WEAPON_FENCE
+FLIP=0
+DAM=7,19
+//SPEED=55
+SKILL=Fencing
+REQSTR=15
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Short Spear of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={31 70}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_bladed_staff_iceberg]
+DEFNAME=i_bladed_staff_iceberg
+ID=i_bladed_staff
+NAME=bladed staff of Iceberg
+TYPE=T_WEAPON_mace_staff
+FLIP=1
+DAM=14,16
+SPEED=37
+SKILL=macefighting
+REQSTR=40
+TWOHANDS=Y
+WEIGHT=4
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Bladed Staff of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={91 112}
+MOREY=145.0
+
+[ITEMDEF i_bone_harvester_iceberg]
+DEFNAME=i_bone_harvester_iceberg
+NAME=bone harvester of Iceberg
+ID=i_bone_harvester
+TYPE=T_WEAPON_SWORD
+FLIP=1
+DAM=13,15
+SPEED=36
+SKILL=Swordsmanship
+REQSTR=25
+TWOHANDS=N
+WEIGHT=3
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Bone Harvester of Iceberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+COLOR=1928
+HITPOINTS={70 76}
+MOREY=145.0
+
+[ITEMDEF i_sword_broad_iceberg]
+DEFNAME=i_sword_broad_iceberg
+NAME=broad sword of Iceberg
+ID=i_sword_broad
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=5,29
+//SPEED=35
+SKILL=Swordsmanship
+REQSTR=25
+TWOHANDS=N
+WEIGHT=6
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Broad Sword of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 100}
+MOREY=145.0
+
+[ITEMDEF i_cutlass_iceberg]
+DEFNAME=i_cutlass_iceberg
+ID=i_cutlass
+NAME=cutlass of Iceberg
+WEIGHT=8
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=6,18
+//SPEED=45
+SKILL=Swordsmanship
+REQSTR=10
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Cutlass of Iceberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+COLOR=1928
+HITPOINTS={31 70}
+MOREY=145.0
+
+[ITEMDEF i_katana_iceberg]
+DEFNAME=i_katana_iceberg
+ID=i_katana
+NAME=katana of Iceberg
+WEIGHT=8
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=4,20
+//SPEED=40
+SKILL=Swordsmanship
+REQSTR=10
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Katana of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={31 90}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_lance_iceberg]
+DEFNAME=i_lance_iceberg
+ID=i_lance
+NAME=lance of Iceberg
+TYPE=T_WEAPON_FENCE
+FLIP=1
+DAM=17,18
+SPEED=24
+SKILL=Fencing
+REQSTR=95
+TWOHANDS=N
+WEIGHT=12
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Lance of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={40 116}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_sword_long_b_iceberg]
+DEFNAME=i_sword_long_b_iceberg
+NAME=long sword of Iceberg
+ID=i_sword_long_b
+WEIGHT=8
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=4,32
+//SPEED=35
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Long Sword b of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 110}
+MOREY=145.0
+
+[ITEMDEF i_sword_long_iceberg]
+DEFNAME=i_sword_long_iceberg
+Name=long sword of Iceberg
+ID=i_sword_long
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=4,32
+//SPEED=35
+SKILL=Swordsmanship
+REQSTR=25
+TWOHANDS=N
+WEIGHT=7
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Long Sword of Iceberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+COLOR=1928
+HITPOINTS={31 110}
+MOREY=145.0
+
+[ITEMDEF i_scimitar_iceberg]
+DEFNAME=i_scimitar_iceberg
+NAME=scimitar of Iceberg
+ID=i_scimitar
+WEIGHT=8
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=6,22
+//SPEED=45
+SKILL=Swordsmanship
+REQSTR=10
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Scimitar of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 90}
+MOREY=145.0
+
+[ITEMDEF i_sword_paladin_iceberg]
+DEFNAME=i_sword_paladin_iceberg
+NAME=paladin sword of Iceberg
+ID=i_sword_paladin
+TYPE=T_WEAPON_SWORD
+FLIP=1
+DAM=12,16
+SPEED=40
+SKILL=Swordsmanship
+REQSTR=55
+TWOHANDS=N
+WEIGHT=1
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Paladin Sword of Iceberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+COLOR=1928
+HITPOINTS={60 85}
+MOREY=145.0
+
+[ITEMDEF i_sword_viking_iceberg]
+DEFNAME=i_sword_viking_iceberg
+NAME=Viking Sword of Iceberg
+ID=i_sword_viking
+WEIGHT=8
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=4,32
+//SPEED=35
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Viking Sword of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={31 100}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_chainmail_coif_iceberg]
+DEFNAME=i_chainmail_coif_iceberg
+name=chainmail coif of Iceberg
+ID=i_chainmail_coif
+TYPE=T_ARMOR
+WEIGHT=7
+FLIP=0
+ARMOR=23
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Chainmail Coif of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={36 44}
+
+[ITEMDEF i_chainmail_leggings_iceberg]
+DEFNAME=i_chainmail_leggings_iceberg
+ID=i_chainmail_leggings
+NAME=chainmail leggings of Iceberg
+TYPE=T_ARMOR
+WEIGHT=10
+FLIP=0
+ARMOR=28
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Chainmail Leggings of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={46 58}
+
+[ITEMDEF i_chainmail_tunic_iceberg]
+DEFNAME=i_chainmail_tunic_iceberg
+ID=i_chainmail_tunic
+NAME=chainmail tunic of Iceberg
+TYPE=T_ARMOR
+WEIGHT=15
+FLIP=0
+ARMOR=28
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Chainmail Tunic of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={46 58}
+
+[ITEMDEF i_platemail_arms_iceberg]
+DEFNAME=i_platemail_arms_iceberg
+NAME=platemail arms of Iceberg
+ID=i_platemail_arms
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=18
+ARMOR=100
+REQSTR=40
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Platemail Arms of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={51 65}
+
+[ITEMDEF i_platemail_chest_iceberg]
+DEFNAME=i_platemail_chest_iceberg
+NAME=platemail chest of Iceberg
+ID=i_platemail_chest
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=23
+ARMOR=100
+REQSTR=60
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Platemail Chest of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={51 65}
+
+[ITEMDEF i_platemail_gloves_iceberg]
+DEFNAME=i_platemail_gloves_iceberg
+name=platemail gloves of Iceberg
+ID=i_platemail_gloves
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=5
+ARMOR=100
+REQSTR=30
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Platemail Gloves of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={51 65}
+
+[ITEMDEF i_platemail_gorget_iceberg]
+DEFNAME=i_platemail_gorget_iceberg
+NAME=platemail gorget of Iceberg
+ID=i_platemail_gorget
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=6
+ARMOR=100
+REQSTR=30
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Platemail Gorget of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={51 65}
+
+[ITEMDEF i_platemail_helm_iceberg]
+DEFNAME=i_platemail_helm_iceberg
+NAME=platemail helm of Iceberg
+ID=i_platemail_helm
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=10
+ARMOR=100
+REQSTR=60
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Platemail Helm of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={51 65}
+
+[ITEMDEF i_platemail_leggings_iceberg]
+DEFNAME=i_platemail_leggings_iceberg
+NAME=platemail leggings of Iceberg
+ID=i_platemail_leggings
+NAME=Platemail Leggings of Iceberg
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=20
+ARMOR=100
+REQSTR=40
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Platemail Leggings of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={51 65}
+
+[ITEMDEF i_shield_heater_iceberg]
+DEFNAME=i_shield_heater_iceberg
+NAME=heater shield of Iceberg
+ID=i_shield_heater
+TYPE=t_shield
+FLIP=0
+WEIGHT=14
+ARMOR=20
+REQSTR=30
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Heater shield of Iceberg
+
+ON=@Create
+MOREY=145.0
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={31 37}
+
+[ITEMDEF i_shield_buckler_iceberg]
+DEFNAME=i_shield_buckler_iceberg
+ID=i_shield_buckler
+NAME=buckler shield of Iceberg
+TYPE=t_shield
+FLIP=0
+WEIGHT=6
+ARMOR=17
+REQSTR=15
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Buckler Shield of Iceberg
+
+ON=@Create
+MORey=145.0
+COLOR=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={41 51}
+
+[ITEMDEF i_shield_kite_metal_iceberg]
+DEFNAME=i_shield_kite_metal_iceberg
+NAME=metal kite shield of Iceberg
+ID=i_shield_kite_metal
+TYPE=t_shield
+FLIP=0
+WEIGHT=14
+DYE=1
+ARMOR=15
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Metal Kite Shield of Iceberg
+
+ON=@Create
+MOREY=145.0
+color=1928
+ATTR=ATTR_MAGIC
+HITPOINTS={26 30}
+
+[ITEMDEF i_shield_kite_wood_iceberg]
+DEFNAME=i_shield_kite_wood_iceberg
+NAME=wood kite shield of Iceberg
+ID=i_shield_kite_wood
+TYPE=t_shield
+FLIP=0
+WEIGHT=9
+ARMOR=13
+REQSTR=30
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Wood Kite Shield of Iceberg
+
+ON=@Create
+MOREY=145.0
+COLOR=1928
+HITPOINTS={46 58}
+
+[ITEMDEF i_shield_round_metal_iceberg]
+DEFNAME=i_shield_round_metal_iceberg
+NAME=metal shield of Iceberg
+ID=i_shield_round_metal
+TYPE=t_shield
+FLIP=0
+WEIGHT=11
+ARMOR=10
+REQSTR=10
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Metal Shield of Iceberg
+
+ON=@Create
+COLOR=1928
+ATTR=ATTR_MAGIC
+MOREY=145.0
+HITPOINTS={36 44}
+
+[ITEMDEF i_shield_round_bronze_iceberg]
+DEFNAME=i_shield_round_bronze_iceberg
+NAME=round bronze shield of Iceberg
+ID=i_shield_round_bronze
+TYPE=t_shield
+FLIP=0
+WEIGHT=12
+ARMOR=5
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Round Bronze Shield of Iceberg
+
+ON=@Create
+color=1928
+MOREY=145.0
+ATTR=ATTR_MAGIC
+HITPOINTS={26 30}
+
+[ITEMDEF i_shield_wood_iceberg]
+DEFNAME=i_shield_wood_iceberg
+NAME=wood shield of Iceberg
+ID=i_shield_wood
+TYPE=t_shield
+FLIP=1
+WEIGHT=9
+ARMOR=3
+REQSTR=5
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Wood Shield of Iceberg
+
+ON=@Create
+color=1928
+ATTR=ATTR_MAGIC
+MOREY=145.0
+HITPOINTS={21 23}
+
+[ITEMDEF i_ringmail_gloves_iceberg]
+DEFNAME=i_ringmail_gloves_iceberg
+NAME=ringmail gloves of Iceberg
+ID=i_ringmail_gloves
+TYPE=T_ARMOR
+WEIGHT=2
+FLIP=0
+ARMOR=22
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Ringmail Gloves of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={41 51}
+
+[ITEMDEF i_ringmail_leggings_iceberg]
+DEFNAME=i_ringmail_leggings_iceberg
+NAME=ringmail leggings of Iceberg
+ID=i_ringmail_leggings
+TYPE=T_ARMOR
+FLIP=1
+WEIGHT=15
+ARMOR=22
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Ringmail Leggings of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={41 51}
+
+[ITEMDEF i_ringmail_sleeves_iceberg]
+DEFNAME=i_ringmail_sleeves_iceberg
+NAME=ringmail sleeves of Iceberg
+ID=i_ringmail_sleeves
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=13
+ARMOR=22
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Ringmail Sleeves of Iceberg
+
+ON=@Create
+color=1928
+HITPOINTS={41 51}
+
+[ITEMDEF i_ringmail_tunic_iceberg]
+DEFNAME=i_ringmail_tunic_iceberg
+NAME=ringamail tunic of Iceberg
+id=i_ringmail_tunic
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=15
+ARMOR=22 
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Iceberg
+DESCRIPTION=Ringmal Tunic of Iceberg
+
+ON=@Create
+COLOR=1928
+HITPOINTS={41 51}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////+21 Fireberg /////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_double_bladed_staff_Fireberg] 
+defname=i_double_bladed_staff_Fireberg
+NAME=double staff of Fireberg
+ID=i_double_bladed_staff
+TWOHANDS=Y
+DAM=12,13
+SPEED=50
+SKILL=FENCING
+REQSTR=50
+WEIGHT=2
+TYPE=T_WEAPON_FENCE
+FLIP=1
+SKILL=Fencing
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Double Staff of Fireberg
+
+ON=@Create 
+HITPOINTS={77 100} 
+COLOR=1975
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_crescent_blade_Fireberg]
+DEFNAME=i_crescent_blade_Fireberg
+NAME=crescent blade of Fireberg
+ID=i_crescent_blade
+TYPE=T_WEAPON_SWORD
+FLIP=1
+DAM=11,14
+SPEED=47
+SKILL=Swordsmanship
+REQSTR=55
+TWOHANDS=Y
+WEIGHT=1
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Crescent Blade of Fireberg
+
+ON=@Create
+Color=1975
+HITPOINTS={82 87}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_axe_Fireberg]
+DEFNAME=i_axe_Fireberg
+ID=i_axe
+TYPE=T_WEAPON_SWORD
+Name=axe of Fireberg
+FLIP=0
+//ATT=30
+DAM=6,33
+SPEED=37
+SKILL=Swordsmanship
+REQSTR=35
+TWOHANDS=Y
+WEIGHT=15
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Axe of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={85 110}
+MOREY=145.0
+
+[ITEMDEF i_axe_battle_Fireberg]
+DEFNAME=i_axe_battle_Fireberg
+TYPE=T_WEAPON_SWORD
+name=battle axe of Fireberg
+ID=i_axe_battle
+FLIP=0
+DAM=6,38
+SPEED=20
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=Y
+WEIGHT=28
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Battle Axe of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={80 105}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_axe_double_Fireberg]
+DEFNAME=i_axe_double_Fireberg
+TYPE=T_WEAPON_SWORD
+name=double axe of Fireberg
+ID=i_axe_double
+FLIP=0
+DAM=5,35
+//ATT=25
+SPEED=37
+SKILL=Swordsmanship
+REQSTR=45
+TWOHANDS=Y
+WEIGHT=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Double Axe of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={70 110}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_axe_exec_Fireberg]
+DEFNAME=i_axe_exec_Fireberg
+TYPE=T_WEAPON_SWORD
+name=executioner's axe of Fireberg
+ID=i_axe_exec
+FLIP=0
+DAM=6,33
+//ATT=30
+SPEED=50
+SKILL=Swordsmanship
+REQSTR=35
+TWOHANDS=Y
+WEIGHT=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Executioner's Axe of Fireberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+COLOR=1975
+HITPOINTS={90 105}
+MOREY=145.0
+
+[ITEMDEF i_hatchet_Fireberg]
+DEFNAME=i_hatchet_Fireberg
+TYPE=T_WEAPON_SWORD
+name=hatchet of Fireberg
+ID=i_hatchet
+FLIP=0
+DAM=2,17
+SPEED=55
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=Y
+WEIGHT=28
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Hatchet of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={95 110}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_axe_battle_large_Fireberg]
+DEFNAME=i_axe_battle_large_Fireberg
+WEIGHT=12
+TYPE=T_WEAPON_AXE
+name=large battle axe of Fireberg
+ID=i_axe_battle_large
+Dam=4,34
+FLIP=0
+SPEED=20
+SKILL=Swordsmanship
+REQSTR=45
+TWOHANDS=Y
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Large Battle Axe of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={80 110}
+MOREY=145.0
+
+[ITEMDEF i_axe_two_hand_Fireberg]
+DEFNAME=i_axe_two_hand_Fireberg
+WEIGHT=8
+name=two handed axe of Fireberg
+Dam=4,32
+ID=i_axe_two_hand
+TYPE=T_WEAPON_AXE
+FLIP=0
+SPEED=30
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=Y
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Two Handed Axe of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={60 98}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_axe_war_Fireberg]
+DEFNAME=i_axe_war_Fireberg
+WEIGHT=8
+TYPE=T_WEAPON_MACE_SHARP
+name=war axe of Iceberg
+Dam=8,33
+ID=i_axe_war
+FLIP=0
+SPEED=35
+SKILL=Mace Fighting
+REQSTR=35
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=War Axe of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={80 110}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+On=@Equip
+SRC.Swordsmanship=<SRC.Swordsmanship> +(-25.0)
+
+On=@Unequip
+SRC.Swordsmanship=<SRC.Swordsmanship> +25.0
+
+[ITEMDEF i_bow_Fireberg]
+//arrow
+//Using bow type below
+DEFNAME=i_bow_Fireberg
+name=bow of Fireberg
+ID=i_bow
+Dam=9,21
+TYPE=T_WEAPON_BOW
+FLIP=0
+WEIGHT=5
+SPEED=20
+SKILL=Archery
+REQSTR=20
+TWOHANDS=Y
+TDATA3=i_arrow
+TDATA4=6252
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Bow of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={54 75}
+MOREY=145.0
+
+[ITEMDEF i_crossbow_Fireberg]
+//Crossbow
+//Using bow type below
+DEFNAME=i_crossbow_Fireberg
+NAME=crossbow of Fireberg
+ID=i_crossbow
+Dam=8,43
+TYPE=T_WEAPON_XBOW
+FLIP=0
+//SPEED=18
+SKILL=Archery
+REQSTR=30
+TWOHANDS=Y
+WEIGHT=15
+TDATA3=i_xbolt
+TDATA4=14052
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Crossbow of Fireberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+color=1975
+HITPOINTS={31 80}
+MOREY=1450
+
+[ITEMDEF i_crossbow_heavy_Fireberg]
+DEFNAME=i_crossbow_heavy_Fireberg
+NAME=heavy crossbow of Fireberg
+ID=i_crossbow_heavy
+TYPE=T_WEAPON_XBOW
+FLIP=0
+WEIGHT=8
+DAM=18,48
+//SPEED=10
+SKILL=archery
+REQSTR=40
+TWOHANDS=Y
+TDATA3=i_xbolt
+TDATA4=14068
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Heavy Crossbow of Fireberg
+
+ON=@Create
+color=1975
+HITPOINTS={31 100}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+ 
+ON=@Damage   
+SRC.NEWITEM=i_fx_explode 
+SRC.ACT.ATTR=attr_static|attr_decay 
+SRC.ACT.TIMER=2 
+SRC.ACT.P=<SRC.P> 
+SRC.ACT.MOVE s 
+SRC.ACT.MOVE e 
+VAR.X=RAND(14) 
+IF X==0 
+SRC.HITS=<SRC.HITS>+(-<EVAL {70}> 
+SRC.ACT.SAYU Es demasiado para el! 
+ENDIF 
+RETURN 0
+
+
+[ITEMDEF i_kryss_Fireberg]
+DEFNAME=i_kryss_Fireberg
+NAME=kryss of Fireberg
+ID=i_kryss
+WEIGHT=8
+TYPE=T_WEAPON_FENCE
+FLIP=0
+DAM=6,18
+//SPEED=50
+SKILL=Fencing
+REQSTR=10
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Kryss of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={31 90}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_club_Fireberg]
+DEFNAME=i_club_Fireberg
+NAME=club of Fireberg
+ID=i_club
+WEIGHT=8
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=3,12
+//SPEED=60
+SKILL=Mace Fighting
+REQSTR=10
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Club of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={31 40}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_hammer_pick_Fireberg]
+DEFNAME=i_hammer_pick_Fireberg
+NAME=hammer pick of Fireberg
+ID=i_hammer_pick
+WEIGHT=7
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=9,33
+//SPEED=30
+SKILL=Mace Fighting
+REQSTR=35
+TWOHANDS=Y
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Hammer Pick of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={31 70}
+MOREY=145.0
+
+[ITEMDEF i_mace_Fireberg]
+DEFNAME=i_mace_Fireberg
+NAME=mace of Fireberg
+ID=i_mace
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=8,32
+//SPEED=55
+SKILL=MaceFighting
+REQSTR=20
+TWOHANDS=N
+//MATERIAL=20
+WEIGHT=14
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Mace of Fireberg
+
+ON=@Create
+ATTR=ATTR_MAGIC
+COLOR=1975
+HITPOINTS={31 70}
+MOREY=145.0
+
+[ITEMDEF i_maul_Fireberg]
+DEFNAME=i_maul_Fireberg
+NAME=maul of Iceberg
+ID=I_MAUL
+WEIGHT=9
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=9,21
+//SPEED=40
+SKILL=Mace Fighting
+REQSTR=20
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Maul of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={31 70}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+
+[ITEMDEF i_scepter_Fireberg]
+DEFNAME=i_scepter_Fireberg
+NAME=scepter of Fireberg
+ID=i_scepter
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=1
+DAM=14,17
+SPEED=30
+SKILL=Macefighting
+REQSTR=40
+TWOHANDS=N
+WEIGHT=8
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Scepter of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={79 92}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_hammer_war_Fireberg]
+DEFNAME=i_hammer_war_Fireberg
+NAME=war hammer of Fireberg
+ID=i_hammer_war
+WEIGHT=7
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=4,36
+//SPEED=20
+SKILL=Mace Fighting
+REQSTR=40
+TWOHANDS=Y
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Hammer War of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={31 110}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_mace_war_Fireberg]
+DEFNAME=i_mace_war_Fireberg
+NAME=war mace of Fireberg
+ID=i_mace_war
+WEIGHT=8
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=0
+DAM=6,34
+//SPEED=30
+SKILL=Mace Fighting
+REQSTR=30
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=War Mace of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={31 110}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_bardiche_Fireberg]
+DEFNAME=i_bardiche_Fireberg
+NAME=bardiche of Fireberg
+ID=i_bardiche
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=5,43
+//SPEED=30
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=Y
+WEIGHT=7
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Bardiche of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={31 100}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_halberd_Fireberg]
+DEFNAME=i_halberd_Firebergg
+Name=haldberd of Fireberg
+ID=i_halberd
+WEIGHT=10
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=4,48
+//SPEED=20
+SKILL=Swordsmanship
+REQSTR=45
+TWOHANDS=Y
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Halberd of Fireberg
+
+ON=@Create
+CoLOR=1975
+HITPOINTS={31 80}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_pitchfork_Fireberg]
+DEFNAME=i_pitchfork_Fireberg
+ID=i_pitchfork
+NAME=pitchfork of Fireberg
+TYPE=T_WEAPON_FENCE
+FLIP=0
+DAM=4,16
+//SPEED=50
+SKILL=Fencing
+REQSTR=15
+TWOHANDS=Y
+WEIGHT=10
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Pitchfork of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={31 60}
+MOREY=145.0
+
+[ITEMDEF i_spear_Fireberg]
+DEFNAME=i_spear_Fireberg
+ID=i_spear
+NAME=spear of Fireberg
+TYPE=T_WEAPON_FENCE
+FLIP=0
+DAM=5,33
+//SPEED=30
+SKILL=Fencing
+REQSTR=30
+TWOHANDS=N
+WEIGHT=7
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Spear of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={31 80}
+MOREY=145.0
+
+[ITEMDEF i_scythe_Fireberg]
+DEFNAME=i_scythe_Fireberg
+ID=i_scythe
+NAME=sythe of Fireberg
+TYPE=t_weapon_mace_staff
+DAM=15,18
+SPEED=32
+SKILL=macefighting
+REQSTR=45
+TWOHANDS=Y
+WEIGHT=5
+FLIP=1
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Scythe of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={46 88}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_war_fork_Fireberg]
+DEFNAME=i_war_fork_Fireberg
+ID=i_war_fork
+NAME=war fork of Fireberg
+WEIGHT=8
+TYPE=T_WEAPON_FENCE
+FLIP=0
+DAM=4,28
+//SPEED=35
+SKILL=Fencing
+REQSTR=35
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=War Fork of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={31 110}
+MOREY=145.0
+
+[ITEMDEF i_spear_short_Fireberg]
+DEFNAME=i_spear_short_Fireberg
+ID=i_spear_short
+NAME=short spear of Fireberg
+WEIGHT=7
+TYPE=T_WEAPON_FENCE
+FLIP=0
+DAM=7,19
+//SPEED=55
+SKILL=Fencing
+REQSTR=15
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Short Spear of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={31 70}
+MOREY=145.0
+
+[ITEMDEF i_bladed_staff_Fireberg]
+DEFNAME=i_bladed_staff_Fireberg
+ID=i_bladed_staff
+NAME=bladed staff of Fireberg
+TYPE=T_WEAPON_mace_staff
+FLIP=1
+DAM=14,16
+SPEED=37
+SKILL=macefighting
+REQSTR=40
+TWOHANDS=Y
+WEIGHT=4
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Bladed Staff of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={91 112}
+MOREY=145.0
+
+[ITEMDEF i_bone_harvester_Fireberg]
+DEFNAME=i_bone_harvester_Fireberg
+name=bone harvester of Fireberg
+ID=i_bone_harvester
+TYPE=T_WEAPON_SWORD
+FLIP=1
+DAM=13,15
+SPEED=36
+SKILL=Swordsmanship
+REQSTR=25
+TWOHANDS=N
+WEIGHT=3
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Bone Harvester of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={70 76}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_sword_broad_Fireberg]
+DEFNAME=i_sword_broad_Fireberg
+NAME=broad sword of Fireberg
+ID=i_sword_broad
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=5,29
+//SPEED=35
+SKILL=Swordsmanship
+REQSTR=25
+TWOHANDS=N
+WEIGHT=6
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Broad Sword of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={31 100}
+MOREY=145.0
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_cutlass_Fireberg]
+DEFNAME=i_cutlass_Fireberg
+ID=i_cutlass
+NAME=cutlass of Fireberg
+WEIGHT=8
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=6,18
+//SPEED=45
+SKILL=Swordsmanship
+REQSTR=10
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Cutlass of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={31 70}
+MOREY=145.0
+
+[ITEMDEF i_katana_Fireberg]
+DEFNAME=i_katana_Fireberg
+ID=i_katana
+NAME=katana of Fireberg
+WEIGHT=8
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=4,20
+//SPEED=40
+SKILL=Swordsmanship
+REQSTR=10
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Katana of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={31 90}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_lance_Fireberg]
+DEFNAME=i_lance_Fireberg
+ID=i_lance
+NAME=lance of Fireberg
+TYPE=T_WEAPON_FENCE
+FLIP=1
+DAM=17,18
+SPEED=24
+SKILL=Fencing
+REQSTR=95
+TWOHANDS=N
+WEIGHT=12
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Lance of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={40 116}
+MOREY=145.0
+
+[ITEMDEF i_sword_long_b_Fireberg]
+DEFNAME=i_sword_long_b_Fireberg
+NAME=long sword of Fireberg
+ID=i_sword_long_b
+WEIGHT=8
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=4,32
+//SPEED=35
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Long Sword b of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={31 110}
+MOREY=145.0
+
+[ITEMDEF i_sword_long_Fireberg]
+DEFNAME=i_sword_long_Fireberg
+Name=long sword of Fireberg
+ID=i_sword_long
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=4,32
+//SPEED=35
+SKILL=Swordsmanship
+REQSTR=25
+TWOHANDS=N
+WEIGHT=7
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Long Sword of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={31 110}
+MOREY=145.0
+
+[ITEMDEF i_scimitar_Fireberg]
+DEFNAME=i_scimitar_Fireberg
+NAME=scimitar of Fireberg
+ID=i_scimitar
+WEIGHT=8
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=6,22
+//SPEED=45
+SKILL=Swordsmanship
+REQSTR=10
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Scimitar of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={31 90}
+MOREY=145.0
+
+[ITEMDEF i_sword_paladin_Fireberg]
+DEFNAME=i_sword_paladin_Fireberg
+NAME=paladin sword of Fireberg
+ID=i_sword_paladin
+TYPE=T_WEAPON_SWORD
+FLIP=1
+DAM=12,16
+SPEED=40
+SKILL=Swordsmanship
+REQSTR=55
+TWOHANDS=N
+WEIGHT=1
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Paladin Sword of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={60 85}
+ATTR=ATTR_MAGIC
+MOREY=145.0
+
+[ITEMDEF i_sword_viking_Fireberg]
+DEFNAME=i_sword_viking_Fireberg
+NAME=viking sword of Fireberg
+ID=i_sword_viking
+WEIGHT=8
+TYPE=T_WEAPON_SWORD
+FLIP=0
+DAM=4,32
+//SPEED=35
+SKILL=Swordsmanship
+REQSTR=40
+TWOHANDS=N
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Viking Sword of Fireberg
+
+ON=@Create
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={31 100}
+MOREY=145.0
+
+[ITEMDEF i_chainmail_coif_Fireberg]
+DEFNAME=i_chainmail_coif_Fireberg
+name=chainmail coif of Fireberg
+ID=i_chainmail_coif
+TYPE=T_ARMOR
+WEIGHT=7
+FLIP=0
+ARMOR=23
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Chainmail Coif of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={36 44}
+
+[ITEMDEF i_chainmail_leggings_Fireberg]
+DEFNAME=i_chainmail_leggings_Fireberg
+ID=i_chainmail_leggings
+NAME=chainmail leggings of Fireberg
+TYPE=T_ARMOR
+WEIGHT=10
+FLIP=0
+ARMOR=28
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Chainmail Leggings of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={46 58}
+
+[ITEMDEF i_chainmail_tunic_Fireberg]
+DEFNAME=i_chainmail_tunic_Fireberg
+ID=i_chainmail_tunic
+NAME=chainmail tunic of Fireberg
+TYPE=T_ARMOR
+WEIGHT=15
+FLIP=0
+ARMOR=28
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Chainmail Tunic of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={46 58}
+
+[ITEMDEF i_platemail_arms_Fireberg]
+DEFNAME=i_platemail_arms_Fireberg
+NAME=platemail arms of Fireberg
+ID=i_platemail_arms
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=18
+ARMOR=100
+REQSTR=40
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Platemail Arms of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={51 65}
+
+[ITEMDEF i_platemail_chest_Fireberg]
+DEFNAME=i_platemail_chest_Fireberg
+NAME=platemail chest of Fireberg
+ID=i_platemail_chest
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=23
+ARMOR=100
+REQSTR=60
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Platemail Chest of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={51 65}
+
+[ITEMDEF i_platemail_gloves_Fireberg]
+DEFNAME=i_platemail_gloves_Fireberg
+name=platemail gloves of Fireberg
+ID=i_platemail_gloves
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=5
+ARMOR=100
+REQSTR=30
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Platemail Gloves of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={51 65}
+
+[ITEMDEF i_platemail_gorget_Fireberg]
+DEFNAME=i_platemail_gorget_Firebergg
+NAME=platemail gorget of Fireberg
+ID=i_platemail_gorget
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=6
+ARMOR=100
+REQSTR=30
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Platemail Gorget of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={51 65}
+
+[ITEMDEF i_platemail_helm_Fireberg]
+DEFNAME=i_platemail_helm_Fireberg
+NAME=platemail helm of Fireberg
+ID=i_platemail_helm
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=10
+ARMOR=100
+REQSTR=60
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Platemail Helm of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={51 65}
+
+[ITEMDEF i_platemail_leggings_Fireberg]
+DEFNAME=i_platemail_leggings_Fireberg
+NAME=platemail leggings of Fireberg
+ID=i_platemail_leggings
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=20
+ARMOR=100
+REQSTR=40
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Platemail Leggings of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={51 65}
+
+[ITEMDEF i_shield_heater_Fireberg]
+DEFNAME=i_shield_heater_Fireberg
+NAME=heater shield of Fireberg
+ID=i_shield_heater
+TYPE=t_shield
+FLIP=0
+WEIGHT=14
+ARMOR=20
+REQSTR=30
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Heater Shield of Fireberg
+
+ON=@Create
+MOREY=145.0
+COLOR=1975
+HITPOINTS={31 37}
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_shield_buckler_Fireberg]
+DEFNAME=i_shield_buckler_Fireberg
+ID=i_shield_buckler
+NAME=buckler shield of Fireberg
+TYPE=t_shield
+FLIP=0
+WEIGHT=6
+ARMOR=17
+REQSTR=15
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Buckler Shield of Fireberg
+
+ON=@Create
+MORey=145.0
+COLOR=1975
+HITPOINTS={41 51}
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_shield_kite_metal_Fireberg]
+DEFNAME=i_shield_kite_metal_Fireberg
+NAME=metal kite shield of Fireberg
+ID=i_shield_kite_metal
+TYPE=t_shield
+FLIP=0
+WEIGHT=14
+DYE=1
+ARMOR=15
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Metal Kite Shield of Fireberg
+
+ON=@Create
+MOREY=145.0
+color=1975
+HITPOINTS={26 30}
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_shield_kite_wood_Fireberg]
+DEFNAME=i_shield_kite_wood_Fireberg
+NAME=wood kite shield of Fireberg
+ID=i_shield_kite_wood
+TYPE=t_shield
+FLIP=0
+WEIGHT=9
+ARMOR=13
+REQSTR=30
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Wood Kite Shield of Fireberg
+
+ON=@Create
+MOREY=145.0
+COLOR=1975
+ATTR=ATTR_MAGIC
+HITPOINTS={46 58}
+
+[ITEMDEF i_shield_round_metal_Fireberg]
+DEFNAME=i_shield_round_metal_Fireberg
+NAME=metal shield of Fireberg
+ID=i_shield_round_metal
+TYPE=t_shield
+FLIP=0
+WEIGHT=11
+ARMOR=10
+REQSTR=10
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Metal shield of Fireberg
+
+ON=@Create
+COLOR=1975
+MOREY=145.0
+HITPOINTS={36 44}
+ATTR=ATTR_MAGIC
+
+[ITEMDEF i_shield_round_bronze_Fireberg]
+DEFNAME=i_shield_round_bronze_Fireberg
+NAME=round bronze shield of Fireberg
+ID=i_shield_round_bronze
+TYPE=t_shield
+FLIP=0
+WEIGHT=12
+ARMOR=5
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Round Bronze Shield of Fireberg
+
+ON=@Create
+color=1975
+MOREY=145.0
+ATTR=ATTR_MAGIC
+HITPOINTS={26 30}
+
+[ITEMDEF i_shield_wood_Fireberg]
+DEFNAME=i_shield_wood_Fireberg
+NAME=wood shield of Fireberg
+ID=i_shield_wood
+TYPE=t_shield
+FLIP=1
+WEIGHT=9
+ARMOR=3
+REQSTR=5
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Wood Shield of Fireberg
+
+ON=@Create
+color=1975
+MOREY=145.0
+ATTR=ATTR_MAGIC
+HITPOINTS={21 23}
+
+[ITEMDEF i_ringmail_gloves_Fireberg]
+DEFNAME=i_ringmail_gloves_Fireberg
+NAME=ringmail gloves of Fireberg
+ID=i_ringmail_gloves
+TYPE=T_ARMOR
+WEIGHT=2
+FLIP=0
+ARMOR=22
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Ringmail Gloves of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={41 51}
+
+[ITEMDEF i_ringmail_leggings_Fireberg]
+DEFNAME=i_ringmail_leggings_Fireberg
+NAME=ringmail leggings of Fireberg
+ID=i_ringmail_leggings
+TYPE=T_ARMOR
+FLIP=1
+WEIGHT=15
+ARMOR=22
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Ringmail Leggings of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={41 51}
+
+[ITEMDEF i_ringmail_sleeves_Fireberg]
+DEFNAME=i_ringmail_sleeves_Fireberg
+NAME=ringmail sleeves of Fireberg
+ID=i_ringmail_sleeves
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=13
+ARMOR=22
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Ringmail Sleeves of Fireberg
+
+ON=@Create
+color=1975
+HITPOINTS={41 51}
+
+[ITEMDEF i_ringmail_tunic_Fireberg]
+DEFNAME=i_ringmail_tunic_Fireberg
+NAME=ringamail tunic of Fireberg
+id=i_ringmail_tunic
+TYPE=T_ARMOR
+FLIP=0
+WEIGHT=15
+ARMOR=22 
+REQSTR=20
+CATEGORY=Provisions - Weapons - +21
+SUBSECTION=Fireberg
+DESCRIPTION=Ringmail Tunic of Fireberg
+
+ON=@Create
+COLOR=1975
+HITPOINTS={41 51}
+
+[EOF]

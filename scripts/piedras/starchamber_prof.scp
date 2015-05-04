@@ -1,0 +1,627 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Sabado, Septiembre 16, 2006
+// Piedra de Profesiones
+VERSION=1.8
+
+[ITEMDEF 945] 
+DEFNAME=i_stone_Class 
+DEFNAME2=i_class_stone
+NAME=Monument of the Classes 
+WEIGHT=0 
+
+CATEGORY=Custom Stone
+SUBSECTION=Piedras Star chamber
+DESCRIPTION=Piedra de Clases
+
+ON=@Create 
+ATTR=014 
+
+ON=@DCLICK
+IF (<SRC.TARG.DISTANCE> > 2) 
+SRC.SYSMESSAGE You can't reach that.
+RETURN 1 
+ENDIF 
+IF ! (<src.oskin>==0)
+SRC.SFX 555
+DIALOG d_class_list 
+RETURN 1
+else
+SRC.SAYUA 32 6 0 1 <SRC.NAME> no has escogido Raza!
+RETURN 1
+
+[DIALOG d_class_List] 
+0,0 
+resizepic 0 0 2600 500 300 
+gumppic 180 20 1418 
+page 0 
+text 55 17 32 0 
+text 145 37 904 1 
+text 145 57 904 2 
+text 145 77 32 3
+text 145 97 904 4 
+text 145 117 904 5 
+text 145 137 904 6
+text 55 37 1152 7 
+text 55 57 1152 8 
+text 55 77 1152 9 
+text 55 97 1152 10 
+text 55 117 1152 11 
+text 55 137 1152 12 
+text 55 157 1152 13 
+text 55 177 1152 14 
+text 55 197 1152 15 
+text 55 217 1152 16 
+text 55 237 1152 17 
+button 35 40 1209 1210 1 0 1 
+button 35 60 1209 1210 1 0 2 
+button 35 80 1209 1210 1 0 3 
+button 35 100 1209 1210 1 0 4 
+button 35 120 1209 1210 1 0 5 
+button 35 140 1209 1210 1 0 6 
+button 35 160 1209 1210 1 0 7 
+button 35 180 1209 1210 1 0 8 
+button 35 200 1209 1210 1 0 9 
+button 35 220 1209 1210 1 0 10 
+button 35 240 1209 1210 1 0 11
+
+[DIALOG d_Class_List TEXT] 
+Profeciones
+Escoge tu profecion de acuerdo a
+tus skills.
+ADVERTENCIA:
+La profecion solo se escoge 1 vez
+y no la cambiaremos por ninguna
+razon.
+Artesano 
+Bardo
+Beserker 
+Clerigo 
+Druida
+Cazador
+Mago 
+Ranger 
+Shaman 
+Ladron
+Guerrero 
+
+[DIALOG d_Class_List BUTTON] 
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+ONBUTTON=1 
+DIALOG d_class_Artisan 
+ONBUTTON=2
+DIALOG d_class_Bard 
+ONBUTTON=3
+DIALOG d_class_Beserker 
+ONBUTTON=4 
+DIALOG d_class_Cleric 
+ONBUTTON=5 
+DIALOG d_class_Druid 
+ONBUTTON=6 
+DIALOG d_class_Hunter 
+ONBUTTON=7 
+DIALOG d_class_Mage 
+ONBUTTON=8
+DIALOG d_class_Ranger 
+ONBUTTON=9 
+DIALOG d_class_Shaman 
+ONBUTTON=10
+DIALOG d_class_Thief
+ONBUTTON=11
+DIALOG d_class_Warrior 
+
+[DIALOG d_Class_Artisan] 
+0,0 
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5582 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+text 25 150 81 3 
+text 25 170 81 4 
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Artisan TEXT] 
+-=*El Artesano*=-
+Vive de la Artesania. Esta profecion requiere 
+cual quiera de estos skills: Alchemy, Tailor, 
+Blacksmithyng, Mining, Carpentry, Tinkering,
+Bowcraft/Fletching. 
+ñ
+"Quiero ser Artesano!" 
+Return to List 
+
+[DIALOG d_Class_Artisan BUTTON] 
+ON=1
+DIALOG d_artisan_select
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+[DIALOG d_artisan_select] 
+0,0 
+resizepic 0 0 3600 500 100 
+text 150 20 81 0 
+text 150 40 81 1
+text 150 60 81 2
+text 25 20 81 3
+text 25 40 81 4
+text 25 60 81 5
+button 90 20 1209 1210 1 0 1 
+button 90 40 1209 1210 1 0 2 
+button 90 60 2076 2075 1 0 3 
+
+[DIALOG d_artisan_select TEXT]
+Al ser artesano puedes escoger una profesion
+segundaria para asi poder aventurarte como un 
+Guerrero o Mago normal.
+Mago
+Guerrero 
+Volver
+
+[DIALOG d_artisan_select BUTTON] 
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+SRC.GO=5139 1767
+SRC.TITLE=<SRC.TITLE> Artisan
+SRC.NEWITEM=i_mem_artisan_mage
+SRC.ACT.EQUIP
+SRC.EVENTS=+e_artisan_mage
+SRC.SOUND=snd_spell_magic_lock
+SRC.SYSMESSAGE=Ahora tu especialidad es Artesano!
+ONBUTTON=2
+SRC.GO=5139 1767
+SRC.TITLE=<SRC.TITLE> Artisan
+SRC.NEWITEM=i_mem_artisan_warrior
+SRC.ACT.EQUIP
+SRC.EVENTS=+e_artisan_warrior
+SRC.SOUND=snd_spell_magic_lock
+SRC.SYSMESSAGE=Ahora tu especialidad es Artesano!
+ONBUTTON=3
+DIALOG d_class_list
+RETURN 1
+
+[DIALOG d_Class_Bard] 
+0,0 
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5554 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+text 25 150 81 3 
+
+
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Bard TEXT] 
+-=*El Bardo*=-
+Es el poeta, el skill para esta profecion es:
+Musicanship. 
+Es un dedicado al arte del poetismo. 
+ñ
+ñ
+"Quiero ser Bardo!" 
+Return to List 
+
+[DIALOG d_Class_Bard BUTTON] 
+ON=1
+SRC.SYSMESSAGE=Bardo no esta activado.
+DIALOG d_class_list
+RETURN 1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+
+[DIALOG d_Class_Beserker] 
+0,0 
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5568 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+text 25 150 81 3 
+text 25 170 81 4 
+text 25 190 81 5 
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Beserker TEXT] 
+-=*El Beserker*=-
+Es aquel individuo indestrutible y que es capas de
+penetrar en la barrera mas solida e invulnerable.
+Esta profecion es para los que tienen como minimo: 
+Swordsmanship, Wrestling, Parrying,Macefighting,
+Tactics. 
+"Quiero ser Beserker!" 
+Return to List 
+
+[DIALOG d_Class_Beserker BUTTON] 
+ON=1
+SRC.GO=5139 1767
+SRC.TITLE=<SRC.TITLE> Berserker
+SRC.EVENTS=+e_berserker
+SRC.NEWITEM=i_mem_berserker
+SRC.ACT.EQUIP
+SRC.SOUND=snd_SPELL_MAGIC_LOCK
+SRC.SYSMESSAGE=Ahora tu especialidad es Berserker!
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+
+[DIALOG d_Class_Cleric] 
+0,0 
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5564 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+
+
+
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Cleric TEXT] 
+-=*El Clerigo*=- 
+Son los Curas especializadas para Resusitar, los
+skills necesarios son: Healing, Magery, Anatomy. 
+ademas se especializan en Alchemy.
+ñ
+ñ
+"Quiero ser Clerigo!" 
+Return to List 
+
+[DIALOG d_Class_Cleric BUTTON] 
+ON=1
+SRC.SYSMESSAGE=Clerigo no esta activado.
+DIALOG d_class_list
+RETURN 1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+
+[DIALOG d_Class_Druid] 
+0,0 
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5550 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+text 25 150 81 3 
+ñ
+ñ 
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Druid TEXT] 
+-=*El Druida*=- 
+Son los que ayudan a los seguidores de la Luz y
+obedecen las reglas de Dios. Para ser Druida
+necesitas poderes curativos. 
+ñ
+ñ
+"Quiero ser Druida!" 
+Return to List 
+
+[DIALOG d_Class_Druid BUTTON] 
+ON=1
+SRC.SYSMESSAGE=Druida no esta activado.
+DIALOG d_class_list
+RETURN 1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+
+[DIALOG d_Class_Hunter] 
+0,0 
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5561 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+text 25 150 81 3 
+text 25 170 81 4 
+text 25 190 81 5 
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Hunter TEXT] 
+-=*El Cazador*=-
+Ellos van en busca de recompensas, esta clase puede
+participar en un selecto grupo de Quest especiales
+mandadas por el Staff del Server.
+Requiere Fencing o Archery.
+ñ
+"Quiero ser Cazador!" 
+Return to List 
+
+[DIALOG d_Class_Hunter BUTTON] 
+ON=1
+SRC.GO=5139 1767
+SRC.TITLE=<SRC.TITLE> Hunter
+SRC.EVENTS=+e_hunter
+SRC.NEWITEM=i_mem_hunter
+SRC.ACT.EQUIP
+SRC.SOUND=snd_SPELL_MAGIC_LOCK
+SRC.SYSMESSAGE=Ahora tu especialidad es Cazador!
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+
+[DIALOG d_Class_Mage] 
+0,0
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5570 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+text 25 150 81 3 
+text 25 170 81 4 
+text 25 190 81 5 
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Mage TEXT] 
+-=*El Mago*=-
+Es la profecion para los que se especializan 
+en magia.
+Ellos pueden pertenecer a la Luz y dar grandes 
+batallas.
+Skills: Magery, Meditation, Wrestling, Evalint. 
+"Quiero ser Mago!" 
+Return to List 
+
+[DIALOG d_Class_Mage BUTTON] 
+ON=1
+SRC.GO=5139 1767
+SRC.TITLE=<SRC.TITLE> Mage
+SRC.EVENTS=+e_mage
+SRC.NEWITEM=i_mem_mago
+SRC.ACT.EQUIP
+SRC.SOUND=snd_SPELL_MAGIC_LOCK
+SRC.SYSMESSAGE=Ahora tu especialidad es Mago!
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+SRC.f_CLASS_INITIALIZE_Mage 
+SRC.SYSMESSAGE=*POOF* Eres Mago 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+
+[DIALOG d_Class_Ranger] 
+0,0 
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5552 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+text 25 150 81 3 
+text 25 170 81 4 
+text 25 190 81 5 
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Ranger TEXT] 
+-=*El Ranger*=- 
+Es el que se especializa en proteger Sosaria 
+de todo mal. Para ser ranger necesitas 
+cualquier skill de guerrero.
+ñ
+ñ
+ñ
+"Quiero ser Ranger!" 
+Return to List 
+
+[DIALOG d_Class_Ranger BUTTON] 
+ON=1
+SRC.GO=5139 1767
+SRC.TITLE=<SRC.TITLE> Ranger
+SRC.EVENTS=+e_ranger
+SRC.NEWITEM=i_mem_ranger
+SRC.ACT.EQUIP
+SRC.SOUND=snd_SPELL_MAGIC_LOCK
+SRC.SYSMESSAGE=Ahora tu especialidad es Ranger!
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+SRC.f_CLASS_INITIALIZE_Ranger 
+SRC.SYSMESSAGE=*POOF* Eres Ranger 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+
+[DIALOG d_Class_Shaman] 
+0,0 
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5585 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+text 25 150 81 3 
+text 25 170 81 4 
+text 25 190 81 5 
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Shaman TEXT] 
+-=*El Shaman*=-
+Es el que controla espiritus y los usa contra su 
+voluntad, a su beneficio.
+Requiere: Magery o Swordsmaship 
+ñ
+ñ
+"Quiero ser Shaman!" 
+Return to List 
+
+[DIALOG d_Class_Shaman BUTTON] 
+ON=1
+SRC.SYSMESSAGE=Shaman no esta activado.
+DIALOG d_class_list
+RETURN 1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+SRC.f_CLASS_INITIALIZE_Shaman 
+SRC.SYSMESSAGE=*POOF* Eres Shaman 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+[DIALOG d_Class_Thief] 
+0,0 
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5572 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+text 25 150 81 3 
+text 25 170 81 4 
+text 25 190 81 5 
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Thief TEXT] 
+-=*El Ladron*=-
+El ladron es el que roba, siendo ladron podras
+robarle a todos Neutrales, Order, Player Killer... 
+Si eres Shapeshifter esta es tu profesion! 
+Skill: Snooping, Stealt, Hiding, Lockpicking
+Advertencia:Quedaras como criminal!
+"Quiero ser Ladron!" 
+Return to List 
+
+[DIALOG d_Class_Thief BUTTON] 
+ON=1
+SRC.SYSMESSAGE=Si deseas ser Ladron debes contactar a un GM o Admin.
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+
+[DIALOG d_Class_Warrior] 
+0,0 
+resizepic 0 0 3600 525 315 
+gumppic 40 40 5578 
+text 120 68 126 0 
+text 25 110 81 1 
+text 25 130 81 2 
+text 25 150 81 3 
+text 25 170 81 4 
+text 25 190 81 5 
+button 90 220 92 52 1 0 1 
+text 140 220 126 6 
+button 425 280 2469 2470 1 0 2 
+text 300 280 81 7 
+
+[DIALOG d_Class_Warrior TEXT] 
+-=*El Guerrero*=-
+ Es el que se especializa en grandes batallas,
+es la profecion perfecta para los que tienen
+skills como: Swordsmanhip, Fencing, Parrying
+Macefighting, Wrestling, Archery, Tactics. 
+ Siendo guerrero puedes hacer grandes PvP.
+"Quiero ser Guerrero!" 
+Return to List 
+
+[DIALOG d_Class_Warrior BUTTON] 
+ON=1
+SRC.GO=5139 1767
+SRC.TITLE=<SRC.TITLE> Warrior
+SRC.EVENTS=+e_warrior
+SRC.NEWITEM=i_mem_warrior
+SRC.ACT.EQUIP
+SRC.SOUND=snd_SPELL_MAGIC_LOCK
+SRC.SYSMESSAGE=Ahora tu especialidad es Guerrero!
+ONBUTTON=0 
+SRC.SYSMESSAGE=Go then, and return when ready 
+RETURN 1 
+ONBUTTON=1 
+SRC.f_CLASS_INITIALIZE_Warrior 
+SRC.SYSMESSAGE=*POOF* Eres Guerrero
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_class_list 
+RETURN 1 
+
+[EOF]

@@ -1,0 +1,108 @@
+[CHARDEF 244]
+DEFNAME=c_rhino
+NAME=Rhino
+SOUND=79
+ICON=i_pet_rhino
+
+DAM=5,19
+ARMOR=16
+RESOURCES=8 i_ore_copper
+
+//ALIGNMENT=EVIL
+CAN=MT_WALK|MT_USEHANDS|MT_RUN
+FOODTYPE=i_ore_copper
+SHELTER=r_dungeon
+AVERSIONS=r_civilization
+
+ON=@Create
+COLOR=0815
+STR={215 295}
+DEX={56 80}
+INT={66 85}
+
+PARRYING={45.0 60.0}
+MAGICRESISTANCE={25.0 40.0}
+TACTICS={75.0 80.0}
+WRESTLING={60.0 80.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-1400 -1499}
+
+ON=@NPCRestock
+ITEM=I_Ore_copper, {4 10 }
+
+CATEGORY=Monsters
+SUBSECTION=Giant Insects and Reptiles
+DESCRIPTION=Rhino
+
+[CHARDEF c_beatle]
+DEFNAME=c_beatle
+NAME=Beatle
+ID=244
+SOUND=79
+ICON=
+
+DAM=5,19
+ARMOR=16
+
+//ALIGNMENT=EVIL
+CAN=MT_WALK|MT_USEHANDS|MT_RUN
+FOODTYPE=i_ore_copper
+SHELTER=r_dungeon
+AVERSIONS=r_civilization
+
+ON=@Create
+STR={215 295}
+DEX={56 80}
+INT={66 85}
+PARRYING={45.0 60.0}
+MAGICRESISTANCE={25.0 40.0}
+TACTICS={75.0 80.0}
+WRESTLING={60.0 80.0}
+TAMING=50.0
+
+NPC=brain_animal
+
+FAME={100 200}
+KARMA={200 499}
+
+ON=@CLICK
+IF (<ISMYPET>)
+DIALOG d_beatle_list
+ENDIF
+
+ON=@NPCRestock
+CATEGORY=Monsters
+SUBSECTION=Giant Insects and Reptiles
+DESCRIPTION=Beatle
+
+[DIALOG d_beatle_List] 
+400,300
+resizepic 0 0 2600 200 100 
+page 0 
+text 60 32 904 0 
+text 60 52 904 1 
+button 40 34 1209 1210 1 0 1
+button 40 54 1209 1210 1 0 2
+
+[DIALOG d_beatle_List TEXT] 
+Mont
+Open Backpack
+
+[DIALOG d_beatle_List BUTTON] 
+ONBUTTON=1 
+REMOVE
+SRC.NEWITEM=i_mt_beatle
+SRC.ACT.EQUIP
+ONBUTTON=2 
+PACK
+
+[ITEMDEF 16144] 
+DEFNAME=i_mt_beatle
+TYPE=T_EQ_HORSE 
+LAYER=25 
+TDATA3=c_beatle
+
+[EOF]

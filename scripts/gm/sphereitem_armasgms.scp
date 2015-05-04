@@ -1,0 +1,122 @@
+[itemdef 0499]
+defname=i_sphere_shield
+NAME=Sphere Shield
+CAN=MT_EQUIP
+REQSTR=0
+armor=54
+WEIGHT=5 
+TYPE=T_SHIELD
+
+ON=@Create 
+HITPOINTS=350 
+ATTR=00024
+MOREY=241.6
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+on=@unequip 
+LINK=04FFFFFFF 
+timer=-1 
+RETURN 0 
+
+[ITEMDEF 16144] 
+defname=i_gm_wings
+NAME=Alas de GM
+CAN=MT_FLY
+
+CATEGORY=Provisions - GM Items
+SUBSECTION=GM Items
+DESCRIPTION=Alas
+
+[ITEMDEF i_GM_staff] 
+NAME=GM Staff
+id=i_staff_black
+DEFNAME=i_gm_staff
+WEIGHT=0
+
+ON=@CREATE 
+COLOR=
+HITPOINTS={100} 
+ATTR=attr_newbie|attr_move_never|attr_magic 
+
+ON=@DCLICK 
+TARGET Seleciona el jugador que deseas mover o resucitar.
+RETURN 1 
+
+ON=@TARGON_CHAR 
+if ((<src.TARG.id>==c_ghost_man) || (<src.TARG.id>==c_ghost_woman)) 
+SRC.TARG.RESURRECT 
+SRC.CONSUME=i_deathshroud
+src.targ.HITS = <SRC.targ.STR> 
+sound=snd_SPELL_RESURRECTION 
+RETURN 1 
+endif 
+
+LINK=<SRC.TARG.UID> 
+TARGETG Donde quieres mover a <SRC.TARG.NAME>? 
+RETURN 1 
+
+ON=@TARGON_GROUND 
+LINK.GO <SRC.TARGP> 
+RETURN 1 
+
+ON=@TARGON_ITEM 
+LINK.GO <SRC.TARGP> 
+RETURN 1 
+
+CATEGORY=Provisions - GM Items
+SUBSECTION=GM Items
+DESCRIPTION=GM Staff
+
+[ITEMDEF i_GM_fishing_pole] 
+NAME=fishing pole
+ID=i_fishing_pole
+DEFNAME=i_gm_fishing_pole
+WEIGHT=2
+VALUE=
+TYPE=T_FISH_POLE
+
+ON=@CREATE 
+COLOR=color_o_apocalypse
+MOREY=170.0
+ATTR=attr_newbie|attr_move_never
+
+ON=@DCLICK 
+TARGET Select player for move or resurrect.
+RETURN 1 
+
+ON=@TARGON_CHAR 
+IF ((<SRC.TARG.ID>==c_ghost_man) || (<SRC.TARG.ID>==c_ghost_woman)) 
+SRC.TARG.RESURRECT 
+SRC.TARG.HITS=25
+SRC.CONSUME=1 i_deathshroud
+SOUND=snd_SPELL_RESURRECTION 
+RETURN 1
+ENDIF
+
+LINK=<SRC.TARG.UID> 
+TARGETG Where move <SRC.TARG.NAME>? 
+RETURN 1 
+
+ON=@TARGON_GROUND 
+LINK.GO <SRC.TARGP> 
+RETURN 1 
+
+ON=@TARGON_ITEM 
+LINK.GO <SRC.TARGP> 
+RETURN 1 
+
+CATEGORY=Provisions - GM Items
+SUBSECTION=GM Items
+DESCRIPTION=GM Fishing Pole

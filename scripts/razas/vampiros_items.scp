@@ -1,0 +1,196 @@
+[ITEMDEF 1607]
+DEFNAME=i_vampire_platemail
+NAME=Vampire Platemail
+ARMOR=80
+REQSTR=110
+WEIGHT=10
+CAN=MT_EQUIP
+TYPE=T_ARMOR
+
+ON=@Create
+COLOR=1979
+HITPOINTS={350 350}
+
+ON=@DCLICK
+IF <CONT.UID>!=<SRC.FINDLAYER(21).UID>
+RETURN 1
+ENDIF
+IF <AMOUNT>>1
+RETURN 1
+ENDIF
+
+ON=@EQUIP
+IF (<src.oskin>==1150)
+drop
+src.emote=are not a pure Vampire!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+LINK=<SRC.UID> 
+TIMER=2 
+RETURN 0
+
+[ITEMDEF i_vampire_platemail_arms]
+DEFNAME=i_vampire_PLATEMAIL_ARMS
+NAME=Vampire Platemail Arms
+ID=i_platemail_arms
+
+ARMOR=80
+REQSTR=110
+WEIGHT=5
+
+ON=@Create
+COLOR=1979
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF (<src.oskin>==1150)
+drop
+src.emote=are not a pure Vampire!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF i_vampire_PLATEMAIL_leggings]
+DEFNAME=i_vampire_PLATEMAIL_leggings
+NAME=Vampire Platemail Legs
+ID=i_platemail_leggings
+
+ARMOR=80
+REQSTR=110
+WEIGHT=7
+
+ON=@Create
+COLOR=1979
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF (<src.oskin>==1150)
+drop
+src.emote=are not a pure Vampire!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF i_vampire_HELM]
+DEFNAME=i_vampire_HELM
+NAME=Vampire Plate Helm
+ID=i_platemail_helm
+
+ARMOR=80
+REQSTR=110
+WEIGHT=2
+
+ON=@Create
+COLOR=1979
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF (<src.oskin>==1150)
+drop
+src.emote=are not a pure Vampire!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF i_vampire_HELM2]
+DEFNAME=i_vampire_HELM2
+NAME=Vampire Helm
+ID=i_bone_helmet
+
+ARMOR=80
+REQSTR=110
+WEIGHT=2
+
+ON=@Create
+COLOR=1979
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF (<src.oskin>==1150)
+drop
+src.emote=are not a pure Vampire!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF i_vampire_PLATEMAIL_GORGET]
+DEFNAME=i_vampire_PLATEMAIL_GORGET
+NAME=Vampire Platemail Gorget
+ID=i_blackrock_platemail_gorget
+
+ARMOR=80
+REQSTR=110
+WEIGHT=2
+
+ON=@Create
+COLOR=1979
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF (<src.oskin>==1150)
+drop
+src.emote=are not a pure Vampire!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF i_vampire_PLATEMAIL_GAUNTLETS]
+DEFNAME=i_vampire_PLATEMAIL_GAUNTLETS
+NAME=Vampire Platemail Gauntlets
+ID=i_platemail_gloves
+
+ARMOR=80
+REQSTR=110
+WEIGHT=3
+
+ON=@Create
+COLOR=1979
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF (<src.oskin>==1150)
+drop
+src.emote=are not a pure Vampire!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF i_vampire_HEATER_SHIELD]
+DEFNAME=i_vampire_HEATER_SHIELD
+NAME=Vampire Heater Shield
+ID=I_SHIELD_HEATER
+ARMOR=34
+REQSTR=30
+WEIGHT=8
+
+ON=@Create
+COLOR=1979
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF (<src.oskin>==1150)
+drop
+src.emote=are not a pure Vampire!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 576]
+DEFNAME=i_vampire_cape
+NAME=Vampire Cape
+REQSTR=30
+WEIGHT=8
+TYPE=t_cloth
+
+ON=@Create
+COLOR=1979
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF (<src.oskin>==1150)
+drop
+src.emote=are not a pure Vampire!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF

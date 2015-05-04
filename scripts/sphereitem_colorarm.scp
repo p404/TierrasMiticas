@@ -1,0 +1,5705 @@
+//////////////////////////////////////
+Orden de los minerales:
+Copper
+Bronze
+Golden
+Bloodrock
+Rose
+Agapite - Shadow
+Verite
+Valorite
+Silver
+Mytheril
+Blackrock
+Titanium
+
+/////////////////////////
+////////Herraduras////////
+////////////////////////////
+
+[ITEMDEF i_herraduras] 
+NAME=horse shoes
+DEFNAME=i_herraduras 
+ID=i_horse_shoes 
+TYPE=t_herradura 
+SKILLMAKE=Blacksmithing 30.0 
+RESOURCES=i_ingot_iron 20 
+CATEGORY=Provisions - Armor - Articulos
+SUBSECTION=Articulos
+DESCRIPTION=Herraduras 
+VALUE=300 
+
+ON=@CREATE 
+COLOR=00 
+
+[TYPEDEF t_herradura] 
+ON=@DCLICK 
+TARGET Which animal you want to put this? 
+RETURN 1 
+
+ON=@TARGON_CHAR 
+IF (<SRC.TARG.DEX> > 150) 
+SRC.MESSAGE This creature dont need horse shoes.
+RETURN 1 
+
+ELSEIF ((<SRC.TARG.BODY> == c_horse_pack) || (<SRC.TARG.BODY> == c_llama_pack)) 
+SRC.SAYU Now the animal is more faster!
+SRC.TARG.DEX=(<SRC.TARG.DEX> + (100)) 
+REMOVE 
+RETURN 1 
+ELSE 
+SRC.SAYU How stupid I am!! This is only for pack animals! 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////COPPER////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF 04560]
+DEFNAME=i_COPPER_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+ARMOR=40
+REQSTR=70
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 68.7
+
+ON=@Create
+COLOR=1946
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04561]
+DEFNAME=i_COPPER_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+ARMOR=40
+REQSTR=70
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 71.4
+
+ON=@Create
+COLOR=1946
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04562]
+DEFNAME=i_COPPER_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+ARMOR=40
+REQSTR=70
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 65.2
+
+ON=@Create
+COLOR=1946
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04563]
+DEFNAME=i_COPPER_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+ARMOR=40
+REQSTR=70
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 61.3
+
+ON=@Create
+COLOR=1946
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04564]
+DEFNAME=i_COPPER_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+ARMOR=40
+REQSTR=70
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 63.5
+
+ON=@Create
+COLOR=1946
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04565]
+DEFNAME=i_COPPER_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+ARMOR=40
+REQSTR=70
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 77.1
+
+ON=@Create
+COLOR=1946
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04578]
+DEFNAME=i_COPPER_chainmail_coif
+NAME=chainmail coif
+ID=i_chainmail_coif
+ARMOR=25
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=chainmail coif
+RESOURCES=10 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 54.6
+
+ON=@Create
+HITPOINTS=65
+COLOR=1946
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04579]
+DEFNAME=i_COPPER_chainmail_leggings
+NAME=chainmail leggings
+ID=i_chainmail_leggings
+ARMOR=25
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=chainmail leggings
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 56.1
+
+ON=@Create
+HITPOINTS=65
+COLOR=1946
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0457a]
+DEFNAME=i_COPPER_RINGMAIL_leggings
+NAME=ringmail leggings
+ID=i_ringmail_leggings
+ARMOR=35
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=ringmail leggings
+RESOURCES=16 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 48.6
+
+ON=@Create
+COLOR=1946
+HITPOINTS=65
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0457b]
+DEFNAME=i_COPPER_RINGMAIL_SLEEVES
+NAME=ringmail sleeves
+ID=i_ringmail_sleeves
+ARMOR=35
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=ringmail sleeves
+RESOURCES=14 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 47.3
+
+ON=@Create
+COLOR=1946
+HITPOINTS=65
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0457c]
+DEFNAME=i_COPPER_RINGMAIL_GLOVES
+NAME=ringmail gloves
+ID=i_ringmail_gloves
+ARMOR=35
+REQSTR=20
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=ringmail gloves
+RESOURCES=10 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 46.8
+
+ON=@Create
+COLOR=1946
+HITPOINTS=65
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0457d]
+DEFNAME=i_COPPER_RINGMAIL_TUNIC
+NAME=ringmail tunic
+ID=i_ringmail_tunic
+ARMOR=35
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=ringmail tunic
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 49.2
+
+ON=@Create
+COLOR=1946
+HITPOINTS=65
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0457e]
+DEFNAME=i_COPPER_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=8
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 61.0
+
+ON=@Create
+COLOR=1946
+HITPOINTS=65
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0457f]
+DEFNAME=i_COPPER_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=10
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 63.0
+
+ON=@Create
+HITPOINTS=65
+COLOR=1946
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04580]
+DEFNAME=i_COPPER_chainmail_TUNIC
+NAME=chainmail tunic
+ID=i_chainmail_tunic
+ARMOR=25
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=chainmail tunic
+RESOURCES=20 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 58.8
+
+ON=@Create
+HITPOINTS=65
+COLOR=1946
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04581]
+DEFNAME=i_COPPER_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=24
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 72.6
+
+ON=@Create
+COLOR=1946
+HITPOINTS=65
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////BRONZE///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF 04801]
+DEFNAME=i_BRONZE_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+
+ARMOR=43
+REQSTR=70
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 79.1
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04802]
+DEFNAME=i_BRONZE_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+
+ARMOR=43
+REQSTR=70
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 72.7
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04803]
+DEFNAME=i_BRONZE_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+
+ARMOR=43
+REQSTR=70
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 75.4
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04804]
+DEFNAME=i_BRONZE_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+
+ARMOR=43
+REQSTR=70
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 69.2
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04805]
+DEFNAME=i_BRONZE_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+
+ARMOR=43
+REQSTR=70
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 65.3
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04806]
+DEFNAME=i_BRONZE_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+
+ARMOR=43
+REQSTR=70
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 67.5
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04808]
+DEFNAME=i_BRONZE_chainmail_coif
+NAME=chainmail coif
+ID=i_chainmail_coif
+
+ARMOR=35
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=chainmail coif
+RESOURCES=10 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 56.6
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={36 44}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04809]
+DEFNAME=i_BRONZE_chainmail_leggings
+NAME=chainmail leggings
+ID=i_chainmail_leggings
+
+ARMOR=35
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=chainmail leggings
+RESOURCES=18 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 60.1
+
+ON=@Create
+COLOR=color_o_bronze
+Hitpoints={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04810]
+DEFNAME=i_BRONZE_chainmail_TUNIC
+NAME=chainmail tunic
+ID=i_chainmail_tunic
+
+ARMOR=35
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=chainmail tunic
+RESOURCES=20 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 62.8
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04811]
+DEFNAME=i_BRONZE_RINGMAIL_leggings
+NAME=ringmail leggings
+ID=i_ringmail_leggings
+
+ARMOR=45
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=ringmail leggings
+RESOURCES=16 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 52.6
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04812]
+DEFNAME=i_BRONZE_RINGMAIL_SLEEVES
+NAME=ringmail sleeves
+ID=i_ringmail_sleeves
+
+ARMOR=45
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=ringmail sleeves
+RESOURCES=14 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 50.3
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04813]
+DEFNAME=i_BRONZE_RINGMAIL_GLOVES
+NAME=ringmail gloves
+ID=i_ringmail_gloves
+
+ARMOR=45
+REQSTR=20
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=ringmail gloves
+RESOURCES=10 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 50.8
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04814]
+DEFNAME=i_BRONZE_RINGMAIL_TUNIC
+NAME=ringmail tunic
+ID=i_ringmail_tunic
+
+ARMOR=45
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=ringmail tunic
+RESOURCES=18 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 53.1
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04815]
+DEFNAME=i_BRONZE_BUCKLER_shield
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=9
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04816]
+DEFNAME=i_BRONZE_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=25
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 73.6
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={31 37}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04817]
+DEFNAME=i_BRONZE_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=11
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Bronze
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_bronze
+SKILLMAKE=BLACKSMITHING 67.0
+
+ON=@Create
+COLOR=color_o_bronze
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////GOLDEN///////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF 04554]
+DEFNAME=i_GOLDEN_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+ARMOR=46
+REQSTR=70
+WEIGHT=5
+RESOURCES=18 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 76.7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=platemail arms
+
+ON=@Create
+COLOR=2056
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04555]
+DEFNAME=i_GOLDEN_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+WEIGHT=15
+ARMOR=46
+REQSTR=70
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 79.4
+
+ON=@Create
+COLOR=2056
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04556]
+DEFNAME=i_GOLDEN_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+ARMOR=46
+REQSTR=70
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 73.2
+
+ON=@Create
+COLOR=2056
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04557]
+DEFNAME=i_GOLDEN_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+ARMOR=46
+REQSTR=70
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 69.3
+
+ON=@Create
+COLOR=2056
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04558]
+DEFNAME=i_GOLDEN_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+ARMOR=46
+REQSTR=70
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 71.5
+
+ON=@Create
+COLOR=2056
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04559]
+DEFNAME=i_GOLDEN_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+ARMOR=46
+REQSTR=70
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=platemail
+RESOURCES=26 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 83.1
+
+ON=@Create
+COLOR=2056
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0455a]
+DEFNAME=i_GOLDEN_RINGMAIL_leggings
+NAME=ringmail leggings
+ID=i_ringmail_leggings
+ARMOR=60
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=ringmail leggings
+RESOURCES=15 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 60.6
+
+ON=@Create
+COLOR=2056
+HITPOINTS=101
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0455b]
+DEFNAME=i_GOLDEN_RINGMAIL_SLEEVES
+NAME=ringmail sleeves
+ID=i_ringmail_sleeves
+ARMOR=60
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=ringmail sleeves
+RESOURCES=14 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 56.3
+
+ON=@Create
+COLOR=2056
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0455c]
+DEFNAME=i_GOLDEN_RINGMAIL_GLOVES
+NAME=ringmail gloves
+ID=i_ringmail_gloves
+ARMOR=60
+REQSTR=20
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=ringmail gloves
+RESOURCES=10 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 56.5
+
+ON=@Create
+COLOR=2056
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0455d]
+DEFNAME=i_GOLDEN_RINGMAIL_TUNIC
+NAME=ringmail tunic
+ID=i_ringmail_tunic
+ARMOR=60
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=ringmail tunic
+RESOURCES=18 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 61.5
+
+ON=@Create
+COLOR=2056
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0455e]
+DEFNAME=i_GOLDEN_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=11
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 67.0
+
+ON=@Create
+COLOR=2056
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0455f]
+DEFNAME=i_GOLDEN_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=13
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 68.0
+
+ON=@Create
+HITPOINTS={51 65}
+COLOR=2056
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04573]
+DEFNAME=i_GOLDEN_chainmail_coif
+NAME=chainmail coif
+ID=i_chainmail_coif
+ARMOR=50
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=chainmail coif
+RESOURCES=10 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 62.6
+
+ON=@Create
+HITPOINTS=36
+COLOR=2056
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04574]
+DEFNAME=i_GOLDEN_chainmail_leggings
+NAME=chainmail leggings
+ID=i_chainmail_leggings
+ARMOR=50
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=chainmail leggings
+RESOURCES=18 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 65.1
+
+ON=@Create
+HITPOINTS=46
+COLOR=2056
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04575]
+DEFNAME=i_GOLDEN_chainmail_TUNIC
+NAME=chainmail tunic
+ID=i_chainmail_tunic
+ARMOR=50
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=chainmail tunic
+RESOURCES=20 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 68.8
+
+ON=@Create
+HITPOINTS=46
+COLOR=2056
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04576]
+DEFNAME=i_GOLDEN_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=26
+REQSTR=70
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Golden
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_gold
+SKILLMAKE=BLACKSMITHING 77.6
+
+ON=@Create
+HITPOINTS=31
+COLOR=2056
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////BLOODROCK////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF 04700]
+DEFNAME=i_BLOODROCK_PLATEMAIL
+NAME=platemail
+
+ID=i_platemail_chest
+WEIGHT=10.0
+ARMOR=49
+REQSTR=85
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 81.1
+
+ON=@Create
+HITPOINTS=51
+COLOR=color_o_bloodrock
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04701]
+DEFNAME=i_BLOODROCK_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+
+ARMOR=49
+REQSTR=85
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 74.7
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04702]
+DEFNAME=i_BLOODROCK_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+
+ARMOR=49
+REQSTR=85
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 77.4
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04703]
+DEFNAME=i_BLOODROCK_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+
+ARMOR=49
+REQSTR=85
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 71.2
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=46
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04704]
+DEFNAME=i_BLOODROCK_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+
+ARMOR=49
+REQSTR=85
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 67.3
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04705]
+DEFNAME=i_BLOODROCK_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+
+ARMOR=49
+REQSTR=85
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 69.5
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04707]
+DEFNAME=i_BLOODROCK_chainmail_coif
+NAME=chainmail coif
+ID=i_chainmail_coif
+
+ARMOR=40
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=chainmail coif
+RESOURCES=10 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 60.6
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=36
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04708]
+DEFNAME=i_BLOODROCK_chainmail_leggings
+NAME=chainmail leggings
+ID=i_chainmail_leggings
+
+ARMOR=40
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=chainmail leggings
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 62.6
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=46
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04709]
+DEFNAME=i_BLOODROCK_chainmail_TUNIC
+NAME=chainmail tunic
+ID=i_chainmail_tunic
+
+ARMOR=40
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=chainmail tunic
+RESOURCES=20 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 65.8
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=46
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0470a]
+DEFNAME=i_BLOODROCK_RINGMAIL_leggings
+NAME=ringmail leggings
+ID=i_ringmail_leggings
+
+ARMOR=50
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=ringmail leggings
+RESOURCES=16 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 56.6
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=41
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0470b]
+DEFNAME=i_BLOODROCK_RINGMAIL_SLEEVES
+NAME=ringmail sleeves
+ID=i_ringmail_sleeves
+
+ARMOR=50
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=ringmail sleeves
+RESOURCES=14 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 54.3
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=41
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0470c]
+DEFNAME=i_BLOODROCK_RINGMAIL_GLOVES
+NAME=ringmail gloves
+ID=i_ringmail_gloves
+
+ARMOR=50
+REQSTR=20
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=ringmail gloves
+RESOURCES=10 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 54.8
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=41
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0470d]
+DEFNAME=i_BLOODROCK_RINGMAIL_TUNIC
+NAME=ringmail tunic
+ID=i_ringmail_tunic
+
+ARMOR=50
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=ringmail tunic
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 57.1
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=41
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0470e]
+DEFNAME=i_BLOODROCK_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=12
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 66.0
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0470f]
+DEFNAME=i_BLOODROCK_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=27
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 75.6
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=31
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04710]
+DEFNAME=i_BLOODROCK_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=10
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+COLOR=color_o_bloodrock
+HITPOINTS=41
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+///////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////ROSE//////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF 04740]
+DEFNAME=i_ROSE_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+
+ARMOR=52
+REQSTR=85
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Colored
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 85.1
+
+ON=@Create
+COLOR=1945
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04741]
+DEFNAME=i_ROSE_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+
+ARMOR=52
+REQSTR=85
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 78.7
+
+ON=@Create
+COLOR=1945
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04742]
+DEFNAME=i_ROSE_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+
+ARMOR=52
+REQSTR=85
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 81.4
+
+ON=@Create
+COLOR=1945
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04743]
+DEFNAME=i_ROSE_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+
+ARMOR=52
+REQSTR=85
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 75.2
+
+ON=@Create
+COLOR=1945
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04744]
+DEFNAME=i_ROSE_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+
+ARMOR=52
+REQSTR=85
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 71.3
+
+ON=@Create
+COLOR=1945
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04745]
+DEFNAME=i_ROSE_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+
+ARMOR=52
+REQSTR=85
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 73.5
+
+ON=@Create
+COLOR=1945
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04747]
+DEFNAME=i_ROSE_chainmail_coif
+NAME=chainmail coif
+ID=i_chainmail_coif
+
+ARMOR=55
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=chainmail coif
+RESOURCES=10 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 65.6
+
+ON=@Create
+COLOR=1945
+HITPOINTS={36 44}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04748]
+DEFNAME=i_ROSE_chainmail_leggings
+NAME=chainmail leggings
+ID=i_chainmail_leggings
+
+ARMOR=55
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=chainmail leggings
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 68.1
+
+ON=@Create
+COLOR=1945
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04749]
+DEFNAME=i_ROSE_chainmail_TUNIC
+NAME=chainmail tunic
+ID=i_chainmail_tunic
+
+ARMOR=55
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=chainmail tunic
+RESOURCES=20 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 76.8
+
+ON=@Create
+COLOR=1945
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0474a]
+DEFNAME=i_ROSE_RINGMAIL_leggings
+NAME=ringmail leggings
+ID=i_ringmail_leggings
+
+ARMOR=65
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=ringmail leggings
+RESOURCES=16 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 64.6
+
+ON=@Create
+COLOR=1945
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0474b]
+DEFNAME=i_ROSE_RINGMAIL_SLEEVES
+NAME=ringmail sleeves
+ID=i_ringmail_sleeves
+
+ARMOR=65
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=ringmail sleeves
+RESOURCES=14 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.3
+
+ON=@Create
+COLOR=1945
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0474c]
+DEFNAME=i_ROSE_RINGMAIL_GLOVES
+NAME=ringmail gloves
+ID=i_ringmail_gloves
+
+ARMOR=65
+REQSTR=20
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=ringmail gloves
+RESOURCES=10 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.8
+
+ON=@Create
+COLOR=1945
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0474d]
+DEFNAME=i_ROSE_RINGMAIL_TUNIC
+NAME=ringmail tunic
+ID=i_ringmail_tunic
+
+ARMOR=65
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=ringmail tunic
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 65.1
+
+ON=@Create
+COLOR=1945
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0474e]
+DEFNAME=i_ROSE_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=12
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 68.0
+
+ON=@Create
+COLOR=1945
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0474f]
+DEFNAME=i_ROSE_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=28
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 78.6
+
+ON=@Create
+COLOR=1945
+HITPOINTS={31 37}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04750]
+DEFNAME=i_ROSE_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=14
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose Colored
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 69.0
+
+ON=@Create
+COLOR=1945
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////Shadow Armor/////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+[FUNCTION f_shadow_drop]
+	if ( 0 > <cont.karma> -1 )
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+
+[ITEMDEF 04755]
+DEFNAME=i_SHADOW_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+
+ARMOR=55
+REQSTR=90
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 87.1
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 04756]
+DEFNAME=i_SHADOW_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+
+ARMOR=55
+REQSTR=90
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 80.7
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 04757]
+DEFNAME=i_SHADOW_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+
+ARMOR=55
+REQSTR=90
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 83.4
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 04758]
+DEFNAME=i_SHADOW_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+
+ARMOR=55
+REQSTR=90
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 77.2
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={46 58}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 04759]
+DEFNAME=i_SHADOW_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+
+ARMOR=55
+REQSTR=90
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 73.3
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 0475a]
+DEFNAME=i_SHADOW_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+
+ARMOR=55
+REQSTR=90
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 75.5
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 0475c]
+DEFNAME=i_SHADOW_chainmail_coif
+NAME=chainmail coif
+ID=i_chainmail_coif
+
+ARMOR=60
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=chainmail coif
+RESOURCES=10 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 68.6
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={36 44}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 0475d]
+DEFNAME=i_SHADOW_chainmail_leggings
+NAME=chainmail leggings
+ID=i_chainmail_leggings
+
+ARMOR=60
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=chainmail leggings
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 76.1
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={46 58}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 0475e]
+DEFNAME=i_SHADOW_chainmail_TUNIC
+NAME=chainmail tunic
+ID=i_chainmail_tunic
+
+ARMOR=60
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=chainmail tunic
+RESOURCES=20 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 80.8
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={46 58}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 0475f]
+DEFNAME=i_SHADOW_RINGMAIL_leggings
+NAME=ringmail leggings
+ID=i_ringmail_leggings
+
+ARMOR=70
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=ringmail leggings
+RESOURCES=16 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 66.1
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={41 51}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 04760]
+DEFNAME=i_SHADOW_RINGMAIL_SLEEVES
+NAME=ringmail sleeves
+ID=i_ringmail_sleeves
+
+ARMOR=70
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=ringmail sleeves
+RESOURCES=14 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 62.3
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={41 51}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 04761]
+DEFNAME=i_SHADOW_RINGMAIL_GLOVES
+NAME=ringmail gloves
+ID=i_ringmail_gloves
+
+ARMOR=70
+REQSTR=20
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=ringmail gloves
+RESOURCES=10 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 62.8
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={41 51}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 04762]
+DEFNAME=i_SHADOW_RINGMAIL_TUNIC
+NAME=ringmail tunic
+ID=i_ringmail_tunic
+
+ARMOR=70
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=ringmail tunic
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 67.1
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={41 51}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 04763]
+DEFNAME=i_SHADOW_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=13
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 73.0
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={41 51}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 04764]
+DEFNAME=i_SHADOW_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=29
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 83.6
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={31 37}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+[ITEMDEF 04765]
+DEFNAME=i_SHADOW_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=15
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 74.0
+
+ON=@Create
+COLOR=color_o_shadow
+HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para PK!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> -1 )
+		emote glows red.
+            src.Message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+else
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_shadow_drop
+		return 1
+	endif
+
+////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////Agapite Armor///////////////////////////////////////////
+// Can only be worn by good karma people.///////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+[FUNCTION f_agapite_drop]
+	if ( 0 > <cont.karma> +1 )
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5 // check again later
+
+[ITEMDEF 04780]
+DEFNAME=i_AGAPITE_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+
+ARMOR=55
+REQSTR=90
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 87.1
+
+ON=@Create
+	COLOR=1944
+	HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 04781]
+DEFNAME=i_AGAPITE_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+
+ARMOR=55
+REQSTR=90
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 80.7
+
+ON=@Create
+COLOR=1944
+HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 04782]
+DEFNAME=i_AGAPITE_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+
+ARMOR=55
+REQSTR=90
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 83.4
+
+ON=@Create
+COLOR=1944
+HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 04783]
+DEFNAME=i_AGAPITE_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+
+ARMOR=55
+REQSTR=90
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 79.2
+
+ON=@Create
+COLOR=1944
+HITPOINTS={46 58}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 04784]
+DEFNAME=i_AGAPITE_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+
+ARMOR=55
+REQSTR=90
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 73.3
+
+ON=@Create
+COLOR=1944
+HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 04785]
+DEFNAME=i_AGAPITE_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+
+ARMOR=55
+REQSTR=90
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 75.5
+
+ON=@Create
+COLOR=1944
+HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 04787]
+DEFNAME=i_AGAPITE_chainmail_coif
+NAME=chainmail coif
+ID=i_chainmail_coif
+
+ARMOR=60
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=chainmail coif
+RESOURCES=10 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 68.6
+
+ON=@Create
+COLOR=1944
+HITPOINTS={36 44}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 04788]
+DEFNAME=i_AGAPITE_chainmail_leggings
+NAME=chainmail leggings
+ID=i_chainmail_leggings
+
+ARMOR=60
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=chainmail leggings
+RESOURCES=18 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 76.1
+
+ON=@Create
+COLOR=1944
+HITPOINTS={46 58}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 04789]
+DEFNAME=i_AGAPITE_chainmail_TUNIC
+NAME=chainmail tunic
+ID=i_chainmail_tunic
+
+ARMOR=60
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=chainmail tunic
+RESOURCES=20 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 80.8
+
+ON=@Create
+COLOR=1944
+HITPOINTS={46 58}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 0478a]
+DEFNAME=i_AGAPITE_RINGMAIL_leggings
+NAME=ringmail leggings
+ID=i_ringmail_leggings
+
+ARMOR=70
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=ringmail leggings
+RESOURCES=16 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 66.1
+
+ON=@Create
+COLOR=1944
+HITPOINTS={41 51}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 0478b]
+DEFNAME=i_AGAPITE_RINGMAIL_SLEEVES
+NAME=ringmail sleeves
+ID=i_ringmail_sleeves
+
+ARMOR=70
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=ringmail sleeves
+RESOURCES=14 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 62.3
+
+ON=@Create
+COLOR=1944
+HITPOINTS={41 51}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 0478c]
+DEFNAME=i_AGAPITE_RINGMAIL_GLOVES
+NAME=ringmail gloves
+ID=i_ringmail_gloves
+
+ARMOR=70
+REQSTR=20
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=ringmail gloves
+RESOURCES=10 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 62.8
+
+ON=@Create
+COLOR=1944
+HITPOINTS={41 51}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 0478d]
+DEFNAME=i_AGAPITE_RINGMAIL_TUNIC
+NAME=ringmail tunic
+ID=i_ringmail_tunic
+
+ARMOR=70
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=ringmail tunic
+RESOURCES=18 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 67.1
+
+ON=@Create
+COLOR=1944
+HITPOINTS={41 51}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 0478e]
+DEFNAME=i_AGAPITE_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=13
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 73.0
+
+ON=@Create
+COLOR=1944
+HITPOINTS={41 51}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 0478f]
+DEFNAME=i_AGAPITE_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=29
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 83.6
+
+ON=@Create
+COLOR=1944
+HITPOINTS={31 37}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+[ITEMDEF 04790]
+DEFNAME=i_AGAPITE_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=15
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Agapite
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_agapite
+SKILLMAKE=BLACKSMITHING 74.1
+
+ON=@Create
+COLOR=1944
+HITPOINTS={51 65}
+
+ON=@Equip
+      IF (!<SRC.RESTEST 1 i_mem_neutral>)
+RETURN 1
+else
+            src.Message=<src.name> esta armadura es solo para Orders!
+		emote glows red.
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=5
+endif
+	TIMER=1
+if ( 0 > <cont.karma> +1 )
+		emote glows red.
+             src.message=No tienes suficiente karma para esta armadura!
+		effect=3,i_fx_curse,6,15,1
+		sfx snd_SPELL_CURSE
+		drop
+	endif
+	TIMER=20 // check again later
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+ON=@Timer
+	if <cont>
+		f_agapite_drop
+		return 1
+	endif
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////Verite Armor//////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF 0476a]
+DEFNAME=i_VERITE_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+
+ARMOR=58
+REQSTR=90
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 89.1
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0476b]
+DEFNAME=i_VERITE_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+
+ARMOR=58
+REQSTR=90
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 82.7
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0476c]
+DEFNAME=i_VERITE_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+
+ARMOR=58
+REQSTR=90
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 85.4
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={51 65}
+
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0476d]
+DEFNAME=i_VERITE_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+
+ARMOR=58
+REQSTR=90
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 81.2
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={46 58}
+
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0476e]
+DEFNAME=i_VERITE_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+
+ARMOR=58
+REQSTR=90
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 79.3
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={51 65}
+
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0476f]
+DEFNAME=i_VERITE_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+
+ARMOR=58
+REQSTR=90
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 77.5
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04771]
+DEFNAME=i_VERITE_chainmail_coif
+NAME=chainmail coif
+ID=i_chainmail_coif
+
+ARMOR=65
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=chainmail coif
+RESOURCES=10 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 76.6
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={36 44}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04772]
+DEFNAME=i_VERITE_chainmail_leggings
+NAME=chainmail leggings
+ID=i_chainmail_leggings
+
+ARMOR=65
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=chainmail leggings
+RESOURCES=18 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 80.1
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04773]
+DEFNAME=i_VERITE_chainmail_TUNIC
+NAME=chainmail tunic
+ID=i_chainmail_tunic
+
+ARMOR=65
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=chainmail tunic
+RESOURCES=20 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 84.8
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04774]
+DEFNAME=i_VERITE_RINGMAIL_leggings
+NAME=ringmail leggings
+ID=i_ringmail_leggings
+
+ARMOR=75
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=ringmail leggings
+RESOURCES=16 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 69.6
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04775]
+DEFNAME i_VERITE_RINGMAIL_SLEEVES
+NAME=ringmail sleeves
+ID=i_ringmail_sleeves
+
+ARMOR=75
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=ringmail sleeves
+RESOURCES=14 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 65.3
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04776]
+DEFNAME=i_VERITE_RINGMAIL_GLOVES
+NAME=ringmail gloves
+ID=i_ringmail_gloves
+
+ARMOR=75
+REQSTR=20
+
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=ringmail gloves
+RESOURCES=10 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 65.8
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04777]
+DEFNAME=i_VERITE_RINGMAIL_TUNIC
+NAME=ringmail tunic
+ID=i_ringmail_tunic
+
+ARMOR=75
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=ringmail tunic
+RESOURCES=18 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 70.1
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04778]
+DEFNAME=i_VERITE_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=14
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 78.0
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04779]
+DEFNAME=i_VERITE_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=30
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 88.6
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={31 37}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0477a]
+DEFNAME=i_VERITE_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=16
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Verite
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_verite
+SKILLMAKE=BLACKSMITHING 79.0
+
+ON=@Create
+COLOR=color_o_verite
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////Valorite Armor///////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF 04795]
+DEFNAME=i_VALORITE_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+
+ARMOR=61
+REQSTR=100
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 91.1
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04796]
+DEFNAME=i_VALORITE_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+
+ARMOR=61
+REQSTR=100
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 84.7
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={51 65}
+
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04797]
+DEFNAME=i_VALORITE_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+
+ARMOR=61
+REQSTR=100
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 87.4
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04798]
+DEFNAME=i_VALORITE_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+
+ARMOR=61
+REQSTR=100
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 83.3
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04799]
+DEFNAME=i_VALORITE_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+
+ARMOR=61
+REQSTR=100
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 81.3
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0479a]
+DEFNAME=i_VALORITE_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+
+ARMOR=61
+REQSTR=100
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 79.5
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0479c]
+DEFNAME=i_VALORITE_chainmail_coif
+NAME=chainmail coif
+ID=i_chainmail_coif
+
+ARMOR=70
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=chainmail coif
+RESOURCES=10 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 80.6
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={36 44}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0479d]
+DEFNAME=i_VALORITE_chainmail_leggings
+NAME=chainmail leggings
+ID=i_chainmail_leggings
+
+ARMOR=70
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=chainmail leggings
+RESOURCES=18 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 84.1
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0479e]
+DEFNAME=i_VALORITE_chainmail_TUNIC
+NAME=chainmail tunic
+ID=i_chainmail_tunic
+
+ARMOR=70
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=chainmail tunic
+RESOURCES=25 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 85.8
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0479f]
+DEFNAME=i_valorite_ringmail_leggings
+NAME=ringmail leggings
+ID=i_ringmail_leggings
+
+ARMOR=80
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=ringmail leggings
+RESOURCES=16 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 72.6
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 047a0]
+DEFNAME=i_VALORITE_RINGMAIL_SLEEVES
+NAME=ringmail sleeves
+ID=i_ringmail_sleeves
+
+ARMOR=80
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=ringmail sleeves
+RESOURCES=14 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 68.3
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 047a1]
+DEFNAME=i_VALORITE_RINGMAIL_GLOVES
+NAME=ringmail gloves
+ID=i_ringmail_gloves
+
+ARMOR=80
+REQSTR=20
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=ringmail gloves
+RESOURCES=10 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 68.8
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 047a2]
+DEFNAME=i_VALORITE_RINGMAIL_TUNIC
+NAME=ringmail tunic
+ID=i_ringmail_tunic
+
+ARMOR=80
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=ringmail tunic
+RESOURCES=18 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 73.1
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 047a3]
+//DEFNAME=i_VALORITE_BUCKLER
+DEFNAME=i_VALORITE_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=15
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 80.0
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 047a4]
+DEFNAME=i_VALORITE_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=31
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 90.6
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={31 37}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 047a5]
+DEFNAME=i_valorite_metal_shield
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=17
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Valorite
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_valorite
+SKILLMAKE=BLACKSMITHING 81.0
+
+ON=@Create
+COLOR=color_o_valorite
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////Silver///////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF 04566]
+DEFNAME=i_SILVER_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+ARMOR=64
+REQSTR=100
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 86.7
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04567]
+DEFNAME=i_SILVER_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+ARMOR=64
+REQSTR=100
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 89.4
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04568]
+DEFNAME=i_SILVER_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+ARMOR=64
+REQSTR=100
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 85.3
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS={46 58}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04569]
+DEFNAME=i_SILVER_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+ARMOR=64
+REQSTR=100
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 83.3
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04570]
+DEFNAME=i_SILVER_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+ARMOR=64
+REQSTR=100
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 81.5
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04571]
+DEFNAME=i_SILVER_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+ARMOR=64
+REQSTR=100
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 93.1
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0456a]
+DEFNAME=i_SILVER_RINGMAIL_leggings
+NAME=ringmail leggings
+ID=i_ringmail_leggings
+ARMOR=64
+REQSTR=100
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=ringmail leggings
+RESOURCES=16 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 78.6
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0456b]
+DEFNAME=i_SILVER_RINGMAIL_SLEEVES
+NAME=ringmail sleeves
+ID=i_ringmail_sleeves
+ARMOR=85
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=ringmail sleeves
+RESOURCES=14 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 76.3
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0456c]
+DEFNAME=i_SILVER_RINGMAIL_GLOVES
+NAME=ringmail gloves
+ID=i_ringmail_gloves
+ARMOR=85
+REQSTR=20
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=ringmail gloves
+RESOURCES=10 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 76.8
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0456d]
+DEFNAME=i_SILVER_RINGMAIL_TUNIC
+NAME=ringmail tunic
+ID=i_ringmail_tunic
+ARMOR=85
+REQSTR=20
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=ringmail tunic
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 79.1
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS=41
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0456e]
+DEFNAME=i_SILVER_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=19
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 83.0
+
+ON=@Create
+COLOR=color_o_silver
+HITPOINTS=41
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0456f]
+DEFNAME=i_SILVER_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=20
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 84.0
+
+ON=@Create
+HITPOINTS=51
+COLOR=color_o_silver
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04583]
+DEFNAME=i_SILVER_chainmail_coif
+NAME=chainmail coif
+ID=i_chainmail_coif
+ARMOR=75
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=chainmail coif
+RESOURCES=10 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 84.6
+
+ON=@Create
+HITPOINTS=36
+COLOR=color_o_silver
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04584]
+DEFNAME=i_SILVER_chainmail_leggings
+NAME=chainmail leggings
+ID=i_chainmail_leggings
+ARMOR=75
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=chainmail leggings
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 85.1
+
+ON=@Create
+HITPOINTS=46
+COLOR=color_o_silver
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04585]
+DEFNAME=i_SILVER_chainmail_TUNIC
+NAME=chainmail tunic
+ID=i_chainmail_tunic
+ARMOR=75
+REQSTR=20
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=chainmail tunic
+RESOURCES=20 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 86.8
+
+ON=@Create
+HITPOINTS=46
+COLOR=color_o_silver
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04586]
+DEFNAME=i_SILVER_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=32
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 93.6
+
+ON=@Create
+HITPOINTS=31
+COLOR=color_o_silver
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////MYTHERIL///////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF 0472a]
+DEFNAME=i_MYTHERIL_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+
+ARMOR=67
+REQSTR=110
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Mytheril
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_mytheril
+SKILLMAKE=BLACKSMITHING 95.1
+
+ON=@Create
+COLOR=2053
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0472b]
+DEFNAME=i_MYTHERIL_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+
+ARMOR=67
+REQSTR=110
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Mytheril
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_mytheril
+SKILLMAKE=BLACKSMITHING 88.7
+
+ON=@Create
+COLOR=2053
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0472c]
+DEFNAME=i_MYTHERIL_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+
+ARMOR=67
+REQSTR=110
+WEIGHT=15
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Mytheril
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_mytheril
+SKILLMAKE=BLACKSMITHING 91.4
+
+ON=@Create
+COLOR=2053
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0472d]
+DEFNAME=i_MYTHERIL_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+
+ARMOR=67
+REQSTR=110
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Mytheril
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_mytheril
+SKILLMAKE=BLACKSMITHING 87.2
+
+ON=@Create
+COLOR=2053
+HITPOINTS=46
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0472e]
+DEFNAME=i_MYTHERIL_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+
+ARMOR=67
+REQSTR=110
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Mytheril
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_mytheril
+SKILLMAKE=BLACKSMITHING 85.3
+
+ON=@Create
+COLOR=2053
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0472f]
+DEFNAME=i_MYTHERIL_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+
+ARMOR=67
+REQSTR=110
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Mytheril
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_mytheril
+SKILLMAKE=BLACKSMITHING 83.5
+
+ON=@Create
+COLOR=2053
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04738]
+DEFNAME=i_MYTHERIL_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=20
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Mytheril
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_mytheril
+SKILLMAKE=BLACKSMITHING 85.0
+
+ON=@Create
+COLOR=2053
+HITPOINTS={41 51}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04739]
+DEFNAME=i_MYTHERIL_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=33
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Mytheril
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_mytheril
+SKILLMAKE=BLACKSMITHING 95.6
+
+ON=@Create
+COLOR=2053
+HITPOINTS={31 37}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0473a]
+DEFNAME=i_MYTHERIL_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=22
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Mytheril
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_mytheril
+SKILLMAKE=BLACKSMITHING 86.0
+
+ON=@Create
+COLOR=2053
+HITPOINTS={51 65}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////BLACKROCK/////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF 04715]
+DEFNAME=i_BLACKROCK_PLATEMAIL
+NAME=platemail
+ID=i_platemail_chest
+
+ARMOR=70
+REQSTR=110
+WEIGHT=10
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Black Rock
+DESCRIPTION=platemail
+RESOURCES=25 i_ingot_blackrock
+SKILLMAKE=BLACKSMITHING 97.1
+
+ON=@Create
+COLOR=color_o_blackrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04716]
+DEFNAME=i_BLACKROCK_PLATEMAIL_ARMS
+NAME=platemail arms
+ID=i_platemail_arms
+
+ARMOR=70
+REQSTR=110
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Black Rock
+DESCRIPTION=platemail arms
+RESOURCES=18 i_ingot_blackrock
+SKILLMAKE=BLACKSMITHING 90.7
+
+ON=@Create
+COLOR=color_o_blackrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04717]
+DEFNAME=i_BLACKROCK_PLATEMAIL_leggings
+NAME=platemail legs
+ID=i_platemail_leggings
+
+ARMOR=70
+REQSTR=110
+WEIGHT=7
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Black Rock
+DESCRIPTION=platemail legs
+RESOURCES=20 i_ingot_blackrock
+SKILLMAKE=BLACKSMITHING 93.4
+
+ON=@Create
+COLOR=color_o_blackrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04718]
+DEFNAME=i_BLACKROCK_PLATE_HELM
+NAME=Plate helm
+ID=i_platemail_helm
+
+ARMOR=70
+REQSTR=110
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Black Rock
+DESCRIPTION=Plate helm
+RESOURCES=15 i_ingot_blackrock
+SKILLMAKE=BLACKSMITHING 89.2
+
+ON=@Create
+COLOR=color_o_blackrock
+HITPOINTS=46
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF i_BLACKROCK_PLATEMAIL_GORGET]
+DEFNAME=i_BLACKROCK_PLATEMAIL_GORGET
+NAME=platemail gorget
+ID=i_platemail_gorget
+
+ARMOR=70
+REQSTR=110
+WEIGHT=2
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Black Rock
+DESCRIPTION=platemail gorget
+RESOURCES=10 i_ingot_blackrock
+SKILLMAKE=BLACKSMITHING 83.3
+
+ON=@Create
+COLOR=color_o_blackrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 0471a]
+DEFNAME=i_BLACKROCK_PLATEMAIL_GAUNTLETS
+NAME=platemail gauntlets
+ID=i_platemail_gloves
+
+ARMOR=70
+REQSTR=110
+WEIGHT=3
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Black Rock
+DESCRIPTION=platemail gauntlets
+RESOURCES=12 i_ingot_blackrock
+SKILLMAKE=BLACKSMITHING 85.5
+
+ON=@Create
+COLOR=color_o_blackrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04723]
+DEFNAME=i_BLACKROCK_METAL_SHIELD
+NAME=metal shield
+ID=i_shield_round_metal
+ARMOR=25
+REQSTR=15
+WEIGHT=6
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Black Rock
+DESCRIPTION=metal shield
+RESOURCES=14 i_ingot_blackrock
+SKILLMAKE=BLACKSMITHING 89.0
+
+ON=@Create
+COLOR=color_o_blackrock
+HITPOINTS=51
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04724]
+DEFNAME=i_BLACKROCK_HEATER_SHIELD
+NAME=heater shield
+ID=I_SHIELD_HEATER
+ARMOR=34
+REQSTR=30
+WEIGHT=8
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Black Rock
+DESCRIPTION=heater shield
+RESOURCES=18 i_ingot_blackrock
+SKILLMAKE=BLACKSMITHING 98.6
+
+ON=@Create
+COLOR=color_o_blackrock
+HITPOINTS=31
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[ITEMDEF 04725]
+DEFNAME=i_BLACKROCK_BUCKLER_SHIELD
+NAME=buckler
+ID=i_shield_buckler
+ARMOR=23
+REQSTR=15
+WEIGHT=5
+
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Black Rock
+DESCRIPTION=buckler
+RESOURCES=10 i_ingot_blackrock
+SKILLMAKE=BLACKSMITHING 88.0
+
+ON=@Create
+COLOR=color_o_blackrock
+HITPOINTS=41
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_mage>) || (<SRC.RESTEST 1 i_mem_artisan_mage>)
+drop
+src.emote=are not a pure warrior!
+src.sfx=snd_spell_curse
+RETURN 1
+ENDIF
+
+[EOF]

@@ -1,0 +1,67 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2004
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Viernes, Diciembre 10, 2004
+// Eventos
+VERSION=Ultra Version
+
+[EVENTS e_must_wait] 
+ON=@ItemDClick 
+IF (<SRC.ACTION>==SKILL_lumberjack)&&((<SRC.ACT.TYPE>==t_weapon_sword)||(<SRC.ACT.TYPE>==t_weapon_mace_sharp)||(<SRC.ACT.TYPE>==t_weapon_axe)) 
+SRC.SYSMESSAGE You must wait perform another action
+RETURN 1 
+ELSEIF (<SRC.ACTION>==SKILL_mining)&&(<SRC.ACT.TYPE>==t_weapon_mace_pick) 
+SRC.SYSMESSAGE You must wait perform another action
+ELSE 
+RETURN 0 
+ENDIF 
+
+[EVENTS e_teleport_fix]
+ON=@SpellCast
+//Teleport house looting problem 
+if ( <isgm> ) 
+return 0 
+endif 
+
+if (<ACTARG1>==22)&&( (<ACT.Isitem>) || (<ACT.IsChar>) ) 
+SYSMESSAGE You cannot teleport to an item or a player! 
+RETURN 1 
+endif
+
+[EVENTS e_fix_pet_rez]
+
+ON=@ItemSpell
+if <argn>==59
+SRC.action=-1
+return 1
+endif
+
+[EVENTS e_fightself_fix] 
+ON=@HitTry 
+IF (<SRC.UID>==<UID>) 
+   SRC.ACTION=-1 
+   SRC.FLAGS=<SRC.FLAGS>&~statf_war 
+   RETURN 1 
+ENDIF
+
+[EVENTS e_fix_paralyze]
+
+ON=@SkillStart
+if ( <SRC.FLAGS> & statf_freeze )
+SRC.SYSMESSAGE You can't do much in your current state.
+return 1
+endif
+
+ON=@SpellCast
+if ( <SRC.FLAGS> & statf_freeze )
+SRC.SYSMESSAGE You can't do much in your current state.
+return 1
+endif
+
+[EOF]

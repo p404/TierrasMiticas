@@ -1,0 +1,4769 @@
+//****************************************************************************
+// SPHERE by : Menasoft ©1997-2003
+// www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//
+// DO NOT MAKE CHANGES TO DEFAULT SCRIPTS! MAKE YOUR ALTERATIONS IN CUSTOM FILES!
+//****************************************************************************
+// FILE LAST UPDATED: Sunday, October 12, 2003
+//
+VERSION=0.99zc
+//****************************************************************************
+//
+//	New AoS Items
+
+// Items 0c4 - 07de are missing or incorrect.
+
+
+[ITEMDEF 0c4] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0224] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0225] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 028e] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02af] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02c2] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02ed] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02f6] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03b1] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e5] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e6] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e7] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e8] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ec] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ed] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 063f] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0641] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0642] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0643] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0644] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0645] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0646] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0647] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 07d1] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 07de] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+
+//////////////////////////////
+//
+//	New Items
+//
+//////////////////////////////
+
+
+[ITEMDEF 081d] // sandstone floor //New
+DEFNAME=i_flooring_sandstone
+
+CATEGORY=Buildings - Floors
+SUBSECTION=Sandstone Floor (dark) - AoS
+DESCRIPTION=Sandstone Floor (dark) New
+
+[ITEMDEF 090d] // fountain //New
+
+CATEGORY=miscellaneous
+SUBSECTION=fountains - AoS
+DESCRIPTION=fountain
+
+[ITEMDEF 090e] // fountain //New
+
+CATEGORY=miscellaneous
+SUBSECTION=fountains - AoS
+DESCRIPTION=fountain
+
+[ITEMDEF 090f] // fountain //New
+
+CATEGORY=miscellaneous
+SUBSECTION=fountains - AoS
+DESCRIPTION=fountain
+
+[ITEMDEF 0910] // fountain //New
+
+CATEGORY=miscellaneous
+SUBSECTION=fountains - AoS
+DESCRIPTION=fountain
+
+[ITEMDEF 0923] // bees  //New
+
+CATEGORY=items by professions
+SUBSECTION=beekeepers - AoS
+DESCRIPTION=bees
+
+[ITEMDEF 0924] // bees  //New
+
+CATEGORY=items by professions
+SUBSECTION=beekeepers - AoS
+DESCRIPTION=bees
+
+[ITEMDEF 0925] // bees  //New
+
+CATEGORY=items by professions
+SUBSECTION=beekeepers - AoS
+DESCRIPTION=bees
+
+[ITEMDEF 0926] // bees  //New
+
+CATEGORY=items by professions
+SUBSECTION=beekeepers - AoS
+DESCRIPTION=bees
+
+[ITEMDEF 0927] // bees  //New
+
+CATEGORY=items by professions
+SUBSECTION=beekeepers - AoS
+DESCRIPTION=bees
+
+[ITEMDEF 0928] // bees  //New
+
+CATEGORY=items by professions
+SUBSECTION=beekeepers - AoS
+DESCRIPTION=bees
+
+[ITEMDEF 0929] // bees  //New
+
+CATEGORY=items by professions
+SUBSECTION=beekeepers - AoS
+DESCRIPTION=bees
+
+[ITEMDEF 092a] // bees  //New
+
+CATEGORY=items by professions
+SUBSECTION=beekeepers - AoS
+DESCRIPTION=bees
+
+[ITEMDEF 0d3b] // fallen branch //New
+
+CATEGORY=Vegetation
+SUBSECTION=Trees - AoS
+DESCRIPTION=Fallen Branch
+
+[ITEMDEF 0d3c] // fallen branch //New
+
+CATEGORY=Vegetation
+SUBSECTION=Trees - AoS
+DESCRIPTION=Fallen Branch
+
+[ITEMDEF 0d3d] // fallen branch //New
+
+CATEGORY=Vegetation
+SUBSECTION=Trees - AoS
+DESCRIPTION=Fallen Branch
+
+[ITEMDEF 0e6b] // cannon //New
+
+CATEGORY=miscellaneous
+SUBSECTION=cannons - AoS
+DESCRIPTION=cannon(1/2)e
+
+[ITEMDEF 0e6c] // cannon //New
+
+CATEGORY=miscellaneous
+SUBSECTION=cannons - AoS
+DESCRIPTION=cannon(2/2)e
+
+[ITEMDEF 0e6d] // cannon //New
+
+CATEGORY=miscellaneous
+SUBSECTION=cannons - AoS
+DESCRIPTION=cannon(1/2)s
+
+[ITEMDEF 0e6e] // cannon //New
+
+CATEGORY=miscellaneous
+SUBSECTION=cannons - AoS
+DESCRIPTION=cannon(2/2)s
+
+[ITEMDEF 0e6f] // cannon //New
+
+CATEGORY=miscellaneous
+SUBSECTION=cannons - AoS
+DESCRIPTION=cannon(1/2)n
+
+[ITEMDEF 0e70] // cannon //New
+
+CATEGORY=miscellaneous
+SUBSECTION=cannons - AoS
+DESCRIPTION=cannon(2/2)n
+
+[ITEMDEF 0e71] // cannon //New
+
+CATEGORY=miscellaneous
+SUBSECTION=cannons - AoS
+DESCRIPTION=cannon(1/2)w
+
+[ITEMDEF 0e72] // cannon //New
+
+CATEGORY=miscellaneous
+SUBSECTION=cannons - AoS
+DESCRIPTION=cannon(2/2)w
+
+[ITEMDEF 0e8a] // quarter staff //New
+DUPEITEM=0e89
+
+CATEGORY=weapons
+SUBSECTION=staves - AoS
+DESCRIPTION=quarter staff
+
+[ITEMDEF 0ec1] // broken knife //New
+DEFNAME=i_knife_broken
+
+CATEGORY=weapons
+SUBSECTION=knives & daggers - AoS
+DESCRIPTION=broken knife
+
+[ITEMDEF 0f31] // twig //New
+DEFNAME=i_twig
+FLIP=1
+DUPELIST=0f32
+
+CATEGORY=Vegetation
+SUBSECTION=Sticks And Wood - AoS
+DESCRIPTION=Twig
+
+[ITEMDEF 0f32] // twig //New
+DUPEITEM=0f31
+
+[ITEMDEF 0f35] // hay //New
+DEFNAME=i_hay_new
+
+CATEGORY=items by professions
+SUBSECTION=stablemaster - AoS
+DESCRIPTION=hay
+
+[ITEMDEF 0f5b] // fireball //New
+DEFNAME=i_fireball_new
+
+CATEGORY=decoration - dungeons and the dead
+SUBSECTION=fireballs - AoS
+DESCRIPTION=new fireball
+
+[ITEMDEF 0100c] // hay sheave //New
+DEFNAME=i_hay_sheave
+FLIP=1
+DUPELIST=0100d
+
+CATEGORY=items by professions
+SUBSECTION=stablemaster - AoS
+DESCRIPTION=hay sheave
+
+[ITEMDEF 0100d] // hay sheave //New
+DUPEITEM=0100c
+
+[ITEMDEF 01018] // empty tile //New
+DEFNAME=i_empty_tile_new
+
+CATEGORY=miscellaneous
+SUBSECTION=empty tiles - AoS
+DESCRIPTION=empty tile
+
+[ITEMDEF 010ef] // garbage //New
+DEFNAME=i_garbage_aos
+TYPE=t_garbage
+value=1
+weight=.2
+DUPELIST=010f0,010f1,010f2,010f3
+
+CATEGORY=items - RESOURCES
+SUBSECTION=cook - AoS
+DESCRIPTION=garbage
+
+[ITEMDEF 010f0] // garbage //New
+DUPEITEM=010ef
+
+[ITEMDEF 010f1] // garbage //New
+DUPEITEM=010ef
+
+[ITEMDEF 010f2] // pile of garbage //New
+DUPEITEM=010ef
+
+[ITEMDEF 010f3] // pile of garbage //New
+DUPEITEM=010ef
+
+[ITEMDEF 0114a] // gas trap //New
+DEFNAME=i_trap_gas_2_aos
+TYPE=t_trap
+RESOURCES=2 i_axe, 1 i_ingot_iron, 1 i_springs, 1 t_reagent
+weight=4
+
+CATEGORY=decoration - dungeons and the dead
+SUBSECTION=traps - AoS
+DESCRIPTION=gas trap 02
+
+[ITEMDEF 01268] // guillotine //New
+DEFNAME=i_guillotine_new
+RESOURCES=20 i_board, 2 i_ingot_iron, 5 i_rope
+weight=30
+DUPELIST=01269
+
+CATEGORY=decoration - dungeons and the dead
+SUBSECTION=torture - AoS
+DESCRIPTION=rack
+
+[ITEMDEF 01269] // guillotine //New
+DUPEITEM=01268
+
+[ITEMDEF 012b5] // Yew tree //New
+DEFNAME=i_tree_yew_1_new
+
+CATEGORY=Vegetation
+SUBSECTION=Yew Tree - AoS
+DESCRIPTION=Yew Tree (01/08) - Dupe
+
+[ITEMDEF 012d1] // wall carving //New
+DEFNAME=i_wall_carving
+TYPE=t_wall
+RESOURCES=10 i_rock_plain
+weight=10
+DUPELIST=012d2
+
+CATEGORY=decoration - wall carvings & statues
+SUBSECTION=wall coverings - AoS
+DESCRIPTION=wall carving
+
+[ITEMDEF 012d2] // wall carving //New
+DUPEITEM=012d1
+
+[ITEMDEF 012f9] // lava //New
+DEFNAME=i_lava_aos
+TYPE=t_lava
+DUPELIST=0136e,0137e,01380,01382
+
+CATEGORY=ground tiles
+SUBSECTION=lava - AoS
+DESCRIPTION=@
+
+[ITEMDEF 0136e] // lava //New
+DUPEITEM=012f9
+
+[ITEMDEF 0137e] // lava //New
+DUPEITEM=012f9
+
+[ITEMDEF 01380] // lava //New
+DUPEITEM=012f9
+
+[ITEMDEF 01382] // lava //New
+DUPEITEM=012f9
+
+[ITEMDEF 014ff] // seive //New
+DEFNAME=i_seive
+weight=1
+RESOURCES=1 i_board
+
+CATEGORY=items by profession
+SUBSECTION=cook - AoS
+DESCRIPTION=seive
+
+[ITEMDEF 0152b] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 01597] // banner //New
+DEFNAME=i_banner_aos
+RESOURCES=1 i_log, 1 i_board, 1 i_cloth, 1 i_thread, 1 i_nails
+weight=3
+
+CATEGORY=decoration - banners and tapestries
+SUBSECTION=banners - AoS
+DESCRIPTION=banner
+
+[ITEMDEF 01641] // magical sign //New
+RESOURCES=6 i_board, 1 i_nails, 20 i_reag_blood_moss, 1 i_glass
+weight=7
+DUPELIST=01642,01643
+
+CATEGORY=decoration - miscellaneous
+SUBSECTION=o's sign
+DESCRIPTION=@
+
+[ITEMDEF 01642] // magical sign //New
+DUPEITEM=01641
+
+[ITEMDEF 01643] // magical sign //New
+DUPEITEM=01641
+
+[ITEMDEF 0188b] // flour mill //New
+DEFNAME=i_flour_mill_aos
+RESOURCES=1 i_millstone, 4 i_log, 2 i_nails, 20 i_board, 20 i_grain_loose, 1 i_flour_mill_crank
+weight=40
+DUPELIST=01893
+
+CATEGORY=items by professions
+SUBSECTION=baker - AoS
+DESCRIPTION=flour mill
+
+[ITEMDEF 01893] // flour mill //New
+DUPEITEM=0188b
+
+[ITEMDEF 0189f] // ballista //New
+DEFNAME=i_ballista_aos
+DUPELIST=018a0,018a1,018a2,018ab,018ac,018ae,018af,018b0,018b1,018b2,018b3,018b4,018b,018f0,018f1,018f2,018f3,018fc,018fd,018fe,018ff,01900,01901,01902,01903,01904,01906,01907,01908,01909,0190b,0190c,0190d,03fe1
+
+CATEGORY=miscellaneous
+SUBSECTION=ballista - AoS
+DESCRIPTION=@
+
+[ITEMDEF 018a0] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018a1] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018a2] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018ab] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018ac] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018ae] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018af] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018b0] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018b1] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018b3] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018b4] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018b5] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018f0] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018f1] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018f2] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018f3] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018fc] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018fd] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018fe] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 018ff] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 01900] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 01901] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 01902] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 01903] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 01904] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 01906] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 01907] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 01908] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 01909] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 0190b] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 0190c] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 0190d] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 01a0b] // skeleton //New
+DEFNAME=i_skeleton_hang_aos_1
+NAME="skeleton"
+RESOURCES=i_shackles_hanging, i_skeleton
+
+CATEGORY=decoration - dungeons and the dead
+SUBSECTION=skeletons - AoS
+DESCRIPTION=skeleton
+
+on=@userclick
+	objprop=0,<NAME>
+	return 1
+
+on=@timer
+	ID=i_bones_hang_aos_1
+	update
+	return 1
+
+[ITEMDEF 01a0c] // skeleton //New
+DEFNAME=i_skeleton_hang_aos_2
+RESOURCES=i_shackles_hanging, i_skeleton
+
+CATEGORY=decoration - dungeons and the dead
+SUBSECTION=skeletons - AoS
+DESCRIPTION=skeleton
+
+on=@timer
+	ID=i_bones_hang_aos_2
+	update
+	return 1
+
+[ITEMDEF 01a0d] // skeleton //New
+DEFNAME=i_bones_hang_aos_1
+
+CATEGORY=decoration - dungeons and the dead
+SUBSECTION=skeletons - AoS
+DESCRIPTION=skeleton hanging
+
+[ITEMDEF 01a0e] // skeleton //New
+DEFNAME=i_bones_hang_aos_2
+
+CATEGORY=decoration - dungeons and the dead
+SUBSECTION=skeletons - AoS
+DESCRIPTION=skeleton hanging
+
+[ITEMDEF 01a75] // lava //New
+DEFNAME=i_lava_anim_aos
+TYPE=t_lava
+DUPELIST=01a76,01a77,01a78,01a79,01a7a,01a7b,01a7c,01a7d,01a7e
+
+CATEGORY=AoS
+SUBSECTION=Animations
+DESCRIPTION=Lava
+
+[ITEMDEF 01a76] // lava //New
+DUPEITEM=01a75
+
+[ITEMDEF 01a77] // lava //New
+DUPEITEM=01a75
+
+[ITEMDEF 01a78] // lava //New
+DUPEITEM=01a75
+
+[ITEMDEF 01a79] // lava //New
+DUPEITEM=01a75
+
+[ITEMDEF 01a7a] // lava //New
+DUPEITEM=01a75
+
+[ITEMDEF 01a7b] // lava //New
+DUPEITEM=01a75
+
+[ITEMDEF 01a7c] // lava //New
+DUPEITEM=01a75
+
+[ITEMDEF 01a7d] // lava //New
+DUPEITEM=01a75
+
+[ITEMDEF 01a7e] // lava //New
+DUPEITEM=01a75
+
+[ITEMDEF 01b07] // floor cracks //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0205b] // cursor //New
+DEFNAME=i_hand_aos
+DUPELIST=0205c,0205d,0205e,0205f,02060,02061,02062,02072,02073,02074,02075,02075,02076,02077,02078,02079
+
+CATEGORY=AoS
+SUBSECTION=Cursor
+DESCRIPTION=@
+
+[ITEMDEF 0205c] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 0205d] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 0205e] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 0205f] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02060] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02061] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02062] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02072] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02073] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02074] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02075] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02076] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02077] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02078] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02079] // cursor //New
+DUPEITEM=0205b
+
+[ITEMDEF 02104] // daemon //New
+DEFNAME=i_pet_daemon_aos
+TDATA3=c_daemon
+DUPELIST=02105
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Daemon - large
+
+[ITEMDEF 02105] // daemon //New
+DUPEITEM=02104
+
+[ITEMDEF 0210c] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0210d] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0210e] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0210f] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02110] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02111] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02112] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02113] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02114] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02115] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02116] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02117] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02128] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02129] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02138] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02139] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0213a] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0213b] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0213c] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0213d] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0213e] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02148] // thatch roof //New
+DEFNAME=i_roof_thatch_aos
+TYPE=t_roof
+RESOURCES=25 i_hay
+DUPELIST=02149,0214a,0214b,0214c,0214d,0214e,0214f
+
+CATEGORY=Buildings - Roofs
+SUBSECTION=Thatch Roof - AoS
+DESCRIPTION=@
+
+[ITEMDEF 02149] // thatch roof //New
+DUPEITEM=02148
+
+[ITEMDEF 0214a] // thatch roof //New
+DUPEITEM=02148
+
+[ITEMDEF 0214b] // thatch roof //New
+DUPEITEM=02148
+
+[ITEMDEF 0214c] // thatch roof //New
+DUPEITEM=02148
+
+[ITEMDEF 0214d] // thatch roof //New
+DUPEITEM=02148
+
+[ITEMDEF 0214e] // thatch roof //New
+DUPEITEM=02148
+
+[ITEMDEF 0214f] // thatch roof //New
+DUPEITEM=02148
+
+[ITEMDEF 02170] // wooden shingle //New
+DEFNAME=i_shingle_wooden_aos
+RESOURCES=25 i_board
+DUPELIST=02171,02172,02173,02174,02175,02176,02177
+
+CATEGORY=buildings - roofs
+SUBSECTION=wooden shingles - AoS
+DESCRIPTION=@
+
+[ITEMDEF 02171] // wooden shingle //New
+DUPEITEM=02170
+
+[ITEMDEF 02172] // wooden shingle //New
+DUPEITEM=02170
+
+[ITEMDEF 02173] // wooden shingle //New
+DUPEITEM=02170
+
+[ITEMDEF 02174] // wooden shingle //New
+DUPEITEM=02170
+
+[ITEMDEF 02175] // wooden shingle //New
+DUPEITEM=02170
+
+[ITEMDEF 02176] // wooden shingle //New
+DUPEITEM=02170
+
+[ITEMDEF 02177] // wooden shingle //New
+DUPEITEM=02170
+
+[ITEMDEF 02178] // slate roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02179] // slate roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0217a] // slate roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0217b] // slate roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0217c] // slate roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0217d] // slate roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0217e] // slate roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0217f] // slate roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02180] // palm fronds //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02181] // palm fronds //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02182] // palm fronds //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02183] // palm fronds //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02184] // palm fronds //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02185] // palm fronds //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02186] // palm fronds //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02187] // palm fronds //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02188] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02189] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0218a] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0218b] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0218c] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0218d] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0218e] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0218f] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02190] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02191] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02192] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02193] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02194] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02195] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02196] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02197] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02199] // nodraw //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0219a] // nodraw //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0219b] // nodraw //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0219c] // nodraw //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0219d] // nodraw //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0219e] // nodraw //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0219f] // nodraw //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021a0] // nodraw //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021a1] // nodraw //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021a2] // nodraw //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021a5] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021a6] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021a7] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021a8] // palisade //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021a9] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021aa] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ab] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ac] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ad] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ae] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021af] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021b0] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021b1] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021b2] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021b3] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021b4] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021b5] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021b6] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021b7] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021b8] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021bd] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021be] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021bf] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021c0] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021c1] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021c2] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021c3] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021c4] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021c5] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021c6] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021c7] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021c8] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021c9] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ca] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021cb] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021cc] // log wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021cd] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ce] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021cf] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021d0] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021d1] // wooden fence //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021d2] // wooden fence //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021d3] // wooden fence //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021d4] // wooden fence //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021d5] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021d6] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021d7] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021d8] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021d9] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021da] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021dc] // wooden wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021dd] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021de] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021df] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021e0] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021e1] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021e2] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021e3] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021e4] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021e5] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021e6] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021e7] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021e8] // dungeon wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021e9] // tile roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ea] // tile roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021eb] // tile roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ec] // tile roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ed] // tile roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ee] // tile roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ef] // tile roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021f0] // tile roof //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021f1] // fire steed //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021fc] // skull spikes //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021fd] // stone wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021fe] // vial //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 021ff] // skull window //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02200] // skull window //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02201] // stone spike //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02202] // stone spike //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02203] // skull //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02204] // skull pole //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02206] // crystal //New
+DEFNAME=i_crystal_rock1
+DUPELIST=02207,02208,02209,0220a,0220b,0220c,0220d,0220e
+
+CATEGORY=AoS
+SUBSECTION=Decoration
+DESCRIPTION=@
+
+[ITEMDEF 02207] // crystal //New
+DUPEITEM=02206
+
+[ITEMDEF 02208] // crystal //New
+DUPEITEM=02206
+
+[ITEMDEF 02209] // crystal //New
+DUPEITEM=02206
+
+[ITEMDEF 0220a] // crystal //New
+DUPEITEM=02206
+
+[ITEMDEF 0220b] // crystal //New
+DUPEITEM=02206
+
+[ITEMDEF 0220c] // crystal //New
+DUPEITEM=02206
+
+[ITEMDEF 0220d] // crystal //New
+DUPEITEM=02206
+
+[ITEMDEF 0220e] // crystal //New
+DUPEITEM=02206
+
+[ITEMDEF 02210] // crystal //New
+DEFNAME=i_crystal_rock2
+DUPELIST=02211,02212,02213,02214,02215,02216,02217,02218
+
+CATEGORY=AoS
+SUBSECTION=Decoration
+DESCRIPTION=@
+
+[ITEMDEF 02211] // crystal //New
+DUPEITEM=02210
+
+[ITEMDEF 02212] // crystal //New
+DUPEITEM=02210
+
+[ITEMDEF 02213] // crystal //New
+DUPEITEM=02210
+
+[ITEMDEF 02214] // crystal //New
+DUPEITEM=02210
+
+[ITEMDEF 02215] // crystal //New
+DUPEITEM=02210
+
+[ITEMDEF 02216] // crystal //New
+DUPEITEM=02210
+
+[ITEMDEF 02217] // crystal //New
+DUPEITEM=02210
+
+[ITEMDEF 02218] // crystal //New
+DUPEITEM=02210
+
+[ITEMDEF 0221a] // crystal //New
+DEFNAME=i_crystal_rock3
+DUPELIST=0221b,0221c,0221d,0221e,0221f,02220,02221,02222
+
+CATEGORY=AoS
+SUBSECTION=Decoration
+DESCRIPTION=@
+
+[ITEMDEF 0221b] // crystal //New
+DUPEITEM=0221a
+
+[ITEMDEF 0221c] // crystal //New
+DUPEITEM=0221a
+
+[ITEMDEF 0221d] // crystal //New
+DUPEITEM=0221a
+
+[ITEMDEF 0221e] // crystal //New
+DUPEITEM=0221a
+
+[ITEMDEF 0221f] // crystal //New
+DUPEITEM=0221a
+
+[ITEMDEF 02220] // crystal //New
+DUPEITEM=0221a
+
+[ITEMDEF 02221] // crystal //New
+DUPEITEM=0221a
+
+[ITEMDEF 02222] // crystal //New
+DUPEITEM=0221a
+
+[ITEMDEF 02224] // crystal //New
+DEFNAME=i_crystal_rock4
+DUPELIST=02225,02226,02227,02228,02229,0222a,0222b,0222c
+
+CATEGORY=AoS
+SUBSECTION=Decoration
+DESCRIPTION=@
+
+[ITEMDEF 02225] // crystal //New
+DUPEITEM=02224
+
+[ITEMDEF 02226] // crystal //New
+DUPEITEM=02224
+
+[ITEMDEF 02227] // crystal //New
+DUPEITEM=02224
+
+[ITEMDEF 02228] // crystal //New
+DUPEITEM=02224
+
+[ITEMDEF 02229] // crystal //New
+DUPEITEM=02224
+
+[ITEMDEF 0222a] // crystal //New
+DUPEITEM=02224
+
+[ITEMDEF 0222b] // crystal //New
+DUPEITEM=02224
+
+[ITEMDEF 0222c] // crystal //New
+DUPEITEM=02224
+
+[ITEMDEF 0222e] // mushroom //New
+DEFNAME=i_mushroom_aos1
+
+CATEGORY=AoS
+SUBSECTION=Decoration - Vegetables
+DESCRIPTION=Mushroom
+
+[ITEMDEF 0222f] // mushroom //New
+DEFNAME=i_mushroom_aos2
+
+CATEGORY=AoS
+SUBSECTION=Decoration - Vegetables
+DESCRIPTION=Mushroom
+
+[ITEMDEF 02230] // mushroom //New
+DEFNAME=i_mushroom_aos3
+
+CATEGORY=AoS
+SUBSECTION=Decoration - Vegetables
+DESCRIPTION=Mushroom
+
+[ITEMDEF 02231] // mushroom //New
+DEFNAME=i_mushroom_aos4
+
+CATEGORY=AoS
+SUBSECTION=Decoration - Vegetables
+DESCRIPTION=Mushroom
+
+[ITEMDEF 02232] // ant hill //New
+DEFNAME=i_ant_hill
+
+CATEGORY=AoS
+SUBSECTION=Decoration - Animals
+DESCRIPTION=Ant Hill
+
+[ITEMDEF 02233] // gopher mound //New
+DEFNAME=i_gopher_mound
+
+CATEGORY=AoS
+SUBSECTION=Decoration - Animals
+DESCRIPTION=Gopher Mound
+
+[ITEMDEF 02234] // dragon head //New
+DEFNAME=i_dragon_head
+DUPELIST=02235
+
+CATEGORY=AoS
+SUBSECTION=Decoration - Wall
+DESCRIPTION=Dragon Head
+
+[ITEMDEF 02235] // dragon head //New
+DUPEITEM=i_dragon_head
+
+[ITEMDEF 02236] // lance //New
+DEFNAME=i_lance_deco
+DUPELIST=02237,02238,02239
+
+CATEGORY=AoS
+SUBSECTION=Decoration - Weapons
+DESCRIPTION=Lance
+
+[ITEMDEF 02237] // lance //New
+DUPEITEM=02236
+
+[ITEMDEF 02238] // lance //New
+DUPEITEM=02236
+
+[ITEMDEF 02239] // lance //New
+DUPEITEM=02236
+
+[ITEMDEF 0223a] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0223b] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0223c] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0223d] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0223e] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0223f] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02240] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02241] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02242] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02243] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02244] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02245] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02246] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02247] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02248] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02249] // broken crystals //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0224a] // willow tree //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0224b] // willow tree //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0224c] // oak tree //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0224d] // oak tree //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0224e] // demon skull //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0224f] // demon skull //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02250] // demon skull //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02251] // demon skull //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02255] // ghost missile //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02256] // small bagball //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02257] // large bagball //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02270] // scroll //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02271] // scroll //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02272] // scroll //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02273] // scroll //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02274] // scroll //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02275] // scroll //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02276] // scroll //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02277] // scroll //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02278] // scroll //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02279] // scroll //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0227a] // scroll of calling //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0227b] // scroll of Abraxus //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0227c]
+DEFNAME=i_scroll_cleanse_by_fire
+NAME="cleanse by fire scroll"
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 0227d]
+DEFNAME=i_scroll_close_wounds
+NAME="close wounds scroll"
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 0227e] // consecrate weapon //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 0227f] // dispel evil //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02280] // divine fury //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02281] // enemy of one //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02282] // holy light //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02283] // noble sacrifice //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02284] // remove curse //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02285] // sacred journey //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02286] // armor ignore //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02287] // bleed attack //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02288] // concussion blow //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02289] // crushing blow //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 0228a] // disarm //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 0228b] // dismount //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 0228c] // double strike //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 0228d] // infecting //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 0228e] // mortal strike //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 0228f] // moving shot //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02290] // paralyzing bow //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02291] // shadow strike //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 02292] // whirlwind attack //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 022c4] // mini house //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 022c6] // reflect physical //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 022c7] // reflect physical //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 022c8] // reflect physical //New
+//DEFNAME=
+NAME=
+RESOURCES=
+SKILLMAKE=
+TYPE=t_scroll
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+ON=@Create
+attr_magic=1
+MOREX=
+MOREY=
+
+[ITEMDEF 022c9] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022ca] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022cb] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022cc] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022cd] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022ce] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022cf] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022d0] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022d1] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022d2] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022d3] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022d4] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022d5] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022d6] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022d7] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022d8] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022d9] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022da] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022db] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022dc] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022dd] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022de] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022df] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022e0] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022e1] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022e2] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022e3] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022e4] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022e5] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022e6] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022e7] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022e8] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022e9] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022ea] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022eb] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022ec] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022ed] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022ee] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022ef] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022f0] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022f1] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022f2] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022f3] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022f4] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022f5] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022f6] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022f7] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022f8] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022f9] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022fa] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022fb] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022fc] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022fd] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022fe] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 022ff] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02300] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02301] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02302] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02303] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02304] // mini house //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02307] // fur boots //New
+DEFNAME=i_boots_fur
+TYPE=t_clothing
+FLIP=1
+weight=6
+Dye=1
+armor=6
+DUPELIST=02308
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02308] // fur boots // New
+DUPEITEM=02307
+
+[ITEMDEF 024ea] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0253f] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02540] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02541] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02542] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02543] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02544] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02545] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02546] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02547] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02548] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02549] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0254a] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0254b] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0254c] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0254d] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0254e] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0254f] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02550] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02551] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02552] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02553] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0256a] // scale shield //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0260a] // Chariot //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02620] // crystal elemental //New
+DEFNAME=i_pet_crystal_elemental
+TYPE=t_figurine
+TDATA3=c_m_crystal_elemental
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Crystal Elemental
+
+[ITEMDEF 02621] // treefellow //New
+DEFNAME=i_pet_treefellow
+TYPE=t_figurine
+TDATA3=c_m_treefellow
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Treefellow
+
+[ITEMDEF 02622] // skittering hopper //New
+DEFNAME=i_pet_skittering_hopper
+TYPE=t_figurine
+TDATA3=c_m_skittering_hopper
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Skittering Hopper
+
+[ITEMDEF 02623] // devourer of souls //New
+DEFNAME=i_pet_devourer_of_souls
+TYPE=t_figurine
+TDATA3=c_m_devourer_of_souls
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Devourer of Souls
+
+[ITEMDEF 02624] // flesh golem //New
+DEFNAME=i_pet_flesh_golem
+TYPE=t_figurine
+TDATA3=c_m_flesh_golem
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Flesh Golem
+
+[ITEMDEF 02625] // gore fiend //New
+DEFNAME=i_pet_gore_fiend
+TYPE=t_figurine
+TDATA3=c_m_gore_fiend
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Gore Fiend
+
+[ITEMDEF 02626] // impaler //New
+DEFNAME=i_pet_impaler
+TYPE=t_figurine
+TDATA3=c_m_impaler
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Impaler
+
+[ITEMDEF 02627] // gibberling //New
+DEFNAME=i_pet_gibberling
+TYPE=t_figurine
+TDATA3=c_m_gibberling
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Gibberling
+
+[ITEMDEF 02628] // bone daemon //New
+DEFNAME=i_pet_bone_daemon
+TYPE=t_figurine
+TDATA3=c_m_bone_daemon
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Bone Daemon
+
+[ITEMDEF 02629] // patchwork skeleton //New
+DEFNAME=i_pet_patchwork_skeleton
+TYPE=t_figurine
+TDATA3=c_m_patchwork_skeleton
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Patchwork Skeleton
+
+[ITEMDEF 0262a] // wailing banshee //New
+DEFNAME=i_pet_wailing_banshee
+TYPE=t_figurine
+TDATA3=c_m_wailing_banshee
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Wailing Banshee
+
+[ITEMDEF 0262b] // shadow knight //New
+DEFNAME=i_pet_shadow_knight
+TYPE=t_figurine
+TDATA3=c_m_shadow_knight
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Shadow Knight
+
+[ITEMDEF 0262c] // abyssmal horror //New
+DEFNAME=i_pet_abyssmal_horror
+TYPE=t_figurine
+TDATA3=c_m_abyssmal_horror
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Abyssmal Horror
+
+[ITEMDEF 0262d] // darknight creeper //New
+DEFNAME=i_pet_darknight_creeper
+TYPE=t_figurine
+TDATA3=c_m_darknight_creeper
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Darknight Creeper
+
+[ITEMDEF 0262e] // ravager //New
+DEFNAME=i_pet_ravager
+TYPE=t_figurine
+TDATA3=c_m_ravager
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Ravager
+
+[ITEMDEF 0262f] // flesh renderer //New
+DEFNAME=i_pet_flesh_renderer
+TYPE=t_figurine
+TDATA3=c_m_flesh_renderer
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Flesh Renderer
+
+[ITEMDEF 02630] // wanderer of the voi //New
+DEFNAME=i_pet_wanderer_of_the_voID
+TYPE=t_figurine
+TDATA3=c_m_wanderer_of_the_voID
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Wanderer of the VoID
+
+[ITEMDEF 02631] // vampire bat //New
+DEFNAME=i_pet_vampire_bat
+TYPE=t_figurine
+TDATA3=c_m_vampire_bat
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Vampire Bat
+
+[ITEMDEF 02632] // daemon knight //New
+DEFNAME=i_pet_daemon_knight
+TYPE=t_figurine
+TDATA3=c_m_daemon_knight
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Daemon Knight
+
+[ITEMDEF 02633] // mound of maggots // new
+DEFNAME=i_pet_mound_of_maggots
+TYPE=t_figurine
+TDATA3=c_m_mound_of_maggots
+
+CATEGORY=AoS
+SUBSECTION=Figurines
+DESCRIPTION=Mound of Maggots
+
+[ITEMDEF 02683]
+DEFNAME=i_hooded_shroud
+NAME="hooded shroud"
+TYPE=t_clothing
+FLIP=1
+DUPELIST=02684
+
+CATEGORY=Provisions - Clothes
+SUBSECTION=Robes - AoS
+DESCRIPTION=Hooded Shroud
+
+[ITEMDEF 02684] // hooded shroud //New
+DUPEITEM=02683
+
+[ITEMDEF 02685]
+DEFNAME=i_death_shroud
+NAME="death shroud"
+TYPE=t_clothing
+FLIP=1
+DUPELIST=02686
+
+CATEGORY=Provisions - Clothes
+SUBSECTION=Robes - AoS
+DESCRIPTION=Death Shroud
+
+[ITEMDEF 02686] // death shroud //New
+DUPEITEM=02685
+
+[ITEMDEF 026b1] // scale%s //New
+DEFNAME=i_scales_dragon
+NAME="dragon scale%s"
+DUPELIST=026b2,026b3,026b4,026b5,026b6
+
+CATEGORY=AoS
+SUBSECTION=Miscellaneous
+DESCRIPTION=Scales
+
+[ITEMDEF 026b2] // scale%s //New
+DUPEITEM=026b1
+
+[ITEMDEF 026b3] // scale%s //New
+DUPEITEM=026b1
+
+[ITEMDEF 026b4] // scale%s //New
+DUPEITEM=026b1
+
+[ITEMDEF 026b5] // scale%s //New
+DUPEITEM=026b1
+
+[ITEMDEF 026b6] // scale%s //New
+DUPEITEM=026b1
+
+[ITEMDEF 026b7]
+DEFNAME=i_zoogi_fungus
+
+CATEGORY=AoS
+SUBSECTION=Vegetation
+DESCRIPTION=Zoogi Fungus
+
+[ITEMDEF 026b8]
+DEFNAME=i_translocation_powder
+
+CATEGORY=AoS
+SUBSECTION=Magical Items
+DESCRIPTION=Translocation powder
+
+[ITEMDEF 026b9]
+DEFNAME=i_plant_bowl
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02a9e] // statue //New
+
+CATEGORY=decoration - wall carvings & statues
+SUBSECTION=statues - AoS
+DESCRIPTION=statue(1/3)
+
+[ITEMDEF 02a9f] // statue //New
+
+CATEGORY=decoration - wall carvings & statues
+SUBSECTION=statues - AoS
+DESCRIPTION=statue(2/3)
+
+[ITEMDEF 02aa0] // statue //New
+
+CATEGORY=decoration - wall carvings & statues
+SUBSECTION=statues - AoS
+DESCRIPTION=statue(3/3)
+
+[itemdef i_multi_statue_aos] // new statue - multi
+NAME="statue"
+ID=02a9f
+TYPE=t_multi
+multiregion=0,0,0,0
+COMPONENT=02a9e 0 1 0 0
+COMPONENT=02aa0 -1 1 0 0
+
+CATEGORY=decoration - wall carvings & statues
+SUBSECTION=statues - AoS
+DESCRIPTION=statue(multi)
+
+[ITEMDEF 02ac8] // bearskin rug //New
+DEFNAME=i_bearskin_rug_aos
+RESOURCES3=2 i_corpse_bear, 5 i_thread, 4 i_canvas
+weight=20
+DUPELIST=02ac9,02acd,02ace
+
+CATEGORY=decoration - carpets & rugs
+SUBSECTION=bearskin rug - AoS
+DESCRIPTION=@
+
+[ITEMDEF 02ac9] // bearskin rug //New
+DUPEITEM=02ac8
+
+[ITEMDEF 02acd] // bearskin rug //New
+DUPEITEM=02ac8
+
+[ITEMDEF 02ace] // bearskin rug //New
+DUPEITEM=02ac8
+
+[ITEMDEF 02ae4] // lava //New
+DEFNAME=i_lava_bubbling_aos
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02ae5] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02ae6] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02ae7] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02ae8] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02ae9] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02aea] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02aeb] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b3e] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b40] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b42] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b44] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b45] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b47] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b48] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b49] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b4b] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b4d] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b4f] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b50] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b52] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b53] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b54] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b56] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b58] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b5c] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b5e] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b60] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b61] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b62] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b63] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b64] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02b65] // lava //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02bd1] // drawer //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02bd2] // drawer //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02bd3] // drawer //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02bd4] // drawer //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02bd5] // drawer //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02bd6] // drawer //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02bd7] // dresser //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02bd8] // dresser //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03127] // stone wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032c4] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032c5] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032c6] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032c7] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032c8] // coast //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032c9] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032ca] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032e8] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032e9] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032ea] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 032eb] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03341] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03342] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03343] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03344] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03345] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03346] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03347] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03348] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03349] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0334a] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0334b] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0334c] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0334d] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0334e] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0334f] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03350] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03351] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0337a] // forest //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0342a] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0342b] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03436] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03437] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03438] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03439] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03493] // whirlpool //New
+DEFNAME=i_whirlpool
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03499] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0349f] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034a5] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034d9] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034da] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034db] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034dc] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034dd] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034de] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034df] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034e0] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034e1] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034e2] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034e3] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034e4] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034e5] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034e6] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034e7] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034e8] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034e9] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034ea] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034eb] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 034ec] // grass //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03539] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0353a] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0353b] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0353c] // rock //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03567] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03568] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03569] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0356a] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0356b] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0356c] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0356d] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0356e] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0356f] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03570] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03571] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03572] // sand //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03573] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03574] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03575] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03576] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03577] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03578] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03579] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0357a] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0357b] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0357c] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0357d] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0357e] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03592] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03593] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03594] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03595] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03596] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03597] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03598] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03599] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0359a] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0359b] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0359c] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0359d] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0359e] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0359f] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 035a0] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 035a1] // game piece //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 035ae] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 035af] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 035b0] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 035b1] // dirt //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03737] // fizzle //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03738] // fizzle //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03739] // fizzle //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03819] // energy //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0381a] // energy //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0381b] // energy //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0381c] // energy //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0381d] // energy //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0381e] // energy //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 0381f] // energy //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03820] // energy //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03821] // energy //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d12] // grapevines //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d17] // corn stalk //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d18] // corn stalk //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d19] // ear%s% of corn //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d1a] // ear%s% of corn //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d1b] // ear%s% of corn //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d1c] // ear%s% of corn //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d35] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d36] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d37] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d48] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03d84] // empty tile //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e02] // Field of Poison //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e03] // Field of Poison //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e04] // Field of Poison //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e05] // Field of Poison //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e06] // Field of Poison //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e07] // Field of Poison //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e08] // Field of Poison //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e09] // Field of Poison //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e0a] // Field of Poison //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e0b] // Field of Poison //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e28] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e29] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e2a] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e2b] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e2c] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e2d] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e2e] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e2f] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e30] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e32] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e33] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e34] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e35] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e36] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e37] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e38] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e39] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03e3a] // Field of fire //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ef2] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ef3] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ef4] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ef5] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ef6] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ef7] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ef8] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ef9] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03efa] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03efb] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03efc] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03efd] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03efe] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03eff] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03f00] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03f01] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03f02] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03f03] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03f04] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03f05] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03f06] // jungle wall //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03fe1] // ballista //New
+DUPEITEM=0189f
+
+[ITEMDEF 03fe7] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ff6] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03ff7] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 03fff] // armored man //New
+DEFNAME=i_armored_man
+NAME="armored man"
+
+CATEGORY=AoS
+SUBSECTION=Decoration
+DESCRIPTION=Armored man
+
+[ITEMDEF 02f23] //  //New
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+[ITEMDEF 02de3] //  //New
+DEFNAME=i_chair_elven
+TYPE=t_chair
+
+CATEGORY=
+SUBSECTION=
+DESCRIPTION=
+
+
+[eof]

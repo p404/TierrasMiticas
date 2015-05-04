@@ -1,0 +1,600 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Miercoles, Septiembre 13, 2006
+// Piedra de Razas
+VERSION=0.9
+
+[ITEMDEF i_Race_stone] 
+DEFNAME=i_race_stone
+DEFNAME2=i_stone_race 
+ID=i_class_stone
+NAME=Monument of the Races 
+WEIGHT=0 
+
+CATEGORY=Custom Stone
+SUBSECTION=Piedras Star chamber
+DESCRIPTION=Piedra de Razas 
+
+ON=@Create 
+ATTR=014 
+
+ON=@DCLICK
+IF (<SRC.TARG.DISTANCE> > 2) 
+SRC.SYSMESSAGE You can't reach that.
+RETURN 1 
+ENDIF 
+IF ! (<SRC.OSKIN>==0)
+SRC.SPEAKUA 32 006 0 1 <src.name> tu ya escogiste raza!
+RETURN 1
+ELSE
+SRC.SFX 555
+DIALOG d_Race_List 
+RETURN 1 
+ENDIF
+
+[DIALOG d_Race_List] 
+0,0 
+resizepic 0 0 2600 500 300 
+gumppic 180 30 1418 
+page 0 
+text 55 17 1157 0 
+text 145 37 904 1 
+text 145 57 904 2 
+text 145 77 904 3 
+text 145 107 32 4 
+text 145 127 904 5 
+text 145 147 904 6 
+text 55 37 1152 7 
+text 55 57 1152 8 
+text 55 77 1152 9 
+text 55 97 1152 10 
+text 55 117 1152 11 
+text 55 137 1152 12 
+text 55 157 1152 13 
+button 35 40 1209 1210 1 0 1 
+button 35 60 1209 1210 1 0 2 
+button 35 80 1209 1210 1 0 3 
+button 35 100 1209 1210 1 0 4 
+button 35 120 1209 1210 1 0 5 
+button 35 140 1209 1210 1 0 6 
+button 35 160 1209 1210 1 0 7 
+
+[DIALOG d_Race_List TEXT] 
+Races of the Land 
+Here shall ye select the Race of whom ye 
+call Your People in this world. On these 
+pages of stone willst thee learn and choose. 
+Thine oath is thine bond! 
+Once borne ye canst not 
+revoke thy kinship. 
+Barbaro 
+Enano
+Elfo
+HalfElf
+Humano 
+Shapeshifter
+Warlock 
+
+
+[DIALOG d_Race_List BUTTON] 
+ONBUTTON=0 
+SRC.SYSMESSAGE=Vuelve cuando estes listo... 
+ONBUTTON=1 
+DIALOG d_race_Barbaro 
+ONBUTTON=2 
+DIALOG d_race_Enano
+ONBUTTON=3  
+DIALOG d_race_Elfo
+ONBUTTON=4
+DIALOG d_race_HalfElf
+ONBUTTON=5 
+DIALOG d_race_Humano
+ONBUTTON=6
+DIALOG d_race_Shapeshifter
+ONBUTTON=7 
+DIALOG d_race_Warlock
+ONBUTTON=8
+
+[DIALOG d_Race_Barbaro] 
+0,0 
+resizepic 0 0 3600 525 560 
+text 25 20 1152 0 
+text 25 50 81 1 
+text 25 70 81 2 
+text 25 90 81 3 
+text 25 110 81 4 
+text 25 130 81 5 
+text 25 150 81 6 
+text 25 170 81 7 
+text 25 190 81 8 
+text 25 210 81 9 
+text 25 230 81 10 
+text 25 250 81 11 
+text 25 270 81 12 
+text 25 290 81 13 
+button 40 490 92 52 1 0 1 
+text 90 490 1152 14 
+button 455 500 2076 2075 1 0 2 
+text 340 505 81 15 
+
+[DIALOG d_Race_Barbaro TEXT] 
+-=* El Barbaro *=- 
+Barbarians are natives of the desert. They are primarily miners, 
+jewelers & leather tailorers, while making for very excellent 
+melee fighters, archers, and scouts. They have no strong arcane 
+arts beyond a few specialty alchemy potions their race has 
+developed. They have been known to enter into fanatical Beserker 
+rages when in melee, and have developed the ability to use 
+archery at point blank range. 
+-=*=- 
+Though a hardy race these barbarians suffer reduced stamina in 
+cold weather or when deep underground. They have developed 
+specialty heavy and light armors which are harvested from 
+Desert Sources. Only Barbarians can work Ankheg chitin into 
+high quality armor and weapons. 
+"Quiero ser Barbaro!" 
+Return to List 
+
+[DIALOG d_Race_Barbaro BUTTON] 
+ON=1
+SRC.TITLE=the Barbarian
+SRC.COLOR=071e
+SRC.OSKIN=071e
+SRC.EVENTS=+e_barbaro
+SRC.NEWITEM=i_beard_short
+src.act.equip
+SRC.SYSMESSAGE=Ahora eres Barbar@!
+SRC.SOUND=snd_SPELL_MAGIC_LOCK
+SRC.STR=50
+SRC.INT=5
+SRC.DEX=20
+SRC.KARMA=1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Vuelve cuando estes listo... 
+RETURN 1 
+ONBUTTON=1   
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_Race_List 
+RETURN 1 
+
+[DIALOG d_Race_Enano] 
+0,0 
+resizepic 0 0 3600 525 560 
+text 25 20 1152 0 
+text 25 50 81 1 
+text 25 70 81 2 
+text 25 90 81 3 
+text 25 110 81 4 
+text 25 130 81 5 
+text 25 150 81 6 
+text 25 170 81 7 
+text 25 190 81 8 
+text 25 210 81 9 
+text 25 230 81 10 
+text 25 250 81 11 
+text 25 270 81 12 
+text 25 290 81 13 
+text 25 310 81 14 
+text 25 330 81 15 
+text 25 350 81 16 
+text 25 370 81 17 
+text 25 390 81 18 
+text 25 410 81 19 
+text 25 430 81 20 
+button 40 490 92 52 1 0 1 
+text 90 490 1152 21 
+button 455 500 2076 2075 1 0 2 
+text 340 505 81 22 
+
+[DIALOG d_Race_Enano TEXT] 
+-=* El Enano *=- 
+Incorrectly referred to as "Dark Elves", Drow are a corrupted 
+species brought into being by a series of unfortunate events early 
+in the world's history. Drow epitomize Pure Chaos and are often 
+wrongly accused of being evil, not that they care what others think 
+about them anyway. Drow believe that only warfare and murder lead 
+to a strong people so petty or tedious "evil" only inspires their 
+contempt. To Drow there exists no greater pleasure than killing 
+Elfkind, preferably slowly and painfully. 
+-=*=- 
+Drow make for some of the best fighters and battle mages found in 
+the lands. Their evolution in the dark warrens and tunnels under 
+ground mean Drow tend to be disdainful of poleArms since such 
+weapons are unsuitable in these areas. But in all the other battle 
+arts few races compete as strongly as Drow. 
+-=*=- 
+Their sole focus on superiority through battle makes the Drow poor 
+candidates for anything not involving conflict. But since their 
+belief is that weak races do not deserve comfort a good Drow 
+usually knows where to find what she needs. Only Drow can work 
+Blackrock metal into high quality armor and weapons. 
+"Quiero ser Enano!" 
+Return to List 
+
+[DIALOG d_Race_Enano BUTTON] 
+ON=1
+SRC.TITLE=the Drow
+SRC.COLOR=040f
+SRC.OSKIN=040f
+SRC.EVENTS=+e_drow
+SRC.SYSMESSAGE=Ahora eres Enan@!
+SRC.SOUND=snd_SPELL_Magic_Lock
+SRC.STR=45
+SRC.INT=15
+SRC.DEX=15
+SRC.KARMA=1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Vuelve cuando estes listo...
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_Race_List 
+RETURN 1 
+
+[DIALOG d_Race_Elfo] 
+0,0 
+resizepic 0 0 3600 525 560 
+text 25 20 1152 0 
+text 25 40 81 1 
+text 25 60 81 2 
+text 25 80 81 3 
+text 25 100 81 4 
+text 25 120 81 5 
+text 25 140 81 6 
+text 25 160 81 7 
+text 25 180 81 8 
+text 25 200 81 9 
+text 25 220 81 10 
+text 25 240 81 11 
+text 25 260 81 12 
+text 25 280 81 13 
+text 25 300 81 14 
+text 25 320 81 15 
+text 25 340 81 16 
+text 25 360 81 17 
+text 25 360 81 18 
+button 40 490 92 52 1 0 1 
+text 90 490 1152 19 
+button 455 520 2076 2075 1 0 2 
+text 340 525 81 20 
+
+[DIALOG d_Race_Elfo TEXT] 
+-=* El Elfo *=- 
+Elves epitomize Good and Lawfulness. They are graceful and 
+extremely dextrous. Though neither would admit to it Elves are the 
+parent people to the Drow and so one can define an Elf by saying 
+they are everything a Drow is not. Most of the other races respect 
+Elves tremendously, but they are perceived as haughty and perhaps 
+a little too proud. 
+-=*=- 
+Elves have a tremendous affinity for nature, and given that they 
+are basically plants themselves it is no great surprise that few 
+races make better artisans than an Elf. Their impressive dexterity 
+and keen senses of perception make them natural archers. Despite 
+their lack of genuine empathy towards other beings Elves in fact 
+tend to be fiercely protective of the all things green and fuzzy. 
+-=*=- 
+Combine all these attributes with a fine intelligence and one 
+understands why Elves often make for superior workers of most 
+arcane arts. Only Elves can work Verite metal into high quality 
+armor and weapons. 
+"Quiero ser Elfo!" 
+Return to List 
+
+[DIALOG d_Race_Elfo BUTTON] 
+ON=1
+SRC.TITLE=the Elf
+SRC.COLOR=51
+SRC.OSKIN=51
+SRC.NEWITEM=i_hair_ponytail
+src.act.equip
+SRC.SYSMESSAGE=Ahora eres Elf@!
+SRC.SOUND=snd_SPELL_Magic_Lock
+SRC.events=+e_Night_Vision
+SRC.events=+e_elfo
+SRC.STR=46
+SRC.INT=14
+SRC.DEX=15
+SRC.KARMA=1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Vuelve cuando estes listo... 
+RETURN 1 
+ONBUTTON=1   
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_Race_List 
+RETURN 1 
+
+
+[DIALOG d_Race_HalfElf] 
+0,0 
+resizepic 0 0 3600 525 560 
+text 25 20 1152 0 
+text 25 40 81 1 
+text 25 60 81 2 
+text 25 80 81 3 
+text 25 100 81 4 
+text 25 120 81 5 
+text 25 140 81 6 
+text 25 160 81 7 
+text 25 180 81 8 
+text 25 200 81 9 
+text 25 220 81 10 
+text 25 240 81 11 
+text 25 260 81 12 
+text 25 280 81 13 
+button 40 490 92 52 1 0 1 
+text 90 490 1152 14 
+button 455 520 2076 2075 1 0 2 
+text 340 525 81 15 
+
+[DIALOG d_Race_HalfElf TEXT] 
+-=* El HalfElf *=- 
+Halfelves are the decendants of both human and elven parents. 
+Having been born with many of the qualities and features of both, 
+Halfelves tend to enjoy the company of both civilizations though 
+they often form towns of their own, enjoying the company of those 
+like themselves the most. 
+-=*=- 
+Halfelves are also known to be great adventurers and to keep a 
+wide variation of company, though usually preferring the company 
+of neutral or good aligned companions. Halfelves are truly blessed 
+having many of both races better qualities, from the humans well 
+rounded abilities to some of the elven races abilities such as keen 
+eyesight, ability with bow and affinity for nature. Only Halfelves 
+can work Rust metal into high quality armor and weapons. 
+"Quiero ser Halfelf!" 
+Return to List 
+
+[DIALOG d_Race_HalfElf BUTTON] 
+ON=1
+SRC.TITLE=the HalfElf
+SRC.COLOR=46
+SRC.OSKIN=46
+SRC.EVENTS=+e_half_elf
+SRC.SYSMESSAGE=Ahora eres HalfElf!
+SRC.SOUND=snd_SPELL_Magic_Lock
+SRC.STR=35
+SRC.INT=25
+SRC.DEX=15
+SRC.KARMA=1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Vuelve cuando estes listo...
+RETURN 1 
+ONBUTTON=1 
+SRC.SYSMESSAGE=*POOF* Yer a HalfElf 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_Race_List 
+RETURN 1 
+
+
+[DIALOG d_Race_Humano] 
+0,0 
+resizepic 0 0 3600 525 560 
+text 25 20 1152 0 
+text 25 40 81 1 
+text 25 60 81 2 
+text 25 80 81 3 
+text 25 100 81 4 
+text 25 120 81 5 
+text 25 140 81 6 
+text 25 160 81 7 
+text 25 180 81 8 
+text 25 200 81 9 
+text 25 220 81 10 
+text 25 240 81 11 
+text 25 260 81 12 
+text 25 280 81 13 
+text 25 300 81 14 
+text 25 320 81 15 
+text 25 340 81 16 
+text 25 360 81 17 
+text 25 380 81 18 
+text 25 400 81 19 
+text 25 420 81 20 
+text 25 440 81 21 
+text 25 460 81 22 
+button 40 490 92 52 1 0 1 
+text 90 490 1152 23 
+button 455 520 2076 2075 1 0 2 
+text 340 525 81 24 
+
+[DIALOG d_Race_Humano TEXT] 
+-=* El Humano *=- 
+Latecomers to an ancient world Humans are a race that are 
+tolerated and even looked upon fondly by the older peoples who 
+preceded them. Their main strengths are incredible flexibility 
+and an impressive amount of what can only be described as plain 
+dumb luck. Even their enemies agree that the phrase "someone 
+up there just likes me" was invented for this short-lived if 
+sometimes short-sighted race. 
+-=*=- 
+Humans don't live long enough to hone their skills and their stats 
+as highly as the more long-lived other races. Not even the most 
+accomplished Human compares to a specialist of another race. 
+But on the other hand Humans can master any skill to a maximum 
+of Master within the limits of the overall skill cap, and they 
+learn skills much much faster. 
+-=*=- 
+These traits, combined with their breathtaking bursts of Dumb 
+Luck in otherwise suicidal situations, make Humans the ultimate 
+jacks of all trades that others disrespect at their peril. However 
+due to their inability to master any skill completely they are 
+often at odds to work in any one area alone instead preferring 
+to generalize. Only Humans can work Iron metal into high quality 
+armor and weapons. 
+"Quiero ser Humano!" 
+Return to List 
+
+[DIALOG d_Race_Humano BUTTON] 
+ON=1
+SRC.TITLE=the Human
+SRC.COLOR=03f8
+SRC.OSKIN=03f8
+SRC.EVENTS=+e_humano
+SRC.NEWITEM=i_hair_long
+src.act.equip
+SRC.SYSMESSAGE=Ahora eres Human@!
+SRC.SOUND=snd_SPELL_Magic_Lock
+SRC.STR=40
+SRC.INT=20
+SRC.DEX=15
+SRC.KARMA=1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Vuelve cuando estes listo... 
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_Race_List 
+RETURN 1 
+
+
+[DIALOG d_Race_Shapeshifter] 
+0,0 
+resizepic 0 0 3600 525 560 
+text 25 20 1152 0 
+text 25 40 81 1 
+text 25 60 81 2 
+text 25 80 81 3 
+text 25 100 81 4 
+text 25 120 81 5 
+text 25 140 81 6 
+text 25 160 81 7 
+text 25 180 81 8 
+text 25 200 81 9 
+text 25 220 81 10 
+text 25 240 81 11 
+text 25 260 81 12 
+text 25 280 81 13 
+text 25 300 81 14 
+text 25 320 81 15 
+text 25 340 81 16 
+text 25 360 81 17 
+text 25 380 81 18 
+text 25 400 81 19 
+text 25 420 81 20 
+button 40 490 92 52 1 0 1 
+text 90 490 1152 21 
+button 455 520 2076 2075 1 0 2 
+text 340 525 81 22 
+
+[DIALOG d_Race_Shapeshifter TEXT] 
+-=* El Shapeshifter *=- 
+Shapeshifters are a chameleon species that evolved a wide range of 
+ways to hide from their enemies. Intelligence, mimicry and stealth, 
+and an impressive affinity with the arcane were the abilities that 
+evolution forced them to adopt in an often cruel and violent world. 
+Shapeshifters have learned the hard way the value of striking that 
+first lethal blow against an unforgiving enemy. 
+-=*=- 
+For brief periods Shapeshifters can assume the form of other 
+creatures, and while in that form they assume most of the skills 
+and abilities of that other being. However the Shapeshifter retains 
+his own physically frail characteristics even while in this other 
+form. The shaper they assume depend on their level of experience. 
+-=*=- 
+Shapeshifters are incredibly intelligent beings, more so than any 
+other race, but lack strength and are easily tired. Their incredible 
+abilities of perception make them excellent traders but 
+unfortunately their sole evolutionary focus on survival skills 
+combined with their lack of grace and strength makes them poor 
+artisans. Only Shapeshifters can work Shadow metal into high 
+quality armor and weapons. 
+"Quiero ser Shapeshifter!" 
+Return to List 
+
+[DIALOG d_Race_Shapeshifter BUTTON] 
+ON=1
+SRC.TITLE=the Shapeshifter
+SRC.COLOR=52
+SRC.OSKIN=52
+SRC.EVENTS=+e_shapeshifter
+SRC.SYSMESSAGE=Ahora eres Shapeshifter!
+SRC.SOUND=snd_SPELL_Magic_Lock
+SRC.STR=35
+SRC.INT=5
+SRC.DEX=35
+SRC.KARMA=-1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Vuelve cuando estes listo... 
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_Race_List 
+RETURN 1 
+
+
+[DIALOG d_Race_Warlock] 
+0,0 
+resizepic 0 0 3600 525 560 
+text 25 20 1152 0 
+text 25 40 81 1 
+text 25 60 81 2 
+text 25 80 81 3 
+text 25 100 81 4 
+text 25 120 81 5 
+text 25 140 81 6 
+text 25 160 81 7 
+text 25 180 81 8 
+text 25 200 81 9 
+text 25 220 81 10 
+text 25 240 81 11 
+text 25 260 81 12 
+text 25 280 81 13 
+button 40 490 92 52 1 0 1 
+text 90 490 1152 14 
+button 455 520 2076 2075 1 0 2 
+text 340 525 81 15 
+
+[DIALOG d_Race_Warlock TEXT] 
+-=* El Warlock *=- 
+Warlocks are the descendants of both human and daemon parents 
+and because of which draw upon the skills and abilities of both. 
+They have a natural ability with magic drawing from their daemon 
+heritage, along with a love for chaos, destruction and evil. 
+Unlike many they have the ability to simultaneously wear armor, 
+wield weapons, and use magic. However, due to their demonic 
+heritage their magic is limited to offensive spells and they 
+have limited healing ability. 
+-=*=- 
+The Warlock is often found where ever there is a cause which 
+may strengthen evil, bring it glory, or in any way impede, destroy 
+or bring strife to the forces of good and order. Only Warlocks can 
+work Steel metal into high quality armor and weapons. 
+"Quiero ser Warlock!" 
+Return to List 
+
+[DIALOG d_Race_Warlock BUTTON] 
+ON=1
+SRC.TITLE=the Warlock
+SRC.COLOR=664
+SRC.OSKIN=664
+SRC.EVENTS=+e_warlock
+SRC.SYSMESSAGE=Ahora eres Warlock!
+SRC.SOUND=snd_SPELL_MAGIC_LOCK
+SRC.STR=35
+SRC.INT=24
+SRC.DEX=16
+SRC.KARMA=1
+ONBUTTON=0 
+SRC.SYSMESSAGE=Vuelve cuando estes listo...
+RETURN 1 
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_Race_List 
+RETURN 1
+
+[EOF]

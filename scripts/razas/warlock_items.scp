@@ -1,0 +1,285 @@
+/////////////////////////////
+//////////Warlock///////////
+////////////////////////////
+[Itemdef I_Warlock_Platemail_Leggings]
+ID=5137
+DefName=I_Warlock_Platemail_Leggings
+Name=Warlock platemail Leggings
+ReqStr=40
+Weight=30
+Armor=85
+Resources=1 i_gem_warlock, 60 i_Ingot_shadow
+Skillmake=blacksmithing 75.0
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Warlock]
+DESCRIPTION=Warlock Legs
+dye=1
+
+ON=@Create
+Color=1327
+Hitpoints=700
+
+ON=@Equip
+If ! (<Src.Oskin>==664)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Warlock!
+              Sfx snd_SPELL_CURSE
+              Endif       
+Link=<Src.Uid> 
+Timer=2 
+Cont.SysMessage  By being Warlock, This item gives you new abilityes
+Return 0
+
+[Itemdef I_Warlock_Platemail_Gauntlets]
+ID=5140
+DefName=I_Warlock_Platemail_Gauntlets
+Name=Warlock platemail Gauntlets
+ReqStr=30
+Weight=20
+Armor=85
+Resources=1 I_Gem_Warlock, 30 I_Ingot_Shadow 
+Skillmake=Blacksmithing 75.0
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Warlock]
+DESCRIPTION=Warlock Legs
+dye=1
+
+ON=@Create
+Color=1327
+Hitpoints=700
+
+ON=@Equip
+If ! (<Src.Oskin>==664)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Warlock!
+              Sfx snd_SPELL_CURSE
+              Endif       
+Link=<Src.Uid> 
+Timer=2 
+Cont.SysMessage  By being Warlock, This item gives you new abilityes
+Return 0
+
+[Itemdef I_Warlock_Platemail]
+ID=5141
+DefName=I_Warlock_Platemail
+Name=Warlock Platemail
+ReqStr=45
+Weight=20
+Armor=85
+Resources=1 I_Gem_Warlock, 80 I_Ingot_Shadow
+Skillmake=Blacksmithing 75.0
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Warlock]
+DESCRIPTION=Warlock Legs
+dye=1
+
+ON=@Create
+Color=1327
+Hitpoints=700
+
+ON=@Equip
+If ! (<Src.Oskin>==664)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Warlock!
+              Sfx snd_SPELL_CURSE
+              Endif       
+Link=<Src.Uid> 
+Timer=2 
+Cont.SysMessage  By being Warlock, This item gives you new abilityes
+Return 0
+
+[Itemdef I_Warlock_Platemail_Gorget]
+ID=5139
+DefName=I_Warlcok_Platemail_Gorget
+Name=Warlock Gorget
+ReqStr=15
+Weight=20
+Armor=85
+Resources=1 I_Gem_Warlock, 20 I_Ingot_Shadow
+Skillmake=Blacksmithing 75.0
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Warlock]
+DESCRIPTION=Warlock Legs
+dye=1
+
+ON=@Create
+Color=1327
+Hitpoints=700
+
+ON=@Equip
+If ! (<Src.Oskin>==664)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Warlock!
+              Sfx snd_SPELL_CURSE
+              Endif       
+Link=<Src.Uid> 
+Timer=2 
+Cont.SysMessage  By being Warlock, This item gives you new abilityes
+Return 0
+
+[Itemdef I_Warlock_Platemail_Arms]
+ID=5143
+DefName=I_Warlock_Platemail_Arms
+Name=Warlock platemail arms
+ReqStr=30
+Weight=35
+Armor=85
+Resources=1 I_Gem_Warlock, 10 I_Ingot_Shadow
+Skillmake=Blacksmithing 75.0
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Warlock]
+DESCRIPTION=Warlock Legs
+dye=1
+
+ON=@Create
+Color=1327
+Hitpoints=700
+
+ON=@Equip
+If ! (<Src.Oskin>==664)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Warlock!
+              Sfx snd_SPELL_CURSE
+              Endif       
+Link=<Src.Uid> 
+Timer=2 
+Cont.SysMessage  By being Warlock, This item gives you new abilityes
+Return 0
+
+[Itemdef I_Warlock_Plate_Helm]
+ID=5138
+DefName=I_Warlock_Plate_Helm
+Name=Warlock plate helm
+ReqStr=30
+Weight=20
+Armor=85
+Resources=1 I_Gem_Warlock, 30 i_Ingot_shadow
+Skillmake=Blacksmithing 75.0
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Warlock]
+DESCRIPTION=Warlock Legs
+dye=1
+
+ON=@Create
+Color=1327
+Hitpoints=700
+
+ON=@Equip
+If ! (<Src.Oskin>==664)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Warlock!
+              Sfx snd_SPELL_CURSE
+              Endif       
+Link=<Src.Uid> 
+Timer=2 
+Cont.SysMessage  By being Warlock, This item gives you new abilityes
+Return 0
+
+[Itemdef I_Brasalet_Warlock]
+ID=4230
+DefName=I_Brasalet_Warlock
+Name=Brasalete Warlock
+Skill=Magery
+ReqStr=10
+Weight=5
+ARMOR=15
+TYPE=T_WAND
+Resources=3 I_Gem_Warlock, 50 I_Ingot_Shadow
+Skillmake=Blacksmithing 80.9
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Warlock]
+DESCRIPTION=Warlock Legs
+dye=1
+
+ON=@Create
+Color=1327
+Hitpoints=700
+
+ON=@Equip
+If ! (<Src.Oskin>==664)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Warlock!
+              Sfx snd_SPELL_CURSE
+              Endif       
+Link=<Src.Uid> 
+Timer=2 
+Cont.SysMessage  By being Warlock, This item gives you new abilityes
+Return 0
+
+ON=@Timer 
+If (<Link.Mana><<Link.Int>) 
+         Link.Mana=<Link.Mana>+3
+         Cont.Effect=3,i_fx_sparkle_2,10,20,10 
+         Timer=7
+         Else 
+         Timer=0 
+         Endif 
+         Return 1 
+
+ON=@UnEquip 
+Link=04FFFFFFF 
+Cont.SysMessage=Without this article, your new ones abilidades are useless
+Timer=-1 
+Return 0 
+
+[Itemdef 0366]
+DefName=I_Warlock_Shield
+Name=Warlock Shield
+ReqStr=30
+Weight=30
+Armor=26
+Type=T_Shield
+Skill=Parrying 40.0
+Resources=1 I_Gem_Warlock, 50 I_Ingot_Shadow
+Skillmake=Blacksmithing 75.0
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Warlock]
+DESCRIPTION=Warlock Legs
+dye=1
+
+ON=@Create
+Color=1327
+Hitpoints=1000
+
+ON=@Equip
+If ! (<Src.Oskin>==664)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Warlock!
+              Sfx snd_SPELL_CURSE
+              Endif       
+Link=<Src.Uid> 
+Timer=2 
+Cont.SysMessage  By being Warlock, This item gives you new abilityes
+Return 0
+
+ON=@Damage 
+Cont.SpellEffect=15 1000
+
+ON=@UnEquip
+Src.SpellEffect=41 1000
+
+ON=@DClick
+If <Cont.Uid>!=<Src.Findlayer(21).Uid>
+                Return 1
+                Endif
+If <Amount>>1
+                Return 1
+                Endif
+
+[EOF]

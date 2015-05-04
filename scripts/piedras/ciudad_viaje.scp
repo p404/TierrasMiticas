@@ -1,0 +1,112 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Miercoles, Septiembre 13, 2006
+// Piedra de Viaje
+VERSION=1.0
+
+[ITEMDEF i_piedra_viaje]
+DEFNAME=i_viaje_piedra
+NAME=Travel Stone
+ID=0edc
+TYPE=t_normal
+CATEGORY=Custom Gate
+SUBSECTION=Gate de Ciudad
+DESCRIPTION=Gate del viaje
+
+ON=@CREATE
+COLOR=1942
+ATTR=ATTR_STATIC 
+
+ON=@DCLICK
+IF (<SRC.TARG.DISTANCE> > 2) 
+SRC.SYSMESSAGE You can't reach that.
+RETURN 1 
+ENDIF 
+SRC.SFX 555
+ATTR=ATTR_STATIC 
+MOREP=<SRC.P>
+SRC.TAG.WEND = <MOREP>
+SRC.DIALOG=d_ciudad_viaje
+RETURN 1
+
+[DIALOG d_ciudad_viaje] 
+0,0
+nomove
+resizepic 225 150 2600 400 200 
+resizepic 310 205 3000 70 30
+resizepic 310 234 3000 85 30
+resizepic 310 263 3000 245 30
+page 0 
+text 360 170 1152 0 
+text 315 210 1152 1
+text 315 239 1152 2
+text 315 266 1152 3
+button 283 210 5540 5542 1 0 1
+button 283 239 5540 5542 1 0 2 
+button 283 268 5540 5542 1 0 3 
+
+[DIALOG d_ciudad_viaje TEXT] 
+Escoge tu Destino
+Mercado
+Zona PvP
+Arena de Combate (Para Torneos)
+
+[DIALOG d_ciudad_viaje BUTTON] 
+ON=0
+
+ON=1
+SRC.GO 5718 1844 1
+SRC.SOUND=510
+
+ON=2
+DIALOG d_pvp_zona
+
+ON=3
+SRC.GO 1130 1810
+SRC.SOUND=510
+
+[DIALOG d_pvp_zona] 
+0,0
+nomove
+resizepic 225 150 2600 400 200 
+resizepic 310 205 3000 85 30
+resizepic 310 234 3000 85 30
+resizepic 310 263 3000 160 30
+page 0 
+text 380 170 1152 0 
+text 315 210 1152 1
+text 315 239 1152 2
+text 315 266 1152 3
+button 283 210 5540 5542 1 0 1
+button 283 239 5540 5542 1 0 2 
+button 283 268 5540 5542 1 0 3 
+
+[DIALOG d_pvp_zona TEXT] 
+Zona PvP
+Zona Roja
+Zona Azul
+Zona de Espectadores
+
+[DIALOG d_pvp_zona BUTTON] 
+ON=0
+
+ON=1
+SRC.GO 5730 1917
+SRC.SOUND=510
+
+ON=2
+SRC.GO 5670 1917
+SRC.SOUND=510
+
+ON=3
+SRC.GO 5709 1915
+SRC.SOUND=510
+
+[EOF]

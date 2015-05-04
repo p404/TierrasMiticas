@@ -1,0 +1,63 @@
+[CHARDEF 0d5]
+//PolarBear
+DEFNAME=c_bear_polar
+NAME=Polar Bear
+ANIM=01fff
+SOUND=snd_ANIMALS_BEAR1
+ICON=i_pet_bear_polar
+DAM=5,14
+ARMOR=9
+RESOURCES=11 i_ribs_raw,5 i_fur_light
+CAN=MT_WALK|MT_RUN|MT_EQUIP
+FOODTYPE=6 t_FISH,5 t_fruit, 15 t_meat_raw
+SHELTER=r_snow,r_caves,r_mountains
+DESIRES=r_snow
+AVERSIONS=r_civilization
+DESCRIPTION=Polar Bear
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+NPC=brain_animal
+COLOR=colors_white
+STR={115 140}
+DEX={80 105}
+INT={25 50}
+PARRYING={70.0 85.0}
+MAGICRESISTANCE={45.0 60.0}
+TACTICS={70.0 100.0}
+WRESTLING={60.0 90.0}
+TAMING=75.0
+FISHING=20.0
+
+FAME=250
+KARMA={-500 -799}
+//ALIGNMENT=NEUTRAL
+
+ON=@DCLICK
+IF (<ismypet>)
+SRC.ACT.REMOVE
+SRC.NEWITEM=i_mt_bear
+SRC.ACT.EQUIP
+RETURN 1
+
+[ITEMDEF 03f0f] 
+DEFNAME=i_mt_bear
+TYPE=T_EQ_HORSE 
+LAYER=25 
+TDATA3=c_bear_polar
+NAME=Polar Bear
+
+ON=@CREATE
+COLOR=colors_white
+
+ON=@EQUIP
+SOUND=snd_ANIMALS_BEAR1
+
+[ITEMDEF 03eab] 
+DEFNAME=i_mt_hiryu
+TYPE=T_EQ_HORSE 
+LAYER=25 
+TDATA3=c_hiryu
+
+[EOF]

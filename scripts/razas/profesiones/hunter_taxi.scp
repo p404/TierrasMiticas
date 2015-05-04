@@ -1,0 +1,178 @@
+[ITEMDEF i_taxidermy_tool]
+NAME=Taxidermy knife
+ID=i_knife_skinning
+TYPE=T_WEAPON_FENCE
+DAM=4,16
+SKILL=Fencing
+REQSTR=30
+SKILLMAKE=BLACKSMITHING 66.7
+
+ON=@Create
+HITPOINTS={350 350}
+
+ON=@Dclick
+TARGET Where is the corpse?
+
+ON=@EQUIP
+IF ! <SRC.RESTEST 1 i_mem_hunter>
+DROP
+EMOTE are not a Hunter!
+ENDIF
+
+ON=@TARGON_ITEM
+        IF !(<SRC.TARG.BASEID>==i_corpse)
+                SRC.SYSMESSAGE You can only use this on a corpse
+                RETURN 1
+        ELSEIF (<SRC.TARG.AMOUNT>==211)
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 7776 1 7783 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF
+                ELSEIF (<SRC.TARG.AMOUNT>==29)                
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 7779 1 7786 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF
+                ELSEIF (<SRC.TARG.AMOUNT>==54)                
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 7782 1 7789 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF
+                ELSEIF (<SRC.TARG.AMOUNT>==55)                
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 7782 1 7789 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF 
+                ELSEIF (<SRC.TARG.AMOUNT>==53)                
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 7782 1 7789 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF
+                ELSEIF (<SRC.TARG.AMOUNT>==7)                
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 7780 1 7787 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF
+                ELSEIF (<SRC.TARG.AMOUNT>==17)                
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 7780 1 7787 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF
+                ELSEIF (<SRC.TARG.AMOUNT>==41)                
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 7780 1 7787 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF    
+                ELSEIF (<SRC.TARG.AMOUNT>==234)                
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 7777 1 7784 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF
+                ELSEIF (<SRC.TARG.AMOUNT>==0d5)                
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 7781 1 7788 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF
+                ELSEIF ((<SRC.TARG.AMOUNT>==0c) || (<SRC.TARG.AMOUNT>==03b) ||  (<SRC.TARG.AMOUNT>==01011) || (<SRC.TARG.AMOUNT>==01016) || (<SRC.TARG.AMOUNT>==01025) || (<SRC.TARG.AMOUNT>==01106))
+                        IF !(<SRC.RESTEST (1 i_log)> 
+                                SRC.SYSMESSAGE You lack resources for this!
+                                RETURN 1
+                        ELSE
+                                SRC.CONSUME (1 i_log)
+                                SRC.NEWITEM { 8756 1 8757 1}
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF
+                ELSEIF (<SRC.TARG.AMOUNT>==212)                
+                                SRC.NEWITEM i_rug_bearskin_1
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                        ENDIF
+                ELSEIF (<SRC.TARG.AMOUNT>==213)                
+                                SRC.NEWITEM i_rug_bearskin_2
+                                SRC.ACT.BOUNCE
+                                SRC.TARG.REMOVE
+                                SRC.RESYNC
+                                RETURN 1
+                ELSE
+                        SRC.SYSMESSAGE you cant make anything out of that
+                        return 1
+                ENDIF
+ENDIF
+
+
+[EOF]

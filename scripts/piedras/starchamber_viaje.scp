@@ -1,0 +1,99 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Miercoles, Septiembre 13, 2006
+// Piedra de Viaje
+VERSION=0.9
+
+[ITEMDEF i_gate_viaje]
+DEFNAME=i_gate_viaje
+DEFNAME2=i_viaje_gate
+NAME=blue moongate
+ID=i_moongate_blue
+TYPE=t_normal
+
+ON=@CREATE
+COLOR=1942
+ATTR=ATTR_STATIC 
+
+ON=@DCLICK
+RETURN 1
+
+ON=@STEP
+SRC.MOVE=S -1
+SRC.MOVE=-1
+SRC.FLAGS=000000004
+SOUND 526
+DIALOG d_star_gate
+ATTR=ATTR_STATIC
+RETURN 1 
+
+[DIALOG d_star_gate] 
+0,0
+nomove
+resizepic 225 150 2600 400 200 
+resizepic 330 205 3000 70 30
+resizepic 330 285 3000 70 30
+resizepic 447 205 3000 70 30
+resizepic 447 285 3000 70 30
+page 0 
+text 360 170 1152 0 
+text 340 210 1152 1
+text 340 290 1152 2
+text 455 210 1152 3
+text 455 290 1152 4
+button 403 212 5540 5542 1 0 1
+button 403 292 5540 5542 1 0 2 
+button 424 212 5537 5539 1 0 3 
+button 424 292 5537 5539 1 0 4
+
+[DIALOG d_star_gate TEXT] 
+Escoge tu Destino
+Britain
+Minoc
+Trinsic
+Vesper
+
+[DIALOG d_star_gate BUTTON] 
+ON=0
+SRC.FLAGS=000000000
+
+ON=1
+SRC.GO 1434 1678 10
+SRC.FLAGS=000000000
+SRC.SOUND=510
+
+ON=2
+SRC.GO 2521 559 0
+SRC.FLAGS=000000000
+SRC.SOUND=510
+
+ON=3
+SRC.GO 1823 2828 0
+SRC.FLAGS=000000000
+SRC.SOUND=510
+
+ON=4
+SRC.GO 2884 699 0
+SRC.FLAGS=000000000
+SRC.SOUND=510
+
+********************************************
+
+[ITEMDEf i_mem_no] 
+defname=i_mem_no
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Anti-Errores
+
+ON=@EQUIP 
+TIMER=120
+ATTR=08090
+
+[EOF]

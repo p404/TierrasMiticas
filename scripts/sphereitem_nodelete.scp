@@ -1,0 +1,151 @@
+[ITEMDEf i_mem_neutral] 
+defname=i_mem_neutral
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Neutral
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_order] 
+defname=i_mem_order
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Order
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_pk] 
+defname=i_mem_pk
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Player Killer
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_artisan_mage] 
+defname=i_mem_artesano_mago
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Artisan
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_artisan_warrior] 
+defname=i_mem_artesano_guerrero
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Artisan
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_bard] 
+defname=i_mem_bardo
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Bardo
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_berserker] 
+defname=i_mem_berserker
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Berserker
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_clerig] 
+defname=i_mem_clerigo
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Clerigo
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_druid] 
+defname=i_mem_druida
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Druida
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_hunter] 
+defname=i_mem_hunter
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Hunter
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_mage] 
+defname=i_mem_mago
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Mage
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_ranger] 
+defname=i_mem_ranger
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Ranger
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_shaman] 
+defname=i_mem_shaman
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Shaman
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_thief] 
+defname=i_mem_ladron
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Thief
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[ITEMDEf i_mem_warrior] 
+defname=i_mem_guerrero
+ID=i_memory 
+TYPE=t_eq_script 
+NAME=Warrior
+
+ON=@EQUIP 
+TIMER=-1
+ATTR=08090
+
+[EOF]

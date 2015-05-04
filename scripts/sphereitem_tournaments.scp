@@ -1,0 +1,19 @@
+////////////////////////////////////
+////////Primer Torneo///////////////
+////////////////////////////////////
+
+[TEMPLATE 111111]
+NAME=Bolsita de Regs
+DEFNAME=i_bolsita_reg
+CATEGORY=Item Templates
+SUBSECTION=Bolsita reg (Torneo)
+DESCRIPTION=Meager Backpack
+CONTAINER=i_bag
+ITEM=i_reag_blood_moss, 100
+ITEM=i_reag_black_pearl, 100
+ITEM=i_reag_garlic, 100
+ITEM=i_reag_spider_silk, 100
+ITEM=i_reag_sulfur_ash, 100
+ITEM=i_reag_gingseng, 100
+ITEM=i_reag_mandrake_root, 100
+ITEM=i_reag_nightshade, 100

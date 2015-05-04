@@ -1,0 +1,215 @@
+[Itemdef i_barbarian_hat]
+ID=01545
+DEFNAME=i_barbarian_hat
+NAME=bear mask
+REQSTR=25
+WEIGHT=12
+ARMOR=15
+TYPE=T_CLOTHING
+RESOURCES=1 I_Gem_Barbarian, 2 I_Titan_Hide
+SKILLMAKE=Tailoring 60.1, t_sewing_kit
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Barbarian]
+DESCRIPTION=Barbarian Hat
+
+ON=@Create 
+COLOR=2865
+HITPOINTS={51 53}
+
+ON=@Equip 
+  IF ! (<SRC.OSKIN>==071e)
+	DROP
+	EFFECt=3,i_fx_curse,6,15,1
+	SRC.EMOTE=are <src.title>! you are not a Barbarian!
+	SFX snd_SPELL_CURSE
+	RETURN 1
+	ENDIF         
+LINK=<SRC.UID> 
+SRC.EVENTS=+e_bear_vision
+TIMER=2
+RETURN 0 
+
+ON=@Timer 
+IF (<LINK.HITS><<LINK.STR>) 
+LINK.HITS=<LINK.HITS>+3
+CONT.EFFECT=3,i_fx_sparkle_2,10,20,10 
+TIMER=5
+ELSE
+TIMER=0 
+ENDIF 
+RETURN 1
+
+ON=@UNEQUIP
+LINK=04FFFFFFF
+SRC.EVENTS=-e_bear_vision
+TIMER=-1 
+RETURN 0 
+
+[ITEMDEF 0903]
+DEFNAME=I_Barbarian_Amulet
+NAME=amulet
+REQSTR=35
+WEIGHT=3
+TYPE=t_armor
+RESOURCES=1 I_Gem_Barbarian, 4 I_Ingot_Agapite
+SKILLMAKE=Blacksmithing 70.1
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Barbarian]
+DESCRIPTION=Barbarian Amulet
+
+ON=@Create 
+Color=2865
+HITPOINTS={41 47}
+
+ON=@EQUIP
+IF ! (<SRC.OSKIN>==071e)
+	DROP
+	EFFECT=3,i_fx_curse,6,15,1
+	SRC.EMOTE=are <src.title>! you are not a Barbarian!
+	SFX snd_SPELL_CURSE
+	RETURN 1
+	ENDIF
+
+SRC.ALCHEMY=<SRC.ALCHEMY> + 10.0
+RETURN 0
+
+ON=@UNEQUIP
+	IF ! (<SRC.OSKIN>==071e)
+	RETURN 1
+	ENDIF
+
+SRC.ALCHEMY=<SRC.ALCHEMY> + (-10.0)
+RETURN 0
+
+[ITEMDEF 16376] 
+DEFNAME=I_Barbarian_Sword
+NAME=sword
+CAN=Mt_Equip 
+TWOHANDS=N
+DAM=6,34
+//SPEED=35
+SKILL=Swordsmanship
+REQSTR=80
+WEIGHT=10
+TYPE=T_WEAPON_SWORD
+RESOURCES=4 I_Gem_Barbarian, 100 I_Ingot_Iron
+SKILLMAKE=BLACKSMITHING 89.9
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Barbarian]
+DESCRIPTION=Barbarian Sword
+
+ON=@CREATE
+COLOR=2865
+HITPOINTS={51 120}
+ATTR=attr_can_decay
+
+ON=@EQUIP
+	IF ! (<SRC.OSKIN>==071e)
+	DROP
+	EFFECT=3,i_fx_curse,6,15,1
+	SRC.EMOTE=are <src.title>! you are not a Barbarian!
+	SFX snd_SPELL_CURSE
+	RETURN 1
+	ENDIF
+
+		IF (<SRC.SWORDSMANSHIP><55.1)
+		DROP
+		EFFECT=3,i_fx_curse,6,15,1
+		SRC.EMOTE=no have sufficient Swordsmanship!
+		SFX snd_SPELL_CURSE
+		RETURN 1
+		ENDIF
+
+SRC.SWORDSMANSHIP=<SRC.SWORDSMANSHIP> +5.0 
+SRC.TACTICS=<SRC.TACTICS> +5.0
+RETURN=0
+ENDIF
+
+ON=@UNEQUIP
+	IF ! (<SRC.OSKIN>==071e)
+	RETURN 1
+	ENDIF
+
+		IF (<SRC.SWORDSMANSHIP><55.0)
+		RETURN 0
+		ENDIF
+
+SRC.SWORDSMANSHIP=<SRC.SWORDSMANSHIP> +(-5.0)
+SRC.TACTICS=<SRC.TACTICS> +(-5.0)
+RETURN 0
+
+[Itemdef 03FF1]
+//Bow
+//Using bow type below
+DEFNAME=I_Barbarian_Bow
+NAME=bow
+CAN=Mt_Equip 
+TWOHANDS=Y
+DAM=11,23
+//SPEED=20
+SKILL=Archery
+REQSTR=40
+WEIGHT=7 
+TYPE=T_WEAPON_BOW
+RESOURCES=4 I_Gem_Barbarian, 150 I_Log
+SKILLMAKE=Carpentry 50.1, t_carpentry
+TDATA3=i_arrow
+TDATA4=i_arrow_x
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Barbarian]
+DESCRIPTION=Barbarian Bow
+
+ON=@Create 
+HITPOINTS={51 80}
+COLOR=2865
+ATTR=attr_can_decay
+
+ON=@EQUIP
+  IF ! (<SRC.OSKIN>==071e)
+	DROP
+	EFFECT=3,i_fx_curse,6,15,1
+	SRC.EMOTE=are <src.title>! you are not a Barbarian!
+	SFX snd_SPELL_CURSE
+	RETURN 1
+	ENDIF
+
+		IF (<SRC.ARCHERY><50.1)
+		DROP
+		EFFECT=3,i_fx_curse,6,15,1
+		SRC.EMOTE=no have sufficient Archery!
+		SFX snd_SPELL_CURSE
+		RETURN 1
+		ENDIF 
+
+SRC.ARCHERY=<SRC.ARCHERY> +5.0
+SRC.TACTICS=<SRC.TACTICS> +5.0
+RETURN 0
+
+ON=@UNEQUIP
+  IF ! (<SRC.OSKIN>==071e)
+	RETURN 1
+	ENDIF
+
+		IF (<SRC.ARCHERY><50.1)
+		RETURN 1
+		ENDIF 
+
+SRC.ARCHERY=<SRC.ARCHERY> +(-5.0)
+SRC.TACTICS=<SRC.TACTICS> +(-5.0)
+RETURN 0
+
+ON=@DAMAGE
+VAR.X=RAND(14) 
+IF X==0 
+CONT.HITS=<SRC.HITS>+(-<EVAL 35)> 
+SRC.SPELLEFFECT=30 200
+SRC.SOUND=Snd_Spell_Lightning
+SRC.EFFECT=1,03709,6,15,1 
+ENDIF 
+RETURN 0
+
+[EOF]

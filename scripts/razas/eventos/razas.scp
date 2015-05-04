@@ -1,0 +1,116 @@
+//****************************************************************************
+//Script by : Blasterox ©2003-2006
+//www.pagina.com
+//Eventos de Razas
+//****************************************************************************
+// Última Actualización: Jueves, Septiembre 21, 2006
+//
+VERSION=0.1
+
+//********************
+//Elfen Event
+//********************
+
+[EVENTS e_elfo]
+ON=@LOGIN
+SRC.TITLE=the Elf
+
+[EVENTS e_Night_Vision] 
+ON=@CLICK 
+f_NightVision 
+ON=@DCLICK
+f_NightVision 
+ON=@ENVIRONCHANGE 
+f_NightVision 
+
+[FUNCTION f_NightVision] 
+IF <SECTOR.ISDARK> 
+IF (<FLAGS>&statf_nightsight)!=statf_nightsight) 
+SPELLEFFECT=s_night_sight 1000 
+MESSAGE Night Vision! Your eyes adjust easily to the gloom 
+TAG.NIGHTSIGHT_STATUS=1 
+ENDIF 
+ELSE 
+IF <TAG.NIGHTSIGHT_STATUS> 
+FLAGS=<FLAGS>&~statf_nightsight 
+MESSAGE Your eyes hurt slightly but adjust to the brightening light 
+TAG.NIGHTSIGHT_STATUS=0 
+ENDIF 
+ENDIF 
+
+//********************
+//Barbarian Event
+//********************
+
+[EVENTS e_barbaro]
+ON=@LOGIN
+SRC.TITLE=the Barbarian
+
+[Events E_Bear_Vision] 
+ON=@Click 
+F_BearVision 
+ON=@DClick 
+F_BearVision 
+ON=@Environchange 
+F_BearVision 
+
+[Function F_BearVision] 
+If <Sector.IsDark> 
+If (<Flags>&StatF_NightSight)!=Statf_NightSight) 
+                   SpellEffect=S_Night_Sight 1000 
+                   Message Bear Vision! Your eyes adjust easily to the gloom 
+                   Tag.NightSight_Status=1 
+                   Endif 
+                   Else 
+If <Tag.NightSinght_Status> 
+                  Flags=<Flags>&~Statf_NightSight 
+                  Message Your eyes hurt slightly but adjust to the brightening light 
+                  Tag.NightSight_Status=0 
+                   Else 
+                   Endif
+
+//********************
+//Drow Event
+//********************
+
+[EVENTS e_drow]
+ON=@LOGIN
+SRC.TITLE=the Drow
+
+//********************
+//HalfElf Event
+//********************
+
+[EVENTS e_half_elf]
+ON=@LOGIN
+SRC.TITLE=the HalfElf
+
+//********************
+//Human Event
+//********************
+
+[EVENTS e_humano]
+ON=@LOGIN
+SRC.TITLE=the Human
+
+//********************
+//Shapeshifter Event
+//********************
+
+[EVENTS e_shapeshifter]
+ON=@LOGIN
+SRC.TITLE=the Shapeshifter
+
+[EVENTS e_noname]
+ON=@CLICK
+RETURN 1
+
+//********************
+//Warlock Event
+//********************
+
+[EVENTS e_warlock]
+ON=@LOGIN
+SRC.TITLE=the Warlock
+
+[EOF]

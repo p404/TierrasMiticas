@@ -1,0 +1,293 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©1997-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Sabado, Septiembre 16, 2006
+//
+VERSION=0.1
+
+[ITEMDEF 026BA]
+NAME=scythe
+DEFNAME=i_scythe
+TYPE=t_weapon_mace_staff
+DAM=15,18
+SPEED=32
+SKILL=macefighting
+REQSTR=45
+TWOHANDS=Y
+WEIGHT=5
+SKILLMAKE=BLACKSMITHING 39.0
+RESOURCES=14 i_ingot_iron
+DUPELIST=026C4
+FLIP=1
+
+CATEGORY=Weapons
+SUBSECTION=Polearms - AoS
+DESCRIPTION=Scythe
+
+ON=@Create
+	HITPOINTS={46 88}
+
+[ITEMDEF 026C4]
+DUPEITEM=026BA
+
+[ITEMDEF 026BB]
+NAME=bone harvester
+DEFNAME=i_bone_harvester
+TYPE=T_WEAPON_SWORD
+FLIP=1
+DAM=13,15
+SPEED=36
+SKILL=Swordsmanship
+REQSTR=25
+TWOHANDS=N
+WEIGHT=3
+SKILLMAKE=BLACKSMITHING 33.0
+RESOURCES=10 i_ingot_iron
+DUPELIST=026c5
+
+CATEGORY=Weapons
+SUBSECTION=Swords - AoS
+DESCRIPTION=Bone Harvester
+
+ON=@Create
+	HITPOINTS={70 76}
+
+[ITEMDEF 026c5]
+DUPEITEM=026bb
+
+[ITEMDEF 026BC]
+NAME=scepter
+DEFNAME=i_scepter
+TYPE=T_WEAPON_MACE_SMITH
+FLIP=1
+DAM=14,17
+SPEED=30
+SKILL=Macefighting
+REQSTR=40
+TWOHANDS=N
+WEIGHT=8
+SKILLMAKE=BLACKSMITHING 28.0
+RESOURCES=10 i_ingot_iron
+DUPELIST=026c6
+
+CATEGORY=Weapons
+SUBSECTION=Maces & Hammers - AoS
+DESCRIPTION=Scepter
+
+ON=@Create
+	HITPOINTS={79 92}
+
+[ITEMDEF 026c6]
+DUPEITEM=026bc
+
+[ITEMDEF 026BD]
+NAME=bladed staff
+DEFNAME=i_bladed_staff
+TYPE=T_WEAPON_mace_staff
+FLIP=1
+DAM=14,16
+SPEED=37
+SKILL=macefighting
+REQSTR=40
+TWOHANDS=Y
+WEIGHT=4
+SKILLMAKE=BLACKSMITHING 40.0
+RESOURCES=12 i_ingot_iron
+DUPELIST=026c7
+
+CATEGORY=Weapons
+SUBSECTION=Polearms - AoS
+DESCRIPTION=Bladed Staff
+
+ON=@Create
+	HITPOINTS={91 112}
+
+
+[ITEMDEF 026c7]
+DUPEITEM=026bd
+
+[ITEMDEF 026BE]
+NAME=pike
+DEFNAME=i_pike
+TYPE=T_WEAPON_FENCE
+FLIP=1
+DAM=14,16
+SPEED=37
+SKILL=Fencing
+REQSTR=50
+TWOHANDS=Y
+WEIGHT=8
+SKILLMAKE=BLACKSMITHING 47.0
+RESOURCES=12 i_ingot_iron
+DUPELIST=026c8
+
+CATEGORY=Weapons
+SUBSECTION=Polearms - AoS
+DESCRIPTION=Pike
+
+ON=@Create
+	HITPOINTS={100 127}
+
+
+[ITEMDEF 026c8]
+DUPEITEM=026be
+
+[ITEMDEF 026BF]
+NAME=double bladed staff
+DEFNAME=i_double_bladed_staff
+TYPE=T_WEAPON_FENCE
+FLIP=1
+DAM=12,13
+SPEED=49
+SKILL=Fencing
+REQSTR=50
+TWOHANDS=Y
+WEIGHT=2
+SKILLMAKE=BLACKSMITHING 45.0
+RESOURCES=16 i_ingot_iron
+DUPELIST=026c9
+
+CATEGORY=Weapons
+SUBSECTION=Polearms - AoS
+DESCRIPTION=Double Bladed Staff
+
+ON=@Create
+	HITPOINTS={56 60}
+
+[ITEMDEF 026c9]
+DUPEITEM=026bf
+
+[ITEMDEF 026C0]
+NAME=lance
+DEFNAME=i_lance
+TYPE=T_WEAPON_FENCE
+FLIP=1
+DAM=17,18
+SPEED=24
+SKILL=Fencing
+REQSTR=95
+TWOHANDS=N
+WEIGHT=12
+SKILLMAKE=BLACKSMITHING 48.0
+RESOURCES=20 i_ingot_iron
+DUPELIST=026ca
+
+CATEGORY=Weapons
+SUBSECTION=Polearms - AoS
+DESCRIPTION=Lance
+
+ON=@Create
+	HITPOINTS={40 116}
+
+[ITEMDEF 026ca]
+DUPEITEM=026c0
+
+[ITEMDEF 026c1]
+NAME=crescent blade
+DEFNAME=i_blade_crescent
+TYPE=T_WEAPON_SWORD
+FLIP=1
+DAM=11,14
+SPEED=47
+SKILL=Swordsmanship
+REQSTR=55
+TWOHANDS=Y
+WEIGHT=1
+SKILLMAKE=BLACKSMITHING 45.0
+RESOURCES=14 i_ingot_iron
+DUPELIST=026cb
+
+CATEGORY=Weapons
+SUBSECTION=Swords - AoS
+DESCRIPTION=Cresent Blade
+
+ON=@Create
+	HITPOINTS={82 87}
+
+
+[ITEMDEF 026cb]
+DUPEITEM=026c1
+
+[ITEMDEF 026C2]
+NAME=composite bow
+DEFNAME=i_bow_composite
+TYPE=T_WEAPON_BOW
+FLIP=1
+DAM=15,17
+SPEED=25
+SKILL=Archery
+REQSTR=45
+TWOHANDS=Y
+WEIGHT=5
+SKILLMAKE=BOWCRAFT 70.0
+RESOURCES=7 i_log
+DUPELIST=026cc
+
+CATEGORY=Weapons
+SUBSECTION=Bows - AoS
+DESCRIPTION=Composite Bow
+
+ON=@Create
+	HITPOINTS={31 70}
+
+[ITEMDEF 026cc]
+DUPEITEM=026c2
+
+[ITEMDEF 026C3]
+//Repeating Crossbow
+NAME=repeating crossbow
+DEFNAME=i_crossbow_repeating
+TYPE=T_WEAPON_XBOW
+FLIP=1
+DAM=10,12
+SPEED=41
+SKILL=Archery
+REQSTR=30
+TWOHANDS=Y
+WEIGHT=6
+SKILLMAKE=BOWCRAFT 90.0
+RESOURCES=10 i_log
+DUPELIST=026cd
+
+CATEGORY=Weapons
+SUBSECTION=Bows - AoS
+DESCRIPTION=Repeating Crossbow
+
+ON=@Create
+	HITPOINTS={31 80}
+
+[ITEMDEF 026cd]
+DUPEITEM=026c3
+
+[ITEMDEF 026ce]
+NAME=paladin sword
+DEFNAME=i_sword_paladin
+TYPE=T_WEAPON_SWORD
+FLIP=1
+DAM=12,16
+SPEED=40
+SKILL=Swordsmanship
+REQSTR=55
+TWOHANDS=N
+WEIGHT=1
+SKILLMAKE=BLACKSMITHING 55.0
+RESOURCES=16 i_ingot_iron
+DUPELIST=026cf
+
+CATEGORY=Weapons
+SUBSECTION=Swords - AoS
+DESCRIPTION=Paladin Sword
+
+ON=@Create
+	HITPOINTS={60 85}
+
+[ITEMDEF 026cf]
+DUPEITEM=026ce
+
+[EOF]

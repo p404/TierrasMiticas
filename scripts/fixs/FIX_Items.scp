@@ -1,0 +1,239 @@
+[ITEMDEF 02006] 
+//corpse (all corpses normally are here) 
+DEFNAME=i_corpse 
+TYPE=T_CORPSE 
+TDATA2=09 
+CATEGORY=Miscellaneous 
+SUBSECTION=Corpses 
+DESCRIPTION=All Corpses (Ogre default) 
+
+ON=@SpellEffect 
+if ( <SRC.NPC> || <SRC.isgm> ) 
+return 0 
+endif 
+if ( <argn> == 59 ) 
+SRC.action = -1 
+0return 1 
+endif 
+
+ON=@TIMER 
+IF !( (<AMOUNT>==400)||(<AMOUNT>==401) ) 
+RETURN 0 
+ENDIF 
+
+IF ( <LINK> = 04fffffff ) 
+RETURN 0 
+ENDIF 
+
+ID={i_bones 1 0ecb 1 0ecc 1 0ecd 1 0ece 1 0ecf 1 0ed0 1 0ed1 1 0ed2 1 }
+TYPE=t_container 
+TIMER=600
+AMOUNT=1 
+COLOR=0 
+NAME=Remains of <LINK.NAME> 
+LINK=0 
+ATTR=attr_decay|attr_move_never 
+UPDATEX 
+MOVE 0,0,1 
+FIX 
+RETURN 1
+
+//////////////////////////////////////
+//////////Candle dupe bug fix/////////
+//////////////////////////////////////
+
+[ITEMDEF 0a0f]
+DEFNAME=i_candle_lit
+TYPE=T_LIGHT_LIT
+TDATA3=i_candle
+TDATA4=0
+RESOURCES=i_CANDLE
+WEIGHT=2
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Candles
+DESCRIPTION=Candle (Lit)
+DUPELIST=0a10,0a11
+
+ON=@Create
+MOREZ=1
+
+on=@EQUIP 
+src.findlayer.2.amount=1 
+return 0 
+             
+on=@unequip 
+if <src.findlayer.2.amount>>01 
+src.findlayer.2.amount=01 
+return 0 
+ 
+[ITEMDEF 0a12]
+DEFNAME=i_torch_lit
+TYPE=T_LIGHT_LIT
+TDATA3=i_torch
+TDATA4=0
+RESOURCES=i_TORCH
+WEIGHT=1
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Torches
+DESCRIPTION=Torch (Lit)
+DUPELIST=0a13,0a14
+
+ON=@Create
+MOREZ=1
+
+on=@EQUIP 
+src.findlayer.2.amount=1 
+return 0 
+             
+on=@unequip 
+if <src.findlayer.2.amount>>01 
+src.findlayer.2.amount=01 
+return 0 
+
+[ITEMDEF 0a28]
+DEFNAME=i_candle
+TYPE=T_LIGHT_OUT
+LAYER=layer_hand2// problem in TILEDATA.MUL
+TDATA3=i_candle_lit
+RESOURCES=1 i_BEESWAX, 1 I_CLOTH
+VALUE={4 8}
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Candles
+DESCRIPTION=Candle (Unlit)
+
+ON=@Create
+MOREZ=1
+
+on=@EQUIP 
+src.findlayer.2.amount=1 
+return 0 
+             
+on=@unequip 
+if <src.findlayer.2.amount>>01 
+src.findlayer.2.amount=01 
+return 0 
+
+[ITEMDEF 0f64]
+//torch
+//player torch
+DEFNAME=i_torch
+TYPE=T_LIGHT_OUT
+TDATA3=i_torch_lit
+RESOURCES=1 i_LOG
+WEIGHT=1
+CATEGORY=Decoration - Lightsources
+SUBSECTION=Torches
+DESCRIPTION=Torch (Unlit)
+DUPELIST=0f6b
+
+ON=@Create
+MOREZ=1
+
+on=@EQUIP 
+src.findlayer.2.amount=1 
+return 0 
+             
+on=@unequip 
+if <src.findlayer.2.amount>>01 
+src.findlayer.2.amount=01 
+return 0 
+
+[ITEMDEF 0ef0] 
+//silver coin 
+DEFNAME=i_silver
+TYPE=T_SILVER
+WEIGHT=0
+CATEGORY=Provisions - Miscellaneous 
+SUBSECTION=Coins 
+DESCRIPTION=Silver Coin 
+DUPELIST=0ef1,0ef2
+
+[ITEMDEF 0ef1] 
+//silver coins 
+WEIGHT=0
+DUPEITEM=0ef0
+CATEGORY=Provisions - Miscellaneous 
+SUBSECTION=Coins 
+DESCRIPTION=Silver Coins 
+
+[ITEMDEF 0ef2] 
+//silver coins 
+WEIGHT=0
+DUPEITEM=0ef0
+CATEGORY=Provisions - Miscellaneous 
+SUBSECTION=Coins 
+DESCRIPTION=Silver Coins
+
+[TYPEDEF T_SILVER]
+
+///////////////////////////////////////////////
+////////////// UID Chest //////////////////////
+///////////////////////////////////////////////
+
+[itemdef i_uidchest_east] 
+NAME=UID Chest
+ID=0e42
+
+ON=@CREATE 
+ATTR=00010 
+COLOR=0
+
+ON=@DCLICK 
+IF ( (<MORE>=1) && (<MORE2>=<SRC.UID>) ) 
+RETURN 0 
+ELSEIF <MORE>!=1 
+NAME=UID Chest of [<SRC.NAME>] 
+MORE=1 
+MORE2=<SRC.UID> 
+SRC.SYSMESSAGE This chest has been linked to you. 
+SRC.SYSMESSAGE No-one but you can open it. 
+SRC.TARG.COLOR=045e 
+RETURN 0 
+ELSE 
+IF <SRC.ACCOUNT.PLEVEL> > 6 
+RETURN 0 
+ELSE 
+SRC.TARG.SAY This is not your chest! 
+RETURN 1 
+ENDIF 
+
+[itemdef i_uidchest_south] 
+NAME=UID Chest
+ID=0e43
+
+ON=@CREATE 
+ATTR=00010
+COLOR=0 
+
+ON=@DCLICK 
+IF ( (<MORE>=1) && (<MORE2>=<SRC.UID>) ) 
+RETURN 0 
+ELSEIF <MORE>!=1 
+NAME=UID Chest of [<SRC.NAME>] 
+MORE=1 
+MORE2=<SRC.UID> 
+SRC.SYSMESSAGE This chest has been linked to you. 
+SRC.SYSMESSAGE No-one but you can open it. 
+SRC.TARG.COLOR=045e 
+RETURN 0 
+ELSE 
+IF <SRC.ACCOUNT.PLEVEL> > 6 
+RETURN 0 
+ELSE 
+SRC.TARG.SAY This is not your chest! 
+RETURN 1 
+ENDIF
+
+[ITEMDEF 0499] 
+NAME=sewer floor
+DEFNAME=i_sewer_floor
+DEFNAME2=i_floor_sewer
+TYPE=t_floor
+
+[ITEMDEF 049A] 
+NAME= 
+DEFNAME=i_negro
+DEFNAME2=i_negro
+TYPE=t_floor
+
+[EOF]

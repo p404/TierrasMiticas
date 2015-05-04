@@ -1,0 +1,508 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Última Actualización: Lunes, Septiembre 18, 2006
+// Pieles
+VERSION=1.1
+
+////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////Pieles/////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF i_rat_hide]
+DEFNAME=i_rat_hide
+ID=4216
+NAME=Rat hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Rat hide
+
+ON=@CREATE
+COLOR=543
+
+[ITEMDEF i_rat_hide2]
+DEFNAME=i_rat_hide2
+ID=i_hides_cut
+NAME=Rat hide
+VALUE=
+WEIGHT=1
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides Cut
+DESCRIPTION=Rat hide
+
+ON=@CREATE
+COLOR=543
+
+[ITEMDEF i_terathan_hide]
+ID=4216
+NAME=Terathan hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Terathan Hide
+
+ON=@CREATE
+COLOR=1941
+
+[ITEMDEF i_terathan_hide2]
+ID=i_hides_cut
+NAME=Terathan hide
+VALUE=
+WEIGHT=1
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Terathan Hide
+
+ON=@CREATE
+COLOR=1941
+
+[ITEMDEF i_demon_hide]
+DEFNAME=i_demon_hide
+ID=4216
+NAME=Daemon Hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=5
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Demon Hide
+
+ON=@CREATE
+COLOR=2058
+
+[ITEMDEF i_demon_hide2]
+DEFNAME=i_demon_hide2
+ID=i_hides_cut
+NAME=Daemon hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=1
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Demon Hide
+
+ON=@CREATE
+COLOR=2058
+
+[ITEMDEF i_dragon_hide]
+DEFNAME=i_dragon_hide
+ID=4216
+NAME=Dragon Hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Dragon Hide
+
+ON=@CREATE
+COLOR=0794
+
+[ITEMDEF i_dragon_hide2]
+DEFNAME=i_dragon_hide2
+ID=i_hides_cut
+NAME=Dragon hide
+VALUE=
+WEIGHT=1
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Dragon Hide
+
+ON=@CREATE
+COLOR=0794
+
+[ITEMDEF i_gargoyle_hide]
+DEFNAME=i_gargoyle_hide
+ID=4216
+NAME=Gargoyle Hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Gargolye Hide
+
+ON=@CREATE
+COLOR=1537
+
+[ITEMDEF i_gargoyle_hide2]
+DEFNAME=i_gargoyle_hide2
+ID=i_hides_cut
+NAME=Gargoyle hide
+VALUE=
+WEIGHT=1
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Gargolye Hide
+
+ON=@CREATE
+COLOR=1537
+
+[ITEMDEF i_cyclops_hide]
+DEFNAME=i_cyclops_hide
+ID=4216
+NAME=Cyclops Hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=5
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Cyclops Hide
+
+ON=@CREATE
+COLOR=2026
+
+[ITEMDEF i_cyclops_hide2]
+DEFNAME=i_cyclops_hide2
+ID=i_hides_cut
+NAME=Cyclops Hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=1
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Cyclops Hide
+
+ON=@CREATE
+COLOR=2026
+
+[ITEMDEF i_titan_hide]
+DEFNAME=i_titan_hide
+ID=4216
+NAME=Titan hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Titan Hide
+
+ON=@CREATE
+COLOR=0b31
+
+[ITEMDEF i_titan_hide2]
+DEFNAME=i_titan_hide2
+ID=i_hides_cut
+NAME=Titan hide
+VALUE=
+WEIGHT=1
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Titan Hide
+
+ON=@CREATE
+COLOR=0b31
+
+[ITEMDEF i_minotaur_hide]
+DEFNAME=i_minotaur_hide
+ID=4216
+NAME=Minotaur hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=5
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Minitauro Hide
+
+ON=@CREATE
+COLOR=1536
+
+[ITEMDEF i_minotaur_hide2]
+DEFNAME=i_minotaur_hide2
+ID=i_hides_cut
+NAME=Minotaur hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=1
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Minitaur Hide
+
+ON=@CREATE
+COLOR=1536
+
+[ITEMDEF i_troll_hide]
+DEFNAME=i_troll_hide
+ID=4216
+NAME=Troll hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Troll Hide
+
+ON=@CREATE
+COLOR=1953
+
+[ITEMDEF i_troll_hide2]
+DEFNAME=i_troll_hide2
+ID=i_hides_cut
+NAME=Troll hide
+VALUE=
+WEIGHT=1
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Troll Hide
+
+ON=@CREATE
+COLOR=1953
+
+[ITEMDEF i_fire_fiend_hide]
+DEFNAME=i_fire_fiend_hide
+ID=4216
+NAME=Fire Fiend hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Fire Fiend Hide
+
+ON=@CREATE
+COLOR=1965
+
+[ITEMDEF i_fire_fiend_hide2]
+DEFNAME=i_fire_fiend_hide2
+ID=i_hides_cut
+NAME=Fire Fiend hide
+VALUE=
+WEIGHT=1
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Fire Fiend Hide
+
+ON=@CREATE
+COLOR=1965
+
+[ITEMDEF i_ice_fiend_hide]
+DEFNAME=i_ice_fiend_hide
+ID=4216
+NAME=Ice Fiend Hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=5
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Ice Fiend Hide
+
+ON=@CREATE
+COLOR=1952
+
+[ITEMDEF i_ice_fiend_hide2]
+DEFNAME=i_ice_fiend_hide2
+ID=4216
+NAME=Ice Fiend hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=1
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Ice Fiend Hide
+
+ON=@CREATE
+COLOR=1952
+
+[ITEMDEF i_air_fiend_hide]
+DEFNAME=i_air_fiend_hide
+ID=4216
+NAME=Air Fiend Hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Air Fiend Hide
+
+ON=@CREATE
+COLOR=1993
+
+[ITEMDEF i_air_fiend_hide2]
+DEFNAME=i_air_fiend_hide2
+ID=i_hides_cut
+NAME=Air Fiend hide
+VALUE=
+WEIGHT=1
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Air Fiend Hide
+
+ON=@CREATE
+COLOR=1993
+
+[ITEMDEF i_earth_fiend_hide]
+DEFNAME=i_earth_fiend_hide
+ID=4216
+NAME=Earth Fiend Hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Earth Fiend Hide
+
+ON=@CREATE
+COLOR=1940
+
+[ITEMDEF i_earth_fiend_hide2]
+DEFNAME=i_earth_fiend_hide2
+ID=i_hides_cut
+NAME=Earth Fiend hide
+VALUE=
+WEIGHT=1
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Earth Fiend Hide
+
+ON=@CREATE
+COLOR=1940
+
+[ITEMDEF i_forest_fiend_hide]
+DEFNAME=i_forest_fiend_hide
+ID=4216
+NAME=Forest Fiend Hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Forest Fiend Hide
+
+ON=@CREATE
+COLOR=2843
+
+[ITEMDEF i_forest_fiend_hide2]
+DEFNAME=i_forest_fiend_hide2
+ID=i_hides_cut
+NAME=Forest Fiend hide
+VALUE=
+WEIGHT=1
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Forest Fiend Hide
+
+ON=@CREATE
+COLOR=2843
+
+[ITEMDEF i_Water_fiend_hide]
+DEFNAME=i_water_fiend_hide
+ID=4216
+NAME=Water Fiend Hide
+VALUE=
+WEIGHT=5
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Water Fiend Hide
+
+ON=@CREATE
+COLOR=2837
+
+[ITEMDEF i_Water_fiend_hide2]
+DEFNAME=i_water_fiend_hide2
+ID=i_hides_cut
+NAME=Water Fiend hide
+VALUE=
+WEIGHT=1
+TYPE=T_HIDE
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Water Fiend Hide
+
+ON=@CREATE
+COLOR=2837
+
+[ITEMDEF i_serpent_hide]
+DEFNAME=i_serpent_hide
+ID=4216
+NAME=Serpent Hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=5
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Serpent Hide
+
+ON=@CREATE
+COLOR=2849
+
+[ITEMDEF i_serpent_hide2]
+DEFNAME=i_serpent_hide2
+ID=i_hides_cut
+NAME=Serpent hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=1
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides cut
+DESCRIPTION=Serpent Hide
+
+ON=@CREATE
+COLOR=2849
+
+[ITEMDEF i_Vampire_hide]
+DEFNAME=i_Vampire_hide
+ID=4225
+NAME=Vampire Hide
+VALUE=
+TYPE=T_HIDE
+WEIGHT=1
+
+CATEGORY=Provisions - Animal Armor
+SUBSECTION=Hides
+DESCRIPTION=Vampire Hide
+
+ON=@CREATE
+COLOR=2840

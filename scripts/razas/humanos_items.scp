@@ -1,0 +1,166 @@
+[Itemdef I_Human_Staff]
+ID=0df0
+DefName=I_Human_Staff
+Name=Baston Humano
+ReqStr=100
+Weight=35
+Resources=2 i_Gem_Human, 100 i_log
+Skillmake=Carpentry 80.1, t_carpentry
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Human]
+DESCRIPTION=Human Staff
+
+ON=@Create 
+Color=2051
+Hitpoints=150
+
+ON=@Equip 
+If ! (<Src.Oskin>==03f8) && (<Src.Oskin>==46)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Human!
+              Sfx snd_SPELL_CURSE
+              Endif       
+Link=<Src.Uid> 
+Cont.SysMessage  By being Human, This item gives you new abilityes
+Timer=2 
+Return 0 
+
+ON=@Timer 
+If (<Link.Hits><<Link.Str>) 
+      Link.Hits=<Link.Hits>+10
+      Cont.Effect=3,i_fx_sparkle_2,10,20,10 
+      Timer=8
+      Else 
+      Timer=0 
+      Endif 
+Return 1
+ON=@UnEquip 
+Link=04FFFFFFF
+Cont.SysMessage=Without this article, your new ones abilidades are useless 
+Timer=-1 
+Return 0 
+
+[Itemdef I_Human_Ring] 
+ID=7945
+defname=I_Human_ring
+Name=Guantes Elfos
+ReqStr=20 
+//TYPE=10
+Weight=1
+Resources=1 I_Gem_Human, 3 I_Ingot_Rose, 3 I_Ingot_Agapite
+Skillmake=Blacksmithing 60.1
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Human]
+DESCRIPTION=Human Ring
+
+ON=@Create 
+Color=2051
+Hitpoints=150
+
+ON=@Equip 
+If ! (<Src.Oskin>==03f8)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Human!
+              Sfx snd_SPELL_CURSE    
+              Endif  
+Src.Blacksmithing=<Src.Blacksmithing> + 20.0
+Src.Tinkering=<Src.Tinkering> + 10.0
+Cont.SysMessage  By being Elf, This item gives you new abilityes
+Return 0 
+
+ON=@UnEquip 
+Src.Blacksmithing=<Src.Blacksmithing> + (-20.0)
+Src.Tinkering=<Src.Tinkering> + (-10.0)
+Cont.SysMessage=Without this article, your new ones abilidades are useless
+Return 0 
+
+[Itemdef I_Human_Shield] 
+ID=01b77
+DefName=I_Human_Shield
+Name=Escudo Humano
+ReqStr=50
+Weight=35
+Armor=31
+Resources=1 I_Gem_Human, 200 I_Ingot_Iron
+Skillmake=Blacksmithing 99.9
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Human]
+DESCRIPTION=Human Shield
+
+ON=@Create
+Color=2051
+Hitpoints=500
+
+ON=@Hits
+Cont.Say Absorbes el ataque de <src.name>
+Cont.Hits=<src.hits> 2
+Cont.SpellEffect=S_Heal
+
+ON=@Equip 
+If ! (<Src.Oskin>==03f8)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Human!
+              Sfx snd_SPELL_CURSE
+              Endif      
+Link=<Src.Uid> 
+Cont.SysMessage By being Human, This item gives you new abilityes
+Src.SpellEffect 15 1000
+
+ON=@UnEquip 
+LinkK=04FFFFFFF
+Cont.SysMessage=Without this article, your new ones abilidades are useless
+Src.SpellEffect 41 1000
+Timer=-1 
+Return 0
+ 
+[Itemdef 03FFa] 
+DefName=I_Human_Sword
+Name=Espada Humana
+Dam=25,30
+Skill=Swordmanships
+ReqStr=120
+Weight=10
+Type=T_Weapon_Sword
+Resources=4 I_Gem_Human, 50 I_Ingot_Silver
+Skillmake=Blacksmithing 90.1, t_carpentry
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Human]
+DESCRIPTION=Human Sword
+
+ON=@Create 
+Hitpoints={350 350} 
+COLOR=2051
+
+ON=@DClick
+If <Cont.Uid>!=<Src.Findlayer(21).UID>
+                 Return 1
+                 Endif
+If <Amount>>1
+     Return 1
+     Endif
+
+ON=@Equip 
+If ! (<Src.Oskin>==03f8)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Human!
+              Sfx snd_SPELL_CURSE
+              Endif        
+Cont.SysMessage By being Human, This item gives you new abilityes
+Return 0 
+Link=<Src.UidD> 
+Timer=2 
+Return 0
+
+ON=@UnEquip 
+Cont.SysMessage Without this item, your new ones abilidades are useless
+Return 0  
+
+[EOF]

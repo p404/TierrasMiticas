@@ -1,0 +1,453 @@
+[ITEMDEF i_piedra_canje]
+DEFNAME=i_piedra_canje
+ID=0e77
+TYPE=00
+VALUE=1-5
+WEIGHT=1
+NAME=Piedra de Canje
+SKILLMAKE=CARPENTRY 10.0, t_carpentry
+RESOURCES=5 i_log,5 i_ingot_iron
+RESOURCES2=5 i_board,5 i_ingot_iron
+
+ON=@CREATE
+COLOR=color_o_copper
+ATTR=8010
+
+ON=@DCLICK
+SRC.SFX 555
+DIALOG d_x_reward_system
+RETURN 1
+
+ON=@TARGON_CHAR
+SRC.MESSAGE Crees que eres un pedazo de basura eh?
+SOUND 510
+RETURN 1
+
+ON=@TARGON_ITEM
+IF ! <SRC.RESTEST 1 <SRC.TARG.BASEID>>
+SRC.MESSAGE Las cosas deben estar en tu mochila!
+SOUND 510
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_food_raw
+SRC.SYSMESSAGE No puedes canjear esto!
+SOUND 510
+DIALOD d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.ATTR> == 04
+SRC.SYSMESSAGE No puedes canjear items inloot!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_food
+SRC.SYSMESSAGE No puedes canjear comida!
+SOUND 510
+DIALOD d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_wall
+SRC.SYSMESSAGE No puedes canjear esto!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_sign_gump
+SRC.SYSMESSAGE No puedes canjear esto!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_container
+SRC.SYSMESSAGE No puedes canjear mochilas!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_telepad
+SRC.SYSMESSAGE No puedes canjear esto!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_bboard
+SRC.SYSMESSAGE No puedes canjear esto!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_door
+SRC.SYSMESSAGE No puedes canjear esto!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_normal
+SRC.SYSMESSAGE No puedes canjear esto!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_gold
+SRC.SYSMESSAGE No puedes canjear oro!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_ingot
+SRC.SYSMESSAGE No puedes canjear ingots!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_log
+SRC.SYSMESSAGE No puedes canjear madera!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_potion_empty
+SRC.SYSMESSAGE No puedes canjear pociones!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_board
+SRC.SYSMESSAGE No puedes canjear esto!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_reagent
+SRC.SYSMESSAGE No puedes canjear regentes!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+IF <SRC.TARG.TYPE> == t_deed
+SRC.SYSMESSAGE No puedes canjear deeds!
+SOUND 510
+DIALOG d_x_reward_system2
+RETURN 1
+ELSE
+
+IF <SRC.TARG.TYPE> == t_spellbook
+SRC.SYSMESSAGE No puedes canjear spellbooks!
+SOUND 510
+DIALOG d_x_reward_system2
+ELSE
+IF <SRC.TARG.ID> == 0e77
+SRC.SYSMESSAGE Yeah sure! You think your that smart?
+SOUND 510
+DIALOG d_x_reward_system2
+ELSE
+VAR.X=<SRC.TARG.VALUE>
+SRC.NEWITEM=i_reward_coin
+SRC.ACT.AMOUNT=X / (3)
+SRC.ACT.BOUNCE
+SRC.MESSAGE Gracias por "Limpiar Britania"
+SRC.TARG.REMOVE
+SRC.SOUND 500
+DIALOG d_x_reward_system2
+RETURN 1
+
+CATEGORY=Ticket Barrel
+SUBSECTION=Barrel
+DESCRIPTION=Ticket Barrel
+
+//////////////////////////////////////
+//ITEMS FOR SYSTEM
+//////////////////////////////////////
+
+[ITEMDEF i_reward_coin]
+DEFNAME=i_reward_coin
+ID=i_silver
+TYPE=0
+NAME=Moneda%s de Canje
+WEIGHT=0
+VALUE=0
+
+///////////////////////////////////////
+// BEGIN GUMP FOR Ticket Barrel
+///////////////////////////////////////
+
+[DIALOG d_x_reward_system]
+0, 0
+resizepic 100 1 2600 370 340
+gumppic  325 50 990
+
+//Buttons
+button 60 60 217 217 1 0 1
+button 60 140 220 220 1 0 2
+button 60 220 222 222 1 0 4
+
+//Text Fields
+text 135 72 1153 0
+text 135 97 1101 1
+text 167 35 1153 2
+text 150 112 1000 3
+text 150 127 1000 4
+text 210 330 999 5
+text 157 48 1101 6
+text 157 25 1101 7
+text 157 36 1101 8
+text 409 36 1101 9
+text 150 143 1000 10 // start
+text 150 158 1000 11
+text 150 173 1000 12
+text 150 188 1000 13
+text 150 203 1000 14
+text 150 218 1000 15
+text 150 233 1000 16
+text 150 248 1000 17
+text 150 263 1000 18
+text 150 278 1000 19
+text 45 50 1153 20
+text 45 65 1153 21
+text 45 80 1153 22
+text 45 95 1153 23
+text 45 110 1153 24
+
+[DIALOG d_x_reward_system TEXT]
+Sobre este Sistema
+Que quiere decir esto?
+      *Piedra de Canje*
+El Limpio acontecimiento de Britian 
+esta hecho para proveerle, de modo
+ñ
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=
+=
+divertido, ganar premios mientras 
+nos ayuda a mejorar su experiencia
+de juego disminuyendose el lag. Ahora
+puedes canjear, items que no uses, con 
+ellos obtendras monedas de canje para 
+gastar en premios unicos. Limpia Britania
+es nuestra fase de liberacion del lag en
+nuestro Shard. Diviertase!
+ñ
+ñ
+ñ
+ñ
+ñ
+ñ
+ñ
+
+[DIALOG d_x_reward_system BUTTON]
+ONBUTTON=0     //Right Click On Gump
+ONBUTTON=1
+DIALOG d_x_reward_system
+ONBUTTON=2
+DIALOG d_x_reward_system2
+ONBUTTON=4
+DIALOG d_x_reward_system3
+
+
+/////////////////////////////////////
+//BEGIN PART 2 OF GUMP
+/////////////////////////////////////
+
+[DIALOG d_x_reward_system2]
+0, 0
+resizepic 100 1 2600 370 340
+gumppic  325 50 990
+
+//Buttons
+button 60 60 218 218 1 0 1
+button 60 140 219 219 1 0 2
+button 60 220 222 222 1 0 4
+button 177 260 4037 4036 1 0 6
+
+//Text Fields
+text 167 35 1153 0
+text 157 48 1101 1
+text 157 25 1101 2
+text 157 36 1101 3
+text 409 36 1101 4
+text 45 130 1153 5
+text 45 145 1153 6
+text 45 160 1153 7
+text 45 175 1153 8
+text 45 190 1153 9
+text 135 72 1153 10
+text 135 97 1101 11
+text 135 113 1101 12
+text 135 128 1101 13
+text 135 143 1101 14
+text 135 158 1101 15
+text 135 240 1250 16
+
+[DIALOG d_x_reward_system2 TEXT]
+          *Canjear*
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=
+=
+ñ
+ñ
+ñ
+ñ
+ñ
+Que quieres decir?, Basura?!
+Ahora puedes cambiar tu basura por
+monedas de canje.
+Haciendo esto, puedes ganar grandes 
+premios de varias selecciones.
+Pruebalo!
+Canjear un Item
+
+[DIALOG d_x_reward_system2 BUTTON]
+ONBUTTON=0     //Right Click On Gump
+ONBUTTON=1
+DIALOG d_x_reward_system
+ONBUTTON=2
+DIALOG d_x_reward_system2
+ONBUTTON=4
+DIALOG d_x_reward_system3
+ONBUTTON=6
+TARGET
+SRC.MESSAGE Porfavor selecciona un item para canjear!
+RETURN 1
+
+
+/////////////////////////////////////
+//BEGIN PART 3 OF GUMP
+/////////////////////////////////////
+
+[DIALOG d_x_reward_system3]
+0, 0
+resizepic 100 1 2600 370 340
+gumppic  325 50 990
+
+//Buttons
+button 60 60 218 218 1 0 1
+button 60 140 220 220 1 0 2
+button 60 220 221 221 1 0 4
+button 350 64 4015 4016 1 0 6
+button 350 109 4015 4016 1 0 7
+button 350 154 4015 4016 1 0 8
+button 350 199 4015 4016 1 0 9
+button 350 244 4015 4016 1 0 10
+
+//Text Fields
+text 167 35 1153 0
+text 157 48 1101 1
+text 157 25 1101 2
+text 157 36 1101 3
+text 409 36 1101 4
+text 45 55 1153 5
+text 45 85 1153 6
+text 45 115 1153 7
+text 45 255 1153 8
+text 45 270 1153 9
+text 120 62 1345 10
+text 120 82 1350 11
+text 120 107 1345 12
+text 120 127 1350 13
+text 120 152 1345 14
+text 120 172 1350 15
+text 120 197 1345 16
+text 120 217 1350 17
+text 120 242 1345 18
+text 120 262 1350 19
+
+[DIALOG d_x_reward_system3 TEXT]
+        *Premios*
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+=
+=
+ñ
+ñ
+ñ
+ñ
+ñ
+Gema al Azar
+Cost 70,000
+Estatua al Azar [Miniatura]
+Cost 40,000
+Estatua al Azar [Gigante]
+Cost 120,000
+Fuente
+Cost 200,000
+Plantas al Azar
+Cost 40,000
+
+[DIALOG d_x_reward_system3 BUTTON]
+ONBUTTON=0     //Right Click On Gump
+ONBUTTON=1
+DIALOG d_x_reward_system
+ONBUTTON=2
+DIALOG d_x_reward_system2
+ONBUTTON=4
+DIALOG d_x_reward_system3
+//Black Dye Tub
+ONBUTTON=6
+IF <SRC.RESTEST 70000 i_reward_coin>
+SRC.CONSUME=70000 i_reward_coin
+SRC.NEWITEM={i_Gem_Drow 1 i_Gem_warlock 1 i_Gem_shapeshifter 1 i_Gem_human 1 i_Gem_barbarian 1 i_Gem_elf 1 }
+SRC.ACT.BOUNCE
+MESSAGE Ya recibiste tu premio. Gracias!
+SOUND 0F7
+RETURN 1
+ELSE
+MESSAGE No tienes suficientes Monedas de canje!
+ENDIF
+RETURN 1
+//Miniature Random Statue
+ONBUTTON=7
+IF <SRC.RESTEST 40000 i_reward_coin>
+SRC.CONSUME=40000 i_reward_coin
+SRC.NEWITEM={01224 1 01225 1 01226 1 01227 1 01228 1 }
+SRC.ACT.DYE=0
+SRC.ACT.BOUNCE
+MESSAGE Ya recibiste tu premio. Gracias!
+SOUND 0F7
+RETURN 1
+ELSE
+MESSAGE No tienes suficientes Monedas de canje!
+ENDIF
+RETURN 1
+//Random Rare Colored Dye Tub
+ONBUTTON=8
+IF <SRC.RESTEST 120000 i_reward_coin>
+SRC.NEWITEM={012d8 1 012d9 1 }
+SRC.CONSUME=120000 i_reward_coin
+SRC.ACT.BOUNCE
+MESSAGE Ya recibiste tu premio. Gracias!
+SOUND 0F7
+RETURN 1
+ELSE
+MESSAGE No tienes suficientes Monedas de canje!
+ENDIF
+RETURN 1
+//Random Silver Weapon
+ONBUTTON=9
+IF <SRC.RESTEST 200000 i_reward_coin>
+SRC.CONSUME=200000 i_reward_coin
+SRC.NEWITEM=i_deed_fount_wh
+SRC.ACT.BOUNCE
+MESSAGE Ya recibiste tu premio. Gracias!
+SOUND 0F7
+RETURN 1
+ELSE
+MESSAGE No tienes suficientes Monedas de canje!
+ENDIF
+RETURN 1
+ONBUTTON=10
+IF <SRC.RESTEST 40000 i_reward_coin>
+SRC.CONSUME=40000 i_reward_coin
+SRC.NEWITEM={011cb 1 011cc 1 011c9 1 011ca 1 011c8 1 }
+SRC.ACT.BOUNCE
+MESSAGE Ya recibiste tu premio. Gracias!
+SOUND 0F7
+RETURN 1
+ELSE
+MESSAGE No tienes suficientes Monedas de canje!
+ENDIF
+RETURN 1
+
+[EOF]

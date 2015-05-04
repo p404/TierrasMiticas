@@ -1,0 +1,418 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©1997-2000
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualisación: Miercoles, Noviembre 10, 2004
+//
+VERSION=0.55
+
+[REGIONRESOURCE mr_nothing]
+// there is nothing here
+REAP=i_unused
+REGEN=60*60*10	// maybe something here later.
+
+[REGIONRESOURCE mr_fish1]
+// fishing default
+// t_water
+SKILL_LO=1.0
+SKILL_HI=100.0
+AMOUNT_LO=9
+AMOUNT_HI=30
+REAP=i_fish_big_1
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish2]
+// fishing default
+// t_water
+SKILL_LO=1.0
+SKILL_HI=100.0
+REAP=i_fish_big_2
+AMOUNT_LO=9
+AMOUNT_HI=30
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish3]
+// fishing default
+// t_water
+SKILL_LO=1.0
+SKILL_HI=100.0
+AMOUNT_LO=9
+AMOUNT_HI=30
+REAP=i_fish_big_3
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish4]
+// fishing default
+// t_water
+SKILL_LO=1.0
+SKILL_HI=100.0
+AMOUNT_LO=9
+AMOUNT_HI=30
+REAP=i_fish_big_4
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish5]
+// fishing default
+// t_water
+SKILL_LO=1.0
+SKILL_HI=30.0
+AMOUNT_LO=1
+AMOUNT_HI=1
+REAP=i_fish_big_5
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish_shoes_1]
+// fishing default
+// t_water
+SKILL_LO=10.0
+SKILL_HI=100.0
+AMOUNT_LO=1
+AMOUNT_HI=1
+REAP=i_boots_thigh
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish_shoes_2]
+// fishing default
+// t_water
+SKILL_LO=10.0
+SKILL_HI=100.0
+AMOUNT_LO=1
+AMOUNT_HI=1
+REAP=i_boots_calf
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish_shoes_3]
+// fishing default
+// t_water
+SKILL_LO=10.0
+SKILL_HI=100.0
+AMOUNT_LO=1
+AMOUNT_HI=1
+REAP=i_shoes_plain
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish_shoes_4]
+// fishing default
+// t_water
+SKILL_LO=10.0
+SKILL_HI=100.0
+AMOUNT_LO=1
+AMOUNT_HI=1
+REAP=i_sandals
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish_junk_1]
+// fishing default
+// t_water
+SKILL_LO=10.0
+SKILL_HI=100.0
+AMOUNT_LO=1
+AMOUNT_HI=1
+REAP=i_FISHING_WEIGHT
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish_junk_2]
+// fishing default
+// t_water
+SKILL_LO=10.0
+SKILL_HI=100.0
+AMOUNT_LO=1
+AMOUNT_HI=1
+REAP=i_FISHING_POLE
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish_junk_3]
+// fishing default
+// t_water
+SKILL_LO=10.0
+SKILL_HI=100.0
+AMOUNT_LO=1
+AMOUNT_HI=1
+REAP=i_fish_cut_raw
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish_junk_4]
+// fishing default
+// t_water
+SKILL_LO=10.0
+SKILL_HI=100.0
+AMOUNT_LO=1
+AMOUNT_HI=1
+REAP=i_FISH_RAW_HEAD
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_fish_junk_5]
+// fishing default
+// t_water
+SKILL_LO=10.0
+SKILL_HI=100.0
+AMOUNT_LO=1
+AMOUNT_HI=1
+REAP=i_FISH_SMALL
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_tree]
+// lumberjacking default
+// t_tree
+SKILL_LO=1.0
+SKILL_HI=80.0
+AMOUNT_LO=9
+AMOUNT_HI=30
+REAP=i_log
+REGEN=60*60*10
+
+[REGIONRESOURCE mr_grass]
+// grazing animals
+// t_grass
+AMOUNT_LO=9
+AMOUNT_HI=30
+REGEN=60*60*10
+REAP=i_hay_sheaf
+
+[REGIONTYPE r_default]
+// Unclaimed regions.
+ON=@ENTER
+	SRC.MIDILIST=midi_britain1,midi_ForestA,midi_JungleA,midi_MountainA,midi_Plains,midi_Victory
+
+ON=@CLIPERIODIC
+	SRC.MIDILIST=midi_britain1,midi_ForestA,midi_JungleA,midi_MountainA,midi_Plains,midi_Victory
+
+[REGIONTYPE r_default_rock t_rock]
+// Random rocks
+RESOURCES=300.0 mr_nothing
+RESOURCES=180.0 mr_iron
+RESOURCES=190.0 mr_copper
+RESOURCES=130.0 mr_bronze
+RESOURCES=120.0 mr_gold
+RESOURCES=85.0 mr_bloodrock
+RESOURCES=65.0 mr_rose
+RESOURCES=60.0 mr_agapite
+RESOURCES=60.0 mr_shadow
+RESOURCES=50.0 mr_verite
+RESOURCES=35.0 mr_Valorite
+RESOURCES=30.0 mr_silver
+RESOURCES=15.0 mr_mytheril
+RESOURCES=10.0 mr_blackrock
+RESOURCES=3.1 mr_titanium
+RESOURCES=20.0 mr_diamond
+RESOURCES=3.0 mr_barbarian
+RESOURCES=2.0 mr_warlock
+RESOURCES=2.0 mr_drow
+RESOURCES=3.5 mr_shapeshifter
+RESOURCES=1.0 mr_human
+RESOURCES=5.0 mr_esp_gol
+RESOURCES=0.5 mr_elf
+
+[REGIONTYPE r_default_water t_water]
+// Not really ocean area.
+RESOURCES=100.0 mr_nothing
+RESOURCES=10.0 mr_fish1
+RESOURCES=10.0 mr_fish2
+RESOURCES=10.0 mr_fish3
+RESOURCES=10.0 mr_fish4
+
+[REGIONTYPE r_default_tree t_tree]
+// All tress produce wood by default.
+RESOURCES=1.0 mr_tree
+
+[REGIONTYPE r_default_grass t_grass]
+// All grass can be eaten by default.
+RESOURCES=1.0 mr_grass
+
+[REGIONTYPE r_water t_water]
+// Water/Ocean boat sounds
+RESOURCES=100.0 mr_nothing
+RESOURCES=10.0 mr_fish1
+RESOURCES=10.0 mr_fish2
+RESOURCES=10.0 mr_fish3
+RESOURCES=10.0 mr_fish4
+
+ON=@REGPERIODIC
+	src.SFX={025,1,026,1,027,1,010,1,011,1,012,1,013,1}
+
+[REGIONTYPE r_brit t_rock]
+// Brit
+RESOURCES=100.0 mr_nothing
+RESOURCES=30.0 mr_iron
+
+ON=@ENTER
+	SRC.MESSAGE Welcome to Britain <SRC.NAME>!
+	SRC.MESSAGE Lord British Guards are here to protect you!
+	SRC.MIDILIST=midi_britain1,midi_britain2
+ON=@CLIPERIODIC
+	SRC.MIDILIST=midi_britain1,midi_britain2
+
+[REGIONTYPE r_brit_castle]
+// Lord brit castle.
+ON=@ENTER
+	SRC.MIDILIST=midi_LBCastle
+ON=@CLIPERIODIC
+	SRC.MIDILIST=midi_LBCastle
+
+[REGIONTYPE r_guard_tower]
+// Guard tower.
+ON=@ENTER
+	SRC.MIDILIST=midi_ForestA
+ON=@CLIPERIODIC
+	SRC.MIDILIST=midi_ForestA
+
+[REGIONTYPE r_black_castle]
+// Lord Blackthorne's Castle
+ON=@ENTER
+	SRC.MIDILIST=midi_BtCastle
+ON=@CLIPERIODIC
+	SRC.MIDILIST=midi_BtCastle
+
+[REGIONTYPE r_bucs_den]
+// Bucs den
+
+ON=@ENTER
+	IF <SRC.KILLS> > 5
+		SRC.MESSAGE Welcome to Bucs Den <SRC.NAME> You are a murderer and you feel at home here
+		SRC.MIDILIST=midi_BucsDen
+		RETURN 1
+	ELSE
+		SRC.MIDILIST=midi_BucsDen
+	ENDIF
+
+ON=@CLIPERIODIC
+	SRC.MIDILIST=midi_BucsDen
+
+[REGIONTYPE r_spooky t_rock]
+// Spooky outdoor area.
+RESOURCES=1000.0 mr_nothing
+RESOURCES=500.0 mr_iron
+
+ON=@ENTER
+	SRC.MIDILIST=midi_Approach
+ON=@CLIPERIODIC
+	SRC.MIDILIST=midi_Approach
+
+[REGIONTYPE r_dungeon t_rock]
+// Dungeon sounds same day or night.
+// Shadow ore is only found here.
+RESOURCES=1000.0 mr_nothing
+RESOURCES=500.0 mr_iron
+
+ON=@REGPERIODIC
+	src.SFX={021f,1,0243,1,0244,1,0245,1}
+
+[REGIONTYPE r_plains]
+// Plains night and day.
+ON=@REGPERIODIC
+	src.SFX={0a,1,0b,1}
+
+[REGIONTYPE r_forests]
+// Forest Day and night.
+
+ON=@REGPERIODIC
+	IF <src.sector.ISNIGHTTIME>
+		src.SFX={00,2,01,2,02,2,07d,1}
+	ELSE
+		src.SFX={08,10,09,10,0219,1,07d,1}
+	ENDIF
+
+[REGIONTYPE r_jungle]
+// Jungle Day and night.
+
+ON=@REGPERIODIC
+	IF <src.sector.ISNIGHTTIME>
+		src.SFX={0c,2,0d,2,0b3,1}
+	ELSE
+		src.SFX={03,2,04,2,05,2,0b3,1}
+	ENDIF
+
+[REGIONTYPE r_swamp t_rock]
+// Swamp Day and night.
+// Never anything to mine here.
+
+ON=@REGPERIODIC
+	src.SFX={0e,10,0f,10,022,1,023,1,024,1,0267,1}
+
+[REGIONTYPE r_house_private]
+DEFNAME=r_house_private
+
+ON=@ENTER
+SRC.EVENTS +e_house
+RETURN 0
+
+ON=@STEP
+IF (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>)
+SRC.SYSMESSAGE You cannot enter!
+MOVE 0 1
+RETURN 1
+ELSE
+SRC.EVENTS +e_house
+RETURN 0
+ENDIF
+
+ON=@EXIT
+SRC.EVENTS -e_house
+RETURN 0
+
+[REGIONTYPE r_house_public]
+DEFNAME=r_house_public
+
+ON=@ENTER
+SRC.EVENTS +e_house
+RETURN 0
+
+ON=@STEP
+IF (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>) || (>==>)
+SRC.SYSMESSAGE You cannot enter!
+MOVE 0 1
+RETURN 1
+ELSE
+SRC.EVENTS +e_house
+RETURN 0
+ENDIF
+
+[REGIONTYPE r_Ilshenar_Rock t_rock]
+// Random rocks
+RESOURCES=10.0 mr_nothing
+RESOURCES=40.0 mr_iron
+RESOURCES=5.0 mr_copper
+RESOURCES=1.0 mr_silver
+RESOURCES=1.0 mr_Valorite
+RESOURCES=1.0 mr_mytheril
+RESOURCES=1.0 mr_blackrock
+	
+[REGIONTYPE r_Dungeon_Dragon t_rock]
+RESOURCES=90.0 mr_nothing
+RESOURCES=5.0 mr_Shadow
+
+[REGIONTYPE r_Ilshenar_water t_water]
+// Not really ocean area.
+RESOURCES=100.0 mr_nothing
+RESOURCES=10.0 mr_fish1
+RESOURCES=10.0 mr_fish2
+RESOURCES=10.0 mr_fish3
+RESOURCES=10.0 mr_fish4
+RESOURCES=5.0 mr_fish_junk_1
+RESOURCES=5.0 mr_fish_junk_2
+RESOURCES=5.0 mr_fish_junk_3
+RESOURCES=5.0 mr_fish_junk_4
+RESOURCES=5.0 mr_fish_junk_5
+RESOURCES=4.0 mr_fish_shoes_1
+RESOURCES=4.0 mr_fish_shoes_2
+RESOURCES=4.0 mr_fish_shoes_3
+RESOURCES=4.0 mr_fish_shoes_4
+
+[REGIONTYPE r_Ilshenar_tree t_tree]
+// All tress produce wood by default.
+RESOURCES=1.0 mr_tree
+
+[REGIONTYPE r_Ilshenar_grass t_grass]
+// All grass can be eaten by default.
+RESOURCES=1.0 mr_grass
+
+[REGIONTYPE r_Gargoyles]
+ON=@ENTER	
+		src.MidiList=Music_Gargoyles
+
+[EOF]

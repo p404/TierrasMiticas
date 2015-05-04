@@ -1,0 +1,198 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2004
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Viernes, Diciembre 10, 2004
+// Piedras
+VERSION=Ultra Version
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////Pisos Custom//////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+[ITEMDEF cocita_telestramportadora]
+defname=CT
+NAME=Honestly 2º piso
+ID=6182
+
+ON=@CREATE
+COLOR=2036
+
+ON=@STEP
+SRC.ACT.TIMER=2 
+MOREP=<SRC.P>
+SRC.TAG.WEND = <MOREP>
+SRC.GO 5152, 1434, 30
+
+CATEGORY=Buildings - Other
+SUBSECTION=Custom
+DESCRIPTION=Honestly
+
+[ITEMDEF cocita_telestramportadora2]
+defname=CT2
+NAME=Honestly 1º Piso
+ID=6182
+
+ON=@CREATE
+COLOR=2036
+
+ON=@STEP
+SRC.ACT.TIMER=2 
+MOREP=<SRC.P>
+SRC.TAG.WEND = <MOREP>
+SRC.GO 5152 1432 50
+
+CATEGORY=Buildings - Other
+SUBSECTION=Custom
+DESCRIPTION=Honestly 2
+
+[ITEMDEF cocita_telestramportadora3]
+defname=CT3
+NAME=Honestly 3º Piso
+ID=6182
+
+ON=@CREATE
+COLOR=2036
+
+ON=@STEP
+SRC.ACT.TIMER=2 
+MOREP=<SRC.P>
+SRC.TAG.WEND = <MOREP>
+SRC.GO 5152 1429 70
+
+CATEGORY=Buildings - Other
+SUBSECTION=Custom
+DESCRIPTION=Honestly 3
+
+[ITEMDEF cocita_vision]
+defname=CV
+NAME=grass
+ID=6013
+
+ON=@CREATE
+COLOR=
+
+CATEGORY=Buildings - Other
+SUBSECTION=Custom
+DESCRIPTION=Jusgado Vision
+
+ON=@STEP
+SRC.ACT.TIMER=2 
+MOREP=<SRC.P>
+SRC.TAG.WEND = <MOREP>
+SRC.events=+e_jusgadovision
+
+[ITEMDEF cocita_novision]
+defname=CNV
+NAME=grass
+ID=6013
+
+ON=@CREATE
+COLOR=
+
+ON=@STEP
+SRC.ACT.TIMER=2 
+MOREP=<SRC.P>
+SRC.TAG.WEND = <MOREP>
+SRC.events=-e_jusgadovision
+
+CATEGORY=Buildings - Other
+SUBSECTION=Custom
+DESCRIPTION=Jusgado Unvision
+
+[ITEMDEF britain_tele]
+defname=BT
+NAME=Pentagram
+ID=4074
+
+ON=@CREATE
+src.invul
+COLOR=1942
+
+ON=@STEP
+SRC.ACT.TIMER=2 
+MOREP=<SRC.P>
+SRC.TAG.WEND = <MOREP>
+SRC.GO 1380, 1749, 50
+SRC.MOVE 1
+
+CATEGORY=Buildings - Other
+SUBSECTION=Custom
+DESCRIPTION=Britain Pentagram
+
+[ITEMDEF britain_tele2]
+defname=BT2
+NAME=Pentangram 2
+ID=0fea
+
+ON=@CREATE
+
+COLOR=1942
+
+ON=@STEP
+SRC.ACT.TIMER=2 
+MOREP=<SRC.P>
+SRC.TAG.WEND = <MOREP>
+SRC.GO 1411, 1716, 40
+SRC.Move 1
+
+CATEGORY=Buildings - Other
+SUBSECTION=Custom
+DESCRIPTION=Britain Pentagram 2
+
+[ITEMDEF i_gm_chair]
+defname=GMC
+NAME=Silla GM 
+ID=4632
+
+ON=@CREATE
+COLOR=
+
+ON=@STEP
+ IF ! (<src.gm>)
+              src.go=1429 1693
+              effect=3,i_fx_sparkle,6,15,1
+              cont.say=<src.name> Tu no eres GM.
+	   Timer=1
+              endif
+
+CATEGORY=Provisions - GM Items
+SUBSECTION=Special Items
+DESCRIPTION=GM Chair
+
+[ITEMDEF cocita_telestramportadora4]
+defname=CT3
+NAME=Honestly 3º Piso
+ID=6182
+
+ON=@CREATE
+COLOR=2036
+
+ON=@STEP
+SRC.ACT.TIMER=2 
+MOREP=<SRC.P>
+SRC.TAG.WEND
+SRC.GO 1429 1671 10
+
+[ITEMDEF alpha_piso]
+defname=alpha
+NAME=Alpha Team Zone
+ID=1295
+
+ON=@CREATE
+COLOR=1945
+
+[ITEMDEF bravo_piso]
+defname=bravo
+NAME=Bravo Team Zone
+ID=1295
+
+ON=@CREATE
+COLOR=1242
+
+[EOF]

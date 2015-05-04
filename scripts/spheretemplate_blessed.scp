@@ -1,0 +1,35 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2005
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// FILE LAST UPDATED: Sturday, November 29, 2005
+// TEMPLATEs Armas + 25
+
+VERSION=Ultra Version
+
+//
+// A template is a collection of items.
+// Numbers are decimal not hex.
+
+[TEMPLATE 150510]
+DEFNAME=RANDOM_ICEBERG
+CATEGORY=Item Templates
+SUBSECTION=Random Magic Weapons
+DESCRIPTION=Iceberg
+CONTAINER=i_bag
+ITEM={ i_blessed_metal 1 i_axe_battle_iceberg 1 i_axe_double_iceberg 1 i_axe_exec_iceberg 1 i_hatchet_iceberg 1 i_axe_battle_large_iceberg 1 i_axe_two_hand_iceberg 1 i_axe_war_iceberg 1 i_kryss_iceberg 1 i_club_iceberg 1 i_hammer_pick_iceberg 1 i_mace_iceberg 1 i_maul_iceberg 1 i_hammer_war_iceberg 1 i_mace_war_iceberg 1 i_bardiche_iceberg 1 i_halberd_iceberg 1 i_pitchfork_iceberg 1 i_spear_iceberg 1 i_spear_short_iceberg 1 i_sword_broad_iceberg 1 i_cutlass_iceberg 1 i_katana_iceberg 1 i_lance_iceberg 1 i_sword_long_b_iceberg 1 i_sword_long_iceberg 1 i_scimitar_iceberg 1 i_chainmail_coif_iceberg 1 i_chainmail_leggings_iceberg 1 i_chainmail_tunic_iceberg 1 i_platemail_arms_iceberg 1 i_platemail_chest_iceberg 1 i_platemail_gloves_iceberg 1 i_platemail_gorget_iceberg 1 i_platemail_helm_iceberg 1 i_platemail_leggings_iceberg 1 i_shield_buckler_iceberg 1 i_shield_kite_metal_iceberg 1 i_shield_kite_wood_iceberg 1 i_shield_round_metal_iceberg 1 i_shield_round_bronze_iceberg 1 i_shield_wood_iceberg 1 i_ringmail_gloves_iceberg 1 i_ringmail_leggings_iceberg 1 i_ringmail_sleeves_iceberg 1 i_ringmail_tunic_iceberg 1  i_shield_heater_iceberg 1 i_sword_viking_iceberg 1 i_war_fork_iceberg 1 i_bow_iceberg 1 i_crossbow_iceberg 1  i_axe_iceberg 1 i_crossbow_heavy_iceberg 1 }
+
+[TEMPLATE 150511]
+DEFNAME=RANDOM_FIREBERG
+CATEGORY=Item Templates
+SUBSECTION=Random Magic Weapons
+DESCRIPTION=Fireberg
+CONTAINER=i_bag
+ITEM={ i_blessed_metal 1 i_axe_battle_Fireberg 1 i_axe_double_Fireberg 1 i_axe_exec_Fireberg 1 i_hatchet_Fireberg 1 i_axe_battle_large_Fireberg 1 i_axe_two_hand_Fireberg 1 i_axe_war_Fireberg 1 i_kryss_Fireberg 1 i_club_Fireberg 1 i_hammer_pick_Fireberg 1 i_mace_Fireberg 1 i_maul_Fireberg 1 i_hammer_war_Fireberg 1 i_mace_war_Fireberg 1 i_bardiche_Fireberg 1 i_halberd_Fireberg 1 i_pitchfork_Fireberg 1 i_spear_Fireberg 1 i_spear_short_Fireberg 1 i_sword_broad_Fireberg 1 i_cutlass_Fireberg 1 i_katana_Fireberg 1 i_lance_Fireberg 1 i_sword_long_b_Fireberg 1 i_sword_long_Fireberg 1 i_scimitar_Fireberg 1 i_chainmail_coif_Fireberg 1 i_chainmail_leggings_Fireberg 1 i_chainmail_tunic_Fireberg 1 i_platemail_arms_Fireberg 1 i_platemail_chest_Fireberg 1 i_platemail_gloves_Fireberg 1 i_platemail_gorget_Fireberg 1 i_platemail_helm_Fireberg 1 i_platemail_leggings_Fireberg 1 i_shield_buckler_Fireberg 1 i_shield_kite_metal_Fireberg 1 i_shield_kite_wood_Fireberg 1 i_shield_round_metal_Fireberg 1 i_shield_round_bronze_Fireberg 1 i_shield_wood_Fireberg 1 i_ringmail_gloves_Fireberg 1 i_ringmail_leggings_Fireberg 1 i_ringmail_sleeves_Fireberg 1 i_ringmail_tunic_Fireberg 1  i_shield_heater_Fireberg 1 i_sword_viking_Fireberg 1 i_war_fork_Fireberg 1 i_bow_Fireberg 1 i_crossbow_Fireberg 1  i_axe_Fireberg 1 i_crossbow_heavy_Fireberg 1 }
+
+[EOF]

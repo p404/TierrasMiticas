@@ -1,0 +1,159 @@
+///////////////////////////////////
+//////////Shapeshifter/////////////
+///////////////////////////////////
+[ITEMDEF I_Shapeshifter_Staff] 
+DEFNAME=I_Shape_Staff
+ID=I_Staff_Black 
+NAME=black staff
+RESOURCES=3 i_Gem_Shapeshifter, 150 I_Log
+
+CATEGORY=Custom Items
+SUBSECTION=Items [ShapeS]
+DESCRIPTION=ShapeS Staff
+
+ON=@CREATE
+COLOR=2028
+HITPOINTS=200
+
+ON=@EQUIP
+	IF ! (<SRC.RESTEST 1 I_Mem_Incognito>)
+	ELSE
+	SRC.SYSMESSAGE You must wait 1 minute for recharge the staff! 
+	DROP
+	TIMER=60
+	RETURN 1 
+	ENDIF
+	IF ! (<SRC.OSKIN>==52)
+	DROP
+	EFFECT=3,i_fx_curse,6,15,1
+	SRC.EMOTE=are <src.title>! you are not a Shapeshifter!
+	SFX snd_SPELL_CURSE
+	ENDIF
+TIMER=10
+SRC.EVENTS=+e_noname
+SRC.NEWITEM=I_Mem_Incognito
+SRC.ACT.EQUIP 
+
+ON=@TIMER
+IF (<SRC.RESTEST 1 i_mem_incognito>) 
+ELSE
+CONT.EVENTS=-e_noname
+
+ON=@UNEQUIP
+SRC.EVENTS=-e_noname
+RETURN 0
+
+[Itemdef I_Mem_Incognito] 
+ID=I_Memory 
+TYPE=T_Eq_Script 
+NAME=Incognito 
+
+CATEGORY=Custom Items
+SUBSECTION=Items [ShapeS]
+DESCRIPTION=ShapeS Memory
+
+ON=@Equip 
+TIMER=60
+ATTR=Attr_Decay // | Attr_Invis 
+
+ON=@Timer 
+REMOVE 
+RETURN 1
+
+[Itemdef I_SChameleon_Cape] 
+DEFNAME=I_SChameleon_Cape
+NAME=cloack
+ID=I_Cape
+REQSTR=90
+WEIGHT=10
+RESOURCES=2 I_Gem_Shapeshifter, 12 I_Demon_Hide
+
+CATEGORY=Custom Items
+SUBSECTION=Items [ShapeS]
+DESCRIPTION=ShapeS SChameleon Cape
+
+ON=@Create 
+COLOR=colors_all
+HITPOINTS=350 
+
+ON=@DCLICK
+SRC.ACT.COLOR=colors_all
+RETURN 0
+
+ON=@EQUIP
+	IF ! (<SRC.OSKIN>==52)
+	DROP
+	EFFECT=3,i_fx_curse,6,15,1
+	SRC.EMOTE=are <src.title>! you are not a Shapeshifter!
+	SFX snd_SPELL_CURSE
+	ENDIF
+SRC.ACT.COLOR=colors_all
+SRC.STEALING=<SRC.STEALING> + 10.0
+RETURN 0 
+
+ON=@UNEQUIP
+SRC.ACT.COLOR=colors_all
+SRC.STEALING=<SRC.STEALING> + (-10.0)
+RETURN 0
+
+[Itemdef I_Shapeshifter_Gloves] 
+DefName=i_Shapeshifter_Gloves
+Name=leather gloves
+ID=I_Leather_Gloves
+ReqStr=90
+Weight=10
+Resources=2 I_Gem_Shapeshifter, 12 I_Demon_Hide
+
+CATEGORY=Custom Items
+SUBSECTION=Items [ShapeS]
+DESCRIPTION=ShapeS Gloves
+
+ON=@Create 
+Color=2028
+Hitpoints=250
+
+ON=@EQUIP 
+IF ! (<SRC.OSKIN>==52)
+              DROP
+              EFFECT=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Shapeshifter!
+              SFX snd_SPELL_CURSE
+              ENDIF
+SRC.STEALING=<SRC.STEALING> + 10.0
+RETURN 0
+
+ON=@UNEQUIP
+SRC.STEALING=<SRC.STEALING> + (-10.0)
+RETURN 0
+
+[ITEMDEF I_Shapeshifter_Sandals] 
+DEFNAME=I_Shape_Sandals
+NAME=sandals
+ID=I_Sandals
+REQSTR=90
+WEIGHT=10
+RESOURCES=2 I_Gem_Shapeshifter, 12 I_Demon_Hide
+
+CATEGORY=Custom Items
+SUBSECTION=Items [ShapeS]
+DESCRIPTION=ShapeS Sandals
+
+ON=@Create 
+COLOR=2028
+HITPOINTS=200
+
+ON=@Equip 
+IF ! (<SRC.OSKIN>==52)
+              DROP
+              EFFECT=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Shapeshifter!
+              SFX snd_SPELL_CURSE
+              ENDIF
+SRC.DEX=<SRC.DEX> + 10
+RETURN 0
+
+ON=@UNEQUIP 
+SRC.DEX=<SRC.DEX> + (-10)
+RETURN 0
+
+[EOF]

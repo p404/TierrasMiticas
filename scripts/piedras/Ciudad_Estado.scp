@@ -1,0 +1,286 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be diSTRibuted
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Viernes, Septiembre 13, 2006
+// Piedra del Estado
+VERSION=0.6
+
+[ITEMDEF i_Status_stone] 
+DEFNAME=Status
+id=0edc
+NAME=Piedra del Estado 
+WEIGHT=900
+CATEGORY=Custom Stone
+SUBSECTION=Piedras de Ciudad
+DESCRIPTION=Piedra del Estado
+
+ON=@Create 
+COLOR=1945
+ATTR=014 
+
+ON=@DCLICK
+IF (<SRC.TARG.DISTANCE> > 2) 
+SRC.SYSMESSAGE You can't reach that.
+RETURN 1 
+ENDIF
+SRC.SFX 555
+DIALOG d_Status
+RETURN 1 
+
+[DIALOG d_status] 
+200,100 
+resizepic 0 0 2600 500 220
+page 0 
+text 55 17 904 0 
+text 182 37 904 1 
+text 182 57 904 2 
+text 182 77 904 3 
+text 182 97 904 4 
+text 182 117 904 5 
+text 182 137 904 6 
+text 55 37 1152 7 
+text 55 57 1152 8 
+text 55 77 1152 9 
+text 55 97 1152 10 
+text 55 117 1152 11 
+text 55 137 1152 12 
+text 55 157 1152 13 
+text 120 77 1152 14
+text 120 97 1152 15 
+text 120 117 1152 16 
+text 120 137 1152 17 
+text 120 157 1152 18 
+
+
+button 35 40 1209 1210 1 0 1 
+button 35 60 1209 1210 1 0 2 
+button 35 120 1209 1210 1 0 3 
+button 35 140 1209 1210 1 0 4
+button 35 160 1209 1210 1 0 5 
+
+
+
+[DIALOG d_Status TEXT] 
+Hola <SRC.name>! Tu Estado: 
+Con esto podras ver tu estado y podras
+cambiar algunos aspectos en tu personaje. 
+Esta piedra cambiara tu Tag de Neutral a
+Pk o a Order, tambien podras bajar tus
+Stats. Elije con cuidado. Cualquier error
+mandar page a GM y veran lo que haran.
+Order
+Player Killer
+Fama
+Karma
+Str
+Int
+Dex
+<SRC.FAME>
+<SRC.KARMA>
+<SRC.STR>
+<SRC.INT>
+<SRC.DEX>
+
+[DIALOG d_Status BUTTON] 
+ONBUTTON=0 
+ONBUTTON=1
+DIALOG d_ORDER
+ONBUTTON=2 
+DIALOG d_PK
+
+
+ONBUTTON=3
+IF (<SRC.STR>=14) || (<SRC.STR>=13) || (<SRC.STR>=12) || (<SRC.STR>=11)
+SRC.STR=<SRC.STR> + (-1)
+DIALOG d_Status
+RETURN 1
+ENDIF
+IF (<SRC.STR>=9) || (<SRC.STR>=8) || (<SRC.STR>=7) || (<SRC.STR>=6) || (<SRC.STR>==5) || (<SRC.STR>==4) || (<SRC.STR>==3) || (<SRC.STR>==2) || (<SRC.STR>==1)
+SRC.MESSAGE=No puedes bajar mas tu Str.
+RETURN 1
+ELSE
+SRC.STR=<SRC.STR> + (-5)
+
+
+ONBUTTON=4 
+IF (<SRC.INT>=14) || (<SRC.INT>=13) || (<SRC.INT>=12) || (<SRC.INT>=11)
+SRC.INT=<SRC.INT> + (-1)
+DIALOG d_Status
+RETURN 1
+ENDIF
+IF (<SRC.INT>=9) || (<SRC.INT>=8) || (<SRC.INT>=7) || (<SRC.INT>=6) || (<SRC.INT>=5) || (<SRC.INT>=4) || (<SRC.INT>=3) || (<SRC.INT>=2) || (<SRC.INT>=1)
+SRC.MESSAGE=No puedes bajar mas tu Int.
+RETURN 1
+ELSE
+SRC.INT=<SRC.INT> + (-5)
+
+
+ONBUTTON=5 
+IF (<SRC.DEX>=14) || (<SRC.DEX>=13) || (<SRC.DEX>=12) || (<SRC.DEX>=11)
+SRC.DEX=<SRC.DEX> + (-1)
+DIALOG d_Status
+RETURN 1
+ENDIF
+IF (<SRC.DEX>=9) || (<SRC.DEX>=8) || (<SRC.DEX>=7) || (<SRC.DEX>=6) || (<SRC.DEX>=5) || (<SRC.DEX>=4) || (<SRC.DEX>=3) || (<SRC.DEX>=2) || (<SRC.DEX>=1)
+SRC.SYSMESSAGE=No puedes bajar mas tu Dex.
+RETURN 1
+ELSE
+SRC.DEX=<SRC.DEX> + (-5)
+
+[DIALOG d_Order] 
+0,0 
+resizepic 0 0 3600 525 560 
+text 25 20 1152 0 
+text 25 50 81 1 
+text 25 70 81 2 
+text 25 90 81 3 
+text 25 110 81 4 
+text 25 130 81 5 
+text 25 150 81 6 
+text 25 170 81 7 
+text 25 190 81 8 
+text 25 210 81 9 
+text 25 230 81 10 
+text 25 250 81 11 
+text 25 270 81 12 
+text 25 290 81 13 
+button 40 490 92 52 1 0 1 
+text 90 490 1152 14 
+button 455 500 2076 2075 1 0 2 
+text 340 505 81 15 
+
+[DIALOG d_Order TEXT] 
+-=* Order *=- 
+ Ellos pertenecen a la justicia, protegen a los debiles, a sus 
+amigos y a Lord British en especial.  
+ Este tipo de justicieros pertenecen a la Luz, la cual deben vencer a 
+los guerreros de la Oscuridad, en este caso Player Killer [Pk].
+ Deberas participar en grandes batallas contra enemigos Rojos.
+ Puedes participar en Torneos, Clanes, todo tipo de Quest y
+Eventos.
+ Su Lema Es Defender la Luz y DeSTRuir a la Oscuridad.
+-=*=- 
+ORDER, admirables paladines que defienden el poder de la LUZ
+armaduras de la Luz, que se obtienen siendo Paladin.
+ Este tipo de pericia puede ser obtenida por Guerreros y Magos 
+ 
+ 
+ 
+ADVERTENCIA: Ya no seras nunca mas Neutral! 
+"Quiero ser Order!" 
+Return to List
+
+[DIALOG d_Order BUTTON] 
+ON=1
+IF (!<SRC.RESTEST 1 i_mem_neutral>)
+SRC.SFX=snd_spell_lightning
+SRC.MESSAGE=Tu no puedes ser Order!
+RETURN 1
+ELSEIF ! (<SRC.SWORDSMANSHIP><70.1) && (<SRC.Macefighting><70.1) && (<SRC.Wrestling><70.1) && (<SRC.PARRYING><70.1) && (<SRC.MAGERY><70.1) && (<SRC.ARCHERY><70.1) && (<SRC.HEALING><70.1) && (<SRC.FENCING><70.1) && (<SRC.TACTICS><80.1) && (<SRC.HIDING><80.1)
+SRC.MESSAGE=Ahora eres Order!
+SRC.SFX=503
+SRC.CONSUME 1 i_mem_neutral
+SRC.NEWITEM i_mem_order
+SRC.ACT.EQUIP
+SRC.EVENTS=-e_Neutral
+SRC.EVENTS=+e_Order
+RETURN 0 
+ENDIF
+SRC.SFX=snd_spell_lightning
+SRC.MESSAGE=Tu aun no puedes ser Order!
+SRC.SYSMESSAGE=Te faltan requisitos...
+RETURN 1
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_Status
+
+[DIALOG d_pk] 
+0,0 
+resizepic 0 0 3600 525 560 
+text 25 20 1152 0 
+text 25 50 81 1 
+text 25 70 81 2 
+text 25 90 81 3 
+text 25 110 81 4 
+text 25 130 81 5 
+text 25 150 81 6 
+text 25 170 81 7 
+text 25 190 81 8 
+text 25 210 81 9 
+text 25 230 81 10 
+text 25 250 81 11 
+text 25 270 81 12 
+text 25 290 81 13 
+button 40 490 92 52 1 0 1 
+text 90 490 1152 14 
+button 455 500 2076 2075 1 0 2 
+text 340 505 81 15 
+
+[DIALOG d_Pk TEXT] 
+-=* Player Killer *=- 
+ Ellos pertenecen al Caos, aterrorizan a los debiles, son clandestinos
+y estan bajo el mandato de Lord Blackthorne.
+ Este tipo de Malvados pertenecen al Caos, la cual debe aterrorizar y
+vencer a los guerreros de la Luz, en este caso Orders.
+ Deberas participar en grandes batallas contra enemigos Azules.
+ Puedes Participar en Torneos, Clanes, todo tipo de Quest y Eventos.
+ Su lema es DeSTRozar a la luz y esparcir la Oscuridad.
+-=*=- 
+ Player Killer, los Azules son sus enemigos, los Player Killer 
+pueden controlar armaduras de la Oscuridad, que se obtienen siendo 
+Antipaladin.
+ Este tipo de pericia puede ser obtenido por Guerreros y Magos
+ 
+ 
+
+ADVERTENCIA: Ya no seras nunca mas Neutral!
+"Quiero ser Player Killer!" 
+Return to List 
+
+[DIALOG d_Pk BUTTON] 
+ON=1
+IF (!<SRC.RESTEST 1 i_mem_neutral>)
+SRC.SFX=snd_spell_lightning
+SRC.MESSAGE=Tu no puedes ser Player Killer!
+RETURN 1
+ELSEIF ! (<SRC.SWORDSMANSHIP><75.1) && (<SRC.Macefighting><75.1) && (<SRC.Wrestling><75.1) && (<SRC.PARRYING><75.1) && (<SRC.MAGERY><75.1) && (<SRC.ARCHERY><75.1) && (<SRC.HEALING><75.1) && (<SRC.FENCING><75.1) && (<SRC.TACTICS><85.1) && (<SRC.HIDING><85.1)
+SRC.MESSAGE=Ahora eres Player Killer!
+SRC.SFX=524
+SRC.CONSUME 1 i_mem_neutral
+SRC.NEWITEM i_mem_pk
+SRC.ACT.EQUIP
+SRC.EVENTS=-e_Neutral
+SRC.EVENTS=+e_PK
+SRC.KARMA=-5000
+SRC.TITLE=<SRC.title> of Dark
+RETURN 0 
+ENDIF
+SRC.SFX=snd_spell_lightning
+SRC.MESSAGE=Tu aun no puedes ser Player Killer!
+SRC.SYSMESSAGE=Te faltan requisitos...
+RETURN 1
+ONBUTTON=1 
+RETURN 1 
+ONBUTTON=2 
+DIALOG d_Status
+
+[events e_Order] 
+ON=@CLICK
+MESSAGE=[Order] 
+////////////////////
+[events e_Pk] 
+ON=@CLICK
+MESSAGE=[Player Killer] 
+////////////////////
+[events e_Neutral] 
+ON=@CLICK
+MESSAGE [Neutral]
+
+[EOF]

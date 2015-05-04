@@ -1,0 +1,43 @@
+[DIALOG D_Cloth]
+0,0
+page
+resizepic 0 0 3000 <EVAL <SRC.TAG.LARGE>> <EVAL <SRC.TAG.LARGEX>>
+text 5 5 53 0
+text 5 25 1152 1
+text 5 40 <EVAL <SRC.TAG.REDTEXT>> 2
+text 5 55 1152 3
+text 5 70 1152 4
+
+[DIALOG D_Cloth TEXT] 
+<ACT.NAME>
+Durability: <ACT.HITPOINTS>
+Str Req: <ACT.REQSTR>
+Weight: <ACT.WEIGHT>
+Bonus: <SRC.TAG.BONUS>
+
+[DIALOG D_Cloth_Race]
+0,0
+page
+resizepic 0 0 3000 <EVAL <SRC.TAG.LARGE>> <EVAL <SRC.TAG.LARGEX>>
+text 5 5 53 0
+text 5 25 1152 1
+text 5 40 1152 2
+text 5 55 <EVAL <SRC.TAG.REDTEXT>> 3
+text 5 70 <EVAL <SRC.TAG.REQREDTEXT>> 4
+text 105 85 <EVAL <SRC.TAG.REQREDTEXT2>> 5
+text 5 100 1152 6
+text 55 115 1152 7
+text 55 130 1152 8
+
+[DIALOG D_Cloth_Race TEXT] 
+<ACT.NAME>
+Durability: <ACT.HITPOINTS>
+Weight: <ACT.WEIGHT>
+Str Req: <ACT.REQSTR>
+Requeriments: <SRC.TAG.REQS>
+<SRC.TAG.REQS2>
+Bonus: <SRC.TAG.BONUS>
+<SRC.TAG.BONUS2>
+<SRC.TAG.BONUS3>
+
+[EOF]

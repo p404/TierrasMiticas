@@ -1,0 +1,10 @@
+[EVENTS e_taming] 
+ON=@SkillStart
+IF <SRC.ACTION>==Skill_Taming
+	IF <TAMING> < <SRC.TARG.TAMING>
+	ACTION -1
+	RETURN 1
+	ENDIF
+ENDIF
+
+[EOF]

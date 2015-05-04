@@ -1,0 +1,83 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2004
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Viernes, Diciembre 10, 2004
+// Cadena de Gates
+VERSION=Ultra Version
+
+[ITEMDEF i_m_b]
+DEFNAME=i_m_b
+NAME=blue moongate
+ID=i_moongate_blue
+
+ON=@STEP
+SRC.ACT.TIMER 2
+SRC.GO 2701 692 5
+SRC.ACT.TIMER 2
+SRC.MOVE=<args>
+
+[ITEMDEF i_m_m]
+DEFNAME=i_m_m
+NAME=blue moongate
+ID=i_moongate_blue
+
+ON=@STEP
+SRC.ACT.TIMER 2
+SRC.GO 4467 1283 5
+SRC.ACT.TIMER 2
+SRC.MOVE=<args>
+
+[ITEMDEF i_m_mo]
+DEFNAME=i_m_mo
+NAME=blue moongate
+ID=i_moongate_blue
+
+ON=@STEP
+SRC.ACT.TIMER 2
+SRC.GO 643 2067 5
+SRC.ACT.TIMER 2
+SRC.MOVE=<args>
+
+[ITEMDEF i_m_sk]
+DEFNAME=i_m_sk
+NAME=blue moongate
+ID=i_moongate_blue
+
+ON=@STEP
+SRC.ACT.TIMER 2
+SRC.GO 3564 2140 34
+SRC.ACT.TIMER 2
+SRC.MOVE=<args>
+
+[ITEMDEF i_m_tr]
+DEFNAME=i_m_tr
+NAME=blue moongate
+ID=i_moongate_blue
+
+ON=@STEP
+SRC.ACT.TIMER 2
+SRC.GO 1336 1997 5
+SRC.ACT.TIMER 2
+SRC.MOVE=<args>
+
+[ITEMDEF i_door_jail]
+DEFNAME=i_door_jail
+NAME=blue moongate
+ID=0825
+
+ON=@STEP
+if ((<src.id>==c_ghost_man) || (<src.id>==c_ghost_woman)) 
+MOREP=<SRC.P>
+SRC.TAG.WEND = <MOREP>
+SRC.GO=<SRC.TAG.WEND>
+SRC.MOVE=S -2
+RETURN 1 
+endif
+
+[EOF]

@@ -1,0 +1,58 @@
+//****************************************************************************
+//Script by : Blasterox ©2003-2006
+//www.pagina.com
+//Eventos de Elementos
+//****************************************************************************
+// Última Actualización: Jueves, Septiembre 21, 2006
+//
+VERSION=0.1
+
+//********************
+//Water Event
+//********************
+
+[EVENTS e_water]
+ON=@LOGIN
+SRC.TITLE=<SRC.TITLE> of Water
+
+//********************
+//Earth Event
+//********************
+
+[EVENTS e_earth]
+ON=@LOGIN
+SRC.TITLE=<SRC.TITLE> of Earth
+
+//********************
+//Forest Event
+//********************
+
+[EVENTS e_forest]
+ON=@LOGIN
+SRC.TITLE=<SRC.TITLE> of Forest
+
+//********************
+//Air Event
+//********************
+
+[EVENTS e_air]
+ON=@LOGIN
+SRC.TITLE=<SRC.TITLE> of Air
+
+//********************
+//Fire Event
+//********************
+
+[EVENTS e_fire]
+ON=@LOGIN
+SRC.TITLE=<SRC.TITLE> of Fire
+
+//********************
+//Electricity Event
+//********************
+
+[EVENTS e_elec]
+ON=@LOGIN
+SRC.TITLE=<SRC.TITLE> of Electricity
+
+[EOF]

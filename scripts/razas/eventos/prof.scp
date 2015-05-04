@@ -1,0 +1,151 @@
+//****************************************************************************
+//Script by : Blasterox ©2003-2006
+//www.pagina.com
+//Eventos de Profesiones
+//****************************************************************************
+// Última Actualización: Jueves, Septiembre 21, 2006
+//
+VERSION=0.1
+
+//*************************
+//Artisan Mage Event
+//*************************
+
+[EVENTS e_artisan_mage]
+ON=@LOGIN
+
+IF (<SRC.Alchemy><30.1)||(<SRC.Tailoring><30.1)||(<SRC.Blacksmith><30.1)||(<SRC.Carpentry><30.1)||(<SRC.Mining><30.1)||(<SRC.Tinkering><30.1)||(<SRC.Bowcraft><30.1)
+SRC.TITLE=<src.title> Artisan Apprentice
+
+ELSEIF (<SRC.Alchemy><60.1)||(<SRC.Tailoring><60.1)||(<SRC.Blacksmith><60.1)||(<SRC.Carpentry><60.1)||(<SRC.Mining><60.1)||(<SRC.Tinkering><60.1)||(<SRC.Bowcraft><60.1)
+SRC.TITLE=<src.title> Artisan Apprentice
+
+ELSEIF (<SRC.Alchemy><90.1)||(<SRC.Tailoring><90.1)||(<SRC.Blacksmith><90.1)||(<SRC.Carpentry><90.1)||(<SRC.Mining><90.1)||(<SRC.Tinkering><90.1)||(<SRC.Bowcraft><90.1)
+SRC.TITLE=<src.title> Artisan
+
+ELSEIF (<SRC.Alchemy><100.1)||(<SRC.Tailoring><100.1)||(<SRC.Blacksmith><100.1)||(<SRC.Carpentry><100.1)||(<SRC.Mining><100.1)||(<SRC.Tinkering><100.1)||(<SRC.Bowcraft><100.1)
+SRC.TITLE=<src.title> Crafter
+
+ENDIF
+
+//*************************
+//Artisan Warrior Event
+//*************************
+
+[EVENTS e_artisan_warrior]
+ON=@LOGIN
+
+IF (<SRC.Alchemy><30.1)||(<SRC.Tailoring><30.1)||(<SRC.Blacksmith><30.1)||(<SRC.Carpentry><30.1)||(<SRC.Mining><30.1)||(<SRC.Tinkering><30.1)||(<SRC.Bowcraft><30.1)
+SRC.TITLE=<src.title> Artisan Apprentice
+
+ELSEIF (<SRC.Alchemy><60.1)||(<SRC.Tailoring><60.1)||(<SRC.Blacksmith><60.1)||(<SRC.Carpentry><60.1)||(<SRC.Mining><60.1)||(<SRC.Tinkering><60.1)||(<SRC.Bowcraft><60.1)
+SRC.TITLE=<src.title> Artisan Apprentice
+
+ELSEIF (<SRC.Alchemy><90.1)||(<SRC.Tailoring><90.1)||(<SRC.Blacksmith><90.1)||(<SRC.Carpentry><90.1)||(<SRC.Mining><90.1)||(<SRC.Tinkering><90.1)||(<SRC.Bowcraft><90.1)
+SRC.TITLE=<src.title> Artisan
+
+ELSEIF (<SRC.Alchemy><100.1)||(<SRC.Tailoring><100.1)||(<SRC.Blacksmith><100.1)||(<SRC.Carpentry><100.1)||(<SRC.Mining><100.1)||(<SRC.Tinkering><100.1)||(<SRC.Bowcraft><100.1)
+SRC.TITLE=<src.title> Crafter
+ENDIF
+
+//*************************
+//Berserker Event
+//*************************
+
+[EVENTS e_berserker]
+ON=@LOGIN
+
+IF (<SRC.SWORDSMANSHIP><30.1)||(<SRC.Macefighting><30.1)||(<SRC.Wrestling><30.1)||(<SRC.PARRYING><30.1)||(<SRC.TACTICS><30.1)
+SRC.TITLE=<src.title> Zealot
+
+ELSEIF (<SRC.SWORDSMANSHIP><65.1)||(<SRC.Macefighting><65.1)||(<SRC.Wrestling><65.1)||(<SRC.PARRYING><65.1)||(<SRC.TACTICS><65.1)
+SRC.TITLE=<src.title> Zealot
+
+ELSEIF (<SRC.SWORDSMANSHIP><90.1)||(<SRC.Macefighting><90.1)||(<SRC.Wrestling><90.1)||(<SRC.PARRYING><90.1)||(<SRC.TACTICS><90.1)
+SRC.TITLE=<src.title> Berserker
+
+ELSEIF (<SRC.SWORDSMANSHIP><100.1)||(<SRC.Macefighting><100.1)||(<SRC.Wrestling><100.1)||(<SRC.PARRYING><100.1)||(<SRC.TACTICS><100.1)
+SRC.TITLE=<src.title> Berserker
+ENDIF
+
+//*************************
+//Hunter Event
+//*************************
+
+[EVENTS e_hunter]
+ON=@LOGIN
+
+IF (<SRC.FENCING><30.1)||(<SRC.ARCHERY><30.1)
+SRC.TITLE=<src.title> Hunter Apprentice
+
+ELSEIF (<SRC.FENCING><60.1)||(<SRC.ARCHERY><60.1)
+SRC.TITLE=<src.title> Hunter Apprentice
+
+ELSEIF (<SRC.FENCING><90.1)||(<SRC.ARCHERY><90.1)
+SRC.TITLE=<src.title> Hunter
+
+ELSEIF (<SRC.FENCING><100.1)||(<SRC.ARCHERY><100.1)
+SRC.TITLE=<src.title> Profesional Hunter
+ENDIF
+
+//*************************
+//Mage Event
+//*************************
+
+[EVENTS e_mage]
+ON=@LOGIN
+
+IF <SRC.MAGERY><30.1
+SRC.TITLE=<src.title> Mage Apprentice
+
+ELSEIF <SRC.MAGERY><60.1
+SRC.TITLE=<src.title> Mage Apprentice
+
+ELSEIF <SRC.MAGERY><90.1
+SRC.TITLE=<src.title> Mage
+
+ELSEIF <SRC.MAGERY><100.1
+SRC.TITLE=<src.title> Wizzard
+ENDIF
+
+//*************************
+//Ranger Event
+//*************************
+
+[EVENTS e_ranger]
+ON=@LOGIN
+
+IF (<SRC.SWORDSMANSHIP><75.1)||(<SRC.Macefighting><75.1)||(<SRC.Wrestling><75.1)
+SRC.TITLE=<src.title> Ranger
+
+ELSEIF (<SRC.SWORDSMANSHIP><100.1)||(<SRC.Macefighting><100.1)||(<SRC.Wrestling><100.1)
+SRC.TITLE=<src.title> Master Ranger
+ENDIF
+
+//*************************
+//Thief Event
+//*************************
+
+[EVENTS e_thief]
+
+//*************************
+//Warrior Event
+//*************************
+
+[EVENTS e_warrior]
+ON=@LOGIN
+
+IF (<SRC.SWORDSMANSHIP><40.1)&&(<SRC.Macefighting><40.1)&&(<SRC.Wrestling><40.1)&&(<SRC.PARRYING><40.1)
+SRC.TITLE=<src.title> Fighter
+
+ELSEIF (<SRC.SWORDSMANSHIP><70.1)&&(<SRC.Macefighting><70.1)&&(<SRC.Wrestling><70.1)&&(<SRC.PARRYING><70.1)
+SRC.TITLE=<src.title> Warrior
+
+ELSEIF (<SRC.SWORDSMANSHIP><90.1)&&(<SRC.Macefighting><90.1)&&(<SRC.Wrestling><90.1)&&(<SRC.PARRYING><90.1)
+SRC.TITLE=<src.title> Superior Warrior
+
+ELSEIF (<SRC.SWORDSMANSHIP><100.1)&&(<SRC.Macefighting><100.1)&&(<SRC.Wrestling><100.1)&&(<SRC.PARRYING><100.1)
+SRC.TITLE=<src.title> Knight
+ENDIF
+
+[EOF]

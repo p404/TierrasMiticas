@@ -1,0 +1,76 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2004
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Miercoles, Septiembre 13, 2006
+// Piedra de la Neutralidad
+VERSION=1.6
+
+[ITEMDEF i_piedra_neutral]
+DEFNAME=i_neutral
+NAME=Piedra de la Neutralidad
+ID=3799
+CATEGORY=Custom Stone
+SUBSECTION=Piedras Star chamber
+DESCRIPTION=Piedra de la Neutralidad
+
+ON=@CREATE
+ATTR=ATTR_STATIC 
+
+ON=@DCLICK
+IF (<SRC.TARG.DISTANCE> > 2) 
+SRC.SYSMESSAGE You can't reach that.
+RETURN 1 
+ENDIF 
+IF (<SRC.OSKIN>==0)
+SRC.SAYUA 32 6 0 1 <src.name> no has escogido Raza!
+RETURN 1
+ENDIF
+IF <SRC.RESTEST 1 i_mem_neutral>
+SRC.SAYUA 32 6 0 1 <src.name> tu ya eres Neutral!
+RETURN 1
+ENDIF
+IF <SRC.RESTEST 1 i_mem_artisan_mage> || <SRC.RESTEST 1 i_mem_artisan_warrior> || <SRC.RESTEST 1 i_mem_berserker> || <SRC.RESTEST 1 i_mem_hunter> || <SRC.RESTEST 1 i_mem_mage> || <SRC.RESTEST 1 i_mem_ranger> || <SRC.RESTEST 1 i_mem_warrior>
+SRC.SFX 555 
+DIALOG d_neutral 
+ATTR=ATTR_STATIC
+RETURN 1
+ENDIF
+SRC.SAYUA 32 6 0 1 <src.name> no has escogido Profesion!
+RETURN 1
+
+[DIALOG d_neutral] 
+0,0 
+resizepic 0 0 3600 400 170 
+page 0 
+text 55 17 37 0 
+text 45 37 904 1 
+text 45 57 904 2 
+text 45 77 904 3 
+text 45 107 32 4 
+text 58 127 904 5
+button 40 129 1209 1210 1 0 1 
+
+[DIALOG d_neutral TEXT] 
+Piedra de la Neutralidad
+Debes elegir ser neutral para ingresar a 
+Sosaria. Siendo neutral obtendras varias 
+ventajas.
+ñ 
+Elijo ser Neutral! 
+
+[DIALOG d_neutral BUTTON]
+ONBUTTON=0  
+ONBUTTON=1 
+SRC.NEWITEM=i_mem_neutral
+SRC.ACT.EQUIP
+SRC.EVENTS=+e_neutral
+SRC.SOUND=snd_SPELL_MAGIC_LOCK
+SRC.GO=5140 1770
+
+[EOF]

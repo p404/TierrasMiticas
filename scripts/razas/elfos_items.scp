@@ -1,0 +1,285 @@
+[Itemdef I_Elf_Staff] 
+ID=I_Staff_Black
+Defname=I_Elf_Staff
+Name=black staff
+ReqStr=20
+Weight=10
+TYPE=t_weapon_mace_staff
+SKILL=MACEFIGHTING
+Resources=1 I_Gem_elf, 2 I_Gem_Diamond, 50 I_Log
+Twohands=Y
+SKILLMAKE=Carpentry 60.0 
+DYE=1
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Elf]
+DESCRIPTION=Elf Staff
+
+ON=@Create 
+COLOR=1964 
+HITPOINTS={350 350}
+
+ON=@Equip
+IF <SRC.MAGERY><100.0
+	Drop
+	Effect=3,i_fx_curse,6,15,1
+	Sfx snd_SPELL_CURSE
+	SRC.EMOTE=<SRC.NAME> you no have sufficient Magery for this item!
+	ENDIF
+IF ! (<Src.Oskin>==51)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Elf!
+              Sfx snd_SPELL_CURSE
+              Endif            
+Link=<Src.Uid> 
+Timer=2 
+SRC.MAGERY=<SRC.MAGERY> +5.0
+SRC.TACTICS=<SRC.TACTICS> +5.0
+Return 0
+
+ON=@Timer
+If (<Link.Mana><<Link.Int>) 
+Link.Mana=<Link.Mana>+6
+Cont.Effect=3,i_fx_sparkle_2,10,20,10 
+Timer=5 
+Else 
+Timer=0 
+Endif
+Return 1 
+
+ON=@UnEquip 
+SRC.MAGERY=<SRC.MAGERY> +(-5.0)
+SRC.TACTICS=<SRC.TACTICS> +(-5.0)
+Link=04FFFFFFF 
+Timer=-1 
+Return 0 
+
+[Itemdef I_Elf_Boots]
+ID=I_Boots_Calf
+Defname=I_Elf_Boots
+Name=boots
+ReqStr=20 
+TYPE=T_CLOTHING
+WEIGHT=3
+Armor=80
+Resources=1 I_Gem_Elf, 4 I_Troll_Hide
+Skillmake=Tailoring 60.1, t_sewing_kit
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Elf]
+DESCRIPTION=Elf Boots
+
+ON=@Create 
+Color=1964 
+HITPOINTS={350 350}
+
+ON=@Equip
+If ! (<Src.Oskin>==51)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Elf!
+              Sfx snd_SPELL_CURSE
+              Endif  
+SRC.ACT.EQUIP      
+Link=<Src.Uid> 
+Timer=2 
+Return 0
+
+ON=@Timer 
+If (<Link.Stam><<Link.Dex>) 
+Link.Stam=<Link.Stam>+5 
+Cont.Effect=3,i_fx_sparkle_2,10,20,10 
+Timer=5
+Else 
+Timer=0 
+Endif 
+Return 1 
+
+ON=@UnEquip 
+Link=04FFFFFFF
+Timer=-1 
+Return 0 
+
+[Itemdef I_Elf_Gloves] 
+ID=5062
+defname=I_Elf_Gloves
+Name=leather gloves
+ReqStr=20 
+//TYPE=10
+Weight=1 
+Armor=15 
+Resources=1 I_Gem_Elf, 2 I_Ice_Fiend_Hide
+Skillmake=Tailoring 60.1, t_sewing_kit
+dye=1
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Elf]
+DESCRIPTION=Elf Gloves
+
+ON=@Create 
+Color=1964 
+Hitpoints=300
+ATTR=attr_magic
+
+ON=@Equip 
+If ! (<Src.Oskin>==51)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Elf!
+              Sfx snd_SPELL_CURSE
+              Endif  
+Src.Carpentry=<Src.Carpentry> + 5.0
+Src.Tactics=<Src.Tactics> + 5.0
+Return 0 
+
+ON=@UnEquip 
+Src.Carpentry=<Src.Carpentry> + (-5.0)
+Src.Tactics=<Src.Tactics> + (-5.0)
+Return 0 
+
+[Itemdef 0367]
+Defname=I_Invis_Cape
+Name=cloack
+ReqStr=30
+Weight=3
+Type=T_clothing
+LAYER=layer_cape
+DYE=1
+Resources=2 I_Gem_Elf, 4 I_Gem_Shapeshifter, 20 I_Serpent_Hide
+Skillmake=Tailoring 80.1, t_sewing_kit
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Elf]
+DESCRIPTION=Elf & Shapeshifter Cape
+
+ON=@Create
+Color=2849
+HITPOINTS={350 350}
+
+ON=@EQUIP
+IF (<SRC.RESTEST 1 i_mem_invis>) 
+SRC.SYSMESSAGE You must wait for recharge the cape! 
+RETURN 1 
+ENDIF
+IF (<SRC.HIDING><40.1) 
+DROP
+SRC.EMOTE You no have sufficient Hiding! 
+RETURN 1 
+ENDIF 
+If ! (<Src.Oskin>==51)||(<Src.Oskin>==52)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Elf or Shapeshifter!
+              Sfx snd_SPELL_CURSE
+              ELSE 
+LINK=<SRC.UID> 
+TIMER=15
+SRC.INVIS=1
+SRC.SFX=snd_spell_invisibility
+SRC.NEWITEM=i_mem_invis
+SRC.ACT.EQUIP
+ENDIF
+
+ON=@TIMER
+IF (<SRC.RESTEST 1 i_mem_invis>) 
+ELSE
+CONT.INVIS=0
+
+ON=@UNEQUIP
+Link=04FFFFFFF
+TIMER=-1
+SRC.INVIS=0
+
+[ITEMDEF i_mem_invis]
+ID=i_memory
+TYPE=t_eq_script
+NAME=Invis
+
+ON=@EQUIP
+TIMER=120
+ATTR=attr_decay // | attr_invis
+
+ON=@TIMER
+REMOVE
+
+[Itemdef 03FF0]
+//Bow
+//Using bow type below
+Defname=I_Elf_Bow
+Name=bow
+Can=Mt_Equip 
+TwoHands=Y
+DAM=13,25
+//SPEED=20
+Skill=Archery
+ReqStr=80
+Weight=5 
+Type=T_Weapon_Bow
+Resources=150 I_Log, 1 I_Gem_Elf
+Skillmake=Carpentry 50.1, t_carpentry
+TDATA3=I_Arrow
+TDATA4=3906
+
+CATEGORY=Custom Items
+SUBSECTION=Items [Elf]
+DESCRIPTION=Elf Bow
+
+ON=@Create 
+HITPOINTS={350 350}
+Color=1964
+
+ON=@DClick
+If <Cont.Uid>!=<Src.FindLayer(21).Uid>
+Return 1
+Endif
+If <Amount>>1
+Return 1
+Endif
+
+ON=@Equip
+If <Src.Archery><50.1
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=no have sufficient Archery!
+              Sfx snd_SPELL_CURSE
+              Endif 
+If ! (<Src.Oskin>==51)
+              Drop
+              Effect=3,i_fx_curse,6,15,1
+              SRC.EMOTE=are <src.title>! you are not a Elf!
+              Sfx snd_SPELL_CURSE
+              Endif 
+Return 0 
+Link=<SRC.UID> 
+Timer=2 
+Return 0
+
+ON=@Timer
+If (<Link.Hits><<Link.Str>) 
+Link.Hits=<Link.Hits>+5
+Cont.Effect=3,i_fx_sparkle_2,10,20,10 
+Timer=5
+Else 
+Timer=0 
+Endif
+Return 1
+
+ON=@UnEquip  
+Return 0  
+
+Link=04FFFFFFF 
+Timer=-1 
+Return 0 
+
+ON=@Damage
+VAR.X=RAND(14) 
+IF X==0
+CONT.HITS=<SRC.HITS>+(-<EVAL 20}>
+SRC.FLAGS=statf_hallucinating
+SRC.SOUND=snd_Z_END_MYSTERY1
+SRC.Effect=3,i_fx_curse,6,15,1
+ENDIF 
+RETURN 0
+
+[EOF]

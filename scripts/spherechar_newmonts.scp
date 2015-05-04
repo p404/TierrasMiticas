@@ -1,0 +1,658 @@
+///////////////////////////////////////
+//////////////Horse Gray///////////////
+///////////////////////////////////////
+[CHARDEF c_a_mustang_poison]
+DEFNAME=C_A_MUSTANG_POISON
+ID=c_horse_gray
+NAME=Poison Mustang
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse (Poison)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=04c
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_ice]
+DEFNAME=C_A_MUSTANG_ice
+NAME=Ice Mustang
+ID=C_horse_gray
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse (Ice)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_ice
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_fire]
+DEFNAME=C_A_MUSTANG_fire
+NAME=Fire Mustang
+ID=c_horse_gray
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse (Fire)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_fire_fiend
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_forest]
+DEFNAME=C_A_MUSTANG_forest
+NAME=Forest Mustang
+ID=c_horse_gray
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse (Forest)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_forest
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_air]
+DEFNAME=C_A_MUSTANG_air
+NAME=Air Mustang
+ID=c_horse_gray
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse (Air)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=0123456789
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_earth]
+DEFNAME=C_A_MUSTANG_earth
+NAME=Earth Mustang
+ID=c_horse_gray
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse (Earth)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_earth
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+//////////////////////////////////////
+//////////Horse Brown DK/////////////
+/////////////////////////////////////
+[CHARDEF c_a_mustang_poison]
+DEFNAME=C_A_MUSTANG_POISON
+ID=c_horse_brown_dk
+NAME=Poison Mustang
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse DK (Poison)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=04c
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_ice]
+DEFNAME=C_A_MUSTANG_ice
+NAME=Ice Mustang
+ID=c_horse_brown_dk
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse DK (Ice)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_ice
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_fire]
+DEFNAME=C_A_MUSTANG_fire
+NAME=Fire Mustang
+ID=c_horse_brown_dk
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse DK (Fire)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_fire_fiend
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_forest]
+DEFNAME=C_A_MUSTANG_forest
+NAME=Forest Mustang
+ID=c_horse_brown_dk
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse DK (Forest)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_forest
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_air]
+DEFNAME=C_A_MUSTANG_air
+NAME=Air Mustang
+ID=c_horse_brown_dk
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse DK (Air)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=0123456789
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_earth]
+DEFNAME=C_A_MUSTANG_earth
+NAME=Earth Mustang
+ID=c_horse_brown_dk
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse DK (Earth)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_earth
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+//////////////////////////////////////
+//////////Horse Tan/////////////
+/////////////////////////////////////
+[CHARDEF c_a_mustang_poison]
+DEFNAME=C_A_MUSTANG_POISON
+ID=c_horse_tan
+NAME=Poison Mustang
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse Tan (Poison)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=04c
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_ice]
+DEFNAME=C_A_MUSTANG_ice
+NAME=Ice Mustang
+ID=c_horse_tan
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse Tan (Ice)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_ice
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_fire]
+DEFNAME=C_A_MUSTANG_fire
+NAME=Fire Mustang
+ID=c_horse_tan
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse Tan (Fire)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_fire_fiend
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_forest]
+DEFNAME=C_A_MUSTANG_forest
+NAME=Forest Mustang
+ID=c_horse_tan
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse Tan (Forest)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_forest
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_air]
+DEFNAME=C_A_MUSTANG_air
+NAME=Air Mustang
+ID=c_horse_tan
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse Tan (Air)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=0123456789
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[CHARDEF c_a_mustang_earth]
+DEFNAME=C_A_MUSTANG_earth
+NAME=Earth Mustang
+ID=c_horse_tan
+SOUND=snd_ANIMALS_HORSE1
+ICON=i_pet_horse_brown_dk
+DAM=3,4
+ARMOR=9
+RESOURCES=15 i_ribs_raw,10 i_hide
+//ALIGNMENT=NEUTRAL
+CAN=MT_WALK|MT_RUN
+FOODTYPE=55 t_crops, 55 t_fruit, 55 t_grain, 64 t_grass
+SHELTER=r_stables,e_Human_Greet
+DESIRES=e_horses,c_man,c_woman
+TEVENTS=e_horses
+AVERSIONS=e_carnivores3
+DESCRIPTION=Horse Tan (Earth)
+SUBSECTION=Land (Wild)
+CATEGORY=Animals
+
+ON=@Create
+COLOR=color_earth
+STR={100 180}
+DEX={90 130}
+INT={6 10}
+
+PARRYING={35.0 45.0}
+MAGICRESISTANCE={25.0 30.0}
+TACTICS={29.0 44.0}
+WRESTLING={29.0 44.0}
+TAMING=90.0
+NPC=brain_animal
+
+FAME=20
+KARMA={-1 -99}
+
+[EOF]

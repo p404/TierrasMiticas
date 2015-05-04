@@ -1,0 +1,681 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2004
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Viernes, Diciembre 10, 2004
+// FIX de Barcos
+VERSION=Ultra Version
+
+[DEFNAME shipfix] 
+hidenuketoggle 1 // 1 Enables 'HideNuke' any other number ( preferablly 0 ) disables 'HideNuke' 
+
+[FUNCTION hidenuke] 
+IF (<ARGN> <= 29) 
+SRC.SYSMESSAGE 
+HIDENUKE <EVAL <ARGN>+1> 
+ENDIF 
+
+[ITEMDEF i_nuke_node] 
+ID=i_corpse 
+TYPE=t_script 
+NAME=Place Holder 
+
+ON=@Create 
+AMOUNT=424 
+ATTR=attr_static|attr_decay 
+TIMER=0 
+
+ON=@Click 
+RETURN 1 
+
+[FUNCTION shipfix]
+// Small Ships
+IF (<BASEID> == i_multi_ship_small_n) || (<BASEID> == i_multi_ship_dragon_small_n)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH 0 -4 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN 1 4 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE -2 0 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE 2 0 0
+ELIF (<BASEID> == i_multi_ship_small_w) || (<BASEID> == i_multi_ship_dragon_small_w)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH -4 0 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN 4 0 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE 0 2 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE 0 -2 0
+ELIF (<BASEID> == i_multi_ship_small_s) || (<BASEID> == i_multi_ship_dragon_small_s)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH 0 4 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN 0 -4 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE 2 0 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE -2 0 0
+ELIF (<BASEID> == i_multi_ship_small_e) || (<BASEID> == i_multi_ship_dragon_small_e)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH 4 0 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN -4 0 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE 0 -2 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE 0 2 0
+
+// Medium Ships
+ELIF (<BASEID> == i_multi_ship_medium_n) || (<BASEID> == i_multi_ship_dragon_medium_n)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH 0 -4 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN 1 5 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE -2 0 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE 2 0 0
+ELIF (<BASEID> == i_multi_ship_medium_w) || (<BASEID> == i_multi_ship_dragon_medium_w)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH -4 0 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN 5 0 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE 0 2 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE 0 -2 0
+ELIF (<BASEID> == i_multi_ship_medium_s) || (<BASEID> == i_multi_ship_dragon_medium_s)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH 0 4 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN 0 -5 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE 2 0 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE -2 0 0
+ELIF (<BASEID> == i_multi_ship_medium_e) || (<BASEID> == i_multi_ship_dragon_medium_e)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH 4 0 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN -5 0 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE 0 -2 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE 0 2 0
+
+// Long Ships
+ELIF (<BASEID> == i_multi_ship_long_n) || (<BASEID> == i_multi_ship_dragon_long_n)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH 0 -5 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN 1 5 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE -2 -1 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE 2 -1 0
+ELIF (<BASEID> == i_multi_ship_long_w) || (<BASEID> == i_multi_ship_dragon_long_w)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH -5 0 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN 5 0 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE -1 2 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE -1 -2 0
+ELIF (<BASEID> == i_multi_ship_long_s) || (<BASEID> == i_multi_ship_dragon_long_s)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH 0 5 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN 0 -5 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE 2 1 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE -2 1 0
+ELIF (<BASEID> == i_multi_ship_long_e) || (<BASEID> == i_multi_ship_dragon_long_e)
+	TRY VAR.SHIP.<UID>.MOVE.HATCH 5 0 0
+	TRY VAR.SHIP.<UID>.MOVE.TILLERMAN -5 0 0
+	TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE 1 -2 0
+	TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE 1 2 0
+ENDIF
+
+TRY UID.<VAR.SHIP.<UID>.HATCH>.hatchfix
+TRY UID.<VAR.SHIP.<UID>.TILLERMAN>.tillermanfix
+TRY UID.<VAR.SHIP.<UID>.LEFTSIDE>.leftsidefix
+TRY UID.<VAR.SHIP.<UID>.RIGHTSIDE>.rightsidefix
+
+TRY VAR.SHIP.<UID>.MOVE.HATCH
+TRY VAR.SHIP.<UID>.MOVE.TILLERMAN
+TRY VAR.SHIP.<UID>.MOVE.LEFTSIDE
+TRY VAR.SHIP.<UID>.MOVE.RIGHTSIDE
+
+SRC.HIDEMESSAGE
+
+[FUNCTION hatchfix]
+IF (<LINK.MORE2> == 00)	|| (<LINK.MORE2> == 01) || (<LINK.MORE2> == 02)				// N
+	DISPID 03eae
+ELIF (<LINK.MORE2> == 02020000)	|| (<LINK.MORE2> == 02020001) || (<LINK.MORE2> == 02020002)	// E
+	DISPID i_ship_hatch_e
+ELIF (<LINK.MORE2> == 04040000)	|| (<LINK.MORE2> == 04040001) || (<LINK.MORE2> == 04040002)	// S
+	DISPID 03eb9
+ELIF (<LINK.MORE2> == 06060000)	|| (<LINK.MORE2> == 06060001) || (<LINK.MORE2> == 06060002)	// W
+	DISPID 03e93
+ENDIF
+P <LINK.P>
+MOVE <VAR.SHIP.<LINK.UID>.MOVE.HATCH>
+
+[FUNCTION tillermanfix]
+IF (<LINK.MORE2> == 00)	|| (<LINK.MORE2> == 01) || (<LINK.MORE2> == 02)				// N
+	DISPID 03e4e
+ELIF (<LINK.MORE2> == 02020000)	|| (<LINK.MORE2> == 02020001) || (<LINK.MORE2> == 02020002)	// E
+	DISPID 03e55
+ELIF (<LINK.MORE2> == 04040000)	|| (<LINK.MORE2> == 04040001) || (<LINK.MORE2> == 04040002)	// S
+	DISPID 03e4b
+ELIF (<LINK.MORE2> == 06060000)	|| (<LINK.MORE2> == 06060001) || (<LINK.MORE2> == 06060002)	// W
+	DISPID 03e50
+ENDIF
+P <LINK.P>
+MOVE <VAR.SHIP.<LINK.UID>.MOVE.TILLERMAN>
+
+[FUNCTION leftsidefix]
+IF (<LINK.MORE2> == 00)	|| (<LINK.MORE2> == 01) || (<LINK.MORE2> == 02)				// N
+	SRC.NEWITEM 03eb1
+	SRC.ACT.P <LINK.P>
+	SRC.ACT.MOVE <VAR.SHIP.<LINK.UID>.MOVE.LEFTSIDE>
+	shipfix2
+ELIF (<LINK.MORE2> == 02020000)	|| (<LINK.MORE2> == 02020001) || (<LINK.MORE2> == 02020002)	// E
+	SRC.NEWITEM i_ship_plank_n_c
+	SRC.ACT.P <LINK.P>
+	SRC.ACT.MOVE <VAR.SHIP.<LINK.UID>.MOVE.LEFTSIDE>
+	shipfix2
+ELIF (<LINK.MORE2> == 04040000)	|| (<LINK.MORE2> == 04040001) || (<LINK.MORE2> == 04040002)	// S
+	SRC.NEWITEM 03eb2
+	SRC.ACT.P <LINK.P>
+	SRC.ACT.MOVE <VAR.SHIP.<LINK.UID>.MOVE.LEFTSIDE>
+	shipfix2
+ELIF (<LINK.MORE2> == 06060000)	|| (<LINK.MORE2> == 06060001) || (<LINK.MORE2> == 06060002)	// W
+	SRC.NEWITEM 03e85
+	SRC.ACT.P <LINK.P>
+	SRC.ACT.MOVE <VAR.SHIP.<LINK.UID>.MOVE.LEFTSIDE>
+	shipfix2
+ENDIF
+SRC.TRY VAR.SHIP.<LINK.UID>.LEFTSIDE <SRC.ACT.UID>
+
+[FUNCTION rightsidefix]
+IF (<LINK.MORE2> == 00)	|| (<LINK.MORE2> == 01) || (<LINK.MORE2> == 02)				// N
+	SRC.NEWITEM 03eb2
+	SRC.ACT.P <LINK.P>
+	SRC.ACT.MOVE <VAR.SHIP.<LINK.UID>.MOVE.RIGHTSIDE>
+	shipfix2
+ELIF (<LINK.MORE2> == 02020000)	|| (<LINK.MORE2> == 02020001) || (<LINK.MORE2> == 02020002)	// E
+	SRC.NEWITEM 03e85
+	SRC.ACT.P <LINK.P>
+	SRC.ACT.MOVE <VAR.SHIP.<LINK.UID>.MOVE.RIGHTSIDE>
+	shipfix2
+ELIF (<LINK.MORE2> == 04040000)	|| (<LINK.MORE2> == 04040001) || (<LINK.MORE2> == 04040002)	// S
+	SRC.NEWITEM 03eb1
+	SRC.ACT.P <LINK.P>
+	SRC.ACT.MOVE <VAR.SHIP.<LINK.UID>.MOVE.RIGHTSIDE>
+	shipfix2
+ELIF (<LINK.MORE2> == 06060000)	|| (<LINK.MORE2> == 06060001) || (<LINK.MORE2> == 06060002)	// W
+	SRC.NEWITEM i_ship_plank_n_c
+	SRC.ACT.P <LINK.P>
+	SRC.ACT.MOVE <VAR.SHIP.<LINK.UID>.MOVE.RIGHTSIDE>
+	shipfix2
+ENDIF
+SRC.TRY VAR.SHIP.<LINK.UID>.RIGHTSIDE <SRC.ACT.UID>
+
+[FUNCTION shipfix2]
+SRC.ACT.MORE1 <MORE1>
+SRC.ACT.MORE2 <MORE2>
+SRC.ACT.ATTR <ATTR>
+SRC.ACT.LINK <LINK>
+
+IF (<TYPE> == t_ship_plank)
+	SRC.ACT.TYPE t_ship_side
+	SRC.ACT.DCLICK
+ELSE
+	SRC.ACT.TYPE <TYPE>
+ENDIF
+
+REMOVE
+
+[SPEECH spk_ship_cmds]
+ON=Furl sail			// Stop
+ON=Stop				// Stops current ship movement.
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPSTOP
+
+ON=Turn Left
+ON=Port				// Turn Left
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPTURNLEFT
+	SHIPFIX
+
+ON=Turn Right
+ON=Starboard			// Turn Right
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPTURNRIGHT
+	SHIPFIX
+
+ON=Left				// Move ship in desired direction.
+ON=Drift Left
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPDRIFTLEFT
+
+ON=Right			// Move ship in desired direction.
+ON=Drift Right
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPDRIFTRIGHT
+
+ON=Back				// Move ship backwards
+ON=Backward			// Move ship backwards
+ON=Backwards			// Move ship backwards
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPBACK
+
+ON=Forward
+ON=Foreward			// Moves ship forward.
+ON=Unfurl sail			// Moves ship forward.
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPFORE
+
+ON=Forward left
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPFORELEFT
+
+ON=forward right
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPFORERIGHT
+
+ON=backward left
+ON=back left
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPBACKLEFT
+
+ON=backward right
+ON=back right
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPBACKRIGHT
+
+ON=Raise Anchor
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPANCHORRAISE
+
+ON=Drop Anchor
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPANCHORDROP
+
+ON=Turn around			// Turns ship around and proceeds.
+ON=Come about			// Turns ship around and proceeds.
+	IF !(<keycheck> )
+		RETURN 1
+	ENDIF
+	SHIPTURN
+	SHIPFIX
+
+[FUNCTION keycheck]
+IF (<SRC.FINDTYPE.t_key.MORE1> == <UID> )
+	IF !(0<VAR.SHIP.<UID>.HATCH> )
+		shipinitiate
+	ENDIF
+	RETURN 1
+ENDIF
+RETURN 0
+
+[FUNCTION shipinitiate]
+SRC.NEWITEM i_gold
+VAR.TEMP <SRC.ACT>
+SRC.ACT.P <P>
+SRC.ACT.MOVE nw 10
+SRC.NUKE shipinitiate1 <UID>
+SRC.LAST
+SRC.ACT.MOVE se 20
+SRC.LAST
+TRY UID.<VAR.TEMP>.REMOVE
+VAR.TEMP
+
+SRC.HIDEMESSAGE
+SRC.SYSMESSAGE Please cancel this target cursor (Esc key), you may occasionally get it while navigating your boat, it is necessary for the time being.
+
+[FUNCTION shipinitiate1]
+IF (<UID> != <ARGN> ) && (<LINK.UID> == <ARGN> )
+	IF (<TYPE> == t_ship_side) || (<TYPE> == t_ship_side_locked) || (<TYPE> == t_ship_plank) || (<TYPE> == t_ship_tiller) || (<TYPE> == t_ship_hold_lock) || (<TYPE> == t_ship_hold)
+		IF (<TYPE> == t_ship_hold) || (<TYPE> == t_ship_hold_lock)
+			SRC.TRY VAR.SHIP.<HVAL <ARGN>>.HATCH <UID>
+		ELIF (<TYPE> == t_ship_tiller)
+			SRC.TRY VAR.SHIP.<HVAL <ARGN>>.TILLERMAN <UID>
+		ELSE
+			IF (<LINK.MORE2> == 00)	|| (<LINK.MORE2> == 01) || (<LINK.MORE2> == 02)				// N
+				IF (<P.X> > <LINK.P.X> )
+					SRC.TRY VAR.SHIP.<HVAL <ARGN>>.RIGHTSIDE <UID>
+				ELIF (<P.X> < <LINK.P.X> )
+					SRC.TRY VAR.SHIP.<HVAL <ARGN>>.LEFTSIDE <UID>
+				ENDIF
+			ELIF (<LINK.MORE2> == 02020000)	|| (<LINK.MORE2> == 02020001) || (<LINK.MORE2> == 02020002)	// E
+				IF (<P.Y> > <LINK.P.Y> )
+					SRC.TRY VAR.SHIP.<HVAL <ARGN>>.RIGHTSIDE <UID>
+				ELIF (<P.Y> < <LINK.P.Y> )
+					SRC.TRY VAR.SHIP.<HVAL <ARGN>>.LEFTSIDE <UID>
+				ENDIF
+			ELIF (<LINK.MORE2> == 04040000)	|| (<LINK.MORE2> == 04040001) || (<LINK.MORE2> == 04040002)	// S
+				IF (<P.X> < <LINK.P.X> )
+					SRC.TRY VAR.SHIP.<HVAL <ARGN>>.RIGHTSIDE <UID>
+				ELIF (<P.X> > <LINK.P.X> )
+					SRC.TRY VAR.SHIP.<HVAL <ARGN>>.LEFTSIDE <UID>
+				ENDIF
+			ELIF (<LINK.MORE2> == 06060000)	|| (<LINK.MORE2> == 06060001) || (<LINK.MORE2> == 06060002)	// W
+				IF (<P.Y> < <LINK.P.Y> )
+					SRC.TRY VAR.SHIP.<HVAL <ARGN>>.RIGHTSIDE <UID>
+				ELIF (<P.Y> > <LINK.P.Y> )
+					SRC.TRY VAR.SHIP.<HVAL <ARGN>>.LEFTSIDE <UID>
+				ENDIF
+			ENDIF
+		ENDIF
+	ENDIF
+ENDIF
+
+[FUNCTION hidemessage]
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+SYSMESSAGE
+
+
+[ITEMDEF 03e4a] 
+DEFNAME=i_ship_tillerman 
+TYPE=T_SHIP_TILLER
+
+CATEGORY=Ship Parts 
+SUBSECTION=Tillerman 
+DESCRIPTION=Tiller man 
+
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e4b] 
+TYPE=T_SHIP_TILLER
+
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e4c] 
+TYPE=T_SHIP_TILLER
+
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e4d] 
+TYPE=T_SHIP_TILLER
+
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e4e] 
+TYPE=T_SHIP_TILLER
+
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e4f] 
+TYPE=T_SHIP_TILLER
+
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e50] 
+TYPE=T_SHIP_TILLER
+
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e51] 
+TYPE=T_SHIP_TILLER
+
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e52]  
+TYPE=T_SHIP_TILLER
+ 
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e53] 
+TYPE=T_SHIP_TILLER
+
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e54]  
+TYPE=T_SHIP_TILLER
+ 
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID> ) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[ITEMDEF 03e55] 
+TTYPE=T_SHIP_TILLER
+
+on=@dclick
+IF (<LINK.MORE>==<SRC.UID>) 
+dialog d_ship_rename
+ELSE
+SRC.SYSMESSAGE This ship doesn't belong to you!
+return 1
+endif
+
+[dialog d_ship_rename] 
+200,200 
+resizepic 0 0 3600 330 140 
+page 0 
+text 20 20 1152 0 
+gumppic 30 50 1143 
+textentry  40 52 250 20 32 0 1 
+button 120 90 249 248 1 0 1 //okay 
+button 210 90 243 241 1 0 2 //cancel 
+
+[dialog d_ship_rename text] 
+What would you like to name the Ship? 
+<src.targ.LINK.name> 
+
+[dialog d_ship_rename button] 
+on=1 
+src.targ.LINK.name=<argtxt[0]> 
+src.targ.name=<argtxt[0]> 
+src.sysmessage ship renamed to: <argtxt[0]> 
+return 1 
+on=2 
+return 1 
+
+//Drydocking 
+[ITEMDEF i_drydock_kit] 
+ID=i_model_ship 
+NAME=Drydock Kit 
+
+ON=@CREATE
+COLOR=005F4
+ATTR=04 
+
+ON=@DCLICK 
+TARGET Target the tillerman of your ship!
+RETURN 1
+
+ON=@TARGON_ITEM 
+IF !<SRC.TARG.TYPE>=T_SHIP_TILLER 
+SRC.SYSMESSAGE=That is not a tillerman! 
+ELSEIF (<SRC.TARG.LINK.MORE>==<SRC.UID>)||(<SRC.ISGM>)
+SRC.NEWITEM=i_model_ship 
+SRC.ACT.TYPE=t_deed 
+SRC.ACT.NAME=<SRC.TARG.LINK.NAME> 
+SRC.ACT.MORE=<SRC.TARG.LINK.ID> 
+SRC.ACT.MORE2=<SRC.TARG.LINK.MORE> 
+SRC.ACT.BOUNCE 
+SRC.TARG.LINK.REMOVE 
+SRC.EMOTE=Drydock a Boat 
+REMOVE 
+RETURN 1
+ELSE
+SRC.SYSMESSAGE=That isnt thou boat! 
+RETURN 1
+ENDIF
+
+//Harbor Master 
+[CHARDEF c_h_Harbormaster] 
+DEFNAME=c_h_Harbormaster 
+NAME=#NAMES_HUMANMALE the Harbor Master 
+ID=C_MAN 
+CAN=MT_WALK|MT_FLY|MT_MALE|MT_RUN 
+DESIRES=i_gold,e_notoriety 
+AVERSIONS=t_TRAP,t_eerie_stuff 
+DAM=9,29 
+ARMOR=75 
+
+TSPEECH=spk_harbormaster 
+
+ON=@Create 
+COLOR=colors_skin 
+STR=700 
+DEX=400 
+INT=400 
+FENCING=400.0 
+WRESTLING=300.0 
+MAGICRESISTANCE=300.0 
+TACTICS=300.0 
+PARRYING=300.0 
+NPC=brain_Human 
+
+ON=@NPCRestock 
+ITEMNEWBIE=i_hat_tricorne 
+COLOR=01 
+ITEM=i_boots_thigh 
+ITEM=i_sash 
+COLOR=025 
+ITEM=i_apron_half 
+COLOR=025 
+ITEM=i_kilt 
+COLOR=01 
+ITEM=i_shirt_fancy 
+ITEM=random_coin_purse 
+ITEM={ backpack_meager 1 backpack_average 2 } 
+
+CATEGORY=Civilized 
+SUBSECTION=Tradesmen 
+DESCRIPTION=Harbor Master 
+
+
+[SPEECH spk_harbormaster] 
+ON=*Buy*
+IF <SRC.RESTEST 1000 i_gold> 
+SRC.NEWITEM=i_drydock_kit 
+SRC.ACT.BOUNCE 
+SAY=Here is yur Drydock Kit, Ill see ya'round Mate! 
+SRC.CONSUME=1000 i_gold 
+ELSE 
+DORAND 4
+SAY=Are ya be trying to rip me off? 
+SAY=I'll wait here for you to return with my Pay. 
+SAY=Go get thou gold and ill hold one for ya's 
+SAY=Well I need 1,000 gold for a Drydock Kit! 
+ENDDO 
+ENDIF
+
+ON=*Hail* 
+ON=*Hey* 
+ON=*Hi* 
+ON=*Hello* 
+ON=*Helo* 
+ANIM 6 
+SRC.ANIM 6 
+SAY=Hail to thee <SRC.NAME>! Dos though need to Drydock thine ship?  
+
+ON=*do you* 
+ON=*Job* 
+ANIM 6 
+SRC.ANIM 6 
+DORAND 3
+SAY=I Drydock Boats! 
+SAY=I Sell Drydock Kits 
+SAY=I am the Harbor Master 
+ENDDO 
+
+ON=*Bye* 
+ON=*Goodbye* 
+ON=*Farewell* 
+ANIM 6 
+SRC.ANIM 6 
+DORAND 3
+SAY=Farewell <SRC.NAME> 
+SAY=I Bid thee Farewell <SRC.NAME> 
+SAY=Goodbye <SRC.NAME> 
+ENDDO 
+
+[EOF]

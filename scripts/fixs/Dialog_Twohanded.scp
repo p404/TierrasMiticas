@@ -1,0 +1,51 @@
+[DIALOG D_Weapon_Twohanded]
+0,0
+page
+resizepic 0 0 3000 <EVAL <SRC.TAG.LARGE>> <EVAL <SRC.TAG.LARGEX>>
+text 5 5 53 0
+text 5 25 1152 1
+text 5 40 1152 2
+text 5 55 1152 3
+text 5 70 1152 4
+text 5 85 <EVAL <SRC.TAG.REDTEXT>> 5
+text 5 100 1152 6
+
+[DIALOG d_Weapon_Twohanded TEXT] 
+<ACT.NAME>
+Two Handed
+Damage: <ACT.DAM>
+Durability: <ACT.HITPOINTS>
+Str Req: <ACT.REQSTR>
+Weight: <ACT.WEIGHT>
+Bonus: <SRC.TAG.BONUS>
+
+[DIALOG D_Weapon_Twohanded_Race]
+0,0
+page
+resizepic 0 0 3000 <EVAL <SRC.TAG.LARGE>> <EVAL <SRC.TAG.LARGEX>>
+text 5 5 53 0
+text 5 25 1152 1
+text 5 40 1152 2
+text 5 55 1152 3
+text 5 70 1152 4
+text 5 85 <EVAL <SRC.TAG.REDTEXT>> 5
+text 5 100 <EVAL <SRC.TAG.REQREDTEXT>> 6
+text 105 115 <EVAL <SRC.TAG.REQREDTEXT2>> 7
+text 5 130 1152 8
+text 55 145 1152 9
+text 55 160 1152 10
+
+[DIALOG D_Weapon_Twohanded_Race TEXT] 
+<ACT.NAME>
+Two Handed
+Damage: <ACT.DAM>
+Durability: <ACT.HITPOINTS>
+Weight: <ACT.WEIGHT>
+Str Req: <ACT.REQSTR>
+Requeriments: <SRC.TAG.REQS>
+<SRC.TAG.REQS2>
+Bonus: <SRC.TAG.BONUS>
+<SRC.TAG.BONUS2>
+<SRC.TAG.BONUS3>
+
+[EOF]

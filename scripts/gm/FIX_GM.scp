@@ -1,0 +1,164 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2006
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// Ultima Actualización: Miercoles, Septiembre 13, 2006
+// Eventos de GMs
+VERSION=0.2
+
+[FUNCTION static]
+SRC.SYSMESSAGE=.SET ATTR 08000
+
+[EVENTS e_all_ply]
+ON=@LOGIN
+if (<account.plevel>==4)
+SRC.EVENTS=+e_gm_vision
+SRC.INVUL=1
+SRC.INVIS=1
+ENDIF
+if (<account.plevel>==5)
+SRC.EVENTS=+e_gm_vision
+SRC.INVUL=1
+SRC.INVIS=1
+ENDIF
+if (<account.plevel>==6)
+SRC.EVENTS=+e_gm_vision
+SRC.INVUL=1
+SRC.INVIS=1
+ENDIF
+if (<account.plevel>==7)
+SRC.EVENTS=+e_gm_vision
+SRC.INVUL=1
+SRC.INVIS=1
+ENDIF
+
+ON=@CLICK
+IF (<account.plevel>==4)
+Message=[Counselor] [Staff]
+f_GMVision
+ELSE
+IF (<account.plevel>==5)
+Message=[GM] [Staff]
+f_GMVision
+ELSE
+IF (<account.plevel>==6)
+Message=[Admin] [Staff]
+f_GMVision
+ELSE
+IF (<account.plevel>==7)
+Message=[Owner] [Staff]
+f_GMVision
+ENDIF
+
+[FUNCTION sinvis]
+newitem=i_fx_glow_spike
+ACT.ATTR=attr_static|attr_decay
+ACT.TYPE=t_normal
+ACT.TIMER=2
+ACT.P=<SRC.P>
+ACT.MOVE n
+newitem=i_fx_glow_spike
+ACT.ATTR=attr_static|attr_decay
+ACT.TYPE=t_normal
+ACT.TIMER=2
+ACT.P=<SRC.P>
+ACT.MOVE s
+newitem=i_fx_glow_spike
+ACT.ATTR=attr_static|attr_decay
+ACT.TYPE=t_normal
+ACT.TIMER=2
+ACT.P=<SRC.P>
+ACT.MOVE e
+newitem=i_fx_glow_spike
+ACT.ATTR=attr_static|attr_decay
+ACT.TYPE=t_normal
+ACT.TIMER=2
+ACT.P=<SRC.P>
+ACT.MOVE w
+NEWITEM=03740
+ACT.ATTR=attr_static|attr_decay
+ACT.TYPE=t_normal
+ACT.TIMER=2
+ACT.P=<SRC.P>
+ACT.MOVE ne
+NEWITEM=03740
+ACT.ATTR=attr_static|attr_decay
+ACT.TYPE=t_normal
+ACT.TIMER=2
+ACT.P=<SRC.P>
+ACT.MOVE nw
+NEWITEM=03740
+ACT.ATTR=attr_static|attr_decay
+ACT.TYPE=t_normal
+ACT.TIMER=2
+ACT.P=<SRC.P>
+ACT.MOVE se
+NEWITEM=03740
+ACT.ATTR=attr_static|attr_decay
+ACT.TYPE=t_normal
+ACT.TIMER=2
+ACT.P=<SRC.P>
+ACT.MOVE sw
+INVIS
+
+[events e_gm_vision] 
+ON=@Click 
+f_GMVision 
+ON=@DClick 
+f_GMVision 
+ON=@ENVIRONCHANGE 
+f_GMVision 
+
+[FUNCTION f_GMVision] 
+IF <sector.isdark> 
+IF (<FLAGS>&statf_nightsight)!=statf_nightsight) 
+SPELLEFFECT=s_night_sight 1000
+TAG.NIGHTSIGHT_STATUS=1 
+ENDIF 
+ELSE 
+IF <TAG.NIGHTSIGHT_STATUS> 
+FLAGS=<FLAGS>&~statf_nightsight 
+TAG.NIGHTSIGHT_STATUS=0
+ENDIF 
+ENDIF
+
+[FUNCTION sysmessageua] 
+VAR.OLD_P <P> 
+VAR.OLD_REGION_FLAGS <REGION.FLAGS> 
+VAR.OLD_REGION_EVENTS <REGION.EVENTS> 
+VAR.OLD_ACT <ACT.UID> 
+REGION.EVENTS -0 
+REGION.FLAGS=0 
+P 11 11 0 1 
+NEWITEM i_memory 
+ACT.CONT <UID> 
+ACT.SAYUA <VAR.SUA_COLOR> 6 0 1 <args> 
+ACT.REMOVE 
+P <VAR.OLD_P> 
+REGION.FLAGS <VAR.OLD_REGION_FLAGS> 
+REGION.EVENTS <VAR.OLD_REGION_EVENTS> 
+ACT <VAR.OLD_ACT>
+
+[FUNCTION messageua]
+VAR.OLD_P <P>
+VAR.OLD_REGION_FLAGS <REGION.FLAGS>
+VAR.OLD_REGION_EVENTS <REGION.EVENTS>
+REGION.EVENTS=-0
+REGION.FLAGS=0
+EVENTS=-e_night_vision
+P 11 11 0 1
+NEWITEM i_memory
+ACT.CONT <UID>
+ACT.SAYUA 04 006 0 1 <args>
+ACT.REMOVE
+P <VAR.OLD_P>
+REGION.FLAGS <VAR.OLD_REGION_FLAGS>
+REGION.EVENTS <VAR.OLD_REGION_EVENTS>
+EVENTS=+e_night_vision
+
+[EOF]

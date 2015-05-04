@@ -1,0 +1,52 @@
+[EVENTS e_mana] 
+
+ON=@SKILLSTART
+If !(<SRC.Mana><<SRC.Int>) 
+Timer=1
+ELSE
+Timer=0
+RETURN 1
+ENDIF
+RETURN 1
+IF <SRC.ACTION>==skill_meditation
+SRC.NEWITEM=i_bolita_mana
+SRC.ACT.EQUIP
+RETURN 1
+ENDIF
+
+[itemdef 02ed]
+defname=i_magic_orb
+NAME=Magic Orb
+
+[itemdef i_bolita_mana]
+defname=i_bolita_mana
+ID=02ed
+NAME=Meditation Ball
+CAN=MT_EQUIP
+Type=t_wand
+TwoHands=Y
+
+ON=@Create 
+ATTR=08010
+
+ON=@EQUIP
+Link=<Src.Uid> 
+Timer=2 
+Return 0
+
+ON=@Timer
+If (<Link.Mana><<Link.Int>) 
+Link.Mana=<Link.Mana>+0
+Timer=1
+Else 
+Timer=0
+CONT.CONSUME=1 i_bolita_mana
+Endif
+Return 1 
+
+on=@unequip 
+SRC.CONSUME=i_bolita_mana
+Link=04FFFFFFF 
+TIMER=-1 
+
+[EOF]

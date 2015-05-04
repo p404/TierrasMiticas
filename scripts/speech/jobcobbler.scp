@@ -1,0 +1,417 @@
+//****************************************************************************
+//SPHERE by : Menasoft ©1997-2000
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// FILE LAST UPDATED: Friday, April 28, 2000
+
+// Purpose: Britannia Cobbler Script
+// Notes:  This is used for general information pertaining to all Britannian Cobblers
+// Current Keyword List:
+//	job, what*do*do, profession, occupation, cobbler, hide, leather, shoe, boot, sandal
+//
+[SPEECH jobCOBBLER]
+
+ON=*job*
+ON=*work*
+ON=*what*do*do*
+ON=*profession*
+ON=*occupation*
+	// SAY=I am a cobbler by trade.
+	IF ( <SRC.KARMA.WICKED> || <SRC.KARMA.BELLIGERANT> )
+		DORAND 2
+			SAY I'm a cobbler.
+			SAY I'm a shoe maker.
+		ENDDO
+	ELIF ( <SRC.KARMA.NEUTRAL> )
+		DORAND 3
+			SAY I'm a cobbler.
+			SAY I make shoes and boots.
+			SAY I'm a crafter of shoes and boots.
+		ENDDO
+	ELSE
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY I'm a maker of fine footwear.
+				SAY I make and sell fine shoes and boots.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY I make good shoes.
+				SAY I make and sell shoes and boots.
+			ENDDO
+		ENDIF
+	ENDIF
+ON=*cobbler*
+	IF ( <SRC.KARMA.WICKED> || <SRC.KARMA.BELLIGERANT> )
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY I make shoes, boots and sandals.
+				SAY I can sell thee something to wrap around thy feet.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY I make shoes, boots and sandals.
+				SAY I can sell something to wear on thy feet.
+			ENDDO
+		ENDIF
+	ELIF ( <SRC.KARMA.NEUTRAL> )
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY I make and sell shoes, boots and sandals for men and ladies.
+				SAY Most folks around here have my work on their feet.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY I make and sell shoes, boots and sandals for folks. Men and ladies, I mean.
+				SAY Most folks 'round this place have my work on their feet.
+			ENDDO
+		ENDIF
+	ELSE
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY I am a maker of fine shoes, hardly just a mere cobbler.
+				SAY I suppose thou couldst call me a cobbler, though that hardly does justice to my craft.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY I'm a maker of good shoes.
+				SAY Thou could call me a cobbler, though I don't like the word.
+			ENDDO
+		ENDIF
+	ENDIF
+ON=*hide*
+ON=*leather*
+	IF ( <SRC.KARMA.WICKED> || <SRC.KARMA.BELLIGERANT> )
+		DORAND 2
+			SAY I could stand to buy some leather.
+			SAY I might be willing to buy some hides.
+		ENDDO
+	ELIF ( <SRC.KARMA.NEUTRAL> )
+		IF ( <COMPLEXITY.HIGH> )
+			DORAND 2
+				SAY I buy hides with which to make my shoes.
+				SAY My supply of leather is always lacking. I could buy some from thee.
+			ENDDO
+		ELIF ( <COMPLEXITY.MEDIUM>)
+			DORAND 2
+				SAY I buy hides to make my shoes from.
+				SAY My supply of leather is running short.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY I buy hides to make my shoes from.
+				SAY My supply of leather is sometimes running short.
+			ENDDO
+		ENDIF
+	ELSE
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY If thou art selling quality hides, I could make thee an offer.
+				SAY Hides of a quality appropriate to my shoes are surprisingly hard to find.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY If thou'rt selling leather, I could make thee an offer.
+				SAY Good quality hides for my shoes are hard to find.
+			ENDDO
+		ENDIF
+	ENDIF
+ON=*shoe*
+ON=*boot*
+ON=*sandal*
+	IF ( <SRC.KARMA.WICKED> || <SRC.KARMA.BELLIGERANT> )
+		IF ( <COMPLEXITY.HIGH> )
+			DORAND 2
+				SAY Shoes, boots or sandals, I make them all.
+				SAY Shoes, boots, sandals, whatever, I got 'em. And for a low price, thou couldst have them also.
+			ENDDO
+		ELIF ( <COMPLEXITY.MEDIUM>)
+			DORAND 2
+				SAY Shoes, boots or sandals, I make them all.
+				SAY Shoes, boots, sandals, whatever, I got 'em.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY Shoes, boots or sandals, I make 'em all.
+				SAY Shoes, boots, sandals... I got 'em.
+			ENDDO
+		ENDIF
+	ELIF ( <SRC.KARMA.NEUTRAL> )
+		IF ( <COMPLEXITY.HIGH> )
+			DORAND 2
+				SAY I have a fine stock of boots, shoes and sandals on hand.
+				SAY Heavy riding boots or comfortable sandals, I can make them all.
+			ENDDO
+		ELIF ( <COMPLEXITY.MEDIUM>)
+			DORAND 2
+				SAY I have a fine stock of boots, shoes and sandals on hand.
+				SAY Heavy riding boots or dainty sandals, I can make 'em all.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY I got some boots, shoes and sandals on hand.
+				SAY Boots or sandals, I can make 'em all.
+			ENDDO
+		ENDIF
+	ELSE
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY Sturdy boots, comfortable sandals or elegant shoes are all available.
+				SAY My shoes, boots and sandals are elegant enough for court, and sturdy enough for the road.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY Sturdy boots, comfortable sandals or nice shoes. I got 'em all.
+				SAY My shoes, boots and sandals are nice and sturdy.
+			ENDDO
+		ENDIF
+	ENDIF
+
+ON=Hail
+ON=Hi
+ON=Greet
+ON=Hello
+	SAY=Hail and well met!
+ON=Bye
+ON=Goodbye
+ON=Farewell
+	SAY=Farewell and safe journeys.
+	BYE
+	return 1
+ON=BOOT
+	SAY=My boots will keep your feet protected and dry.
+ON=COBBLER
+	SAY=A cobbler such as myself makes the finest footwear.
+ON=HIDE
+	SAY=I buy my leather direct from the local tanner, and pass the savings on to you!
+ON=SANDAL
+	SAY=Sandals are quite nice in the warm months, but offer little protection for thy feet.
+ON=SHOE
+	SAY=Shoes offer better protection than sandals for thy feet, but a gallant adventurer such as thyself should wear a sturdy pair of boots.
+
+//RANDOM=Shoes here, fit for noble and adventurer alike!
+//DEFAULT=I do not understand thee.
+
+[EOF]
+
+//****************************************************************************
+//SPHERE by : Menasoft ©2004-2004
+//www.sphereserver.com
+// All SPHERE script files and formats are copyright Menasoft & Partners.
+// This file may be freely edited for personal use, but may not be distributed
+// in whole or in part, in any format without express written permission from
+// Menasoft & Partners.  All donations and contributions
+// become the property of Menasoft & Partners.
+//****************************************************************************
+// 
+// Purpose: Firce Script
+// Notes:  This is used for general information pertaining to Firce
+// Current Keyword List: job,profession,occupation,what*do*do,steal,rob,theif,bandit,brigand,crime,villian
+//
+//
+[SPEECH jobFirce]
+
+ON=*job*
+ON=*work*
+ON=*what*do*do*
+ON=*profession*
+ON=*occupation*
+	IF ( <SRC.KARMA.WICKED> || <SRC.KARMA.BELLIGERANT> )
+		DORAND 2
+			SAY None of thy business.
+			BEGIN
+				// SRC.CRIMINAL
+				SAY I do THIS!
+				ATTACK
+			END
+		ENDDO
+	ELIF ( <SRC.KARMA.NEUTRAL> )
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY Thou couldst say that I'm a traveling man.
+				SAY I'm sort of like a porter. I lighten the burdens of rich travelers.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY Thou couldst say that I'm a traveling man.
+			        SAY I'm sort of like a porter. I lighten the burdens of rich travelers.
+			ENDDO
+		ENDIF
+	ELSE
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY I do what I must to get by, just as we all do.
+				SAY Oh, I do this and that.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY I do what I must to get by, just as we all do.
+				SAY Oh, I do this and that.
+			ENDDO
+		ENDIF
+	ENDIF
+
+ON=*firce*
+	IF ( <SRC.KARMA.WICKED> || <SRC.KARMA.BELLIGERANT> )
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY Think thou'rt real smart, dost thou? [Attack]
+				SAY I don't know anything about bandits.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY Think thou'rt real smart, dost thou? [Attack]
+				SAY I don't know anything about bandits.
+			ENDDO
+		ENDIF
+	ELIF ( <SRC.KARMA.NEUTRAL> )
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY Don't go throwing around accusations thou can't prove.
+				SAY Now do I really look like a bandit?
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY Don't go throwing around accusations thou can't prove.
+				SAY Now do I really look like a bandit?
+			ENDDO
+		ENDIF
+	ELSE
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+					SAY Ah, thieves and bandits are overwhelmingly common of late. Honest citizens should take care.
+				SAY Bandits everywhere these days. 'Tis shocking, really.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY Ah, thieves and bandits are overwhelmingly common of late. Honest citizens should take care.
+				SAY Bandits everywhere these days. 'Tis shocking, really.
+			ENDDO
+		ENDIF
+	ENDIF
+ON=*crime*
+	IF ( <SRC.KARMA.WICKED> || <SRC.KARMA.BELLIGERANT> )
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY Thou canst prove nothing!
+				SAY Thou dost speak of things thou art ignorant of.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY Thou canst prove nothing!
+				SAY Thou dost speak of things thou art ignorant of.
+			ENDDO
+		ENDIF
+	ELIF ( <SRC.KARMA.NEUTRAL> )
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY I have just as much respect for the law as the next man.
+				SAY I'm as honest as the day is long.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY I have just as much respect for the law as the next man.
+				SAY I'm as honest as the day is long.
+			ENDDO
+		ENDIF
+	ELSE
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY Crime is horrible, is it not? Thou wouldst be inclined to think the authorities would do something.
+				SAY Being poor is the only crime I'm guilty of.
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY Crime is horrible, is it not? Thou wouldst be inclined to think the authorities would do something.
+				SAY Being poor is the only crime I'm guilty of.
+ 			ENDDO
+		ENDIF
+	ENDIF
+ON=*firce*
+	IF ( <SRC.KARMA.WICKED> || <SRC.KARMA.BELLIGERANT> )
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY Thou dost resemble a villain thyself!
+				SAY Draw thy sword! [Attack]
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY Thou dost resemble a villain thyself!
+				SAY Draw thy sword! [Attack]
+			ENDDO
+		ENDIF
+	ELIF ( <SRC.KARMA.NEUTRAL> )
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY I'll not be accused by the likes of thee. [Attack]
+				SAY I'll not be accused by the likes of thee. [Leave].
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY I'll not be accused by the likes of thee. [Attack]
+		             	SAY I'll not be accused by the likes of thee. [Leave].
+			ENDDO
+		ENDIF
+	ELSE
+		IF ( <COMPLEXITY.HIGH> || <COMPLEXITY.MEDIUM> )
+			DORAND 2
+				SAY Here here, is that any way to talk?
+				SAY If that's the way of it, I'll be saying good day. We may be meeting again sooner than thou dost think. [Leave]
+			ENDDO
+		ELSE
+			DORAND 2
+				SAY Here here, is that any way to talk?
+				SAY If that's the way of it, I'll be saying good day. We may be meeting again sooner than thou dost think. [Leave]
+			ENDDO
+		ENDIF
+	ENDIF
+
+DEFAULT=Perhaps I misunderstand thee?
+
+ON=Hi
+ON=Greet
+ON=Hello
+ON=Hail
+ON=Hola
+ON=Oa
+	SAY=Hola, como estas?
+
+ON=Bn
+ON=Bien
+ON=Good
+         SAY=Que bien...
+
+ON=Y tu?
+ON=Y Ud?
+        SAY=Bien tambien...
+
+ON=Bye
+ON=Chao
+ON=Adios
+ON=byebye
+ON=bye bye
+ON=Goodbye
+ON=Farewell
+	SAY=Adios.
+	Adios
+	return 1
+
+ON=Pelea
+ON=Attack
+ON=Ataca
+          SAY=Te arrepentiras! [Attack]
+
+ON=Corran!
+	SAY=Escapan de mi? Corran imbecil! [Attack]
+
+ON=Firce
+	SAY=Me llamabas <src.name>?  Aqui estoy! [Leave]
+
+//RANDOM=I'm minding mine own business.  Why can't thou?
+
+[EOF]
